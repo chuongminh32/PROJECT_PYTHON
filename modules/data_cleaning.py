@@ -12,7 +12,6 @@ def remove_missing_values(df):
 def remove_duplicates(df):
     """Loại bỏ các giá trị trùng lặp"""
     result_df = df.drop_duplicates()
-    print(result_df)
     return result_df
 
 def correct_formatting(df):
