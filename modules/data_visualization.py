@@ -8,9 +8,9 @@ def plot_average_scores(df):
                 'lich_su', 'dia_li', 'gdcd']
     averages = df[subjects].mean()
 
- #   colors = plt.cm.viridis(np.linspace(0, 1, len(subjects)))
+    colors = plt.cm.viridis(np.linspace(0, 1, len(subjects)))
 
-    plt.bar(subjects, averages, color = 'blue')
+    plt.bar(subjects, averages, color = colors)
 
     for i, value in enumerate(averages):
         plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom')
