@@ -5,10 +5,16 @@ print("Thực hiện các thao tác cleaning trên tập dữ liệu")
 import pandas as pd
 import csv
 
-def remove_missing_values(df):
-    """Loại bỏ các giá trị thiếu"""
-
-    return df.dropna()
+def handle_missing_value(FILE_PATH):
+    """Thay thế dữ liệu bị thiếu thành 0.0 (float)
+    - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\dataset_demo.csv")
+    - Hàm xử lý dữ liệu điểm bị thiếu thành 0.0 (chưa xử lý sbd)
+    """
+    df = pd.read_csv(FILE_PATH)
+    result_df = df.fillna(0.0)
+    # print(result_df)
+    save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
+    return result_df
 
 def remove_duplicates(FILE_PATH):
     """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "cleaned_data.csv"
@@ -39,3 +45,4 @@ def save_to_cleaned_data_file(FILEPATH, result_df):
         writer.writerows(result_df.values)
 
 # remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
+# fill_missing_value("data\dataset_demo.csv") #xóa comment để chạy demo
