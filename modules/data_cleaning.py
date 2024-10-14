@@ -11,7 +11,9 @@ def remove_missing_values(df):
 
 def remove_duplicates(df):
     """Loại bỏ các giá trị trùng lặp"""
-    result_df = df.drop_duplicates()
+    result_df = pd.read_csv(df)
+    result_df = result_df.drop_duplicates()
+    print(result_df)
     return result_df
 
 def correct_formatting(df):
@@ -20,3 +22,5 @@ def correct_formatting(df):
                'lich_su', 'dia_li', 'gdcd']
     df[columns] = df[columns].apply(pd.to_numeric, errors='coerce')
     return df
+
+remove_duplicates("D:\DOAN_PYTHON\PROJECT_PYTHON\data\dataset_demo.csv")
