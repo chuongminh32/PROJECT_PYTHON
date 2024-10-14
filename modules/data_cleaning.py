@@ -38,4 +38,4 @@ def save_to_cleaned_data_file(FILEPATH, result_df):
         writer.writerow(result_df.head())
         writer.writerows(result_df.values)
 
-remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
+# remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
