@@ -6,11 +6,14 @@ import pandas as pd
 
 def remove_missing_values(df):
     """Loại bỏ các giá trị thiếu"""
+
     return df.dropna()
 
 def remove_duplicates(df):
     """Loại bỏ các giá trị trùng lặp"""
-    return df.drop_duplicates()
+    result_df = df.drop_duplicates()
+    print(result_df)
+    return result_df
 
 def correct_formatting(df):
     """Sửa định dạng dữ liệu"""
