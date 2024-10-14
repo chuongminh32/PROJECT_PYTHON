@@ -3,18 +3,20 @@ print("Thực hiện các thao tác cleaning trên tập dữ liệu")
 
 # code demo 
 import pandas as pd
+import numpy as np
 import csv
 
 def handle_missing_value(FILE_PATH):
     """Thay thế dữ liệu bị thiếu thành 0.0 (float)
     - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\dataset_demo.csv")
-    - Hàm xử lý dữ liệu điểm bị thiếu thành 0.0 (chưa xử lý sbd)
+    - Hàm xử lý dữ liệu ĐIỂM bị thiếu thành 0.0 và xóa hàng khi giá trị tại cột "SBD" bị rỗng
     """
     df = pd.read_csv(FILE_PATH)
-    result_df = df.fillna(0.0)
+    result_df = df.dropna(subset=['sbd'])
+    result_df = result_df.fillna(0.0)
     # print(result_df)
     save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
-    return result_df
+    return 1
 
 def remove_duplicates(FILE_PATH):
     """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "cleaned_data.csv"
@@ -23,10 +25,10 @@ def remove_duplicates(FILE_PATH):
     - resule_df --> chứa kq đã loại bỏ giá trị trùng lặp
     """
     df = pd.read_csv(FILE_PATH)
-    result_df = df.drop_duplicates()
+    result_df = df.drop_duplicates(subset=['sbd'])
     save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
     # print(result_df)
-    return result_df
+    return 1
 
 def correct_formatting(df):
     """Sửa định dạng dữ liệu"""
@@ -44,5 +46,10 @@ def save_to_cleaned_data_file(FILEPATH, result_df):
         writer.writerow(result_df.head())
         writer.writerows(result_df.values)
 
+"""
+Gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong file demo và ghi vào file cleaned
+Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "dataset_demo.csv", từ lời gọi
+thứ 2, 3, 4 truyền "data\cleaned_data.csv"
+"""
 # remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
-# fill_missing_value("data\dataset_demo.csv") #xóa comment để chạy demo
+# handle_missing_value("data\cleaned_data.csv") #xóa comment để chạy demo
