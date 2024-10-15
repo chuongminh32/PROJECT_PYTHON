@@ -30,6 +30,8 @@ def clean_data():
 def visualize_data():
     if df is not None:
         plot_average_scores(df)
+    else:
+        print("DataFrame không có dữ liệu. Hãy cung cấp dữ liệu cho DataFrame.")
 
 # Hàm làm mới bảng sau khi thêm hoặc xóa dữ liệu
 def refresh_table():
