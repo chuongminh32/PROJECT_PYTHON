@@ -59,3 +59,25 @@ def update_data(df, sbd, updated_row):
     else:
         print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu SBD không tồn tại
     return df
+
+def delete_data(df, sbd):
+    """
+    Xóa một hàng dữ liệu trong DataFrame theo SBD.
+
+    Hàm này tìm dòng có SBD tương ứng và xóa dòng đó khỏi DataFrame.
+    Nếu không tìm thấy SBD, sẽ in ra thông báo lỗi.
+
+    Parameters:
+    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
+    sbd (str/int): Số báo danh của sinh viên cần xóa.
+
+    Returns:
+    DataFrame: DataFrame sau khi đã xóa hàng dữ liệu.
+    """
+    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có SBD
+    if not index.empty:
+        df = df.drop(index)  # Xóa dòng với SBD tương ứng
+        print(f"Đã xóa sinh viên với SBD {sbd}")  # Thông báo đã xóa thành công
+    else:
+        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu SBD không tồn tại
+    return df
