@@ -3,7 +3,7 @@
 import unittest
 import pandas as pd
 from modules.data_crud import add_data, update_data, delete_data, read_data
-from modules.data_cleaning import remove_missing_values, remove_duplicates, correct_formatting
+from modules.data_cleaning import handle_missing_value, remove_duplicates, correct_formatting
 from modules.data_normalize import normalize_scores
 
 class TestCRUDOperations(unittest.TestCase):
@@ -65,7 +65,7 @@ class TestDataCleaning(unittest.TestCase):
 
     def test_remove_missing_values(self):
         """Kiểm tra xóa giá trị thiếu"""
-        df_clean = remove_missing_values(self.df)
+        df_clean = handle_missing_value(self.df)
         self.assertEqual(len(df_clean), 2)
         self.assertNotIn(None, df_clean['toan'].values)
 
