@@ -34,26 +34,6 @@ def visualize_data():
     else:
         print("DataFrame không có dữ liệu. Hãy cung cấp dữ liệu cho DataFrame.")
 
-# Hàm chuẩn hóa và thống nhất dữ liệu
-def standard_unity_data(df):
-    # 1. Xử lý giá trị trống trong cột 'sbd'
-    df['sbd'] = df['sbd'].fillna('unknown')
-
-    # 2. Xử lý giá trị trống trong cột 'ma_ngoai_ngu'
-    df['ma_ngoai_ngu'] = df['ma_ngoai_ngu'].fillna('unknown')
-
-    # 3. Điền giá trị NaN cho các giá trị trống trong các môn học
-    df.fillna(np.nan, inplace=True)
-    df['toan'] = pd.to_numetric(df['toan'], errors ='coerce') # Chuyển đổi sang kiểu số
-    df['ngu_van'] = pd.to_numetric(df['ngu_van'], errors ='coerce')
-    df['ngoai_ngu'] = pd.to_numetric(df['ngoai_ngu'], errors ='coerce')
-    df['vat_li'] = pd.to_numetric(df['vat_li'], errors ='coerce')
-    df['hoa_hoc'] = pd.to_numetric(df['hoa_hoc'], errors ='coerce')
-    df['sinh_hoc'] = pd.to_numetric(df['sinh_hoc'], errors ='coerce')
-    df['lich_su'] = pd.to_numetric(df['lich_su'], errors ='coerce')
-    df['dia_li'] = pd.to_numetric(df['dia_li'], errors ='coerce')
-    df['gdcd'] = pd.to_numetric(df['gdcd'], errors ='coerce')
-
 # Hàm làm mới bảng sau khi thêm hoặc xóa dữ liệu
 def refresh_table():
     for row in tree.get_children():
