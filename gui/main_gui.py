@@ -1,198 +1,343 @@
-import numpy as np
+# import tkinter as tk
+# from tkinter import messagebox, filedialog
+# import pandas as pd
+# from modules import data_crud
+
+# # Đường dẫn mặc định đến file CSV
+# default_file_path = 'data/dataset.csv'
+
+# # Đọc dữ liệu ban đầu
+# df = data_crud.read_data(default_file_path)
+
+# def load_file():
+#     """
+#     Hàm này mở hộp thoại file để người dùng chọn file CSV từ máy tính.
+#     Sau khi chọn file, nó sẽ đọc dữ liệu từ file CSV và hiển thị lên giao diện.
+#     Nếu không chọn file, sẽ sử dụng file CSV mặc định.
+#     """
+#     global df
+#     file_path = filedialog.askopenfilename(
+#         title="Chọn file CSV",
+#         filetypes=(("CSV files", "*.csv"), ("All files", "*.*"))
+#     )
+    
+#     if file_path:
+#         df = data_crud.read_data(file_path)
+#     else:
+#         messagebox.showinfo("Thông báo", f"Sử dụng file mặc định: {default_file_path}")
+#         df = data_crud.read_data(default_file_path)
+    
+#     if df is not None:
+#         display_table(df)
+#     else:
+#         messagebox.showerror("Lỗi", "Không thể đọc dữ liệu từ file CSV đã chọn.")
+
+# def display_table(dataframe):
+#     """
+#     Hiển thị dữ liệu từ DataFrame lên giao diện.
+
+#     Hàm sẽ xóa nội dung hiện tại trong hộp văn bản và hiển thị toàn bộ DataFrame.
+#     """
+#     text_output.config(state='normal')
+#     text_output.delete(1.0, tk.END)
+#     text_output.insert(tk.END, dataframe.to_string(index=False))
+#     text_output.config(state='disabled')
+
+# def display_student():
+#     """
+#     Hiển thị thông tin sinh viên dựa trên số báo danh (SBD) được nhập.
+#     """
+#     sbd = entry_sbd.get()
+#     student = df[df['sbd'] == sbd]
+#     if not student.empty:
+#         student_info = student.to_string(index=False)
+#         text_output.config(state='normal')
+#         text_output.delete(1.0, tk.END)
+#         text_output.insert(tk.END, student_info)
+#         text_output.config(state='disabled')
+#     else:
+#         messagebox.showerror("Lỗi", f"Không tìm thấy sinh viên với SBD {sbd}")
+
+# def add_student():
+#     """
+#     Thêm sinh viên mới vào DataFrame và lưu vào file CSV.
+#     """
+#     new_row = {
+#         'sbd': entry_sbd.get(),
+#         'toan': entry_math.get(),
+#         'ngu_van': entry_literature.get(),
+#         'ngoai_ngu': entry_foreign_lang.get(),
+#     }
+#     global df
+#     df = data_crud.add_data(df, new_row)
+#     data_crud.save_data(df, default_file_path)
+#     messagebox.showinfo("Thành công", "Đã thêm sinh viên thành công")
+#     display_table(df)
+
+# def update_student():
+#     """
+#     Cập nhật thông tin sinh viên dựa trên SBD được nhập.
+#     """
+#     sbd = entry_sbd.get()
+#     updated_row = {
+#         'sbd': sbd,
+#         'toan': entry_math.get(),
+#         'ngu_van': entry_literature.get(),
+#         'ngoai_ngu': entry_foreign_lang.get(),
+#     }
+#     global df
+#     df = data_crud.update_data(df, sbd, updated_row)
+#     data_crud.save_data(df, default_file_path)
+#     messagebox.showinfo("Thành công", "Đã cập nhật thông tin sinh viên")
+#     display_table(df)
+
+# def delete_student():
+#     """
+#     Xóa sinh viên dựa trên SBD được nhập.
+#     """
+#     sbd = entry_sbd.get()
+#     global df
+#     df = data_crud.delete_data(df, sbd)
+#     data_crud.save_data(df, default_file_path)
+#     messagebox.showinfo("Thành công", "Đã xóa sinh viên")
+#     display_table(df)
+
+# def center_window(root):
+#     """
+#     Căn giữa cửa sổ Tkinter trên màn hình.
+#     """
+#     root.update_idletasks()
+#     width = root.winfo_width()
+#     height = root.winfo_height()
+#     x = (root.winfo_screenwidth() // 2) - (width // 2)
+#     y = (root.winfo_screenheight() // 2) - (height // 2)
+#     root.geometry(f'{width}x{height}+{x}+{y}')
+
+# # Tạo giao diện Tkinter
+# root = tk.Tk()
+# root.title("Quản lý sinh viên")
+
+# # Căn giữa cửa sổ
+# root.update()
+# center_window(root)
+
+# # Các trường nhập liệu với khoảng cách padding
+# tk.Label(root, text="SBD:").grid(row=0, column=0, padx=10, pady=5)
+# entry_sbd = tk.Entry(root)
+# entry_sbd.grid(row=0, column=1, padx=10, pady=5)
+
+# tk.Label(root, text="Toán:").grid(row=1, column=0, padx=10, pady=5)
+# entry_math = tk.Entry(root)
+# entry_math.grid(row=1, column=1, padx=10, pady=5)
+
+# tk.Label(root, text="Ngữ văn:").grid(row=2, column=0, padx=10, pady=5)
+# entry_literature = tk.Entry(root)
+# entry_literature.grid(row=2, column=1, padx=10, pady=5)
+
+# tk.Label(root, text="Ngoại ngữ:").grid(row=3, column=0, padx=10, pady=5)
+# entry_foreign_lang = tk.Entry(root)
+# entry_foreign_lang.grid(row=3, column=1, padx=10, pady=5)
+
+# # Nút thêm, sửa, xóa, hiển thị với khoảng cách padding
+# btn_add = tk.Button(root, text="Thêm sinh viên", command=add_student)
+# btn_add.grid(row=4, column=0, padx=10, pady=5)
+
+# btn_update = tk.Button(root, text="Cập nhật sinh viên", command=update_student)
+# btn_update.grid(row=4, column=1, padx=10, pady=5)
+
+# btn_delete = tk.Button(root, text="Xóa sinh viên", command=delete_student)
+# btn_delete.grid(row=5, column=0, padx=10, pady=5)
+
+# btn_display = tk.Button(root, text="Hiển thị sinh viên", command=display_student)
+# btn_display.grid(row=5, column=1, padx=10, pady=5)
+
+# # Nút để tải file CSV
+# btn_load_file = tk.Button(root, text="Tải file CSV", command=load_file)
+# btn_load_file.grid(row=6, column=0, columnspan=2, padx=10, pady=5)
+
+# # Text box để hiển thị thông tin sinh viên
+# text_output = tk.Text(root, height=15, width=70, state='disabled')
+# text_output.grid(row=7, column=0, columnspan=2, padx=10, pady=5)
+
+# # Hiển thị dữ liệu mặc định khi khởi động
+# if df is not None:
+#     display_table(df)
+
+# # Căn giữa cửa sổ khi thay đổi kích thước
+# root.bind('<Configure>', lambda event: center_window(root))
+
+# # Chạy giao diện chính
+# root.mainloop()
+
+
+
 import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
+from tkinter import messagebox, filedialog
 import pandas as pd
-from modules.data_cleaning import remove_missing_values, remove_duplicates, correct_formatting
-from modules.data_visualization import plot_average_scores
-from modules.data_crud import read_data, add_data, update_data, delete_data, save_data
+from modules import data_crud
 
-# Khởi tạo DataFrame ban đầu
-df = pd.DataFrame()
+# Đường dẫn mặc định đến file CSV
+default_file_path = 'data/dataset_demo.csv'
 
-# Hàm tải dữ liệu từ file CSV
-def load_data():
+# Đọc dữ liệu ban đầu
+df = data_crud.read_data(default_file_path)
+
+def load_file():
+    """
+    Hàm này mở hộp thoại file để người dùng chọn file CSV từ máy tính.
+    Sau khi chọn file, nó sẽ đọc dữ liệu từ file CSV và hiển thị lên giao diện.
+    Nếu không chọn file, sẽ sử dụng file CSV mặc định.
+    """
     global df
-    file_path = filedialog.askopenfilename(filetypes=[("CSV Files", "*.csv")])
+    file_path = filedialog.askopenfilename(
+        title="Chọn file CSV",
+        filetypes=(("CSV files", "*.csv"), ("All files", "*.*"))
+    )
+    
     if file_path:
-        df = read_data(file_path)
-        refresh_table()
-
-# Hàm làm sạch dữ liệu
-def clean_data():
-    global df
-    if df is not None:
-        df = remove_missing_values(df)
-        df = remove_duplicates(df)
-        df = correct_formatting(df)
-        refresh_table()
-        messagebox.showinfo("Thông báo", "Dữ liệu đã được làm sạch.")
-
-# Hàm trực quan hóa dữ liệu
-def visualize_data():
-    if df is not None:
-        plot_average_scores(df)
+        df = data_crud.read_data(file_path)
     else:
-        print("DataFrame không có dữ liệu. Hãy cung cấp dữ liệu cho DataFrame.")
+        messagebox.showinfo("Thông báo", f"Sử dụng file mặc định: {default_file_path}")
+        df = data_crud.read_data(default_file_path)
+    
+    if df is not None:
+        display_table(df)
+    else:
+        messagebox.showerror("Lỗi", "Không thể đọc dữ liệu từ file CSV đã chọn.")
 
-# Hàm làm mới bảng sau khi thêm hoặc xóa dữ liệu
-def refresh_table():
-    for row in tree.get_children():
-        tree.delete(row)
-    for index, row in df.iterrows():
-        tree.insert("", tk.END, values=list(row))
+def display_table(dataframe):
+    """
+    Hiển thị dữ liệu từ DataFrame lên giao diện.
 
-# Thêm sinh viên mới
+    Hàm sẽ xóa nội dung hiện tại trong hộp văn bản và hiển thị toàn bộ DataFrame.
+    """
+    text_output.config(state='normal')
+    text_output.delete(1.0, tk.END)
+    text_output.insert(tk.END, dataframe.to_string(index=False))
+    text_output.config(state='disabled')
+
+def display_student():
+    """
+    Hiển thị thông tin sinh viên dựa trên số báo danh (SBD) được nhập.
+    """
+    sbd = entry_sbd.get()
+    student = df[df['sbd'] == sbd]
+    if not student.empty:
+        student_info = student.to_string(index=False)
+        text_output.config(state='normal')
+        text_output.delete(1.0, tk.END)
+        text_output.insert(tk.END, student_info)
+        text_output.config(state='disabled')
+    else:
+        messagebox.showerror("Lỗi", f"Không tìm thấy sinh viên với SBD {sbd}")
+
 def add_student():
+    """
+    Thêm sinh viên mới vào DataFrame và lưu vào file CSV.
+    """
+    new_row = {
+        'sbd': entry_sbd.get(),
+        'toan': entry_math.get(),
+        'ngu_van': entry_literature.get(),
+        'ngoai_ngu': entry_foreign_lang.get(),
+    }
     global df
-    try:
-        sbd = int(sbd_entry.get())
-        toan = float(toan_entry.get())
-        ngu_van = float(ngu_van_entry.get())
-        ngoai_ngu = float(ngoai_ngu_entry.get())
-        vat_li = float(vat_li_entry.get())
-        hoa_hoc = float(hoa_hoc_entry.get())
-        sinh_hoc = float(sinh_hoc_entry.get())
-        lich_su = float(lich_su_entry.get())
-        dia_li = float(dia_li_entry.get())
-        gdcd = float(gdcd_entry.get())
-        ma_ngoai_ngu = int(ma_ngoai_ngu_entry.get())
+    df = data_crud.add_data(df, new_row)
+    data_crud.save_data(df, default_file_path)
+    messagebox.showinfo("Thành công", "Đã thêm sinh viên thành công")
+    display_table(df)
 
-        new_row = {
-            'sbd': sbd,
-            'toan': toan,
-            'ngu_van': ngu_van,
-            'ngoai_ngu': ngoai_ngu,
-            'vat_li': vat_li,
-            'hoa_hoc': hoa_hoc,
-            'sinh_hoc': sinh_hoc,
-            'lich_su': lich_su,
-            'dia_li': dia_li,
-            'gdcd': gdcd,
-            'ma_ngoai_ngu': ma_ngoai_ngu
-        }
-
-        df = df.append(new_row, ignore_index=True)
-        refresh_table()
-        messagebox.showinfo("Thông báo", "Sinh viên đã được thêm thành công!")
-        clear_entries()
-
-    except ValueError:
-        messagebox.showerror("Lỗi", "Vui lòng nhập đúng định dạng cho các trường!")
-
-# Xóa thông tin trong các trường nhập
-def clear_entries():
-    sbd_entry.delete(0, tk.END)
-    toan_entry.delete(0, tk.END)
-    ngu_van_entry.delete(0, tk.END)
-    ngoai_ngu_entry.delete(0, tk.END)
-    vat_li_entry.delete(0, tk.END)
-    hoa_hoc_entry.delete(0, tk.END)
-    sinh_hoc_entry.delete(0, tk.END)
-    lich_su_entry.delete(0, tk.END)
-    dia_li_entry.delete(0, tk.END)
-    gdcd_entry.delete(0, tk.END)
-    ma_ngoai_ngu_entry.delete(0, tk.END)
-
-# Hàm lọc sinh viên có điểm cao
-def filter_students_by_score():
+def update_student():
+    """
+    Cập nhật thông tin sinh viên dựa trên SBD được nhập.
+    """
+    sbd = entry_sbd.get()
+    updated_row = {
+        'sbd': sbd,
+        'toan': entry_math.get(),
+        'ngu_van': entry_literature.get(),
+        'ngoai_ngu': entry_foreign_lang.get(),
+    }
     global df
-    selected_subject = subject_combobox.get()
-    if selected_subject in df.columns:
-        top_students = df[df[selected_subject] == df[selected_subject].max()]
-        refresh_table(top_students)
+    df = data_crud.update_data(df, sbd, updated_row)
+    data_crud.save_data(df, default_file_path)
+    messagebox.showinfo("Thành công", "Đã cập nhật thông tin sinh viên")
+    display_table(df)
 
-# GUI chính
-def run_gui():
-    global sbd_entry, toan_entry, ngu_van_entry, ngoai_ngu_entry, vat_li_entry
-    global hoa_hoc_entry, sinh_hoc_entry, lich_su_entry, dia_li_entry, gdcd_entry, ma_ngoai_ngu_entry
-    global tree, subject_combobox
+def delete_student():
+    """
+    Xóa sinh viên dựa trên SBD được nhập.
+    """
+    sbd = entry_sbd.get()
+    global df
+    df = data_crud.delete_data(df, sbd)
+    data_crud.save_data(df, default_file_path)
+    messagebox.showinfo("Thành công", "Đã xóa sinh viên")
+    display_table(df)
 
-    root = tk.Tk()
-    root.title("Quản lý điểm thi THPT")
+def center_window(root):
+    """
+    Căn giữa cửa sổ Tkinter trên màn hình.
+    """
+    root.update_idletasks()
+    width = root.winfo_width()
+    height = root.winfo_height()
+    x = (root.winfo_screenwidth() // 2) - (width // 2)
+    y = (root.winfo_screenheight() // 2) - (height // 2)
+    root.geometry(f'{width}x{height}+{x}+{y}')
 
-    # Tạo khung nhập liệu
-    input_frame = tk.Frame(root)
-    input_frame.pack(pady=10)
+# Tạo giao diện Tkinter
+root = tk.Tk()
+root.title("Quản lý sinh viên")
 
-    # Các trường nhập dữ liệu sinh viên
-    tk.Label(input_frame, text="SBD").grid(row=0, column=0)
-    sbd_entry = tk.Entry(input_frame)
-    sbd_entry.grid(row=0, column=1)
+# Căn giữa cửa sổ
+root.update()
+center_window(root)
 
-    tk.Label(input_frame, text="Toán").grid(row=1, column=0)
-    toan_entry = tk.Entry(input_frame)
-    toan_entry.grid(row=1, column=1)
+# Các trường nhập liệu với khoảng cách padding
+tk.Label(root, text="SBD:").grid(row=0, column=0, padx=10, pady=5)
+entry_sbd = tk.Entry(root)
+entry_sbd.grid(row=0, column=1, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Ngữ Văn").grid(row=2, column=0)
-    ngu_van_entry = tk.Entry(input_frame)
-    ngu_van_entry.grid(row=2, column=1)
+tk.Label(root, text="Toán:").grid(row=1, column=0, padx=10, pady=5)
+entry_math = tk.Entry(root)
+entry_math.grid(row=1, column=1, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Ngoại Ngữ").grid(row=3, column=0)
-    ngoai_ngu_entry = tk.Entry(input_frame)
-    ngoai_ngu_entry.grid(row=3, column=1)
+tk.Label(root, text="Ngữ văn:").grid(row=2, column=0, padx=10, pady=5)
+entry_literature = tk.Entry(root)
+entry_literature.grid(row=2, column=1, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Vật Lý").grid(row=4, column=0)
-    vat_li_entry = tk.Entry(input_frame)
-    vat_li_entry.grid(row=4, column=1)
+tk.Label(root, text="Ngoại ngữ:").grid(row=3, column=0, padx=10, pady=5)
+entry_foreign_lang = tk.Entry(root)
+entry_foreign_lang.grid(row=3, column=1, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Hóa Học").grid(row=5, column=0)
-    hoa_hoc_entry = tk.Entry(input_frame)
-    hoa_hoc_entry.grid(row=5, column=1)
+# Nút thêm, sửa, xóa, hiển thị với khoảng cách padding
+btn_add = tk.Button(root, text="Thêm sinh viên", command=add_student)
+btn_add.grid(row=4, column=0, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Sinh Học").grid(row=6, column=0)
-    sinh_hoc_entry = tk.Entry(input_frame)
-    sinh_hoc_entry.grid(row=6, column=1)
+btn_update = tk.Button(root, text="Cập nhật sinh viên", command=update_student)
+btn_update.grid(row=4, column=1, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Lịch Sử").grid(row=7, column=0)
-    lich_su_entry = tk.Entry(input_frame)
-    lich_su_entry.grid(row=7, column=1)
+btn_delete = tk.Button(root, text="Xóa sinh viên", command=delete_student)
+btn_delete.grid(row=5, column=0, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Địa Lý").grid(row=8, column=0)
-    dia_li_entry = tk.Entry(input_frame)
-    dia_li_entry.grid(row=8, column=1)
+btn_display = tk.Button(root, text="Hiển thị sinh viên", command=display_student)
+btn_display.grid(row=5, column=1, padx=10, pady=5)
 
-    tk.Label(input_frame, text="GDCD").grid(row=9, column=0)
-    gdcd_entry = tk.Entry(input_frame)
-    gdcd_entry.grid(row=9, column=1)
+# Nút để tải file CSV
+btn_load_file = tk.Button(root, text="Tải file CSV", command=load_file)
+btn_load_file.grid(row=6, column=0, columnspan=2, padx=10, pady=5)
 
-    tk.Label(input_frame, text="Mã Ngoại Ngữ").grid(row=10, column=0)
-    ma_ngoai_ngu_entry = tk.Entry(input_frame)
-    ma_ngoai_ngu_entry.grid(row=10, column=1)
+# Text box để hiển thị thông tin sinh viên
+text_output = tk.Text(root, height=15, width=70, state='disabled')
+text_output.grid(row=7, column=0, columnspan=2, padx=10, pady=5)
 
-    # Nút Thêm sinh viên
-    add_button = tk.Button(root, text="Thêm Sinh Viên", command=add_student)
-    add_button.pack(pady=10)
+# Hiển thị dữ liệu mặc định khi khởi động
+if df is not None:
+    display_table(df)
 
-    # Tạo bảng hiển thị dữ liệu
-    tree_frame = tk.Frame(root)
-    tree_frame.pack()
+# Căn giữa cửa sổ khi thay đổi kích thước
+root.bind('<Configure>', lambda event: center_window(root))
 
-    tree = ttk.Treeview(tree_frame, columns=(df.columns), show="headings", height=10)
-    for col in df.columns:
-        tree.heading(col, text=col)
-        tree.column(col, width=100)
-    tree.pack()
-
-    # Tải dữ liệu, làm sạch, trực quan, và lọc
-    btn_frame = tk.Frame(root)
-    btn_frame.pack(pady=10)
-
-    load_button = tk.Button(btn_frame, text="Tải Dữ Liệu", command=load_data)
-    load_button.grid(row=0, column=0, padx=10)
-
-    clean_button = tk.Button(btn_frame, text="Làm Sạch Dữ Liệu", command=clean_data)
-    clean_button.grid(row=0, column=1, padx=10)
-
-    visualize_button = tk.Button(btn_frame, text="Trực Quan Dữ Liệu", command=visualize_data)
-    visualize_button.grid(row=0, column=2, padx=10)
-
-    # Chọn môn học để lọc
-    subject_combobox = ttk.Combobox(btn_frame, values=list(df.columns), state="readonly")
-    subject_combobox.grid(row=1, column=0, padx=10)
-    filter_button = tk.Button(btn_frame, text="Lọc Sinh Viên", command=filter_students_by_score)
-    filter_button.grid(row=1, column=1, padx=10)
-
-    root.mainloop()
-
-if __name__ == "__main__":
-    run_gui()
+# Chạy giao diện chính
+root.mainloop()

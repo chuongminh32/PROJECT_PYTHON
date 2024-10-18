@@ -3,8 +3,7 @@
 
 import unittest
 import pandas as pd
-from modules.data_cleaning import remove_missing_values, remove_duplicates, correct_formatting
-
+from modules.data_cleaning import remove_duplicates, handle_missing_value, correct_formatting
 class TestDataCleaning(unittest.TestCase):
 
     def setUp(self):
@@ -16,7 +15,7 @@ class TestDataCleaning(unittest.TestCase):
         })
 
     def test_remove_missing_values(self):
-        df_clean = remove_missing_values(self.df)
+        df_clean = handle_missing_value(self.df)
         self.assertEqual(len(df_clean), 2)
         self.assertNotIn(None, df_clean['toan'].values)
 

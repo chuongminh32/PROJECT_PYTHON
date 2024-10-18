@@ -1,39 +1,83 @@
-print("Thực hiện các thao tác CRUD trên tập dữ liệu") 
-
-# # file_path = "G:/NamII_HK1/PY/PROJECT/PROJECT_PYTHON/data/dataset.csv" -> demo
-# code demo 
 import pandas as pd
 
-# Đọc dữ liệu từ CSV
 def read_data(file_path):
+    """
+    Đọc dữ liệu từ file CSV.
+
+    Hàm này sẽ cố gắng đọc dữ liệu từ file CSV tại đường dẫn 'file_path' và trả về DataFrame.
+    Nếu xảy ra lỗi trong quá trình đọc, hàm sẽ bắt lỗi và trả về None.
+
+    Parameters:
+    file_path (str): Đường dẫn tới file CSV.
+
+    Returns:
+    DataFrame: DataFrame chứa dữ liệu từ file CSV.
+    None: Nếu có lỗi xảy ra trong quá trình đọc file.
+    """
     try:
-        df = pd.read_csv("file_path")
+        df = pd.read_csv(file_path)  # Đọc file CSV vào DataFrame
         return df
     except Exception as e:
-        print(f"Lỗi khi đọc file: {e}")
+        print(f"Lỗi khi đọc file: {e}")  # Thông báo lỗi nếu có sự cố
         return None
 
-# Thêm dữ liệu mới vào DataFrame
 def add_data(df, new_row):
-     df = df.append(new_row, ignore_index=True)
-     return df
+    """
+    Thêm một hàng dữ liệu mới vào DataFrame.
 
-# Cập nhật dữ liệu trong DataFrame theo SBD
+    Hàm này nhận DataFrame hiện tại và một hàng dữ liệu mới (new_row) dạng dictionary,
+    sau đó thêm hàng này vào cuối DataFrame.
+
+    Parameters:
+    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
+    new_row (dict): Hàng dữ liệu mới dưới dạng dictionary.
+
+    Returns:
+    DataFrame: DataFrame sau khi đã thêm hàng mới.
+    """
+    df = df.append(new_row, ignore_index=True)  # Thêm hàng mới vào DataFrame và bỏ qua chỉ mục cũ
+    return df
+
 def update_data(df, sbd, updated_row):
-    index = df[df['sbd'] == sbd].index
+    """
+    Cập nhật dữ liệu trong DataFrame theo SBD.
+
+    Hàm này tìm dòng có SBD tương ứng và cập nhật toàn bộ dòng đó với dữ liệu từ updated_row.
+    Nếu không tìm thấy SBD, sẽ in ra thông báo lỗi.
+
+    Parameters:
+    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
+    sbd (str/int): Số báo danh của sinh viên cần cập nhật.
+    updated_row (dict): Dữ liệu cập nhật dưới dạng dictionary.
+
+    Returns:
+    DataFrame: DataFrame sau khi cập nhật dữ liệu.
+    """
+    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có SBD
     if not index.empty:
-        df.loc[index, :] = updated_row
+        df.loc[index, :] = updated_row  # Cập nhật dòng với dữ liệu mới
     else:
-        print(f"Không tìm thấy SBD {sbd}")
+        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu SBD không tồn tại
     return df
 
-# Xóa một dòng dữ liệu theo SBD
 def delete_data(df, sbd):
-    df = df[df['sbd'] != sbd]
+    """
+    Xóa một hàng dữ liệu trong DataFrame theo SBD.
+
+    Hàm này tìm dòng có SBD tương ứng và xóa dòng đó khỏi DataFrame.
+    Nếu không tìm thấy SBD, sẽ in ra thông báo lỗi.
+
+    Parameters:
+    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
+    sbd (str/int): Số báo danh của sinh viên cần xóa.
+
+    Returns:
+    DataFrame: DataFrame sau khi đã xóa hàng dữ liệu.
+    """
+    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có SBD
+    if not index.empty:
+        df = df.drop(index)  # Xóa dòng với SBD tương ứng
+        print(f"Đã xóa sinh viên với SBD {sbd}")  # Thông báo đã xóa thành công
+    else:
+        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu SBD không tồn tại
     return df
-
-# Lưu DataFrame trở lại file CSV
-def save_data(df, file_path):
-    df.to_csv(file_path, index=False)
-
-
