@@ -29,6 +29,9 @@
     │   ├── data_normalization.py       # Module xử lý chuẩn hóa dữ liệu
     │   ├── data_crud.py                # Module thực hiện các thao tác CRUD
     │   ├── data_visualization.py       # Module trực quan hóa dữ liệu
+    │   ├── student_queries.py          # Module chứa các tính năng tìm kiếm sinh viên 
+    │   ├── student_statistics.py       # Module tính toán thống kê dữ liệu sinh viên (tính năng mới)
+    │   ├── student_comparison.py       # Module so sánh điểm số giữa các sinh viên (tính năng mới)
     │   └── utils.py                    # Các hàm tiện ích dùng chung cho nhiều module
     │
     ├── gui/                            # Thư mục chứa các tập tin giao diện 
