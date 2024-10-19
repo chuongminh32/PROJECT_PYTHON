@@ -1,11 +1,12 @@
 print("Trục quan hóa data")
+print("NTTT")
 
-# code demo 
+# code demo
 import matplotlib.pyplot as plt
 
 def plot_average_scores(df):
     """Vẽ biểu đồ điểm trung bình các môn"""
-    subjects = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
+    subjects = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc',
                 'lich_su', 'dia_li', 'gdcd']
     averages = df[subjects].mean()
 
