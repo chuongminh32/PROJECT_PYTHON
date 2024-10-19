@@ -27,17 +27,6 @@ def remove_duplicates(FILE_PATH):
     save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
     return 1
 
-<<<<<<< HEAD
-def correct_formatting(df):
-    """Sửa định dạng dữ liệu, đảm bảo SBD là chuỗi số liên tiếp và các điểm thi là số."""
-    # Chuyển đổi SBD thành chuỗi và loại bỏ bất kỳ giá trị không hợp lệ
-    df['sbd'] = df['sbd'].astype(str).str.replace('.0', '', regex=False)  # Đảm bảo không có ".0"
-    
-    columns = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
-               'lich_su', 'dia_li', 'gdcd']
-    df[columns] = df[columns].apply(pd.to_numeric, errors='coerce')  # Chuyển đổi các điểm thi thành số
-    return df
-=======
 def correct_formatting(FILE_PATH):
     """Sửa định dạng dữ liệu"""
 
@@ -51,7 +40,6 @@ def correct_formatting(FILE_PATH):
     # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
     # save_to_cleaned_data_file("data\cleaned_data.csv",result_df)
     return 1
->>>>>>> efe77949c2a27884d325d070dcae20a3bd9738af
 
 def save_to_cleaned_data_file(FILEPATH, result_df):
     """Hàm này để lưu các giá trị sau khi làm sạch vào file "cleaned_data.csv"
