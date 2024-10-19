@@ -20,7 +20,7 @@
     project_root/
     │
     ├── data/                           # Thư mục chứa tập tin dữ liệu
-    │   ├── dataset.csv                 # Tập dữ liệu nguồn
+    │   ├── dataset_demo.csv                 # Tập dữ liệu nguồn
     │   └── cleaned_data.csv            # Tập dữ liệu đã làm sạch (sau khi xử lý)
     │
     ├── modules/                        # Thư mục chứa các modules theo chức năng

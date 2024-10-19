@@ -1,5 +1,4 @@
-print("Code chuẩn hóa data")
-
+#CODE CHUAN HOA DATA
 import pandas as pd
 
 def normalize_scores(df):
