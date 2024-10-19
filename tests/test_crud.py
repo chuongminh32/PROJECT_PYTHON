@@ -55,7 +55,10 @@ def update_data(df, student_id, updated_row):
     """
     index = df[df['Student ID'] == student_id].index  # Tìm chỉ mục của dòng có Student ID
     if not index.empty:
-        df.loc[index] = pd.Series(updated_row)  # Cập nhật dòng với dữ liệu mới
+        # Đảm bảo rằng các giá trị của updated_row được ánh xạ đúng với cột của DataFrame
+        for key in updated_row:
+            if key in df.columns:
+                df.loc[index, key] = updated_row[key]
     else:
         print(f"Không tìm thấy Student ID {student_id}")  # Thông báo nếu Student ID không tồn tại
     return df
