@@ -504,22 +504,22 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 411;Portugal;137;0;Basic;Linear Algebra;Matrices and Determinants;Matrix equivalent - echelon,Matrix rank,Matrix operations,Matrix multiplication,Symmetric matrix,Linearly independent rows,Determinant computation,Commuting matrices,Determinant properties,Inverse matrix ,Solve matrix equation
 80;Lithuania;137;1;Basic;Linear Algebra;Matrices and Determinants;Matrix equivalent - echelon,Matrix rank,Matrix operations,Matrix multiplication,Symmetric matrix,Linearly independent rows,Determinant computation,Commuting matrices,Determinant properties,Inverse matrix ,Solve matrix equation
 52;Portugal;137;1;Basic;Linear Algebra;Matrices and Determinants;Matrix equivalent - echelon,Matrix rank,Matrix operations,Matrix multiplication,Symmetric matrix,Linearly independent rows,Determinant computation,Commuting matrices,Determinant properties,Inverse matrix ,Solve matrix equation
-128;Lithuania;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-455;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-1518;Portugal;138;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-510;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-166;Portugal;138;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-406;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-411;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-600;Italy;138;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-311;Ireland;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-311;Ireland;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
-311;Ireland;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix 
+128;Lithuania;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+455;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+1518;Portugal;138;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+510;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+166;Portugal;138;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+406;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+411;Portugal;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+600;Italy;138;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+311;Ireland;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+311;Ireland;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
+311;Ireland;138;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Determinant computation,Determinant properties,Inverse matrix
 90;Lithuania;139;0;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Matrix multiplication,Determinant computation,Determinant properties
 415;Portugal;139;0;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Matrix multiplication,Determinant computation,Determinant properties
 633;Italy;139;0;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Matrix multiplication,Determinant computation,Determinant properties
-415;Portugal;140;1;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Inverse matrix 
-633;Italy;140;1;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Inverse matrix 
+415;Portugal;140;1;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Inverse matrix
+633;Italy;140;1;Advanced;Linear Algebra;Matrices and Determinants;Matrix operations,Inverse matrix
 128;Lithuania;141;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Matrix multiplication
 1518;Portugal;141;1;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Matrix multiplication
 510;Portugal;141;0;Basic;Linear Algebra;Matrices and Determinants;Matrix operations,Matrix multiplication
@@ -2905,32 +2905,32 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 468;Portugal;348;1;Advanced;Complex Numbers;Complex Numbers;Imaginary part,Complex plane ,Real part
 582;Lithuania;348;1;Advanced;Complex Numbers;Complex Numbers;Imaginary part,Complex plane ,Real part
 374;Portugal;348;1;Advanced;Complex Numbers;Complex Numbers;Imaginary part,Complex plane ,Real part
-393;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-393;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-91;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-91;Lithuania;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-91;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-380;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-483;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-483;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-1247;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-376;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-375;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-470;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-403;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-426;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-468;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-551;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-582;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-91;Lithuania;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-466;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-380;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-457;Portugal;350;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-376;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-376;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-426;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-468;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-374;Portugal;350;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
+393;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+393;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+91;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+91;Lithuania;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+91;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+380;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+483;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+483;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+1247;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+376;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+375;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+470;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+403;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+426;Portugal;349;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+468;Portugal;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+551;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+582;Lithuania;349;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+91;Lithuania;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+466;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+380;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+457;Portugal;350;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+376;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+376;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+426;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+468;Portugal;350;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+374;Portugal;350;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
 393;Lithuania;351;0;Advanced;Complex Numbers;Complex Numbers;Nth root,Polar representation,Imaginary part,Complex plane ,Operations with complex numbers,Real part,Principal argument,De Moivre formulas
 393;Lithuania;351;0;Advanced;Complex Numbers;Complex Numbers;Nth root,Polar representation,Imaginary part,Complex plane ,Operations with complex numbers,Real part,Principal argument,De Moivre formulas
 91;Lithuania;351;1;Advanced;Complex Numbers;Complex Numbers;Nth root,Polar representation,Imaginary part,Complex plane ,Operations with complex numbers,Real part,Principal argument,De Moivre formulas
@@ -8887,8 +8887,8 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 552;Portugal;928;0;Advanced;Real Functions of a single variable;Domain, Image and Graphics;Planar graph
 1557;Portugal;928;0;Advanced;Real Functions of a single variable;Domain, Image and Graphics;Planar graph
 1557;Portugal;928;0;Advanced;Real Functions of a single variable;Domain, Image and Graphics;Planar graph
-81;Lithuania;929;1;Basic;Graph Theory;Graph Theory;Cycle and circuit,Shortest path,Path,Planar graph,Tree,Adjacency matrix,Chromatic number,Simple graph,Spanning tree,Incidence matrix 
-1487;Portugal;929;1;Basic;Graph Theory;Graph Theory;Cycle and circuit,Shortest path,Path,Planar graph,Tree,Adjacency matrix,Chromatic number,Simple graph,Spanning tree,Incidence matrix 
+81;Lithuania;929;1;Basic;Graph Theory;Graph Theory;Cycle and circuit,Shortest path,Path,Planar graph,Tree,Adjacency matrix,Chromatic number,Simple graph,Spanning tree,Incidence matrix
+1487;Portugal;929;1;Basic;Graph Theory;Graph Theory;Cycle and circuit,Shortest path,Path,Planar graph,Tree,Adjacency matrix,Chromatic number,Simple graph,Spanning tree,Incidence matrix
 1487;Portugal;930;0;Basic;Graph Theory;Graph Theory;Planar graph
 741;Ireland;933;0;Basic;Graph Theory;Graph Theory;Planar graph
 741;Ireland;935;0;Basic;Graph Theory;Graph Theory;Chromatic number
@@ -9106,15 +9106,15 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 851;Italy;1053;0;Basic;Optimization;Nonlinear Optimization;Optimal solution,Stationary point,Minimum,Maximum,Saddle point
 851;Italy;1053;0;Basic;Optimization;Nonlinear Optimization;Optimal solution,Stationary point,Minimum,Maximum,Saddle point
 376;Portugal;1054;1;Advanced;Complex Numbers;Complex Numbers;Equations involving complex numbers,Imaginary part,Modulus of a complex number,Conjugate number,Algebraic form,Real part
-376;Portugal;1056;1;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-376;Portugal;1056;0;Advanced;Complex Numbers;Complex Numbers;Complex plane 
-376;Portugal;1060;1;Basic;Complex Numbers;Complex Numbers;Complex plane 
-1487;Portugal;1060;0;Basic;Complex Numbers;Complex Numbers;Complex plane 
-175;Italy;1061;0;Basic;Complex Numbers;Complex Numbers;Complex plane 
-175;Italy;1061;0;Basic;Complex Numbers;Complex Numbers;Complex plane 
-71;Portugal;1061;1;Basic;Complex Numbers;Complex Numbers;Complex plane 
-71;Portugal;1061;1;Basic;Complex Numbers;Complex Numbers;Complex plane 
-80;Lithuania;1061;0;Basic;Complex Numbers;Complex Numbers;Complex plane 
+376;Portugal;1056;1;Advanced;Complex Numbers;Complex Numbers;Complex plane
+376;Portugal;1056;0;Advanced;Complex Numbers;Complex Numbers;Complex plane
+376;Portugal;1060;1;Basic;Complex Numbers;Complex Numbers;Complex plane
+1487;Portugal;1060;0;Basic;Complex Numbers;Complex Numbers;Complex plane
+175;Italy;1061;0;Basic;Complex Numbers;Complex Numbers;Complex plane
+175;Italy;1061;0;Basic;Complex Numbers;Complex Numbers;Complex plane
+71;Portugal;1061;1;Basic;Complex Numbers;Complex Numbers;Complex plane
+71;Portugal;1061;1;Basic;Complex Numbers;Complex Numbers;Complex plane
+80;Lithuania;1061;0;Basic;Complex Numbers;Complex Numbers;Complex plane
 37;Portugal;1063;1;Basic;Differentiation;Partial Differentiation;Second order,First order
 37;Portugal;1066;1;Advanced;Differentiation;Partial Differentiation;First order,Second order
 37;Portugal;1067;0;Advanced;Differentiation;Partial Differentiation;Power rule,Trigonometric rules,Logarithmic rule
@@ -9162,159 +9162,159 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 175;Italy;1089;1;Basic;Numerical Methods;Numerical Methods;First order,Second order
 955;Lithuania;1089;1;Basic;Numerical Methods;Numerical Methods;First order,Second order
 1340;Portugal;1089;1;Basic;Numerical Methods;Numerical Methods;First order,Second order
-1543;Portugal;1090;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-913;Ireland;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-175;Italy;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-175;Italy;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-979;Portugal;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-955;Lithuania;1090;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-1340;Portugal;1090;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-1543;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-1543;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-979;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-1538;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-37;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newton’s method
-1543;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1092;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1092;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1340;Portugal;1092;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1093;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1093;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1538;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1094;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1542;Portugal;1094;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1095;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1095;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1095;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1095;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1095;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1340;Portugal;1095;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1096;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1096;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1096;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1542;Portugal;1096;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
+1543;Portugal;1090;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+913;Ireland;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+175;Italy;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+175;Italy;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+979;Portugal;1090;1;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+955;Lithuania;1090;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+1340;Portugal;1090;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+1543;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+1543;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+979;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+1538;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+37;Portugal;1091;0;Basic;Numerical Methods;Numerical Methods;Nonlinear equation,Newtonï¿½s method
+1543;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1092;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1092;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1092;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1340;Portugal;1092;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1093;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1093;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1538;Portugal;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1094;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1542;Portugal;1094;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1095;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1095;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1095;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1095;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1095;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1340;Portugal;1095;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1096;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1096;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1096;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1542;Portugal;1096;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
 175;Italy;1097;1;Basic;Numerical Methods;Numerical Methods;Lagrange's interpolation,Polynomial interpolation
 979;Portugal;1097;1;Basic;Numerical Methods;Numerical Methods;Lagrange's interpolation,Polynomial interpolation
 1538;Portugal;1097;0;Basic;Numerical Methods;Numerical Methods;Lagrange's interpolation,Polynomial interpolation
 955;Lithuania;1097;1;Basic;Numerical Methods;Numerical Methods;Lagrange's interpolation,Polynomial interpolation
 955;Lithuania;1097;0;Basic;Numerical Methods;Numerical Methods;Lagrange's interpolation,Polynomial interpolation
 1542;Portugal;1097;1;Basic;Numerical Methods;Numerical Methods;Lagrange's interpolation,Polynomial interpolation
-1543;Portugal;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1098;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1340;Portugal;1098;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1099;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1099;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-979;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-71;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-974;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-71;Portugal;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-37;Portugal;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1101;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-979;Portugal;1101;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1101;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1538;Portugal;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-974;Portugal;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-979;Portugal;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-979;Portugal;1103;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1103;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1340;Portugal;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1104;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1104;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1104;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1104;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1104;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1104;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1104;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1104;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1105;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1105;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1105;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1105;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1105;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1105;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1105;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-37;Portugal;1105;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1106;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1106;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-175;Italy;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1106;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-955;Lithuania;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1542;Portugal;1106;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1340;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1340;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1107;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1543;Portugal;1107;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1107;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1107;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-913;Ireland;1107;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1107;0;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-979;Portugal;1107;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-71;Portugal;1107;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
-1542;Portugal;1107;1;Basic;Numerical Methods;Numerical Methods;Newton’s method,Nonlinear equation
+1543;Portugal;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1098;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1098;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1340;Portugal;1098;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1099;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1099;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+979;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+71;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+974;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1099;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+71;Portugal;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1100;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+37;Portugal;1100;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1101;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+979;Portugal;1101;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1101;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1101;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1538;Portugal;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+974;Portugal;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1102;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1102;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+979;Portugal;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+979;Portugal;1103;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1103;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1340;Portugal;1103;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1104;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1104;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1104;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1104;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1104;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1104;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1104;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1104;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1105;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1105;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1105;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1105;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1105;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1105;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1105;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+37;Portugal;1105;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1106;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1106;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+175;Italy;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1106;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+955;Lithuania;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1542;Portugal;1106;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1340;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1340;Portugal;1106;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1107;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1543;Portugal;1107;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1107;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1107;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+913;Ireland;1107;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1107;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+979;Portugal;1107;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+71;Portugal;1107;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
+1542;Portugal;1107;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s method,Nonlinear equation
 913;Ireland;1108;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
 175;Italy;1108;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
 175;Italy;1108;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
@@ -9327,84 +9327,84 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 955;Lithuania;1109;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
 955;Lithuania;1109;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
 1542;Portugal;1109;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
-1543;Portugal;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1110;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-71;Portugal;1110;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1110;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1111;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1111;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1542;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-913;Ireland;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-175;Italy;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-955;Lithuania;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1340;Portugal;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newton’s interpolation
-1543;Portugal;1113;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1113;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1113;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1113;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1113;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1113;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1340;Portugal;1113;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1114;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1114;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1114;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1114;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1114;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1114;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1114;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1115;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1115;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1115;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1115;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1115;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1538;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-37;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1340;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1117;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1117;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1538;Portugal;1117;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1117;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1117;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1542;Portugal;1117;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1542;Portugal;1117;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1118;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1118;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1340;Portugal;1118;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1119;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1119;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1119;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1119;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1119;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1120;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-1543;Portugal;1120;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1120;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1120;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1120;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-71;Portugal;1120;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1120;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1120;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
+1543;Portugal;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1110;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+71;Portugal;1110;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1110;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1110;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1111;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1111;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1542;Portugal;1111;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+913;Ireland;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+175;Italy;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+955;Lithuania;1112;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1340;Portugal;1112;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Newtonï¿½s interpolation
+1543;Portugal;1113;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1113;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1113;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1113;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1113;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1113;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1340;Portugal;1113;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1114;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1114;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1114;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1114;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1114;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1114;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1114;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1115;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1115;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1115;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1115;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1115;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1538;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+37;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1340;Portugal;1116;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1117;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1117;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1538;Portugal;1117;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1117;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1117;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1542;Portugal;1117;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1542;Portugal;1117;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1118;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1118;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1340;Portugal;1118;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1119;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1119;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1119;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1119;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1119;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1120;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+1543;Portugal;1120;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1120;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1120;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1120;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+71;Portugal;1120;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1120;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1120;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
 71;Portugal;1121;0;Basic;Differentiation;Derivatives;Trigonometric rules,Quotient rule
 176;Italy;1121;0;Basic;Differentiation;Derivatives;Trigonometric rules,Quotient rule
 57;Portugal;1123;1;Basic;Integration;Integration Techniques;Integration by parts,Substitution,Simple integration,Direct inspection
@@ -9455,7 +9455,7 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 36;Portugal;1163;0;Basic;Set Theory;Set Theory;Subset
 1487;Portugal;1164;1;Basic;Integration;Definite Integrals;Direct integrals ,Fundamental theorem of Calculus
 37;Portugal;1168;0;Basic;Integration;Definite Integrals;Direct integrals ,Fundamental theorem of Calculus
-1487;Portugal;1170;1;Basic;Integration;Definite Integrals;Fundamental theorem of Calculus,Direct integrals 
+1487;Portugal;1170;1;Basic;Integration;Definite Integrals;Fundamental theorem of Calculus,Direct integrals
 37;Portugal;1173;1;Basic;Integration;Definite Integrals; Integration by parts,Fundamental theorem of Calculus
 1487;Portugal;1174;1;Basic;Integration;Definite Integrals; Integration by parts,Fundamental theorem of Calculus
 1487;Portugal;1186;1;Basic;Integration;Definite Integrals;Fundamental theorem of Calculus,Partial fractions decomposition
@@ -9488,9 +9488,9 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 913;Ireland;1215;1;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
 175;Italy;1215;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
 979;Portugal;1215;0;Basic;Numerical Methods;Numerical Methods;Polynomial interpolation,Lagrange's interpolation
-175;Italy;1216;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1216;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1216;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
+175;Italy;1216;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1216;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1216;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
 71;Portugal;1220;1;Basic;Differentiation;Derivatives;Trigonometric rules,Power rule
 37;Portugal;1226;1;Basic;Differentiation;Derivatives;Trigonometric rules,Product rule,Exponential rule
 176;Italy;1226;0;Basic;Differentiation;Derivatives;Trigonometric rules,Product rule,Exponential rule
@@ -9504,21 +9504,21 @@ Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subto
 851;Italy;1246;0;Basic;Optimization;Nonlinear Optimization;Unconstrained optimization,Second derivative test,Optimal solution
 851;Italy;1247;0;Basic;Optimization;Nonlinear Optimization;Unconstrained optimization,Second derivative test,Optimal solution
 80;Lithuania;1248;1;Basic;Integration;Double Integration;Iterate integrals,Cartesian coordinates
-913;Ireland;1251;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1251;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1251;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1251;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1251;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-974;Portugal;1251;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1251;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1251;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1251;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1252;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-913;Ireland;1252;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-175;Italy;1252;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-979;Portugal;1252;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1252;1;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
-955;Lithuania;1252;0;Basic;Numerical Methods;Numerical Methods;Newton’s interpolation,Polynomial interpolation
+913;Ireland;1251;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1251;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1251;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1251;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1251;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+974;Portugal;1251;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1251;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1251;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1251;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1252;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+913;Ireland;1252;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+175;Italy;1252;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+979;Portugal;1252;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1252;1;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
+955;Lithuania;1252;0;Basic;Numerical Methods;Numerical Methods;Newtonï¿½s interpolation,Polynomial interpolation
 175;Italy;1473;0;Basic;Complex Numbers;Complex Numbers;Principal argument,Trigonometric form,Modulus of a complex number,Algebraic form
 175;Italy;1474;1;Basic;Complex Numbers;Complex Numbers;Principal argument,Trigonometric form,Modulus of a complex number,Algebraic form
 175;Italy;1475;0;Basic;Complex Numbers;Complex Numbers;Algebraic form,Real part,Equations involving complex numbers,Imaginary part,Conjugate number,Modulus of a complex number
