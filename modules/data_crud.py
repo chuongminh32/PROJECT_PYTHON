@@ -15,7 +15,7 @@ def read_data(file_path):
     None: Nếu có lỗi xảy ra trong quá trình đọc file.
     """
     try:
-        df = pd.read_csv(file_path, delimiter=';')  # Đọc file CSV vào DataFrame với dấu phân cách là dấu chấm phẩy
+        df = pd.read_csv(file_path, delimiter=',')  # Đọc file CSV với dấu phân cách là dấu phẩy
         return df
     except Exception as e:
         print(f"Lỗi khi đọc file: {e}")  # Thông báo lỗi nếu có sự cố
@@ -38,46 +38,46 @@ def add_data(df, new_row):
     df = df.append(new_row, ignore_index=True)  # Thêm hàng mới vào DataFrame và bỏ qua chỉ mục cũ
     return df
 
-def update_data(df, student_id, updated_row):
+def update_data(df, sbd, updated_row):
     """
-    Cập nhật dữ liệu trong DataFrame theo Student ID.
+    Cập nhật dữ liệu trong DataFrame theo Số báo danh (sbd).
 
-    Hàm này tìm dòng có Student ID tương ứng và cập nhật toàn bộ dòng đó với dữ liệu từ updated_row.
-    Nếu không tìm thấy Student ID, sẽ in ra thông báo lỗi.
+    Hàm này tìm dòng có sbd tương ứng và cập nhật toàn bộ dòng đó với dữ liệu từ updated_row.
+    Nếu không tìm thấy sbd, sẽ in ra thông báo lỗi.
 
     Parameters:
     df (DataFrame): DataFrame hiện tại chứa dữ liệu.
-    student_id (str/int): Student ID của sinh viên cần cập nhật.
+    sbd (str/int): Số báo danh của sinh viên cần cập nhật.
     updated_row (dict): Dữ liệu cập nhật dưới dạng dictionary.
 
     Returns:
     DataFrame: DataFrame sau khi cập nhật dữ liệu.
     """
-    index = df[df['Student ID'] == student_id].index  # Tìm chỉ mục của dòng có Student ID
+    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có sbd
     if not index.empty:
         df.loc[index, :] = updated_row  # Cập nhật dòng với dữ liệu mới
     else:
-        print(f"Không tìm thấy Student ID {student_id}")  # Thông báo nếu Student ID không tồn tại
+        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu sbd không tồn tại
     return df
 
-def delete_data(df, student_id):
+def delete_data(df, sbd):
     """
-    Xóa một hàng dữ liệu trong DataFrame theo Student ID.
+    Xóa một hàng dữ liệu trong DataFrame theo Số báo danh (sbd).
 
-    Hàm này tìm dòng có Student ID tương ứng và xóa dòng đó khỏi DataFrame.
-    Nếu không tìm thấy Student ID, sẽ in ra thông báo lỗi.
+    Hàm này tìm dòng có sbd tương ứng và xóa dòng đó khỏi DataFrame.
+    Nếu không tìm thấy sbd, sẽ in ra thông báo lỗi.
 
     Parameters:
     df (DataFrame): DataFrame hiện tại chứa dữ liệu.
-    student_id (str/int): Student ID của sinh viên cần xóa.
+    sbd (str/int): Số báo danh của sinh viên cần xóa.
 
     Returns:
     DataFrame: DataFrame sau khi đã xóa hàng dữ liệu.
     """
-    index = df[df['Student ID'] == student_id].index  # Tìm chỉ mục của dòng có Student ID
+    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có sbd
     if not index.empty:
-        df = df.drop(index)  # Xóa dòng với Student ID tương ứng
-        print(f"Đã xóa sinh viên với Student ID {student_id}")  # Thông báo đã xóa thành công
+        df = df.drop(index)  # Xóa dòng với sbd tương ứng
+        print(f"Đã xóa sinh viên với SBD {sbd}")  # Thông báo đã xóa thành công
     else:
-        print(f"Không tìm thấy Student ID {student_id}")  # Thông báo nếu Student ID không tồn tại
+        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu sbd không tồn tại
     return df
