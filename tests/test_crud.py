@@ -15,8 +15,32 @@ def add_data(df, new_row):
     """
     Thêm hàng mới vào DataFrame.
     """
-    new_row_df = pd.DataFrame([new_row])
-    df = pd.concat([df, new_row_df], ignore_index=True)
+    new_row_df = pd.DataFrame([new_row])  # Chuyển dictionary thành DataFrame
+    df = pd.concat([df, new_row_df], ignore_index=True)  # Thêm hàng mới vào DataFrame
+    return df
+def update_data(df, student_id, updated_row):
+    """
+    Cập nhật dữ liệu trong DataFrame theo Student ID.
+
+    Hàm này tìm dòng có Student ID tương ứng và cập nhật toàn bộ dòng đó với dữ liệu từ updated_row.
+    Nếu không tìm thấy Student ID, sẽ in ra thông báo lỗi.
+
+    Parameters:
+    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
+    student_id (str/int): Student ID của sinh viên cần cập nhật.
+    updated_row (dict): Dữ liệu cập nhật dưới dạng dictionary.
+
+    Returns:
+    DataFrame: DataFrame sau khi cập nhật dữ liệu.
+    """
+    index = df[df['Student ID'] == student_id].index  # Tìm chỉ mục của dòng có Student ID
+    if not index.empty:
+        # Đảm bảo rằng các giá trị của updated_row được ánh xạ đúng với cột của DataFrame
+        for key in updated_row:
+            if key in df.columns:
+                df.loc[index, key] = updated_row[key]
+    else:
+        print(f"Không tìm thấy Student ID {student_id}")  # Thông báo nếu Student ID không tồn tại
     return df
 
 def update_data(df, sbd, updated_row):
