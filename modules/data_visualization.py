@@ -20,10 +20,10 @@ def plot_average_scores(df):
     plt.ylabel('Điểm trung bình')
     plt.title('Điểm trung bình các môn thi THPT 2024')
 
-    # in nghiêng tên môn học
+    # in nghiêng các subject
     plt.xticks(rotation=45)
 
-    # tạo lưới
+    # tạo lưới mờ
     plt.grid(axis='y', linestyle='--', alpha=0.5)
 
     plt.tight_layout()
