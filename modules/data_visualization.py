@@ -8,7 +8,7 @@ def plot_average_scores(df):
                 'lich_su', 'dia_li', 'gdcd']
     averages = df[subjects].mean()
 
-    # Tạo màu thay đổi cho từng cột
+    # Tạo màu thay đổi cho từng cột (tạo dãy màu)
     colours = plt.cm.viridis(np.linspace(0, 1, len(subjects)))
 
     plt.bar(subjects, averages, color = colours)
