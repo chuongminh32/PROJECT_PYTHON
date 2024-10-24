@@ -8,7 +8,7 @@ def plot_average_scores(df):
     subjects = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
                 'lich_su', 'dia_li', 'gdcd']
     averages = df[subjects].mean()
-
+    # demo
     plt.bar(subjects, averages)
     plt.xlabel('Môn học')
     plt.ylabel('Điểm trung bình')

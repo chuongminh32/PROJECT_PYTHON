@@ -1,12 +1,9 @@
-Student ID;Student Country;Question ID;Type of Answer;Question Level;Topic;Subtopic;Keywords
-647;Ireland;77;0;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-41;Portugal;77;1;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-340;Portugal;77;1;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-641;Italy;77;0;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-669;Portugal;77;1;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-697;Portugal;77;1;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-720;Portugal;77;1;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-675;Portugal;77;1;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-663;Portugal;77;0;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-28;Portugal;77;0;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
-953;Lithuania;77;0;Basic;Statistics;Statistics;Stem and Leaf diagram,Relative frequency,Sample,Frequency
+id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grade,math.grade,sciences.grade,language.grade,portfolio.rating,coverletter.rating,refletter.rating
+0,Kiana Lor,China,Suzhou,31.31,120.62,F,NA,22,3.5,3.7,3.1,1,4,4,4
+1,Joshua Lonaker,United States of America,Santa Clarita,34.39,-118.54,M,NA,22,2.9,3.2,3.6,5,5,4,5
+2,Dakota Blanco,United States of America,Oakland,37.8,-122.27,F,NA,22,3.9,3.8,3.2,5,3,3,4
+3,Natasha Yarusso,United States of America,Castro Valley,37.69,-122.09,F,NA,20,3.3,2.8,3.2,5,5,2,4
+4,Brooke Cazares,Brazil,São José dos Campos,-23.18,-45.88,F,NA,21,3.7,2.6,3.4,1,4,4,5
+5,Rochelle Johnson,United States of America,Indianapolis,39.77,-86.16,F,NA,21,3.4,3.1,3.7,5,2,4,4
+6,Joey Abreu,China,Shenyang,41.79,123.43,M,NA,22,3.7,3.9,3.6,2,5,5,5
+7,Preston Suarez,Brazil,São Paulo,-23.47,-46.67,M,NA,22,3.8,3.7,3.6,2,5,5,4
