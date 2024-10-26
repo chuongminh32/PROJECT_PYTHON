@@ -59,7 +59,7 @@ if __name__ == "__main__":
         print(df)
 
         # Thêm một hàng dữ liệu mới
-        new_row = {'id': 8, 'name': 'New Student', 'nationality': 'Vietnam', 'city': 'Hanoi', 'latitude': 21.02, 'longitude': 105.84,
+        new_row = {'id': 8, 'name': 'Minh Chuong', 'nationality': 'Vietnam', 'city': 'Hanoi', 'latitude': 21.02, 'longitude': 105.84,
                    'gender': 'F', 'ethnic.group': 'NA', 'age': 23, 'english.grade': 4.0, 'math.grade': 4.5, 'sciences.grade': 4.2,
                    'language.grade': 3, 'portfolio.rating': 4, 'coverletter.rating': 4, 'refletter.rating': 4}
         df = add_data(df, new_row)
@@ -67,7 +67,7 @@ if __name__ == "__main__":
         print(df)
 
         # Cập nhật một hàng dữ liệu
-        updated_row = {'name': 'Updated Student', 'nationality': 'Vietnam', 'city': 'Hanoi', 'latitude': 21.02, 'longitude': 105.84,
+        updated_row = {'name': 'Chuong Minh', 'nationality': 'Vietnam', 'city': 'Hanoi', 'latitude': 21.02, 'longitude': 105.84,
                        'gender': 'F', 'ethnic.group': 'NA', 'age': 23, 'english.grade': 4.5, 'math.grade': 4.8, 'sciences.grade': 4.5,
                        'language.grade': 3.5, 'portfolio.rating': 4.5, 'coverletter.rating': 4.5, 'refletter.rating': 4.5}
         df = update_data(df, 8, updated_row)
