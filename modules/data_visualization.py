@@ -1,19 +1,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-print("TRỰC QUAN HÓA DATA".center(50, '='))
+print("TRỰC QUAN HÓA DỮ LIỆU".center(50, '='))
 def plot_grade(df):
     """Vẽ biểu đồ điểm học tập."""
     grade_cols = ['english.grade','math.grade','sciences.grade','language.grade']
 
-    df_grades = df[grade_cols]
+    df_grades = df[grade_cols].mean()
 
     # Tạo màu thay đổi cho từng cột (tạo dãy màu)
     colours = plt.cm.viridis(np.linspace(0, 1, len(grade_cols)))
 
     df_grades.plot(kind='bar', figsize=(10, 6))
 
-    plt.title("Comparison of Grades in Different Subjects")
+    plt.title("Biểu đồ điểm học tập trung bình")
     plt.xlabel("Student ID")
     plt.ylabel("Grades")
 
@@ -32,7 +32,7 @@ def plot_grade(df):
 
     plt.show()
     '''
-    # Tạo heatmap 
+    # Tạo heatmap
     plt.figure(figsize=(8, 6))
     sns.heatmap(df[ratings_cols].T, annot=True, cmap="YlGnBu", cbar=True, linewidths=0.5)
     plt.title("Heatmap of Grades and Portfolio Ratings")
