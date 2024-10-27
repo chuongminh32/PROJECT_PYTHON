@@ -29,3 +29,6 @@ def plot_average_scores(df):
     plt.tight_layout()
 
     plt.show()
+
+    plt.show()
+

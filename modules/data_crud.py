@@ -1,83 +1,99 @@
 import pandas as pd
+import csv
+from tkinter import messagebox
 
-def read_data(file_path):
+def read_data(file_path="data/data_clean.csv"):
     """
-    Đọc dữ liệu từ file CSV.
-
-    Hàm này sẽ cố gắng đọc dữ liệu từ file CSV tại đường dẫn 'file_path' và trả về DataFrame.
-    Nếu xảy ra lỗi trong quá trình đọc, hàm sẽ bắt lỗi và trả về None.
-
-    Parameters:
-    file_path (str): Đường dẫn tới file CSV.
+    Đọc dữ liệu từ file CSV và trả về danh sách các hàng.
+    
+    Args:
+        file_path (str): Đường dẫn đến file CSV.
 
     Returns:
-    DataFrame: DataFrame chứa dữ liệu từ file CSV.
-    None: Nếu có lỗi xảy ra trong quá trình đọc file.
+        list: Danh sách các hàng dữ liệu từ file CSV hoặc None nếu có lỗi hoặc không có dữ liệu.
     """
     try:
-        df = pd.read_csv(file_path, delimiter=',')  # Đọc file CSV với dấu phân cách là dấu phẩy
-        return df
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile)
+            data = list(reader)
+
+        if not data:  # Kiểm tra nếu dữ liệu trống
+            messagebox.showinfo("Thông báo", "Không có dữ liệu để hiển thị.")
+            return None
+
+        return data
+
+    except FileNotFoundError:
+        messagebox.showerror("Lỗi", f"Không tìm thấy file: {file_path}")
+        return None
     except Exception as e:
-        print(f"Lỗi khi đọc file: {e}")  # Thông báo lỗi nếu có sự cố
+        messagebox.showerror("Lỗi", f"Có lỗi xảy ra khi đọc file: {e}")
         return None
 
-def add_data(df, new_row):
-    """
-    Thêm một hàng dữ liệu mới vào DataFrame.
+def create_data(student_data, file_path):
+    """Thêm dữ liệu sinh viên vào file CSV, đảm bảo tiêu đề cột luôn đứng đầu."""
+    # Đọc dữ liệu hiện tại trong file
+    current_data = []
+    try:
+        with open(file_path, mode='r', newline='') as file:
+            reader = csv.reader(file)
+            current_data = list(reader)
+    except FileNotFoundError:
+        # Nếu file không tồn tại, tạo một danh sách rỗng
+        pass
 
-    Hàm này nhận DataFrame hiện tại và một hàng dữ liệu mới (new_row) dạng dictionary,
-    sau đó thêm hàng này vào cuối DataFrame.
+    # Kiểm tra xem tiêu đề đã có trong dữ liệu chưa
+    if not current_data:
+        # Nếu không có dữ liệu, thêm tiêu đề
+        current_data.append(["ID", "Name", "Nationality", "City", "Latitude", "Longitude", "Gender",
+                             "Ethnic Group", "Age", "English Grade", "Math Grade", 
+                             "Sciences Grade", "Language Grade", "Portfolio Rating", 
+                             "Cover Letter Rating", "Reference Letter Rating"])
 
-    Parameters:
-    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
-    new_row (dict): Hàng dữ liệu mới dưới dạng dictionary.
+    # Thêm dữ liệu mới vào cuối danh sách (bỏ qua tiêu đề)
+    current_data.append(student_data)
 
-    Returns:
-    DataFrame: DataFrame sau khi đã thêm hàng mới.
-    """
-    df = df.append(new_row, ignore_index=True)  # Thêm hàng mới vào DataFrame và bỏ qua chỉ mục cũ
-    return df
+    # Ghi lại toàn bộ dữ liệu vào file
+    with open(file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(current_data)
 
-def update_data(df, sbd, updated_row):
-    """
-    Cập nhật dữ liệu trong DataFrame theo Số báo danh (sbd).
 
-    Hàm này tìm dòng có sbd tương ứng và cập nhật toàn bộ dòng đó với dữ liệu từ updated_row.
-    Nếu không tìm thấy sbd, sẽ in ra thông báo lỗi.
+def update_data(student_id, new_info):
+    """Cập nhật thông tin sinh viên trong file CSV."""
+    updated = False
 
-    Parameters:
-    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
-    sbd (str/int): Số báo danh của sinh viên cần cập nhật.
-    updated_row (dict): Dữ liệu cập nhật dưới dạng dictionary.
+    # lấy data trong file demo  -> lưu list row 
+    with open("data/data_clean.csv", "r") as file:
+        reader = csv.reader(file)
+        rows = list(reader)
 
-    Returns:
-    DataFrame: DataFrame sau khi cập nhật dữ liệu.
-    """
-    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có sbd
-    if not index.empty:
-        df.loc[index, :] = updated_row  # Cập nhật dòng với dữ liệu mới
+    # Tìm kiếm ID sinh viên và cập nhật thông tin
+    for index, row in enumerate(rows):
+        # tìm data sinh viên theo ID (diuyệt qua tất cả các dòng | cột 0 trong data)
+        if row[0] == student_id:  # Giả sử ID sinh viên nằm ở cột đầu tiên
+            rows[index] = new_info  # Cập nhật thông tin mới
+            updated = True
+            break
+
+    # Ghi dữ liệu cập nhật lại vào file
+    if updated:
+        with open("data/data_clean.csv", "w", newline='') as file:
+            writer = csv.writer(file)
+            writer.writerows(rows)
+        return True
     else:
-        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu sbd không tồn tại
-    return df
+        return False
 
-def delete_data(df, sbd):
+def delete_data(df, student_id):
     """
-    Xóa một hàng dữ liệu trong DataFrame theo Số báo danh (sbd).
-
-    Hàm này tìm dòng có sbd tương ứng và xóa dòng đó khỏi DataFrame.
-    Nếu không tìm thấy sbd, sẽ in ra thông báo lỗi.
-
-    Parameters:
-    df (DataFrame): DataFrame hiện tại chứa dữ liệu.
-    sbd (str/int): Số báo danh của sinh viên cần xóa.
-
-    Returns:
-    DataFrame: DataFrame sau khi đã xóa hàng dữ liệu.
+    Xóa hàng dữ liệu theo ID.
     """
-    index = df[df['sbd'] == sbd].index  # Tìm chỉ mục của dòng có sbd
+    index = df[df['id'].astype(str) == student_id].index  # Chuyển đổi ID sang chuỗi để so sánh
     if not index.empty:
-        df = df.drop(index)  # Xóa dòng với sbd tương ứng
-        print(f"Đã xóa sinh viên với SBD {sbd}")  # Thông báo đã xóa thành công
+        df = df.drop(index)  # Xóa hàng dữ liệu
+        print(f"Đã xóa ID {student_id}")
     else:
-        print(f"Không tìm thấy SBD {sbd}")  # Thông báo nếu sbd không tồn tại
-    return df
+        print(f"Không tìm thấy ID {student_id}")
+
+    return df  # Trả về DataFrame đã cập nhật
