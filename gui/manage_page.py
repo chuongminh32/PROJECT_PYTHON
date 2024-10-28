@@ -20,11 +20,11 @@ def open_manage_page():
     """Hàm để mở trang quản lý sinh viên."""
     manage_root = Tk()
     manage_root.title("Quản lý sinh viên")
-    manage_root.geometry("1350x700")
+    manage_root.geometry("1000x550+300+200")
     manage_root.configure(background="white")
 
-    # === ICON === 
-    logo_path = os.path.join("images", "logo2.png")
+    # === Icon === 
+    logo_path = os.path.join("images", "logo.png")
     if not os.path.exists(logo_path):
         messagebox.showerror("Error", f"File not found: {logo_path}")
         return
@@ -32,17 +32,17 @@ def open_manage_page():
     logo_image = logo_image.resize((40, 40), Image.LANCZOS)
     logo_dash = ImageTk.PhotoImage(logo_image)
 
-    # === TITLE ===
+    # === Title ===
     title = Label(manage_root, text="Students Management", image=logo_dash, padx=10, compound=LEFT,
                   bg="#1C2442", fg="white", font=("Arial", 24, "bold"))
     title.place(x=0, y=0, relwidth=1, height=80)
 
-    # === NÚT QUAY LẠI ===
-    back_button = Button(manage_root, text="Quay lại", bg="#242533", fg="white", font=("Arial", 12, "bold"),
+    # === Back button ===
+    back_button = Button(manage_root, text="Back", border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"),
                          command=lambda: return_to_home(manage_root))
     back_button.place(x=20, y=100, width=90, height=30)
 
-    # === MENU === 
+    # === Menu === 
     M_Frame = LabelFrame(manage_root, text="Menu", bg="white", font=("Arial", 12, "bold"))
     M_Frame.place(x=0, y=150, width=200, relheight=1)
 
@@ -59,7 +59,7 @@ def open_manage_page():
     background_label = Label(manage_root, image=bg_manage)
     background_label.place(x=200, y=80, relwidth=1, relheight=1)
 
-    manage_root.mainloop()
+    manage_root.mainloop() # Chạy chương trình
 
 def return_to_home(manage_root):
     """Hàm để quay lại trang chính."""
@@ -68,13 +68,14 @@ def return_to_home(manage_root):
 
 def create_menu_button(parent, text, command, y_position):
     """Hàm để tạo nút trong khung menu."""
-    button = Button(parent, text=text, bg="#242533", fg="white", font=("Arial", 12, "bold"), command=command)
+    button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"), command=command)
     button.place(x=0, y=y_position, width=200, height=50)
     button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))
     button.bind("<Leave>", lambda e: button.config(bg="#242533"))
     return button
 
 def read():
+
     """Hàm cho chức năng Read - Hiển thị dữ liệu trong file ra một cửa sổ mới dưới dạng bảng."""
     try:
         data = read_data()  # Gọi hàm để lấy dữ liệu từ file CSV
@@ -85,7 +86,7 @@ def read():
         # Tạo một cửa sổ mới để hiển thị bảng dữ liệu
         display_window = Toplevel()
         display_window.title("Dữ liệu sinh viên")
-        display_window.geometry("800x400")
+        display_window.geometry("700x550+300+200")
 
         # Tạo khung chứa Treeview và thanh cuộn
         frame = ttk.Frame(display_window)
@@ -98,7 +99,7 @@ def read():
         # Tạo Treeview để hiển thị bảng dữ liệu
         columns = data[0]  # Lấy hàng đầu tiên làm tên cột
         tree = ttk.Treeview(frame, columns=columns, show="headings",
-                            yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
+                             yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
 
         # Đặt thanh cuộn cho Treeview
         v_scrollbar.config(command=tree.yview)
@@ -107,11 +108,18 @@ def read():
         # Đặt tiêu đề cho mỗi cột và tùy chỉnh độ rộng
         for col in columns:
             tree.heading(col, text=col)
-            tree.column(col, anchor='center', width=150)  # Đặt độ rộng cột 150, có thể điều chỉnh nếu cần
+            tree.column(col, anchor='center', width=150)  # Đặt độ rộng cột 150
 
-        # Thêm dữ liệu vào bảng
-        for row in data[1:]:
-            tree.insert("", "end", values=row)
+        # Thêm dữ liệu vào bảng với đường kẻ
+        for index, row in enumerate(data[1:]):
+            if index % 2 == 0:
+                tree.insert("", "end", values=row, tags=("evenrow",))
+            else:
+                tree.insert("", "end", values=row, tags=("oddrow",))
+
+        # Thiết lập màu sắc cho các hàng
+        tree.tag_configure("evenrow", background="#f9f9f9")  # Màu nền cho hàng chẵn
+        tree.tag_configure("oddrow", background="white")      # Màu nền cho hàng lẻ
 
         # Đặt Treeview và thanh cuộn vào khung
         tree.grid(row=0, column=0, sticky="nsew")
@@ -127,11 +135,12 @@ def read():
     except Exception as e:
         messagebox.showerror("Lỗi", f"Có lỗi xảy ra: {e}")
 
+
 def create():
     """Hàm cho chức năng Create - Tạo bảng nhập dữ liệu sinh viên với các gợi ý cho từng trường."""
     create_window = Toplevel()
     create_window.title("Thêm sinh viên mới")
-    create_window.geometry("500x600")
+    create_window.geometry("700x550+300+200")
     
     fields = [
         ("ID", "e.g., 0, 1, 2..."),
@@ -154,12 +163,15 @@ def create():
     
     entries = {}
     
+    # Chia số trường thành hai cột
     for i, (label_text, placeholder) in enumerate(fields):
-        Label(create_window, text=label_text).grid(row=i, column=0, padx=10, pady=5, sticky="w")
+        col = i % 2  # Xác định cột (0 hoặc 1)
+        row = i // 2  # Xác định hàng
+        Label(create_window, text=label_text).grid(row=row, column=col * 2, padx=10, pady=5, sticky="w")
         
         var = StringVar(value=placeholder)
         entry = Entry(create_window, textvariable=var, fg="grey")
-        entry.grid(row=i, column=1, padx=10, pady=5)
+        entry.grid(row=row, column=col * 2 + 1, padx=10, pady=5)
         entries[label_text] = entry
 
         def clear_placeholder(e, var=var, placeholder=placeholder):
@@ -196,7 +208,7 @@ def create():
 
     # Tạo nút để thêm dữ liệu mẫu
     add_button = Button(create_window, text="Thêm Dữ Liệu Mẫu", command=add_sample_data)
-    add_button.grid(row=len(fields), column=0, columnspan=2, pady=10)
+    add_button.grid(row=len(fields) // 2 + 1, column=0, padx=10, pady=10)
 
     def confirm():
         student_data = [entries[label_text].get() for label_text, _ in fields]
@@ -210,13 +222,14 @@ def create():
         create_window.destroy()
 
     confirm_button = Button(create_window, text="Xác nhận", command=confirm)
-    confirm_button.grid(row=len(fields) + 1, column=0, columnspan=2, pady=20)
+    confirm_button.grid(row=len(fields) // 2 + 1, column=1, padx=10, pady=10)
+
 
 def update():
     """Mở cửa sổ để nhập thông tin cập nhật sinh viên."""
     update_window = Toplevel()
     update_window.title("Cập nhật thông tin sinh viên")
-    update_window.geometry("450x400")
+    update_window.geometry("550x550+300+200")
 
     # Tạo Canvas để cuộn
     canvas = Canvas(update_window)
@@ -281,13 +294,11 @@ def update():
         else:
             messagebox.showerror("Lỗi", "Không tìm thấy sinh viên để cập nhật.")
 
-
-
 def delete():
     """Mở cửa sổ xóa sinh viên."""
     delete_window = Tk()
     delete_window.title("Xóa Sinh Viên")
-    delete_window.geometry("500x400")
+    delete_window.geometry("550x550+300+200")
 
     # Tạo Canvas để cuộn
     canvas = Canvas(delete_window)
@@ -360,5 +371,3 @@ if __name__ == "__main__":
 
 
 
-
-    
