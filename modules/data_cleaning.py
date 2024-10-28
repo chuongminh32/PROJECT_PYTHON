@@ -76,6 +76,6 @@ Lời gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong fil
 Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "data_demo.csv", từ lời gọi
 thứ 2, 3, 4 truyền "data\data_clean.csv"
 """
-remove_duplicates("data\data_demo.csv") #xóa comment để chạy demo
-handle_missing_value("data\data_clean.csv") #xóa comment để chạy demo
-correct_formatting("data\data_clean.csv")
+# remove_duplicates("data\data_demo.csv") #xóa comment để chạy demo
+# handle_missing_value("data\data_clean.csv") #xóa comment để chạy demo
+# correct_formatting("data\data_clean.csv")
