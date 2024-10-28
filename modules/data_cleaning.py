@@ -13,6 +13,14 @@ def handle_missing_value(FILE_PATH):
     # Xóa hàng không có id
     result_df = result_df.dropna(subset='id')
     
+    # Fill ô không có thông tin thành "No infor" (String)
+    colums_str = ['name','nationality','city','gender']
+    result_df[colums_str] = result_df[colums_str].fillna('No infor')
+
+    # Fill ô không có tuổi thành trung bình tuổi của cột đó (int)
+    ave_age = result_df['age'].mean()
+    result_df['age'] = result_df['age'].fillna(ave_age)
+
     # Fill ô không có điểm thành 0.0 (Float)
     columns_float = ['latitude', 'longitude','english.grade','math.grade','sciences.grade','language.grade']
     result_df[columns_float] = result_df[columns_float].fillna(0.0)
@@ -26,15 +34,15 @@ def handle_missing_value(FILE_PATH):
     return 1
 
 def remove_duplicates(FILE_PATH):
-    """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "cleaned_data.csv"
+    """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "data_clean.csv"
     - Gọi hàm này ở cuối để chạy demo: remove_duplicates("data\data_demo.csv")
     - df --> đọc file dữ liệu
     - resule_df --> chứa kq đã loại bỏ giá trị trùng lặp
     """
     df = pd.read_csv(FILE_PATH)
 
-    result_df = df.drop_duplicates(subset=['sbd'])
-    save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
+    result_df = df.drop_duplicates(subset=['id'])
+    save_to_cleaned_data_file("data\data_clean.csv", result_df)
     return 1
 
 def correct_formatting(FILE_PATH):
@@ -65,6 +73,6 @@ Lời gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong fil
 Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "dataset_demo.csv", từ lời gọi
 thứ 2, 3, 4 truyền "data\data_clean.csv"
 """
-# remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
-handle_missing_value("data\data_demo.csv") #xóa comment để chạy demo
+remove_duplicates("data\data_demo.csv") #xóa comment để chạy demo
+# handle_missing_value("data\data_demo.csv") #xóa comment để chạy demo
 # correct_formatting("data\dataset_demo.csv")
