@@ -1,5 +1,6 @@
 import pandas as pd
 import csv
+from math import ceil
 
 def handle_missing_value(FILE_PATH):
     """Thay thế dữ liệu bị thiếu thành 0.0 (float)
@@ -18,7 +19,8 @@ def handle_missing_value(FILE_PATH):
     result_df[colums_str] = result_df[colums_str].fillna('No infor')
 
     # Fill ô không có tuổi thành trung bình tuổi của cột đó (int)
-    ave_age = result_df['age'].mean()
+    # ave_age = ceil(result_df['age'].mean())
+    ave_age = int(ceil(23.1))
     result_df['age'] = result_df['age'].fillna(ave_age)
 
     # Fill ô không có điểm thành 0.0 (Float)
@@ -48,19 +50,19 @@ def remove_duplicates(FILE_PATH):
 def correct_formatting(FILE_PATH):
     """Sửa định dạng dữ liệu"""
 
-    columns = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
-               'lich_su', 'dia_li', 'gdcd']
-    df = pd.read_csv(FILE_PATH)
-    # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
-    # result_df 
-    # print(df)
+    colums_int = ['portfolio.rating','coverletter.rating','refletter.rating', 'age']
+
+    result_df = pd.read_csv(FILE_PATH)
+    result_df['age'] = pd.Series(result_df['age'], dtype=pd.Int64Dtype())
+    pd.to_numeric(result_df['age'],downcast='unsigned',errors='coerce')
+
     # df['sbd'] = df['sbd'].apply(pd.to_numeric(downcast='integer'))
     # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
-    # save_to_cleaned_data_file("data\cleaned_data.csv",result_df)
+    save_to_cleaned_data_file("data\data_clean.csv",result_df)
     return 1
 
 def save_to_cleaned_data_file(FILEPATH, result_df):
-    """Hàm này để lưu các giá trị sau khi làm sạch vào file "cleaned_data.csv"
+    """Hàm này để lưu các giá trị sau khi làm sạch vào file "data_clean.csv"
     Hàm đọc dữ liệu từ giá trị đã được làm sạch của df (giá trị này được gán vào result_df)
     """
     with open(FILEPATH,'w',encoding="utf8", newline='') as file:
@@ -70,9 +72,9 @@ def save_to_cleaned_data_file(FILEPATH, result_df):
 
 """
 Lời gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong file demo và ghi vào file cleaned
-Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "dataset_demo.csv", từ lời gọi
+Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "data_demo.csv", từ lời gọi
 thứ 2, 3, 4 truyền "data\data_clean.csv"
 """
 remove_duplicates("data\data_demo.csv") #xóa comment để chạy demo
-# handle_missing_value("data\data_demo.csv") #xóa comment để chạy demo
-# correct_formatting("data\dataset_demo.csv")
+handle_missing_value("data\data_clean.csv") #xóa comment để chạy demo
+correct_formatting("data\data_clean.csv")

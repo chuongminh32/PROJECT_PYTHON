@@ -1,2 +1,2 @@
-    # #Xóa hàng không có số báo danh
-    # result_df = df.dropna(subset='ethnic.group', axis=1)
+mo.csv") #xóa comment để chạy demo
+handle_missing_value("data\data
