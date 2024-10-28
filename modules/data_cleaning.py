@@ -3,21 +3,31 @@ import csv
 
 def handle_missing_value(FILE_PATH):
     """Thay thế dữ liệu bị thiếu thành 0.0 (float)
-    - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\dataset_demo.csv")
+    - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\data_demo.csv")
     - Hàm xử lý dữ liệu ĐIỂM bị thiếu thành 0.0 và xóa hàng khi giá trị tại cột "SBD" bị rỗng
     """
     df = pd.read_csv(FILE_PATH)
-    #Xóa hàng không có số báo danh
-    result_df = df.dropna(subset=['sbd'])
+    # Xóa cột Ethic.group
+    result_df = df.drop('ethnic.group', axis=1)
 
-    #Fill ô không có điểm thành 0.0
-    result_df = result_df.fillna(0.0)
-    save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
+    # Xóa hàng không có id
+    result_df = result_df.dropna(subset='id')
+    
+    # Fill ô không có điểm thành 0.0 (Float)
+    columns_float = ['latitude', 'longitude','english.grade','math.grade','sciences.grade','language.grade']
+    result_df[columns_float] = result_df[columns_float].fillna(0.0)
+
+    # Fill ô không có rating thành 0 (Int)
+    colums_int = ['portfolio.rating','coverletter.rating','refletter.rating']
+    result_df[colums_int] = result_df[colums_int].fillna(0)
+
+    # Lưu dữ liệu đã được làm sạch vào file
+    save_to_cleaned_data_file("data\data_clean.csv", result_df)
     return 1
 
 def remove_duplicates(FILE_PATH):
     """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "cleaned_data.csv"
-    - Gọi hàm này ở cuối để chạy demo: remove_duplicates("data\dataset_demo.csv")
+    - Gọi hàm này ở cuối để chạy demo: remove_duplicates("data\data_demo.csv")
     - df --> đọc file dữ liệu
     - resule_df --> chứa kq đã loại bỏ giá trị trùng lặp
     """
@@ -53,8 +63,8 @@ def save_to_cleaned_data_file(FILEPATH, result_df):
 """
 Lời gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong file demo và ghi vào file cleaned
 Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "dataset_demo.csv", từ lời gọi
-thứ 2, 3, 4 truyền "data\cleaned_data.csv"
+thứ 2, 3, 4 truyền "data\data_clean.csv"
 """
 # remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
-# handle_missing_value("data\cleaned_data.csv") #xóa comment để chạy demo
+handle_missing_value("data\data_demo.csv") #xóa comment để chạy demo
 # correct_formatting("data\dataset_demo.csv")
