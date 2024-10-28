@@ -30,8 +30,8 @@ def remove_duplicates(FILE_PATH):
 def correct_formatting(FILE_PATH):
     """Sửa định dạng dữ liệu"""
 
-    columns = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
-               'lich_su', 'dia_li', 'gdcd']
+    # columns = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
+    #            'lich_su', 'dia_li', 'gdcd']
     df = pd.read_csv(FILE_PATH)
     # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
     # result_df 
