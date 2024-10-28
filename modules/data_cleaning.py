@@ -20,7 +20,7 @@ def handle_missing_value(FILE_PATH):
 
     # Fill ô không có tuổi thành trung bình tuổi của cột đó (int)
     # ave_age = ceil(result_df['age'].mean())
-    ave_age = int(ceil(23.1))
+    ave_age = ceil(result_df['age'].mean())
     result_df['age'] = result_df['age'].fillna(ave_age)
 
     # Fill ô không có điểm thành 0.0 (Float)
@@ -49,12 +49,15 @@ def remove_duplicates(FILE_PATH):
 
 def correct_formatting(FILE_PATH):
     """Sửa định dạng dữ liệu"""
-
-    colums_int = ['portfolio.rating','coverletter.rating','refletter.rating', 'age']
-
     result_df = pd.read_csv(FILE_PATH)
+
+    # Convert cột age thành unsigned int    
     result_df['age'] = pd.Series(result_df['age'], dtype=pd.Int64Dtype())
-    pd.to_numeric(result_df['age'],downcast='unsigned',errors='coerce')
+    result_df['age'] = abs(result_df['age'].values)
+
+    # Convert các cột trong list sau thành unsigned int <= 5
+    colums_int = ['portfolio.rating','coverletter.rating','refletter.rating']
+    result_df[colums_int] = abs(result_df[colums_int].values % 6)
 
     # df['sbd'] = df['sbd'].apply(pd.to_numeric(downcast='integer'))
     # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
