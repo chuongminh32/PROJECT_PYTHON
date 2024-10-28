@@ -59,8 +59,6 @@ def correct_formatting(FILE_PATH):
     colums_int = ['portfolio.rating','coverletter.rating','refletter.rating']
     result_df[colums_int] = abs(result_df[colums_int].values % 6)
 
-    # df['sbd'] = df['sbd'].apply(pd.to_numeric(downcast='integer'))
-    # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
     save_to_cleaned_data_file("data\data_clean.csv",result_df)
     return 1
 
