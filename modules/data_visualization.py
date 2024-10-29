@@ -8,10 +8,14 @@ def plot_grade(df):
 
     df_grades = df[grade_cols].mean()
 
-    # Tạo màu thay đổi cho từng cột (tạo dãy màu)
-    colours = plt.cm.viridis(np.linspace(0, 1, len(grade_cols)))
+    # Tạo màu thay đổi cho từng cột (tạo dãy màu từ xanh dương tới xanh lá)
+    colours = plt.cm.coolwarm(np.linspace(0, 1, len(grade_cols)))
 
-    df_grades.plot(kind='bar', figsize=(10, 6))
+    # Thiết lập kích thước và màu sắc cho biểu đồ
+    fig, ax = plt.subplots(figsize=(12, 8), facecolor='white')
+    bars = ax.bar(grade_cols, df_grades, color=colours)
+
+    #df_grades.plot(kind='bar', figsize=(10, 6))
 
     plt.title("Biểu đồ điểm học tập trung bình")
     plt.xlabel("Student ID")
@@ -30,13 +34,47 @@ def plot_grade(df):
     # Lấy tên của các cột làm nhãn cho chú thích
     plt.legend(title="Subjects")
 
+    # Hover interaction
+    annot = ax.annotate("", xy=(0,0), xytext=(10,10),textcoords="offset points",
+                        bbox=dict(boxstyle="round", fc="w"),
+                        arrowprops=dict(arrowstyle="->"))
+    annot.set_visible(False)
+
+    def update_annot(bar):
+        """Cập nhật chú thích khi hover."""
+        x = bar.get_x() + bar.get_width() / 2
+        y = bar.get_height()
+        annot.xy = (x, y)
+        text = f"{bar.get_label()}:\n{y:.2f}"
+        annot.set_text(text)
+        annot.get_bbox_patch().set_alpha(0.6)
+
+    def on_hover(event):
+        """Hiển thị thông tin khi hover chuột."""
+        visible = annot.get_visible()
+        if event.inaxes == ax:
+            for bar in bars:
+                if bar.contains(event)[0]:
+                    update_annot(bar)
+                    annot.set_visible(True)
+                    fig.canvas.draw_idle()
+                    return
+        if visible:
+            annot.set_visible(False)
+            fig.canvas.draw_idle()
+
+    # Click interaction
+    def on_click(event):
+        """Xử lý sự kiện khi click."""
+        if event.inaxes == ax:
+            for bar in bars:
+                if bar.contains(event)[0]:
+                    subject = bar.get_label()
+                    grade = bar.get_height()
+                    print(f"Bạn đã chọn: {subject} - Điểm trung bình: {grade:.2f}")
+
+    fig.canvas.mpl_connect("motion_notify_event", on_hover)
+    fig.canvas.mpl_connect("button_press_event", on_click)
+
+    plt.tight_layout()
     plt.show()
-    '''
-    # Tạo heatmap
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(df[ratings_cols].T, annot=True, cmap="YlGnBu", cbar=True, linewidths=0.5)
-    plt.title("Heatmap of Grades and Portfolio Ratings")
-    plt.xlabel("Student ID")
-    plt.ylabel("Grades / Ratings")
-    plt.show()
-    '''
