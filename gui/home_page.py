@@ -3,7 +3,9 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import os
 import subprocess
-from gui.manage_page import open_manage_page
+from manage_page import open_manage_page
+from view_page import open_view_page
+
 
 class Main:
     def __init__(self, root):
@@ -21,9 +23,7 @@ class Main:
     def create_logo(self):
         """Tạo logo cho ứng dụng."""
         logo_path = os.path.join("images", "logo.png")
-        if not os.path.exists(logo_path):
-            raise FileNotFoundError(f"File not found: {logo_path}")
-        logo_image = Image.open(logo_path).resize((40, 40), Image.LANCZOS)
+        logo_image = Image.open(logo_path).resize((20, 20))
         self.logo_dash = ImageTk.PhotoImage(logo_image)
 
         Label(self.root, text="Student Management Mini", image=self.logo_dash, padx=10, compound=LEFT,
@@ -31,7 +31,8 @@ class Main:
 
     def create_menu(self):
         """Tạo menu cho ứng dụng."""
-        M_Frame = LabelFrame(self.root, text="Menu", bg="white", font=("Arial", 12, "bold"))
+        M_Frame = LabelFrame(self.root, text="Menu",
+                             bg="white", font=("Arial", 12, "bold"))
         M_Frame.place(x=0, y=80, width=200, relheight=1)
 
         # Thêm các nút vào khung menu
@@ -41,8 +42,10 @@ class Main:
         self.create_menu_button(M_Frame, "Exit", self.exit_program, 220)
 
         # Nền cho khung chính
-        self.bg_Home = ImageTk.PhotoImage(Image.open("images/bg_home.png").resize((1150, 700), Image.LANCZOS))
-        Label(self.root, image=self.bg_Home).place(x=200, y=80, relwidth=1, relheight=1)
+        self.bg_Home = ImageTk.PhotoImage(Image.open(
+            "images/bg_home.png").resize((1150, 700), Image.LANCZOS))
+        Label(self.root, image=self.bg_Home).place(
+            x=200, y=80, relwidth=1, relheight=1)
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
@@ -59,7 +62,8 @@ class Main:
 
     def show_view(self):
         """Chức năng xem."""
-        messagebox.showinfo("View", "Chức năng này đang được phát triển.")
+        self.root.destroy()
+        open_view_page()
 
     def logout(self):
         """Chức năng đăng xuất."""
@@ -71,6 +75,7 @@ class Main:
         """Chức năng thoát chương trình."""
         if messagebox.askyesno("Exit", "Bạn có chắc chắn muốn thoát chương trình?"):
             self.root.quit()
+
 
 if __name__ == "__main__":
     root = Tk()

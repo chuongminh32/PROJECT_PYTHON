@@ -1,6 +1,8 @@
 import pandas as pd
 import csv
 from math import ceil
+from pathlib import Path
+
 
 def handle_missing_value(FILE_PATH):
     """Thay thế dữ liệu bị thiếu thành 0.0 (float)
@@ -79,3 +81,27 @@ thứ 2, 3, 4 truyền "data\data_clean.csv"
 # remove_duplicates("data\data_demo.csv") #xóa comment để chạy demo
 # handle_missing_value("data\data_clean.csv") #xóa comment để chạy demo
 # correct_formatting("data\data_clean.csv")
+
+# Đường dẫn đến thư mục cha của thư mục "modules"
+project_root = Path(__file__).resolve().parent.parent
+
+# Đường dẫn đến file data.csv trong thư mục data
+file_path = project_root / "data" / "data_demo.csv"
+handle_missing_value(file_path)
+
+
+def main():
+    # Đường dẫn đến thư mục cha của thư mục "modules"
+    project_root = Path(__file__).resolve().parent.parent
+    # Đường dẫn đến file data_demo.csv trong thư mục data
+    file_path = project_root / "data" / "data_demo.csv"
+
+    # Run each cleaning function and print results
+    print(remove_duplicates(file_path))
+    print(handle_missing_value("data/data_clean.csv"))
+    print(correct_formatting("data/data_clean.csv"))
+
+
+# Call main to run the data cleaning process
+if __name__ == "__main__":
+    main()
