@@ -82,14 +82,14 @@ def plot_grade(df):
     plt.tight_layout()
     plt.show()
 
-def main():
-     # Đường dẫn đến thư mục cha của thư mục "modules"
-    project_root = Path(__file__).resolve().parent.parent
+# def main():
+#      # Đường dẫn đến thư mục cha của thư mục "modules"
+#     project_root = Path(__file__).resolve().parent.parent
 
-    # Đường dẫn đến file data.csv trong thư mục data
-    file_path = project_root / "data" / "data_demo.csv"
-    df = pd.read_csv(file_path)
-    plot_grade(df)
+#     # Đường dẫn đến file data.csv trong thư mục data
+#     file_path = project_root / "data" / "data_demo.csv"
+#     df = pd.read_csv(file_path)
+#     plot_grade(df)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
