@@ -107,4 +107,3 @@ def plot_country(FILE_PATH):
 
 #plot_grade('data/data_demo.csv')
 #plot_age('data/data_demo.csv')
-#plot_country('data/data_demo.csv')

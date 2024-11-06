@@ -3,7 +3,7 @@
 ### Thành viên 1
 - **Họ và tên**: Phạm Hàn Minh Chương.
 - **MSSV**: 23110187.
-- **Vai trò**: Leader, Quản lí dự án, lên kế hoạch, điều phối nhóm, code GUI [FE], làm sạch data (Numpy, Pandas).
+- **Vai trò**: Leader, Quản lí dự án, lên kế hoạch, điều phối nhóm, code GUI [FE].
 
 ### Thành viên 2
 - **Họ và tên**: Nguyễn Thanh Bình Minh.
@@ -29,10 +29,10 @@
     │   ├── data_normalization.py       # Module xử lý chuẩn hóa dữ liệu
     │   ├── data_crud.py                # Module thực hiện các thao tác CRUD
     │   ├── data_visualization.py       # Module trực quan hóa dữ liệu
-    │   ├── student_queries.py          # Module chứa các tính năng tìm kiếm sinh viên 
+    │   ├── student_queries.py          # Module chứa các tính năng tìm kiếm sinh viên (tính năng mới)
     │   ├── student_statistics.py       # Module tính toán thống kê dữ liệu sinh viên (tính năng mới)
-    │   ├── student_comparison.py       # Module so sánh điểm số giữa các sinh viên (tính năng mới)
     │   └── utils.py                    # Các hàm tiện ích dùng chung cho nhiều module
+    │   
     │
     ├── gui/                            # Thư mục chứa các tập tin giao diện 
     │   └── main_gui.py                 # Chương trình giao diện chính (dùng Tkinter)

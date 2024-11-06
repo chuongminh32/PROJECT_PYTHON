@@ -6,7 +6,7 @@ from PIL import Image, ImageTk
 
 def initialize_root():
     root = Tk()
-    root.title("Mini Edu Hub - Login")
+    root.title("Mini Edu - Login")
     root.geometry("1000x550+300+200")
     root.config(bg="white")
     root.resizable(False, False)
@@ -23,15 +23,13 @@ def create_login_frame(root):
     return frame
 
 def add_logo(frame):
-    logo_path = os.path.join("images", "logo.png")
-    if not os.path.exists(logo_path):
-        raise FileNotFoundError(f"File not found: {logo_path}")
-    logo_image = ImageTk.PhotoImage(Image.open(logo_path).resize((40, 40)))
-    Label(frame, image=logo_image, bg="white").place(x=30, y=10)
+    logo_path = os.path.join("images", "logo_ute.png")
+    logo_image = ImageTk.PhotoImage(Image.open(logo_path).resize((50, 50)))
+    Label(frame, image=logo_image, bg="white").place(x=20, y=10)
     frame.logo_image = logo_image  # Giữ tham chiếu
 
 def add_heading(frame):
-    Label(frame, text="Mini Edu Hub", font=("Arial", 20, "bold"), bg="white", fg="#1C2442").place(x=80, y=15)
+    Label(frame, text="Mini Edu System", font=("Arial", 20, "bold"), bg="white", fg="#1C2442").place(x=80, y=15)
 
 def add_password_entry(frame):
     password = Entry(frame, width=25, fg='#1C2442', border=0, bg="white", font=("Arial", 11))
@@ -59,7 +57,7 @@ def add_login_button(frame, password):
         if password.get() == "123":  # Giả định mật khẩu là "123"
             messagebox.showinfo("Login", "Đăng nhập thành công!")
             root.destroy()
-            subprocess.run(["python", "home_page.py"])  # Chuyển đến trang mới
+            subprocess.run(["python", "gui/home_page.py"])  # Chuyển đến trang mới
         else:
             messagebox.showerror("Login", "Mật khẩu không chính xác")
 

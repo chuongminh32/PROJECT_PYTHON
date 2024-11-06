@@ -1,8 +1,9 @@
-import pandas as pd
 import csv
-from tkinter import messagebox
+import os
+import tkinter as tk
+from tkinter import messagebox, ttk
 
-def read_data(file_path="data/data_clean.csv"):
+def read_data(file_path):
     """
     Đọc dữ liệu từ file CSV và trả về danh sách các hàng.
     
@@ -97,3 +98,42 @@ def delete_data(df, student_id):
         print(f"Không tìm thấy ID {student_id}")
 
     return df  # Trả về DataFrame đã cập nhật
+
+
+# def display_data_in_table(root, data):
+#     """
+#     Hiển thị dữ liệu dưới dạng bảng trong Tkinter.
+    
+#     Args:
+#         root (Tk): Cửa sổ Tkinter.
+#         data (list): Danh sách các hàng dữ liệu để hiển thị.
+#     """
+#     if data is None or len(data) == 0:
+#         return
+
+#     # Tạo Treeview để hiển thị bảng dữ liệu
+#     table = ttk.Treeview(root, columns=[f"col_{i}" for i in range(len(data[0]))], show='headings')
+#     table.pack(expand=True, fill='both')
+
+#     # Đặt tên cột theo hàng đầu tiên
+#     for i, header in enumerate(data[0]):
+#         table.heading(f"col_{i}", text=header)
+#         table.column(f"col_{i}", width=100)  # Điều chỉnh độ rộng của cột
+
+#     # Thêm các hàng dữ liệu
+#     for row in data[1:]:  # Bỏ qua hàng đầu tiên (header)
+#         table.insert("", "end", values=row)
+
+# def main():
+#     root = tk.Tk()
+#     root.title("Hiển thị dữ liệu dạng bảng")
+#     root.geometry("800x400")
+
+#     # Đọc và hiển thị dữ liệu
+#     data = read_data()
+#     display_data_in_table(root, data)
+
+#     root.mainloop()
+
+# if __name__ == "__main__":
+#     main()
