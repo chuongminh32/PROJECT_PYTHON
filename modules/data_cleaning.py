@@ -1,107 +1,63 @@
 import pandas as pd
-import csv
 from math import ceil
 from pathlib import Path
-
-
-def handle_missing_value(FILE_PATH):
-    """Thay thế dữ liệu bị thiếu thành 0.0 (float)
-    - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\data_demo.csv")
-    - Hàm xử lý dữ liệu ĐIỂM bị thiếu thành 0.0 và xóa hàng khi giá trị tại cột "SBD" bị rỗng
+def handle_missing_value(df):
+    """Thay thế dữ liệu bị thiếu bằng các giá trị mặc định và trả về DataFrame đã được làm sạch.
+    - Điền điểm số bị thiếu bằng 0.0, dữ liệu nhân khẩu học bị thiếu bằng 'No infor',
+      và thay thế tuổi bị thiếu bằng tuổi trung bình.
+    - Xóa các hàng có giá trị 'id' bị thiếu.
     """
-    df = pd.read_csv(FILE_PATH)
-    # Xóa cột Ethic.group
-    result_df = df.drop('ethnic.group', axis=1)
+    # Xóa cột 'ethnic.group' nếu tồn tại
+    if 'ethnic.group' in df.columns:
+        df = df.drop(columns='ethnic.group')
 
-    # Xóa hàng không có id
-    result_df = result_df.dropna(subset='id')
-    
-    # Fill ô không có thông tin thành "No infor" (String)
-    colums_str = ['name','nationality','city','gender']
-    result_df[colums_str] = result_df[colums_str].fillna('No infor')
+    # Điền dữ liệu chuỗi bị thiếu bằng 'No infor'
+    columns_str = ['name', 'nationality', 'city', 'gender']
+    for col in columns_str:
+        if col in df.columns:
+            df[col] = df[col].fillna('No infor')
 
-    # Fill ô không có tuổi thành trung bình tuổi của cột đó (int)
-    # ave_age = ceil(result_df['age'].mean())
-    ave_age = ceil(result_df['age'].mean())
-    result_df['age'] = result_df['age'].fillna(ave_age)
+    # Điền tuổi bị thiếu bằng tuổi trung bình, làm tròn lên
+    if 'age' in df.columns:
+        ave_age = ceil(df['age'].mean())
+        df['age'] = df['age'].fillna(ave_age)
 
-    # Fill ô không có điểm thành 0.0 (Float)
-    columns_float = ['latitude', 'longitude','english.grade','math.grade','sciences.grade','language.grade']
-    result_df[columns_float] = result_df[columns_float].fillna(0.0)
+    # Điền điểm số bị thiếu bằng 0.0
+    columns_float = ['latitude', 'longitude', 'english.grade', 'math.grade', 'sciences.grade', 'language.grade']
+    for col in columns_float:
+        if col in df.columns:
+            df[col] = df[col].fillna(0.0)
 
-    # Fill ô không có rating thành 0 (Int)
-    colums_int = ['portfolio.rating','coverletter.rating','refletter.rating']
-    result_df[colums_int] = result_df[colums_int].fillna(0)
+    # Điền đánh giá bị thiếu bằng 0
+    columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
+    for col in columns_int:
+        if col in df.columns:
+            df[col] = df[col].fillna(0)
 
-    # Lưu dữ liệu đã được làm sạch vào file
-    save_to_cleaned_data_file("data\data_clean.csv", result_df)
-    return 1
+    return df
 
-def remove_duplicates(FILE_PATH):
-    """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "data_clean.csv"
-    - Gọi hàm này ở cuối để chạy demo: remove_duplicates("data\data_demo.csv")
-    - df --> đọc file dữ liệu
-    - resule_df --> chứa kq đã loại bỏ giá trị trùng lặp
-    """
-    df = pd.read_csv(FILE_PATH)
+def remove_duplicates(df):
+    """Loại bỏ các hàng trùng lặp dựa trên 'id' và trả về DataFrame đã được làm sạch."""
+    df = df.drop_duplicates(subset=['id'])
+    return df
 
-    result_df = df.drop_duplicates(subset=['id'])
-    save_to_cleaned_data_file("data\data_clean.csv", result_df)
-    return 1
+def correct_formatting(df):
+    """Sửa định dạng dữ liệu, làm cho cột 'age' và các cột đánh giá thành số nguyên không âm."""
+    # Chuyển đổi 'age' thành số nguyên dương
+    if 'age' in df.columns:
+        df['age'] = pd.Series(df['age'], dtype=pd.Int64Dtype())
+        df['age'] = abs(df['age'])
 
-def correct_formatting(FILE_PATH):
-    """Sửa định dạng dữ liệu"""
-    result_df = pd.read_csv(FILE_PATH)
+    # Đảm bảo các cột đánh giá là số nguyên không âm từ 0 đến 5
+    columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
+    for col in columns_int:
+        if col in df.columns:
+            df[col] = abs(df[col]) % 6
 
-    # Convert cột age thành unsigned int    
-    result_df['age'] = pd.Series(result_df['age'], dtype=pd.Int64Dtype())
-    result_df['age'] = abs(result_df['age'].values)
+    return df
 
-    # Convert các cột trong list sau thành unsigned int <= 5
-    colums_int = ['portfolio.rating','coverletter.rating','refletter.rating']
-    result_df[colums_int] = abs(result_df[colums_int].values % 6)
-
-    save_to_cleaned_data_file("data\data_clean.csv",result_df)
-    return 1
-
-def save_to_cleaned_data_file(FILEPATH, result_df):
-    """Hàm này để lưu các giá trị sau khi làm sạch vào file "data_clean.csv"
-    Hàm đọc dữ liệu từ giá trị đã được làm sạch của df (giá trị này được gán vào result_df)
-    """
-    with open(FILEPATH,'w',encoding="utf8", newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(result_df.head())
-        writer.writerows(result_df.values)
-
-"""
-Lời gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong file demo và ghi vào file cleaned
-Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "data_demo.csv", từ lời gọi
-thứ 2, 3, 4 truyền "data\data_clean.csv"
-"""
-# remove_duplicates("data\data_demo.csv") #xóa comment để chạy demo
-# handle_missing_value("data\data_clean.csv") #xóa comment để chạy demo
-# correct_formatting("data\data_clean.csv")
-
-# Đường dẫn đến thư mục cha của thư mục "modules"
-project_root = Path(__file__).resolve().parent.parent
-
-# Đường dẫn đến file data.csv trong thư mục data
-file_path = project_root / "data" / "data_demo.csv"
-handle_missing_value(file_path)
-
-
-def main():
-    # Đường dẫn đến thư mục cha của thư mục "modules"
-    project_root = Path(__file__).resolve().parent.parent
-    # Đường dẫn đến file data_demo.csv trong thư mục data
-    file_path = project_root / "data" / "data_demo.csv"
-
-    # Run each cleaning function and print results
-    print(remove_duplicates(file_path))
-    print(handle_missing_value("data/data_clean.csv"))
-    print(correct_formatting("data/data_clean.csv"))
-
-
-# Call main to run the data cleaning process
-if __name__ == "__main__":
-    main()
+def save_to_cleaned_data_file(filepath, result_df):
+    """Lưu dữ liệu được làm sạch vào dile clean_data.csv."""
+    filepath = Path(filepath)
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+    result_df.to_csv(filepath, index=False, encoding="utf-8")
