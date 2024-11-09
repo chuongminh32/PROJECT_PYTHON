@@ -3,7 +3,7 @@ import os
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-def read_data(file_path):
+def read_data(file_path = "data/data_clean.csv"):
     """
     Đọc dữ liệu từ file CSV và trả về danh sách các hàng.
     
@@ -60,24 +60,50 @@ def create_data(student_data, file_path):
         writer.writerows(current_data)
 
 
+# def update_data(student_id, new_info):
+#     """Cập nhật thông tin sinh viên trong file CSV."""
+#     updated = False
+
+#     # lấy data trong file demo  -> lưu list row 
+#     with open("data/data_clean.csv", "r") as file:
+#         reader = csv.reader(file)
+#         data = list(reader)
+
+#     # Tìm kiếm ID sinh viên và cập nhật thông tin
+#     for index, col in enumerate(data):
+#         # tìm data sinh viên theo ID (diuyệt qua tất cả các dòng | cột 0 trong data)
+#        if str(col[0]).strip() == student_id.strip():  # Giả sử ID sinh viên nằm ở cột đầu tiên
+#             col[index] = new_info  # Cập nhật thông tin mới
+#             updated = True
+#             break
+
+#     # Ghi dữ liệu cập nhật lại vào file
+#     if updated:
+#         with open("data/data_clean.csv", "w", newline='') as file:
+#             writer = csv.writer(file)
+#             writer.writerows(rows)
+#         return True
+#     else:
+#         return False
+
 def update_data(student_id, new_info):
     """Cập nhật thông tin sinh viên trong file CSV."""
     updated = False
 
-    # lấy data trong file demo  -> lưu list row 
-    with open("data/data_clean.csv", "r") as file:
+    # Đọc dữ liệu từ file CSV
+    with open("data/student-dataset.csv", "r") as file:
         reader = csv.reader(file)
         rows = list(reader)
 
-    # Tìm kiếm ID sinh viên và cập nhật thông tin
+    # Kiểm tra và cập nhật dữ liệu
     for index, row in enumerate(rows):
-        # tìm data sinh viên theo ID (diuyệt qua tất cả các dòng | cột 0 trong data)
-        if row[0] == student_id:  # Giả sử ID sinh viên nằm ở cột đầu tiên
-            rows[index] = new_info  # Cập nhật thông tin mới
+        if str(row[0]).strip() == student_id.strip():  # Kiểm tra ID sinh viên
+            # Cập nhật thông tin mới, giữ ID trong cột đầu tiên
+            rows[index] = [student_id] + new_info[1:]  # Giữ lại ID và thay thế các trường còn lại
             updated = True
             break
 
-    # Ghi dữ liệu cập nhật lại vào file
+    # Nếu tìm thấy và cập nhật thành công, ghi dữ liệu vào file
     if updated:
         with open("data/data_clean.csv", "w", newline='') as file:
             writer = csv.writer(file)
@@ -88,16 +114,17 @@ def update_data(student_id, new_info):
 
 def delete_data(df, student_id):
     """
-    Xóa hàng dữ liệu theo ID.
+    Xóa sinh viên khỏi DataFrame dựa trên ID.
     """
-    index = df[df['id'].astype(str) == student_id].index  # Chuyển đổi ID sang chuỗi để so sánh
+    index = df[df['id'].astype(str) == student_id].index  # Chuyển ID sang chuỗi để so sánh
     if not index.empty:
-        df = df.drop(index)  # Xóa hàng dữ liệu
-        print(f"Đã xóa ID {student_id}")
+        df = df.drop(index)  # Xóa dòng dữ liệu có ID trùng khớp
+        return df
     else:
-        print(f"Không tìm thấy ID {student_id}")
+        return None  # Trả về None nếu không tìm thấy sinh viên
 
-    return df  # Trả về DataFrame đã cập nhật
+# test 
+# update_data("1", ["1", "Nguyễn Văn A", "Việt Nam", "Hà Nội", "21.028511", "105.804817", "Nam", "Kinh", "20", "8.0", "7.5", "8.0", "7.5", "8.0", "8.0", "8.0"])
 
 
 # def display_data_in_table(root, data):

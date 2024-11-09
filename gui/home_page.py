@@ -3,8 +3,9 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import os
 import subprocess
-from manage_page import open_manage_page
-from view_page import open_view_page
+
+from manage_page import StudentManagementApp
+from view_page import ViewPage
 
 
 class Main:
@@ -19,6 +20,7 @@ class Main:
         self.root.title("Hệ thống quản lý sinh viên")
         self.root.geometry("1000x550+300+200")
         self.root.configure(background="white")
+        self.root.resizable(False, False)
 
     def create_logo(self):
         """Tạo logo cho ứng dụng."""
@@ -56,14 +58,14 @@ class Main:
         button.bind("<Leave>", lambda e: button.config(bg="#242533"))
 
     def manage(self):
-        """Chức năng quản lý."""
-        self.root.destroy()
-        open_manage_page()
+        """Mở trang quản lý trong cửa sổ mới."""
+        management_window = Toplevel(self.root)  # Tạo cửa sổ mới
+        StudentManagementApp(management_window)
 
     def show_view(self):
         """Chức năng xem."""
-        self.root.destroy()
-        open_view_page()
+        management_window = Toplevel(self.root)  # Tạo cửa sổ mới
+        ViewPage(management_window)
 
     def logout(self):
         """Chức năng đăng xuất."""

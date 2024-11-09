@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-print("TRỰC QUAN HÓA DỮ LIỆU".center(50, '='))
+# print("TRỰC QUAN HÓA DỮ LIỆU".center(50, '='))
 def plot_grade(FILE_PATH):
     df = pd.read_csv(FILE_PATH)
     """Vẽ biểu đồ điểm học tập."""
@@ -18,8 +18,8 @@ def plot_grade(FILE_PATH):
     #df_grades.plot(kind='bar', figsize=(10, 6))
 
     plt.title("Biểu đồ điểm học tập trung bình")
-    plt.xlabel("Subjects")
-    plt.ylabel("Grades")
+    plt.xlabel("Môn học")
+    plt.ylabel("Điểm")
 
     # Tạo lưới mờ
     plt.grid(axis='y', linestyle='--', alpha=0.5)
@@ -95,15 +95,27 @@ def plot_age(FILE_PATH):
     plt.show()
 
 def plot_country(FILE_PATH):
-    df = pd.read_csv(FILE_PATH)
     """Vẽ biểu đồ phân bố quốc gia."""
+    df = pd.read_csv(FILE_PATH)
+    
+    # Đếm số lượng sinh viên theo quốc gia
     nationality_counts = df['nationality'].value_counts()
-    plt.figure(figsize=(7, 7))
+    
+    # Kích thước biểu đồ 
+    plt.figure(figsize=(10, 10))
+    
+    # Vẽ biểu đồ tròn
     plt.pie(nationality_counts, labels=nationality_counts.index, autopct='%1.1f%%', startangle=140)
+    
+    # Thêm tiêu đề
     plt.title("Phân bố quốc gia")
-    plt.legend()
-    plt.legend(loc='lower right')
+    
+    # Thêm bảng chú thích nằm ngoài biểu đồ
+    plt.legend(nationality_counts.index, loc='center left', bbox_to_anchor=(1, 0.5))
+    
+    # Hiển thị biểu đồ
     plt.show()
 
-#plot_grade('data/data_demo.csv')
-#plot_age('data/data_demo.csv')
+# plot_country('data/student-dataset.csv')
+# plot_grade('data/data_demo.csv')
+# plot_age('data/data_demo.csv')
