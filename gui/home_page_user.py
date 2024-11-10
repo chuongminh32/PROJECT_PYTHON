@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 import os
 import subprocess
 
-from manage_page import StudentManagementApp
+from manage_page_user import StudentManagementAppUser
 from view_page import ViewPage
 
 
@@ -38,12 +38,12 @@ class Main:
         M_Frame.place(x=0, y=80, width=200, relheight=1)
 
         # Thêm các nút vào khung menu
-        self.create_menu_button(M_Frame, "Quản lí", self.manage, 0)
+        self.create_menu_button(M_Frame, "Quản lí", self.manage_user, 0)
         self.create_menu_button(M_Frame, "Trực quan", self.show_view, 75)
         self.create_menu_button(M_Frame, "Đăng xuất", self.logout, 150)
-        self.create_menu_button(M_Frame, "Thoát", self.exit_program, 220)
+        self.create_menu_button(M_Frame, "Exit", self.exit_program, 220)
 
-        # Nền cho khung chính
+       # Nền cho khung chính
         self.bg_Home = ImageTk.PhotoImage(Image.open(
             "images/bg_home2.png").resize((800, 470), Image.LANCZOS))
         Label(self.root, image=self.bg_Home).place(
@@ -57,15 +57,15 @@ class Main:
         button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))
         button.bind("<Leave>", lambda e: button.config(bg="#242533"))
 
-    def manage(self):
+    def manage_user(self):
         """Mở trang quản lý trong cửa sổ mới."""
         self.root.destroy()
-        subprocess.run(["python", "gui/manage_page.py"])
+        subprocess.run(["python", "gui/manage_page_user.py"])
 
     def show_view(self):
         """Chức năng xem."""
         self.root.destroy()
-        subprocess.run(["python", "gui/view_page.py"])
+        subprocess.run(["python", "gui/view_page_user.py"])
 
     def logout(self):
         """Chức năng đăng xuất."""

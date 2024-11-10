@@ -12,10 +12,10 @@ import matplotlib.pyplot as plt
 
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from modules.data_crud import read_data, create_data, update_data, delete_data  
-from modules.data_visualization import plot_grade, plot_age, plot_country
+from modules.data_crud import read_data, create_data, update_data, delete_data
 from modules.data_cleaning import handle_missing_value, remove_duplicates, correct_formatting, save_to_cleaned_data_file
+from modules.data_visualization import plot_grade, plot_age, plot_country
+
 
 class ViewPage:
     def __init__(self, root):
@@ -23,7 +23,7 @@ class ViewPage:
         self.setup_window()
         self.create_logo()
         self.create_menu()
-        self.create_content_frame()  
+        # self.create_content_frame()
         root.resizable(False, False)
 
     def setup_window(self):
@@ -38,7 +38,7 @@ class ViewPage:
         logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS)
         self.logo_dash = ImageTk.PhotoImage(logo_image)
 
-        Label(self.root, text="Student Management Mini", image=self.logo_dash, padx=10, compound=LEFT,
+        Label(self.root, text="Trực quan", image=self.logo_dash, padx=10, compound=LEFT,
               bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
 
     def create_menu(self):
@@ -48,18 +48,20 @@ class ViewPage:
         M_Frame.place(x=0, y=80, width=200, relheight=1)
 
         # Thêm các nút vào khung menu
-        self.create_menu_button(M_Frame, "Plot Age", self.plot_age, 0)
-        self.create_menu_button(M_Frame, "Plot Country", self.plot_country, 75)
-        self.create_menu_button(M_Frame, "Plot Grade", self.plot_grade, 150)
-        self.create_menu_button(M_Frame, "Cleaning", self.cleaning, 220)
-        self.create_menu_button(M_Frame, "Read", self.read, 290)
-        self.create_menu_button(M_Frame, "Back Home", self.exit_program, 360)
+        self.create_menu_button(M_Frame, "Độ tuổi", self.plot_age, 0)
+        self.create_menu_button(M_Frame, "Quốc gia", self.plot_country, 75)
+        self.create_menu_button(M_Frame, "Điểm số", self.plot_grade, 150)
+        self.create_menu_button(M_Frame, "Back", self.exit_program, 220)
 
-    def create_content_frame(self):
-        """Tạo vùng hiển thị nội dung."""
-        self.content_frame = Frame(self.root, bg="lightgrey")
-        self.content_frame.place(x=200, y=80, width=800, height=470)
-
+     # Nền cho khung chính
+        self.bg_Home = ImageTk.PhotoImage(Image.open(
+            "images/hcmute3.png").resize((704, 538), Image.LANCZOS))
+        Label(self.root, image=self.bg_Home).place(
+            x=220, y=80, width=800, height=470)
+    # def create_content_frame(self):
+    #     """Tạo vùng hiển thị nội dung."""
+    #     self.content_frame = Frame(self.root, bg="lightgrey")
+    #     self.content_frame.place(x=200, y=80, width=800, height=470)
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
@@ -100,7 +102,7 @@ class ViewPage:
             # Đặt tiêu đề cho mỗi cột và tùy chỉnh độ rộng
             for col in columns:
                 tree.heading(col, text=col)
-                tree.column(col, anchor='center', width=150) # Độ rộng cố định
+                tree.column(col, anchor='center', width=150)  # Độ rộng cố định
 
             # Thêm dữ liệu vào bảng
             for row in data[1:]:
@@ -108,16 +110,18 @@ class ViewPage:
 
             # Đặt Treeview và thanh cuộn vào content_frame
             tree.grid(row=0, column=0, sticky="nsew")
-            v_scrollbar.grid(row=0, column=1, sticky="ns") # Cần thêm cột này để thanh cuộn dọc hoạt động
-            h_scrollbar.grid(row=1, column=0, sticky="ew") # Cần thêm hàng này để thanh cuộn ngang hoạt động
+            # Cần thêm cột này để thanh cuộn dọc hoạt động
+            v_scrollbar.grid(row=0, column=1, sticky="ns")
+            # Cần thêm hàng này để thanh cuộn ngang hoạt động
+            h_scrollbar.grid(row=1, column=0, sticky="ew")
 
             # Kết nối thanh cuộn với Treeview
             v_scrollbar.config(command=tree.yview)  # Cuộn dọc
             h_scrollbar.config(command=tree.xview)  # Cuộn ngang
 
             # Thiết lập tỷ lệ mở rộng cho Treeview
-            self.content_frame.grid_rowconfigure(0, weight=1) # Cột 0
-            self.content_frame.grid_columnconfigure(0, weight=1) # Hàng 0
+            self.content_frame.grid_rowconfigure(0, weight=1)  # Cột 0
+            self.content_frame.grid_columnconfigure(0, weight=1)  # Hàng 0
 
         except FileNotFoundError:
             messagebox.showerror("Lỗi", f"Không tìm thấy file: {file_path}")
@@ -126,26 +130,25 @@ class ViewPage:
 
     def plot_age(self):
         """Hàm trực quan độ tuổi"""
-        self.clear_content_frame()
+        # self.clear_content_frame()
         file_path = "data/student-dataset.csv"
         plot_age(file_path)
 
     def plot_country(self):
         """Hàm trực quan quốc gia."""
-        self.clear_content_frame()
+        # self.clear_content_frame()
         file_path = "data/student-dataset.csv"
         plot_country(file_path)
-       
 
     def plot_grade(self):
         """Hàm trực quan điểm học tập."""
-        self.clear_content_frame()
+        # self.clear_content_frame()
         file_path = "data/student-dataset.csv"
         plot_grade(file_path)
 
-    def cleaning(self):    
+    def cleaning(self):
         """Hàm làm sạch dữ liệu."""
-        self.clear_content_frame()
+        # self.clear_content_frame()
         file_path = "data/student-dataset.csv"
         data = pd.read_csv(file_path)
         # Xử lí dữ liệu
@@ -162,18 +165,20 @@ class ViewPage:
         save_to_cleaned_data_file(cleaned_file_path, data)
 
         # Thông báo
-        messagebox.showinfo("Thông báo", "Dữ liệu đã được làm sạch và lưu vào file data_clean.csv.")
+        messagebox.showinfo(
+            "Thông báo", "Dữ liệu đã được làm sạch và lưu vào file data_clean.csv.")
 
     def exit_program(self):
         """Hàm cho chức năng Exit - Thoát chương trình."""
         self.root.destroy()
-        subprocess.run(["python", "gui/home_page.py"])
+        subprocess.run(["python", "gui/home_page_user.py"])
+
 
 def main():
     root = Tk()
     app = ViewPage(root)
     root.mainloop()
 
+
 if __name__ == "__main__":
     main()
-
