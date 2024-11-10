@@ -115,7 +115,7 @@ def plot_country(FILE_PATH):
 
     plt.legend(labels=nationality_counts.index, loc='center left', bbox_to_anchor=(1, 0.5))
 
-    # Thềm phần hover chuột để xem phần trăm những nước có % nhỏ
+    # Tùy chỉnh hover chuột để xem những nước có % nhỏ
     annot = ax.annotate("", xy=(0,0), xytext=(10,10), textcoords="offset points", bbox=dict     (boxstyle="round", fc="w"), arrowprops=dict(arrowstyle="->"))
     annot.set_visible(False)
 
@@ -152,4 +152,4 @@ def plot_country(FILE_PATH):
 
 #plot_grade('data/student-dataset.csv')
 #plot_age('data/student-dataset.csv')
-plot_country('data/student-dataset.csv')
+#plot_country('data/student-dataset.csv')
