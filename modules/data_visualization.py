@@ -116,6 +116,6 @@ def plot_country(FILE_PATH):
     # Hiển thị biểu đồ
     plt.show()
 
-# plot_country('data/student-dataset.csv')
+plot_country('data/student-dataset.csv')
 # plot_grade('data/data_demo.csv')
 # plot_age('data/data_demo.csv')
