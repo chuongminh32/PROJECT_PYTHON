@@ -1,60 +1,63 @@
 import pandas as pd
-import csv
-
-def handle_missing_value(FILE_PATH):
-    """Thay thế dữ liệu bị thiếu thành 0.0 (float)
-    - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\dataset_demo.csv")
-    - Hàm xử lý dữ liệu ĐIỂM bị thiếu thành 0.0 và xóa hàng khi giá trị tại cột "SBD" bị rỗng
+from math import ceil
+from pathlib import Path
+def handle_missing_value(df):
+    """Thay thế dữ liệu bị thiếu bằng các giá trị mặc định và trả về DataFrame đã được làm sạch.
+    - Điền điểm số bị thiếu bằng 0.0, dữ liệu nhân khẩu học bị thiếu bằng 'No infor',
+      và thay thế tuổi bị thiếu bằng tuổi trung bình.
+    - Xóa các hàng có giá trị 'id' bị thiếu.
     """
-    df = pd.read_csv(FILE_PATH)
-    #Xóa hàng không có số báo danh
-    result_df = df.dropna(subset=['sbd'])
+    # Xóa cột 'ethnic.group' nếu tồn tại
+    if 'ethnic.group' in df.columns:
+        df = df.drop(columns='ethnic.group')
 
-    #Fill ô không có điểm thành 0.0
-    result_df = result_df.fillna(0.0)
-    save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
-    return 1
+    # Điền dữ liệu chuỗi bị thiếu bằng 'No infor'
+    columns_str = ['name', 'nationality', 'city', 'gender']
+    for col in columns_str:
+        if col in df.columns:
+            df[col] = df[col].fillna('No infor')
 
-def remove_duplicates(FILE_PATH):
-    """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "cleaned_data.csv"
-    - Gọi hàm này ở cuối để chạy demo: remove_duplicates("data\dataset_demo.csv")
-    - df --> đọc file dữ liệu
-    - resule_df --> chứa kq đã loại bỏ giá trị trùng lặp
-    """
-    df = pd.read_csv(FILE_PATH)
+    # Điền tuổi bị thiếu bằng tuổi trung bình, làm tròn lên
+    if 'age' in df.columns:
+        ave_age = ceil(df['age'].mean())
+        df['age'] = df['age'].fillna(ave_age)
 
-    result_df = df.drop_duplicates(subset=['sbd'])
-    save_to_cleaned_data_file("data\cleaned_data.csv", result_df)
-    return 1
+    # Điền điểm số bị thiếu bằng 0.0
+    columns_float = ['latitude', 'longitude', 'english.grade', 'math.grade', 'sciences.grade', 'language.grade']
+    for col in columns_float:
+        if col in df.columns:
+            df[col] = df[col].fillna(0.0)
 
-def correct_formatting(FILE_PATH):
-    """Sửa định dạng dữ liệu"""
+    # Điền đánh giá bị thiếu bằng 0
+    columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
+    for col in columns_int:
+        if col in df.columns:
+            df[col] = df[col].fillna(0)
 
-    columns = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
-               'lich_su', 'dia_li', 'gdcd']
-    df = pd.read_csv(FILE_PATH)
-    # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
-    # result_df 
-    # print(df)
-    # df['sbd'] = df['sbd'].apply(pd.to_numeric(downcast='integer'))
-    # result_df = df[columns].apply(pd.to_numeric, errors='coerce')
-    # save_to_cleaned_data_file("data\cleaned_data.csv",result_df)
-    return 1
+    return df
 
-def save_to_cleaned_data_file(FILEPATH, result_df):
-    """Hàm này để lưu các giá trị sau khi làm sạch vào file "cleaned_data.csv"
-    Hàm đọc dữ liệu từ giá trị đã được làm sạch của df (giá trị này được gán vào result_df)
-    """
-    with open(FILEPATH,'w',encoding="utf8", newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(result_df.head())
-        writer.writerows(result_df.values)
+def remove_duplicates(df):
+    """Loại bỏ các hàng trùng lặp dựa trên 'id' và trả về DataFrame đã được làm sạch."""
+    df = df.drop_duplicates(subset=['id'])
+    return df
 
-"""
-Lời gọi hàm dưới đây chỉ chạy demo, xử lý dữ liệu trong file demo và ghi vào file cleaned
-Vì vậy, khi truyền vào tham số "FILE_PATH", lời gọi đầu truyền "dataset_demo.csv", từ lời gọi
-thứ 2, 3, 4 truyền "data\cleaned_data.csv"
-"""
-# remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
-# handle_missing_value("data\cleaned_data.csv") #xóa comment để chạy demo
-# correct_formatting("data\dataset_demo.csv")
+def correct_formatting(df):
+    """Sửa định dạng dữ liệu, làm cho cột 'age' và các cột đánh giá thành số nguyên không âm."""
+    # Chuyển đổi 'age' thành số nguyên dương
+    if 'age' in df.columns:
+        df['age'] = pd.Series(df['age'], dtype=pd.Int64Dtype())
+        df['age'] = abs(df['age'])
+
+    # Đảm bảo các cột đánh giá là số nguyên không âm từ 0 đến 5
+    columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
+    for col in columns_int:
+        if col in df.columns:
+            df[col] = abs(df[col]) % 6
+
+    return df
+
+def save_to_cleaned_data_file(filepath, result_df):
+    """Lưu dữ liệu được làm sạch vào dile clean_data.csv."""
+    filepath = Path(filepath)
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+    result_df.to_csv(filepath, index=False, encoding="utf-8")

@@ -1,54 +1,123 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import Image, ImageTk
 import subprocess
+import os
+from PIL import Image, ImageTk
+import ast
 
-class LoginGUI:
+
+class LoginPage:
     def __init__(self, root):
         self.root = root
-        self.root.title("Đăng nhập hệ thống quản lý sinh viên")
-        self.root.geometry("1350x700")
-        self.root.configure(bg="#1C2442")
+        self.root.title("Mini Edu - Sign In")
+        self.root.geometry("1000x550+300+200")
+        self.root.config(bg="white")
+        self.root.resizable(False, False)
+        self.add_background()
+        self.frame = self.create_signup_frame()
+        self.add_logo()
+        self.add_heading()
+        self.username = self.add_entry("Username", 100)
+        self.password = self.add_entry("Password", 150)
+        self.add_signup_button()
+        self.add_create_account_label()
 
-        # === Ảnh nền và logo ===
-        bg_image = ImageTk.PhotoImage(Image.open("images/bg_login.png").resize((675, 700), Image.LANCZOS))
-        logo_image = ImageTk.PhotoImage(Image.open("images/logo2.png").resize((40, 40), Image.LANCZOS))
+    def add_background(self):
+        img = PhotoImage(file="images/sign_in.png")
+        Label(self.root, image=img, bg="white").place(x=50, y=50)
+        self.root.bg_image = img
 
-        Label(root, image=bg_image).place(relwidth=0.5, relheight=1)  # Ảnh nền
-        self.login_frame = Frame(root, bg="white")
-        self.login_frame.place(relx=0.5, relheight=1, relwidth=0.5)
+    def create_signup_frame(self):
+        frame = Frame(self.root, width=350, height=400, bg="white")
+        frame.place(x=550, y=70)
+        return frame
 
-        Label(self.login_frame, image=logo_image, bg="white").grid(row=0, column=0, columnspan=2, pady=20)
-        Label(self.login_frame, text="Login", bg="white", fg="#1C2442", font=("Arial", 24, "bold")).grid(row=1, column=0, columnspan=2, pady=10)
+    def add_logo(self):
+        logo_image = ImageTk.PhotoImage(Image.open(
+            "images/logo_fit.png").resize((50, 50)))
+        Label(self.frame, image=logo_image, bg="white").place(x=20, y=10)
+        self.frame.logo_image = logo_image
 
-        # === Form đăng nhập ===
-        Label(self.login_frame, text="Username:", bg="white", fg="#1C2442", font=("Arial", 12)).grid(row=2, column=0, padx=10, pady=10, sticky=W)
-        self.username_entry = Entry(self.login_frame, font=("Arial", 12), width=30)
-        self.username_entry.grid(row=2, column=1, padx=10, pady=10)
+    def add_heading(self):
+        Label(self.frame, text="Đăng Nhập", font=("Arial", 20, "bold"),
+              bg="white", fg="#1C2442").place(x=80, y=15)
 
-        Label(self.login_frame, text="Password:", bg="white", fg="#1C2442", font=("Arial", 12)).grid(row=3, column=0, padx=10, pady=10, sticky=W)
-        self.password_entry = Entry(self.login_frame, show="*", font=("Arial", 12), width=30)
-        self.password_entry.grid(row=3, column=1, padx=10, pady=10)
+    def add_entry(self, placeholder, y, show=""):
+        entry = Entry(self.frame, width=25, fg='#1C2442', border=0,
+                      bg="white", font=("Arial", 11), show=show)
+        entry.place(x=30, y=y)
+        entry.insert(0, placeholder)
+        Frame(self.frame, width=262, height=2,
+              bg="#1C2442").place(x=30, y=y+25)
 
-        # === Nút đăng nhập ===
-        btn_login = Button(self.login_frame, text="Log In", bg="#242533", fg="white", font=("Arial", 12, "bold"), command=self.login)
-        btn_login.grid(row=4, column=0, columnspan=2, pady=20)
-        btn_login.bind("<Enter>", lambda e: btn_login.config(bg="#3B3F4C"))
-        btn_login.bind("<Leave>", lambda e: btn_login.config(bg="#242533"))
+        entry.bind("<FocusIn>", lambda e: self.on_enter(
+            entry, placeholder, show))
+        entry.bind("<FocusOut>", lambda e: self.on_leave(
+            entry, placeholder, show))
+        return entry
 
-        # Lưu ảnh để tránh bị xóa bộ nhớ
-        self.bg_image = bg_image
-        self.logo_image = logo_image
+    def on_enter(self, entry, placeholder, show):
+        if entry.get() == placeholder:
+            entry.delete(0, END)
 
-    def login(self):
-        if self.username_entry.get() == "admin" and self.password_entry.get() == "1234":
-            messagebox.showinfo("Login", "Đăng nhập thành công!")
+    def on_leave(self, entry, placeholder, show):
+        if entry.get() == '':
+            entry.insert(0, placeholder)
+
+    def add_signup_button(self):
+        def signin():
+            u, p = self.username.get(), self.password.get()
+            if u != 'Username' and p != 'Password':
+                try:
+                    with open("data/users.txt", "r") as f:
+                        users = ast.literal_eval(f.read())
+                    if u in users and users[u] == p:
+                        if u == "chuongdepzai" and p == "23571131179123":
+                            messagebox.showinfo("Login", "Hi Admin !")
+                            self.root.destroy()
+                            subprocess.run(["python", "gui/home_page.py"])
+                        else:
+                            messagebox.showinfo(
+                                "Login", "Đăng nhập thành công")
+                            self.root.destroy()
+                            subprocess.run(["python", "gui/home_page_user.py"])
+                    else:
+                        messagebox.showerror(
+                            "Login", "Tên người dùng hoặc mật khẩu không đúng")
+                except Exception as e:
+                    messagebox.showerror(
+                        "Error", f"Có lỗi xảy ra khi đọc file: {str(e)}")
+            else:
+                messagebox.showerror(
+                    "Login", "Vui lòng nhập tên người dùng và mật khẩu hợp lệ")
+
+        btn_signup = Button(self.frame, width=26, height=2, border=0, text="Sign In", bg="#1C2442", fg="white",
+                            font=("Arial", 13, "bold"), command=signin)
+        btn_signup.place(x=30, y=220)
+        btn_signup.bind("<Enter>", lambda e: btn_signup.config(
+            bg="grey", fg="#1C2442", cursor="hand2"))
+        btn_signup.bind("<Leave>", lambda e: btn_signup.config(
+            bg="#1C2442", fg="white"))
+
+    def add_create_account_label(self):
+        def open_signin_page():
             self.root.destroy()
-            subprocess.run(["python", "home_page.py"])
-        else:
-            messagebox.showerror("Login", "Tên đăng nhập hoặc mật khẩu không hợp lệ")
+            subprocess.run(["python", "gui/signup_page.py"])
+
+        create_account_label = Label(self.frame, text="Bạn chưa có tài khoản ?", font=(
+            "Arial", 10), bg="white", fg="#1C2442")
+        create_account_label.place(x=30, y=277)
+
+        signin = Button(self.frame, width=8, text="Đăng kí", bg="white", fg="#1C2442", font=(
+            "Arial", 10, "bold"), border=0, cursor="hand2", command=open_signin_page)
+        signin.place(x=180, y=275)
+
+
+def main():
+    root = Tk()
+    LoginPage(root)
+    root.mainloop()
+
 
 if __name__ == "__main__":
-    root = Tk()
-    app = LoginGUI(root)
-    root.mainloop()
+    main()
