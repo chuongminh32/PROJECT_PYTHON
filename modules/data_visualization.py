@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-print("TRỰC QUAN HÓA DỮ LIỆU".center(50, '='))
+# print("TRỰC QUAN HÓA DỮ LIỆU".center(50, '='))
 def plot_grade(FILE_PATH):
     df = pd.read_csv(FILE_PATH)
     """Vẽ biểu đồ điểm học tập."""
@@ -95,8 +95,8 @@ def plot_age(FILE_PATH):
     plt.show()
 
 def plot_country(FILE_PATH):
-    df = pd.read_csv(FILE_PATH)
     """Vẽ biểu đồ phân bố quốc gia."""
+    df = pd.read_csv(FILE_PATH)
     nationality_counts = df['nationality'].value_counts()
     total = nationality_counts.sum()
     labels = []
@@ -151,3 +151,4 @@ def plot_country(FILE_PATH):
 #plot_grade('data/student-dataset.csv')
 #plot_age('data/student-dataset.csv')
 #plot_country('data/student-dataset.csv')
+

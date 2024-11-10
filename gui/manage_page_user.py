@@ -8,9 +8,10 @@ import subprocess
 
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from modules.data_crud import read_data, create_data, update_data, delete_data  
+from modules.data_crud import read_data, create_data, update_data, delete_data
 
-class StudentManagementApp:
+
+class StudentManagementAppUser:
     def __init__(self, root):
         self.root = root
         self.setup_window()
@@ -36,23 +37,24 @@ class StudentManagementApp:
 
     def create_menu(self):
         """Tạo menu cho ứng dụng."""
-        M_Frame = LabelFrame(self.root, text="Menu", bg="white", font=("Arial", 12, "bold"))
+        M_Frame = LabelFrame(self.root, text="Menu",
+                             bg="white", font=("Arial", 12, "bold"))
         M_Frame.place(x=0, y=80, width=200, relheight=1)
         self.create_menu_button(M_Frame, "Đọc", self.read, 0)
         self.create_menu_button(M_Frame, "Thêm", self.create, 75)
         self.create_menu_button(M_Frame, "Sửa", self.update, 150)
         self.create_menu_button(M_Frame, "Xóa", self.delete, 220)
         self.create_menu_button(M_Frame, "Back", self.exit_program, 290)
-
+        
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
         self.content_frame = Frame(self.root, bg="lightgrey")
         self.content_frame.place(x=200, y=80, width=800, height=470)
-        # self.set_background_image()
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
-        button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"), command=command)
+        button = Button(parent, text=text, border=0, bg="#242533",
+                        fg="white", font=("Arial", 12, "bold"), command=command)
         button.place(x=0, y=y_position, width=200, height=50)
         button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))
         button.bind("<Leave>", lambda e: button.config(bg="#242533"))
@@ -61,15 +63,6 @@ class StudentManagementApp:
         """Xóa nội dung trong khung hiển thị nội dung."""
         for widget in self.content_frame.winfo_children():
             widget.destroy()
-        self.set_background_image()
-
-    # def set_background_image(self):
-    #     """Đặt hình nền cho khung nội dung."""
-    #     bg_path = os.path.join("images", "hcmute_login.png")
-    #     bg_image = Image.open(bg_path)
-    #     self.bg_photo = ImageTk.PhotoImage(bg_image)
-    #     bg_label = Label(self.content_frame, image=self.bg_photo)
-    #     bg_label.place(relwidth=1, relheight=1)
 
     def read(self):
         """Hiển thị dữ liệu trong file ra bảng."""
@@ -78,10 +71,12 @@ class StudentManagementApp:
             file_path = "data/student-dataset.csv"
             data = read_data(file_path)
             if not data:
-                messagebox.showinfo("Thông báo", "Không có dữ liệu để hiển thị.")
+                messagebox.showinfo(
+                    "Thông báo", "Không có dữ liệu để hiển thị.")
                 return
             v_scrollbar = ttk.Scrollbar(self.content_frame, orient="vertical")
-            h_scrollbar = ttk.Scrollbar(self.content_frame, orient="horizontal")
+            h_scrollbar = ttk.Scrollbar(
+                self.content_frame, orient="horizontal")
             columns = data[0]
             tree = ttk.Treeview(self.content_frame, columns=columns, show="headings",
                                 yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
@@ -106,70 +101,67 @@ class StudentManagementApp:
         """Tạo bảng nhập dữ liệu sinh viên."""
         self.clear_content_frame()
         fields = [("ID", "e.g., 0, 1, 2..."), ("Name", "e.g., Kiana Lor"), ("Nationality", "e.g., United States of America"),
-                  ("City", "e.g., Oakland"), ("Latitude (vĩ dộ)", "e.g., 37.8"), ("Longitude (kinh độ)", "e.g., -122.27"),
-                  ("Gender", "e.g., M/F"), ("Ethnic Group", "e.g., NA"), ("Age", "e.g., 22"), ("English Grade", "e.g., 3.5"),
-                  ("Math Grade", "e.g., 3.7"), ("Sciences Grade", "e.g., 3.2"), ("Language Grade", "e.g., 5"),
+                  ("City", "e.g., Oakland"), ("Latitude (vĩ dộ)",
+                                              "e.g., 37.8"), ("Longitude (kinh độ)", "e.g., -122.27"),
+                  ("Gender", "e.g., M/F"), ("Ethnic Group", "e.g., NA"), ("Age",
+                                                                          "e.g., 22"), ("English Grade", "e.g., 3.5"),
+                  ("Math Grade", "e.g., 3.7"), ("Sciences Grade",
+                                                "e.g., 3.2"), ("Language Grade", "e.g., 5"),
                   ("Portfolio Rating", "e.g., 4"), ("Cover Letter Rating", "e.g., 5"), ("Reference Letter Rating", "e.g., 4")]
         entries = {}
         field_frame = Frame(self.content_frame)
         field_frame.pack(fill="both", expand=True, pady=10, padx=15)
-        Label(field_frame, text="Thêm sinh viên", font=("Arial", 12, "bold")).grid(row=0, column=1, columnspan=2, pady=5)
+        Label(field_frame, text="Thêm sinh viên", font=("Arial", 12, "bold")).grid(
+            row=0, column=1, columnspan=2, pady=5)
         for i, (label_text, placeholder) in enumerate(fields):
             col = i % 2
             row = (i // 2) + 1
-            Label(field_frame, text=label_text, font=("Arial", 11)).grid(row=row, column=col * 2, padx=15, pady=5, sticky="w")
+            Label(field_frame, text=label_text, font=("Arial", 11)).grid(
+                row=row, column=col * 2, padx=15, pady=5, sticky="w")
             var = StringVar(value=placeholder)
-            entry = Entry(field_frame, textvariable=var, fg="grey", font=("Arial", 11))
+            entry = Entry(field_frame, textvariable=var, fg="grey",
+                          font=("Arial", 11), state="readonly")
             entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5)
             entries[label_text] = entry
-            entry.bind("<FocusIn>", lambda e, var=var, placeholder=placeholder: var.set("") if var.get() == placeholder else None)
-            entry.bind("<FocusOut>", lambda e, var=var, placeholder=placeholder: var.set(placeholder) if var.get() == "" else None)
+            entry.bind("<FocusIn>", lambda e, var=var, placeholder=placeholder: var.set(
+                "") if var.get() == placeholder else None)
+            entry.bind("<FocusOut>", lambda e, var=var, placeholder=placeholder: var.set(
+                placeholder) if var.get() == "" else None)
         button_frame = Frame(self.content_frame)
         button_frame.pack(pady=10)
-        def fill_sample_data():
-            sample_data = {"ID": "1", "Name": "Chuong Min", "Nationality": "Vietnam", "City": "Ho Chi Minh",
-                           "Latitude (vĩ dộ)": "37.8", "Longitude (kinh độ)": "-122.27", "Gender": "F", "Ethnic Group": "NA",
-                           "Age": "22", "English Grade": "4.0", "Math Grade": "3.9", "Sciences Grade": "3.8", "Language Grade": "5",
-                           "Portfolio Rating": "4", "Cover Letter Rating": "5", "Reference Letter Rating": "4"}
-            for label_text, sample_value in sample_data.items():
-                entries[label_text].delete(0, END)
-                entries[label_text].insert(0, sample_value)
-                entries[label_text].config(fg="black")
-        sample_button = Button(button_frame, text="Thêm dữ liệu mẫu", command=fill_sample_data)
-        sample_button.pack(side=LEFT, padx=20, pady=10)
-        def confirm():
-            student_data = [entries[label_text].get() for label_text, _ in fields]
-            for i, (field, placeholder) in enumerate(fields):
-                if student_data[i] == placeholder or student_data[i] == "":
-                    messagebox.showwarning("Cảnh báo", f"Vui lòng nhập thông tin cho trường '{field}'.")
-                    return
-            create_data(student_data, "data/student-dataset.csv")
-            messagebox.showinfo("Thành công", "Dữ liệu đã được thêm vào!")
-        confirm_button = Button(button_frame, text="Create", command=confirm)
-        confirm_button.pack(side=RIGHT, padx=20, pady=10)
+        Button(button_frame, text="Thêm dữ liệu mẫu", command=lambda: messagebox.showinfo(
+            "Thông báo", "Bạn không có quyền khởi tạo.")).pack(side=LEFT, padx=20, pady=10)
+        Button(button_frame, text="Create", command=lambda: messagebox.showinfo(
+            "Thông báo", "Bạn không có quyền khởi tạo.")).pack(side=RIGHT, padx=20, pady=10)
 
     def update(self):
         """Tìm kiếm và cập nhật thông tin sinh viên dựa trên ID."""
         self.clear_content_frame()
         fields = [("id", "e.g., 0, 1, 2..."), ("name", "e.g., Kiana Lor"), ("nationality", "e.g., United States of America"),
-                  ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
-                  ("ethnic.group", "e.g., NA"), ("age", "e.g., 22"), ("english.grade", "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
-                  ("sciences.grade", "e.g., 3.2"), ("language.grade", "e.g., 5"), ("portfolio.rating", "e.g., 4"),
+                  ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude",
+                                                                          "e.g., -122.27"), ("gender", "e.g., M/F"),
+                  ("ethnic.group", "e.g., NA"), ("age", "e.g., 22"), ("english.grade",
+                                                                      "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
+                  ("sciences.grade", "e.g., 3.2"), ("language.grade",
+                                                    "e.g., 5"), ("portfolio.rating", "e.g., 4"),
                   ("coverletter.rating", "e.g., 5"), ("refletter.rating", "e.g., 4")]
         entries = {}
         field_frame = Frame(self.content_frame)
         field_frame.pack(fill="both", expand=True, pady=10, padx=15)
         inner_frame = Frame(field_frame)
         inner_frame.place(relx=0.5, rely=0.5, anchor=CENTER)
-        Label(inner_frame, text="Nhập ID Sinh Viên:", font=("Arial", 12, "bold")).grid(row=0, column=0, columnspan=2, pady=5)
+        Label(inner_frame, text="Nhập ID Sinh Viên:", font=(
+            "Arial", 12, "bold")).grid(row=0, column=0, columnspan=2, pady=5)
         student_id_entry = Entry(inner_frame, justify="center")
         student_id_entry.grid(row=0, column=2, columnspan=2, padx=10, pady=5)
+
         def search_student():
             student_id = student_id_entry.get()
             df = pd.read_csv("data/student-dataset.csv")
             student_data = df[df['id'].astype(str) == student_id]
             if student_data.empty:
-                messagebox.showerror("Error", f"Không tìm thấy sinh viên có ID: {student_id}")
+                messagebox.showerror(
+                    "Error", f"Không tìm thấy sinh viên có ID: {student_id}")
                 for entry in entries.values():
                     entry.grid_forget()
                 return False
@@ -179,56 +171,52 @@ class StudentManagementApp:
                 entry.delete(0, END)
                 entry.insert(0, str(student_data[label_text]))
                 entry.config(fg="black", font=("Arial", 11))
-                entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5)
+                entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 +
+                           1, padx=15, pady=5, ipadx=7, ipady=5)
             return True
         for i, (label_text, placeholder) in enumerate(fields):
             col = i % 2
             row = (i // 2) + 1
-            Label(inner_frame, text=label_text, font=10).grid(row=row, column=col * 2, padx=15, pady=5, sticky="w")
+            Label(inner_frame, text=label_text, font=10).grid(
+                row=row, column=col * 2, padx=15, pady=5, sticky="w")
             entry = Entry(inner_frame, justify="center")
             entry.grid_forget()
             entries[label_text] = entry
         button_frame = Frame(self.content_frame)
         button_frame.pack(pady=10)
-        search_button = Button(button_frame, text="Search", command=search_student)
-        search_button.pack(side=LEFT, padx=20, pady=10)
-        def confirm_update():
-            student_id = str(student_id_entry.get())
-            new_data = [entries[label_text].get() for label_text, _ in fields]
-            for i, (field, placeholder) in enumerate(fields):
-                if new_data[i] == "":
-                    messagebox.showwarning("Cảnh báo", f"Hãy điền đầy đủ các trường '{field}'")
-                    return
-            if update_data(student_id, new_data):
-                messagebox.showinfo("Thành công!", "Đã cập nhật thông tin sinh viên.")
-                return
-            else:
-                messagebox.showerror("Cập nhật thất bại.", f"Không tìm thấy sinh viên với ID: {student_id}")
-        confirm_button = Button(button_frame, text="Update", command=confirm_update)
-        confirm_button.pack(side=RIGHT, padx=20, pady=10)
+        Button(button_frame, text="Search", command=search_student).pack(
+            side=LEFT, padx=20, pady=10)
+        Button(button_frame, text="Update", command=lambda: messagebox.showinfo(
+            "Thông báo", "Bạn không có quyền cập nhật.")).pack(side=RIGHT, padx=20, pady=10)
 
     def delete(self):
         """Xóa sinh viên."""
         self.clear_content_frame()
         fields = [("id", "e.g., 0, 1, 2..."), ("name", "e.g., Kiana Lor"), ("nationality", "e.g., United States of America"),
-                  ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
-                  ("ethnic.group", "e.g., NA"), ("age", "e.g., 22"), ("english.grade", "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
-                  ("sciences.grade", "e.g., 3.2"), ("language.grade", "e.g., 5"), ("portfolio.rating", "e.g., 4"),
+                  ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude",
+                                                                          "e.g., -122.27"), ("gender", "e.g., M/F"),
+                  ("ethnic.group", "e.g., NA"), ("age", "e.g., 22"), ("english.grade",
+                                                                      "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
+                  ("sciences.grade", "e.g., 3.2"), ("language.grade",
+                                                    "e.g., 5"), ("portfolio.rating", "e.g., 4"),
                   ("coverletter.rating", "e.g., 5"), ("refletter.rating", "e.g., 4")]
         entries = {}
         field_frame = Frame(self.content_frame)
         field_frame.pack(fill="both", expand=True, pady=10, padx=15)
         inner_frame = Frame(field_frame)
         inner_frame.place(relx=0.5, rely=0.5, anchor=CENTER)
-        Label(inner_frame, text="Nhập ID Sinh Viên:", font=("Arial", 12, "bold")).grid(row=0, column=0, columnspan=2, pady=5)
+        Label(inner_frame, text="Nhập ID Sinh Viên:", font=(
+            "Arial", 12, "bold")).grid(row=0, column=0, columnspan=2, pady=5)
         student_id_entry = Entry(inner_frame, justify="center")
         student_id_entry.grid(row=0, column=2, columnspan=2, padx=10, pady=5)
+
         def search_student():
             student_id = student_id_entry.get()
             df = pd.read_csv("data/student-dataset.csv")
             student_data = df[df['id'].astype(str) == student_id]
             if student_data.empty:
-                messagebox.showerror("Error", f"Không tìm thấy sinh viên có ID: {student_id}")
+                messagebox.showerror(
+                    "Error", f"Không tìm thấy sinh viên có ID: {student_id}")
                 for entry in entries.values():
                     entry.grid_forget()
                 return False
@@ -238,41 +226,35 @@ class StudentManagementApp:
                 entry.delete(0, END)
                 entry.insert(0, str(student_data[label_text]))
                 entry.config(fg="black", state="readonly", font=("Arial", 11))
-                entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5)
+                entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 +
+                           1, padx=15, pady=5, ipadx=7, ipady=5)
             return True
         for i, (label_text, placeholder) in enumerate(fields):
             col = i % 2
             row = (i // 2) + 1
-            Label(inner_frame, text=label_text, font=10).grid(row=row, column=col * 2, padx=15, pady=5, sticky="w")
+            Label(inner_frame, text=label_text, font=10).grid(
+                row=row, column=col * 2, padx=15, pady=5, sticky="w")
             entry = Entry(inner_frame, justify="center")
             entry.grid_forget()
             entries[label_text] = entry
         button_frame = Frame(self.content_frame)
         button_frame.pack(pady=10)
-        search_button = Button(button_frame, text="Search", command=search_student)
-        search_button.pack(side=LEFT, padx=20, pady=10)
-        def confirm_delete():
-            student_id = student_id_entry.get()
-            if not student_id:
-                messagebox.showwarning("Cảnh báo", "Vui lòng nhập ID sinh viên cần xóa.")
-                return
-            df = pd.read_csv("data/data_clean.csv")
-            updated_df = delete_data(df, student_id)
-            if updated_df is None:
-                messagebox.showerror("Lỗi", f"Không tìm thấy sinh viên với ID: {student_id}.")
-            else:
-                updated_df.to_csv("data/data_clean.csv", index=False)
-                messagebox.showinfo("Thành công", f"Đã xóa sinh viên có ID {student_id}")
-        confirm_button = Button(button_frame, text="Delete", command=confirm_delete)
-        confirm_button.pack(side=LEFT, padx=20, pady=10)
+        Button(button_frame, text="Search", command=search_student).pack(
+            side=LEFT, padx=20, pady=10)
+        Button(button_frame, text="Delete", command=lambda: messagebox.showinfo(
+            "Thông báo", "Bạn không có quyền xóa.")).pack(side=LEFT, padx=20, pady=10)
 
     def exit_program(self):
         """Thoát chương trình."""
         self.root.destroy()
-        subprocess.run(["python", "gui/home_page.py"])
+        subprocess.run(["python", "gui/home_page_user.py"])
 
-# Khởi chạy ứng dụng
-if __name__ == "__main__":
+
+def main():
     root = Tk()
-    app = StudentManagementApp(root)
+    app = StudentManagementAppUser(root)
     root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
