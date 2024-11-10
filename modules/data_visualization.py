@@ -18,8 +18,8 @@ def plot_grade(FILE_PATH):
     #df_grades.plot(kind='bar', figsize=(10, 6))
 
     plt.title("Biểu đồ điểm học tập trung bình")
-    plt.xlabel("Subjects")
-    plt.ylabel("Grades")
+    plt.xlabel("Môn học")
+    plt.ylabel("Điểm")
 
     # Tạo lưới mờ
     plt.grid(axis='y', linestyle='--', alpha=0.5)
@@ -88,23 +88,66 @@ def plot_age(FILE_PATH):
 
     plt.figure(figsize=(8, 5))
     plt.hist(df['age'], bins=5)
-    plt.title("Age Distribution of Students")
-    plt.xlabel("Age")
-    plt.ylabel("Frequency")
-    plt.xticks([15,20,21,22,23,24,25,26,30])
+    plt.title("Biểu đồ phân bố độ tuổi")
+    plt.xlabel("Tuổi")
+    plt.ylabel("Mật độ")
+    plt.xticks([15,19,20,21,22,23,24,25,26,30])
     plt.show()
 
 def plot_country(FILE_PATH):
     df = pd.read_csv(FILE_PATH)
     """Vẽ biểu đồ phân bố quốc gia."""
     nationality_counts = df['nationality'].value_counts()
-    plt.figure(figsize=(7, 7))
-    plt.pie(nationality_counts, labels=nationality_counts.index, autopct='%1.1f%%', startangle=140)
+    total = nationality_counts.sum()
+    labels = []
+    sizes = []
+    for label, size in zip(nationality_counts.index, nationality_counts):
+        if size / total >= 0.024:
+            labels.append(label)
+        else:
+            labels.append("")
+        sizes.append(size)
+    fig, ax = plt.subplots(figsize=(12, 7))
+    wedges, texts, autotexts = ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 2.4 else '', startangle=140)
     plt.title("Phân bố quốc gia")
-    plt.legend()
-    plt.legend(loc='lower right')
+
+    plt.legend(labels=nationality_counts.index, loc='center left', bbox_to_anchor=(1, 0.5))
+
+    # Thềm phần hover chuột để xem phần trăm những nước có % nhỏ
+    annot = ax.annotate("", xy=(0,0), xytext=(10,10), textcoords="offset points", bbox=dict     (boxstyle="round", fc="w"), arrowprops=dict(arrowstyle="->"))
+    annot.set_visible(False)
+
+    def update_annot(wedge, event):
+        x, y = wedge.center
+        angle = (wedge.theta2 - wedge.theta1) / 2 + wedge.theta1
+        x = x + wedge.r * 0.5 * np.cos(np.radians(angle))
+        y = y + wedge.r * 0.5 * np.sin(np.radians(angle))
+        annot.xy = (x, y)
+        label = nationality_counts.index[wedges.index(wedge)]
+        size = sizes[wedges.index(wedge)]
+        percent = size / total * 100
+        text = f"{label}: {percent:.1f}%"
+        annot.set_text(text)
+        annot.get_bbox_patch().set_facecolor('lightblue')
+        annot.set_fontsize(12)
+
+    def hover(event):
+        vis = annot.get_visible()
+        if event.inaxes == ax:
+            for wedge in wedges:
+                if wedge.contains(event)[0]:
+                    update_annot(wedge, event)
+                    annot.set_visible(True)
+                    fig.canvas.draw_idle()
+                    return
+        if vis:
+            annot.set_visible(False)
+            fig.canvas.draw_idle()
+
+    fig.canvas.mpl_connect("motion_notify_event", hover)
     plt.show()
 
-#plot_grade('data/data_demo.csv')
-#plot_age('data/data_demo.csv')
-#plot_country('data/data_demo.csv')
+
+#plot_grade('data/student-dataset.csv')
+#plot_age('data/student-dataset.csv')
+#plot_country('data/student-dataset.csv')
