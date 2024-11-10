@@ -107,8 +107,10 @@ def plot_country(FILE_PATH):
         else:
             labels.append("")
         sizes.append(size)
+
     fig, ax = plt.subplots(figsize=(12, 7))
     wedges, texts, autotexts = ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 2.4 else '', startangle=140)
+    
     plt.title("Phân bố quốc gia")
 
     plt.legend(labels=nationality_counts.index, loc='center left', bbox_to_anchor=(1, 0.5))
