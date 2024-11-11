@@ -15,12 +15,11 @@
 - **MSSV**: 23110336.
 - **Vai trò**: BE, Vẽ biểu đồ, chuẩn hóa thống nhất data (nếu có), Tester.
 
-
 * Cấu trúc thư mục đồ án:
-    project_root/
+    PROJECT_PYTHON/
     │
     ├── data/                           # Thư mục chứa tập tin dữ liệu
-    │   ├── dataset_demo.csv                 # Tập dữ liệu nguồn
+    │   ├── student-dataset.csv         # Tập dữ liệu nguồn
     │   └── cleaned_data.csv            # Tập dữ liệu đã làm sạch (sau khi xử lý)
     │
     ├── modules/                        # Thư mục chứa các modules theo chức năng

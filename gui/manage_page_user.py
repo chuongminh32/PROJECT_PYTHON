@@ -68,7 +68,7 @@ class StudentManagementAppUser:
         """Hiển thị dữ liệu trong file ra bảng."""
         self.clear_content_frame()
         try:
-            file_path = "data/student-dataset.csv"
+            file_path = "data/data_clean.csv"
             data = read_data(file_path)
             if not data:
                 messagebox.showinfo(
@@ -157,7 +157,7 @@ class StudentManagementAppUser:
 
         def search_student():
             student_id = student_id_entry.get()
-            df = pd.read_csv("data/student-dataset.csv")
+            df = pd.read_csv("data/data_clean.csv")
             student_data = df[df['id'].astype(str) == student_id]
             if student_data.empty:
                 messagebox.showerror(
@@ -212,7 +212,7 @@ class StudentManagementAppUser:
 
         def search_student():
             student_id = student_id_entry.get()
-            df = pd.read_csv("data/student-dataset.csv")
+            df = pd.read_csv("data/data_clean.csv")
             student_data = df[df['id'].astype(str) == student_id]
             if student_data.empty:
                 messagebox.showerror(

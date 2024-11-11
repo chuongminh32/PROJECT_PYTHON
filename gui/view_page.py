@@ -79,7 +79,7 @@ class ViewPage:
         self.clear_content_frame()  # Xóa nội dung cũ trong khung hiển thị nội dung
 
         try:
-            file_path = "data/student-dataset.csv"  # Đường dẫn đến file CSV
+            file_path = "data/data_clean.csv"  # Đường dẫn đến file CSV
             data = read_data(file_path)  # Lấy dữ liệu từ file CSV
 
             if not data:
@@ -127,26 +127,26 @@ class ViewPage:
     def plot_age(self):
         """Hàm trực quan độ tuổi"""
         self.clear_content_frame()
-        file_path = "data/student-dataset.csv"
+        file_path = "data/data_clean.csv"
         plot_age(file_path)
 
     def plot_country(self):
         """Hàm trực quan quốc gia."""
         self.clear_content_frame()
-        file_path = "data/student-dataset.csv"
+        file_path = "data/data_clean.csv"
         plot_country(file_path)
        
 
     def plot_grade(self):
         """Hàm trực quan điểm học tập."""
         self.clear_content_frame()
-        file_path = "data/student-dataset.csv"
+        file_path = "data/data_clean.csv"
         plot_grade(file_path)
 
     def cleaning(self):    
         """Hàm làm sạch dữ liệu."""
         self.clear_content_frame()
-        file_path = "data/student-dataset.csv"
+        file_path = "data/data_clean.csv"
         data = pd.read_csv(file_path)
         # Xử lí dữ liệu
         data = handle_missing_value(data)

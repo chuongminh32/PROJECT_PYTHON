@@ -63,19 +63,19 @@ class StudentManagementApp:
             widget.destroy()
         self.set_background_image()
 
-    # def set_background_image(self):
-    #     """Đặt hình nền cho khung nội dung."""
-    #     bg_path = os.path.join("images", "hcmute_login.png")
-    #     bg_image = Image.open(bg_path)
-    #     self.bg_photo = ImageTk.PhotoImage(bg_image)
-    #     bg_label = Label(self.content_frame, image=self.bg_photo)
-    #     bg_label.place(relwidth=1, relheight=1)
+    def set_background_image(self):
+        """Đặt hình nền cho khung nội dung."""
+        bg_path = os.path.join("images", "hcmute_login.png")
+        bg_image = Image.open(bg_path)
+        self.bg_photo = ImageTk.PhotoImage(bg_image)
+        bg_label = Label(self.content_frame, image=self.bg_photo)
+        bg_label.place(relwidth=1, relheight=1)
 
     def read(self):
         """Hiển thị dữ liệu trong file ra bảng."""
         self.clear_content_frame()
         try:
-            file_path = "data/student-dataset.csv"
+            file_path = "data/data_clean.csv"
             data = read_data(file_path)
             if not data:
                 messagebox.showinfo("Thông báo", "Không có dữ liệu để hiển thị.")
@@ -143,7 +143,7 @@ class StudentManagementApp:
                 if student_data[i] == placeholder or student_data[i] == "":
                     messagebox.showwarning("Cảnh báo", f"Vui lòng nhập thông tin cho trường '{field}'.")
                     return
-            create_data(student_data, "data/student-dataset.csv")
+            create_data(student_data, "data/data_clean.csv")
             messagebox.showinfo("Thành công", "Dữ liệu đã được thêm vào!")
         confirm_button = Button(button_frame, text="Create", command=confirm)
         confirm_button.pack(side=RIGHT, padx=20, pady=10)
@@ -166,7 +166,7 @@ class StudentManagementApp:
         student_id_entry.grid(row=0, column=2, columnspan=2, padx=10, pady=5)
         def search_student():
             student_id = student_id_entry.get()
-            df = pd.read_csv("data/student-dataset.csv")
+            df = pd.read_csv("data/data_clean.csv")
             student_data = df[df['id'].astype(str) == student_id]
             if student_data.empty:
                 messagebox.showerror("Error", f"Không tìm thấy sinh viên có ID: {student_id}")
@@ -225,7 +225,7 @@ class StudentManagementApp:
         student_id_entry.grid(row=0, column=2, columnspan=2, padx=10, pady=5)
         def search_student():
             student_id = student_id_entry.get()
-            df = pd.read_csv("data/student-dataset.csv")
+            df = pd.read_csv("data/data_clean.csv")
             student_data = df[df['id'].astype(str) == student_id]
             if student_data.empty:
                 messagebox.showerror("Error", f"Không tìm thấy sinh viên có ID: {student_id}")

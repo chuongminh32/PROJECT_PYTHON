@@ -72,7 +72,7 @@ class LoginPage:
                     with open("data/users.txt", "r") as f:
                         users = ast.literal_eval(f.read())
                     if u in users and users[u] == p:
-                        if u == "chuongdepzai" and p == "23571131179123":
+                        if u == "chuongdepzai" and p == "111":
                             messagebox.showinfo("Login", "Hi Admin !")
                             self.root.destroy()
                             subprocess.run(["python", "gui/home_page.py"])

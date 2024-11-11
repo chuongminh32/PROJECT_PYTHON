@@ -1,2 +1,11 @@
 pandas
 matplotlib
+numpy
+scipy
+scikit-learn
+seaborn
+requests
+flask
+django
+beautifulsoup4
+pytest
