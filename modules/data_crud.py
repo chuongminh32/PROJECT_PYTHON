@@ -91,7 +91,7 @@ def update_data(student_id, new_info):
     updated = False
 
     # Đọc dữ liệu từ file CSV
-    with open("data/student-dataset.csv", "r") as file:
+    with open("data/data-clean.csv", "r") as file:
         reader = csv.reader(file)
         rows = list(reader)
 
@@ -123,44 +123,4 @@ def delete_data(df, student_id):
     else:
         return None  # Trả về None nếu không tìm thấy sinh viên
 
-# test 
-# update_data("1", ["1", "Nguyễn Văn A", "Việt Nam", "Hà Nội", "21.028511", "105.804817", "Nam", "Kinh", "20", "8.0", "7.5", "8.0", "7.5", "8.0", "8.0", "8.0"])
-
-
-# def display_data_in_table(root, data):
-#     """
-#     Hiển thị dữ liệu dưới dạng bảng trong Tkinter.
-    
-#     Args:
-#         root (Tk): Cửa sổ Tkinter.
-#         data (list): Danh sách các hàng dữ liệu để hiển thị.
-#     """
-#     if data is None or len(data) == 0:
-#         return
-
-#     # Tạo Treeview để hiển thị bảng dữ liệu
-#     table = ttk.Treeview(root, columns=[f"col_{i}" for i in range(len(data[0]))], show='headings')
-#     table.pack(expand=True, fill='both')
-
-#     # Đặt tên cột theo hàng đầu tiên
-#     for i, header in enumerate(data[0]):
-#         table.heading(f"col_{i}", text=header)
-#         table.column(f"col_{i}", width=100)  # Điều chỉnh độ rộng của cột
-
-#     # Thêm các hàng dữ liệu
-#     for row in data[1:]:  # Bỏ qua hàng đầu tiên (header)
-#         table.insert("", "end", values=row)
-
-# def main():
-#     root = tk.Tk()
-#     root.title("Hiển thị dữ liệu dạng bảng")
-#     root.geometry("800x400")
-
-#     # Đọc và hiển thị dữ liệu
-#     data = read_data()
-#     display_data_in_table(root, data)
-
-#     root.mainloop()
-
-# if __name__ == "__main__":
-#     main()
+#
