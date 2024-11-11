@@ -150,6 +150,6 @@ def plot_country(FILE_PATH):
     plt.show()
 
 
-#plot_grade('data/student-dataset.csv')
+# plot_grade('data/student-dataset.csv')
 #plot_age('data/student-dataset.csv')
-#plot_country('data/student-dataset.csv')
+plot_country('data/student-dataset.csv')
