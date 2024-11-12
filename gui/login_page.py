@@ -108,7 +108,7 @@ class LoginPage:
                             messagebox.showinfo(
                                 "Login", "Đăng nhập thành công")
                             self.root.destroy()
-                            subprocess.run(["python", "gui/home_page_user.py"])
+                            subprocess.run(["python", "gui/home_page.py"])
                     else:
                         messagebox.showerror(
                             "Login", "Tên người dùng hoặc mật khẩu không đúng")
