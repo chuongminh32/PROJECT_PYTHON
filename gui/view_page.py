@@ -13,7 +13,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from modules.data_crud import read_data
 import tkinter as tk
-from modules.data_visualization import plot_grade, plot_age, plot_country, plot_gender
+from modules.data_visualization import plot_grade, plot_age, plot_country, plot_gender, plot_point_rating, plot_personal, plot_point_old
 
 """
 Thư viện:
@@ -67,36 +67,38 @@ class ViewPage:
         logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS)
         self.logo_dash = ImageTk.PhotoImage(logo_image)
 
-        Label(self.root, text="Student Management Mini", image=self.logo_dash, padx=10, compound=LEFT,
+        Label(self.root, text="Trực Quan", image=self.logo_dash, padx=10, compound=LEFT,
               bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
 
     def create_menu(self):
         """Tạo menu cho ứng dụng."""
         M_Frame = LabelFrame(self.root, text="Menu",
                              bg="white", font=("Arial", 12, "bold"))
-        M_Frame.place(x=0, y=80, width=200, relheight=1)
+        M_Frame.place(x=0, y=80, width=170, relheight=1)
 
         # Thêm các nút vào khung menu
         self.create_menu_button(M_Frame, "Độ tuổi", self.plot_age, 0)
-        self.create_menu_button(M_Frame, "Quốc gia", self.plot_country, 75)
-        self.create_menu_button(M_Frame, "Điểm số", self.plot_grade, 150)
-        self.create_menu_button(M_Frame, "Giới tính", self.plot_gender, 220)
-        self.create_menu_button(M_Frame, "Đọc data", self.read, 290)
-        self.create_menu_button(M_Frame, "Quay về", self.exit_program, 360)
+        self.create_menu_button(M_Frame, "Quốc gia", self.plot_country, 50)
+        self.create_menu_button(M_Frame, "Điểm số", self.plot_grade, 100)
+        self.create_menu_button(M_Frame, "Giới tính", self.plot_gender, 150)
+        self.create_menu_button(M_Frame, "Điểm vs Năng lực", self.plot_point_rating, 200)
+        self.create_menu_button(M_Frame, "Cá nhân", self.plot_personal, 250)
+        self.create_menu_button(M_Frame, "Điểm vs Tuổi", self.plot_point_old, 300)
+        self.create_menu_button(M_Frame, "Quay về", self.exit_program, 350)
 
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
         self.content_frame = Frame(self.root, bg="lightgrey")
         # Dùng relwidth và relheight để mở rộng theo kích thước cửa sổ
         # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
-        self.content_frame.place(x=200, y=80, width=800, height=470)
+        self.content_frame.place(x=170, y=80, width=830, height=470)
 
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
         button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"),
                         command=command)
-        button.place(x=0, y=y_position, width=200, height=50)
+        button.place(x=0, y=y_position, width=170, height=40)
         button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))
         button.bind("<Leave>", lambda e: button.config(bg="#242533"))
 
@@ -176,6 +178,21 @@ class ViewPage:
         self.clear_content_frame()
         FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
         plot_gender(FILE_PATH, self.content_frame)
+    
+    def plot_point_rating(self):
+        self.clear_content_frame()
+        FILE_PATH = 'data/data_clean.csv'
+        plot_point_rating(FILE_PATH, self.content_frame)
+    
+    def plot_personal(self):
+        self.clear_content_frame()
+        FILE_PATH = 'data/data_clean.csv'
+        plot_personal(FILE_PATH, self.content_frame)
+    
+    def plot_point_old(self):
+        self.clear_content_frame()
+        FILE_PATH = 'data/data_clean.csv'
+        plot_point_old(FILE_PATH, self.content_frame)
 
 
     def exit_program(self):

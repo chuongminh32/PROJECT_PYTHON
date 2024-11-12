@@ -91,30 +91,30 @@ class StudentManagementApp:
        
     def read(self):
         """Hiển thị dữ liệu trong file ra bảng."""
-        self.clear_content_frame()
+        self.clear_content_frame() # Xóa nội dung cũ
         try:
             file_path = "data/data_clean.csv"
             data = read_data(file_path)
             if not data:
                 messagebox.showinfo("Thông báo", "Không có dữ liệu để hiển thị.")
                 return
-            v_scrollbar = ttk.Scrollbar(self.content_frame, orient="vertical")
-            h_scrollbar = ttk.Scrollbar(self.content_frame, orient="horizontal")
-            columns = data[0]
-            tree = ttk.Treeview(self.content_frame, columns=columns, show="headings",
-                                yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
-            for col in columns:
-                tree.heading(col, text=col)
-                tree.column(col, anchor='center', width=150)
-            for row in data[1:]:
-                tree.insert("", "end", values=row)
-            tree.grid(row=0, column=0, sticky="nsew")
-            v_scrollbar.grid(row=0, column=1, sticky="ns")
-            h_scrollbar.grid(row=1, column=0, sticky="ew")
-            v_scrollbar.config(command=tree.yview)
-            h_scrollbar.config(command=tree.xview)
-            self.content_frame.grid_rowconfigure(0, weight=1)
-            self.content_frame.grid_columnconfigure(0, weight=1)
+            v_scrollbar = ttk.Scrollbar(self.content_frame, orient="vertical") # Tạo thanh cuộn dọc
+            h_scrollbar = ttk.Scrollbar(self.content_frame, orient="horizontal") # Tạo thanh cuộn ngang
+            columns = data[0] # Lấy tên cột 
+            tree = ttk.Treeview(self.content_frame, columns=columns, show="headings",  # Tạo bảng hiển thị dữ liệu
+                                yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set) 
+            for col in columns: # Đặt tên cột
+                tree.heading(col, text=col)     
+                tree.column(col, anchor='center', width=150) # Đặt chiều rộng cột
+            for row in data[1:]: # Thêm dữ liệu vào bảng
+                tree.insert("", "end", values=row) 
+            tree.grid(row=0, column=0, sticky="nsew") # Hiển thị bảng
+            v_scrollbar.grid(row=0, column=1, sticky="ns") # Hiển thị thanh cuộn dọc
+            h_scrollbar.grid(row=1, column=0, sticky="ew") # Hiển thị thanh cuộn ngang
+            v_scrollbar.config(command=tree.yview) # Kết nối thanh cuộn dọc với bảng
+            h_scrollbar.config(command=tree.xview) # Kết nối thanh cuộn ngang với bảng
+            self.content_frame.grid_rowconfigure(0, weight=1) # Đặt trọng số cho hàng
+            self.content_frame.grid_columnconfigure(0, weight=1) # Đặt trọng số cho cột
         except FileNotFoundError:
             messagebox.showerror("Lỗi", f"Không tìm thấy file: {file_path}")
         except Exception as e:
@@ -130,39 +130,45 @@ class StudentManagementApp:
                   ("Portfolio Rating", "e.g., 4"), ("Cover Letter Rating", "e.g., 5"), ("Reference Letter Rating", "e.g., 4")]
         entries = {}
         field_frame = Frame(self.content_frame)
-        field_frame.pack(fill="both", expand=True, pady=10, padx=15)
+        field_frame.pack(fill="both", expand=True, pady=10, padx=15) 
         Label(field_frame, text="Thêm sinh viên", font=("Arial", 12, "bold")).grid(row=0, column=1, columnspan=2, pady=5)
-        for i, (label_text, placeholder) in enumerate(fields):
-            col = i % 2
+        for i, (label_text, placeholder) in enumerate(fields): # Tạo các trường nhập dữ liệu
+            col = i % 2 
             row = (i // 2) + 1
             Label(field_frame, text=label_text, font=("Arial", 11)).grid(row=row, column=col * 2, padx=15, pady=5, sticky="w")
-            var = StringVar(value=placeholder)
-            entry = Entry(field_frame, textvariable=var, fg="grey", font=("Arial", 11))
-            entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5)
-            entries[label_text] = entry
-            entry.bind("<FocusIn>", lambda e, var=var, placeholder=placeholder: var.set("") if var.get() == placeholder else None)
-            entry.bind("<FocusOut>", lambda e, var=var, placeholder=placeholder: var.set(placeholder) if var.get() == "" else None)
+            var = StringVar(value=placeholder) # Tạo biến lưu trữ dữ liệu nhập vào
+            entry = Entry(field_frame, textvariable=var, fg="grey", font=("Arial", 11)) # Tạo trường nhập dữ liệu
+            entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5) # Hiển thị trường nhập dữ liệu
+            entries[label_text] = entry # Lưu trường nhập dữ liệu vào dictionary
+            entry.bind("<FocusIn>", lambda e, var=var, placeholder=placeholder: var.set("") if var.get() == placeholder else None) # Xử lý khi focus vào trường nhập dữ liệu
+            entry.bind("<FocusOut>", lambda e, var=var, placeholder=placeholder: var.set(placeholder) if var.get() == "" else None) # Xử lý khi focus ra khỏi trường nhập dữ liệu
         button_frame = Frame(self.content_frame)
-        button_frame.pack(pady=10)
+        button_frame.pack(pady=10)  
         def fill_sample_data():
-            sample_data = {"ID": "1", "Name": "Chuong Min", "Nationality": "Vietnam", "City": "Ho Chi Minh",
+            sample_data = {"ID": "1", "Name": "Chuong", "Nationality": "Vietnam", "City": "Ho Chi Minh",
                            "Latitude (vĩ dộ)": "37.8", "Longitude (kinh độ)": "-122.27", "Gender": "F", "Ethnic Group": "NA",
                            "Age": "22", "English Grade": "4.0", "Math Grade": "3.9", "Sciences Grade": "3.8", "Language Grade": "5",
                            "Portfolio Rating": "4", "Cover Letter Rating": "5", "Reference Letter Rating": "4"}
             for label_text, sample_value in sample_data.items():
-                entries[label_text].delete(0, END)
-                entries[label_text].insert(0, sample_value)
-                entries[label_text].config(fg="black")
+                entries[label_text].delete(0, END) # Xóa dữ liệu cũ
+                entries[label_text].insert(0, sample_value) # Thêm dữ liệu mẫu
+                entries[label_text].config(fg="black") # Đổi màu chữ thành màu đen
         sample_button = Button(button_frame, text="Thêm dữ liệu mẫu", command=fill_sample_data)
         sample_button.pack(side=LEFT, padx=20, pady=10)
         def confirm():
-            student_data = [entries[label_text].get() for label_text, _ in fields]
-            for i, (field, placeholder) in enumerate(fields):
+            student_data = [entries[label_text].get() for label_text, _ in fields] # Lấy dữ liệu nhập vào
+            for i, (field, placeholder) in enumerate(fields): # Kiểm tra dữ liệu nhập vào
+                # Check if ID already exists
+                df = pd.read_csv("data/data_clean.csv")
+                if student_data[0] in df['id'].astype(str).values:
+                     messagebox.showwarning("Cảnh báo", "ID đã tồn tại. Vui lòng nhập ID khác.")
+                     return
                 if student_data[i] == placeholder or student_data[i] == "":
                     messagebox.showwarning("Cảnh báo", f"Vui lòng nhập thông tin cho trường '{field}'.")
                     return
             create_data(student_data, "data/data_clean.csv")
             messagebox.showinfo("Thành công", "Dữ liệu đã được thêm vào!")
+            
         confirm_button = Button(button_frame, text="Create", command=confirm)
         confirm_button.pack(side=RIGHT, padx=20, pady=10)
 

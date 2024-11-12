@@ -68,7 +68,7 @@ class Student:
         logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS)
         self.logo_dash = ImageTk.PhotoImage(logo_image)
 
-        Label(self.root, text="Sinh viên", image=self.logo_dash, padx=10, compound=LEFT,
+        Label(self.root, text="Sinh Viên", image=self.logo_dash, padx=10, compound=LEFT,
               bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
 
     def create_menu(self):

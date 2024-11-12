@@ -7,32 +7,6 @@ import subprocess
 from manage_page import StudentManagementApp
 from view_page import ViewPage
 
-"""
-This module creates a GUI home page for a student management system using Tkinter.
-Libraries:
-- tkinter: Standard Python interface to the Tk GUI toolkit.
-    - *: Imports all classes and functions from the tkinter library.
-    - messagebox: Provides a set of dialogs to interact with the user.
-- PIL (Pillow): Python Imaging Library, adds image processing capabilities.
-    - Image: Provides a class with methods to open, manipulate, and save many different image file formats.
-    - ImageTk: Provides support for displaying images in Tkinter.
-- os: Provides a way of using operating system dependent functionality like reading or writing to the file system.
-- subprocess: Allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
-Classes:
-- Main: The main class that sets up the GUI window, logo, and menu.
-Methods:
-- __init__(self, root): Initializes the main class with the root window.
-- setup_window(self): Sets up the main window properties.
-- create_logo(self): Creates and places the logo in the main window.
-- create_menu(self): Creates and places the menu in the main window.
-- create_menu_button(self, parent, text, command, y_position): Creates a button for the menu.
-- manage(self): Opens the management page in a new window.
-- show_view(self): Opens the view page in a new window.
-- logout(self): Logs out the user and opens the login page.
-- stu(self): Opens the student page in a new window.
-- exit_program(self): Exits the application.
-"""
-
 class Main:
     def __init__(self, root):
         self.root = root
