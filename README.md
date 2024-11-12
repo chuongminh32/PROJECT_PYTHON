@@ -39,6 +39,8 @@
     │   ├── signup_page.py               # Trang đăng kí
     │   ├── student_page.py              # Trang xử lí liên quan đến sinh viên
     │   └── view_page.py                 # Trang trực quan [VISUALIZATION]
+    │   
+    ├── images/                         # Thư mục chứa các tập tin giao diện image
     │
     ├── tests/                          # Thư mục chứa các tập tin kiểm thử (optional)
     │   ├── test_cleaning.py            # Kiểm thử module làm sạch dữ liệu
