@@ -1,11 +1,12 @@
-pandas
-matplotlib
-numpy
-scipy
-scikit-learn
-seaborn
-requests
-flask
-django
-beautifulsoup4
-pytest
+Tkinter: Tạo giao diện người dùng (GUI) trong Python.
+Pillow (PIL): Xử lý hình ảnh và hiển thị trong GUI.
+os: Làm việc với hệ thống tệp và thư mục.
+subprocess: Thực thi các lệnh hệ thống và các tiến trình ngoài.
+sys: Xử lý tham số dòng lệnh và các tác vụ hệ thống.
+ast: Phân tích cú pháp mã nguồn Python thành cây cú pháp trừu tượng.
+pandas: Phân tích và xử lý dữ liệu dạng bảng (DataFrame).
+matplotlib: Vẽ đồ thị và biểu đồ.
+ttk: Tạo các widget giao diện đẹp và hiện đại hơn cho Tkinter.
+csv: Đọc và ghi dữ liệu dạng CSV.
+ceil: Làm tròn số lên
+

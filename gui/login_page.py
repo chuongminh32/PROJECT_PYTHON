@@ -5,6 +5,34 @@ import os
 from PIL import Image, ImageTk
 import ast
 
+"""
+Mô tả:
+    Đây là một trang đăng nhập được xây dựng bằng thư viện Tkinter trong Python. 
+    Trang đăng nhập này cho phép người dùng nhập tên người dùng và mật khẩu để đăng nhập vào hệ thống.
+Thư viện sử dụng:
+    - tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - tkinter.messagebox: Thư viện con của tkinter để hiển thị các hộp thoại thông báo.
+    - subprocess: Thư viện để chạy các tiến trình con.
+    - os: Thư viện cung cấp nhiều chức năng liên quan đến hệ điều hành.
+    - PIL (Pillow): Thư viện xử lý hình ảnh.
+    - ast: Thư viện để xử lý các biểu thức Python dưới dạng chuỗi.
+Lớp:
+    - LoginPage: Lớp đại diện cho trang đăng nhập.
+Phương thức của lớp LoginPage:
+    - __init__(self, root): Khởi tạo đối tượng LoginPage.
+    - add_background(self): Thêm hình nền cho trang đăng nhập.
+    - create_signup_frame(self): Tạo khung cho phần đăng nhập.
+    - add_logo(self): Thêm logo vào khung đăng nhập.
+    - add_heading(self): Thêm tiêu đề cho khung đăng nhập.
+    - add_entry(self, placeholder, y, show=""): Thêm các trường nhập liệu cho tên người dùng và mật khẩu.
+    - on_enter(self, entry, placeholder, show): Xử lý sự kiện khi người dùng nhấp vào trường nhập liệu.
+    - on_leave(self, entry, placeholder, show): Xử lý sự kiện khi người dùng rời khỏi trường nhập liệu.
+    - add_signup_button(self): Thêm nút đăng nhập và xử lý sự kiện khi nhấp vào nút.
+    - add_create_account_label(self): Thêm nhãn và nút để chuyển đến trang đăng ký tài khoản.
+Hàm:
+    - main(): Hàm chính để khởi chạy ứng dụng.
+"""
+
 
 class LoginPage:
     def __init__(self, root):

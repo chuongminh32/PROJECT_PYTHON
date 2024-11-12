@@ -1,22 +1,28 @@
-# -*- coding: utf-8 -*-
 from tkinter import Tk, Label, Frame, Entry, Button, END, messagebox, PhotoImage
 import subprocess
 import os
 import ast
 from PIL import Image, ImageTk
 
-"""Tk: class để tạo cửa sổ chính
-Label: class để thêm text hoặc hình ảnh
-Frame: class để tạo container
-Entry: class để tạo ô nhập liệu
-Button: class để tạo nút
-END: biến để xác định cuối của Entry
-messagebox: class để hiển thị thông báo
-os: module để thao tác với hệ thống
-subprocess: module để chạy các lệnh hệ thống
-Image, ImageTk: class để thao tác với hình ảnh
-PhotoImage: class để thêm hình ảnh vào Label"""
-
+"""
+Chương trình đăng ký người dùng với giao diện đồ họa sử dụng thư viện Tkinter.
+Các thư viện sử dụng:
+- tkinter: Thư viện tiêu chuẩn của Python để tạo giao diện đồ họa.
+    + Tk: Tạo cửa sổ chính của ứng dụng.
+    + Label: Tạo nhãn văn bản hoặc hình ảnh.
+    + Frame: Tạo khung chứa các widget khác.
+    + Entry: Tạo ô nhập liệu.
+    + Button: Tạo nút bấm.
+    + END: Hằng số để chỉ định vị trí cuối cùng trong ô nhập liệu.
+    + messagebox: Hiển thị các hộp thoại thông báo.
+    + PhotoImage: Xử lý hình ảnh.
+- subprocess: Thư viện để chạy các tiến trình con.
+- os: Thư viện cung cấp các chức năng tương tác với hệ điều hành.
+- ast: Thư viện để xử lý và phân tích cú pháp các biểu thức Python.
+- PIL (Pillow): Thư viện xử lý hình ảnh.
+    + Image: Mở và xử lý hình ảnh.
+    + ImageTk: Chuyển đổi hình ảnh để sử dụng trong Tkinter.
+"""
 
 def initialize_root():
     root = Tk()

@@ -8,8 +8,8 @@ def handle_missing_value(df):
     - Xóa các hàng có giá trị 'id' bị thiếu.
     """
     # Xóa cột 'ethnic.group' nếu tồn tại
-    if 'ethnic.group' in df.columns:
-        df = df.drop(columns='ethnic.group')
+    # if 'ethnic.group' in df.columns:
+    #     df = df.drop(columns='ethnic.group')
 
     # Điền dữ liệu chuỗi bị thiếu bằng 'No infor'
     columns_str = ['name', 'nationality', 'city', 'gender']

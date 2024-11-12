@@ -9,6 +9,32 @@ import subprocess
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data, create_data, update_data, delete_data  
+from modules.data_cleaning import handle_missing_value, remove_duplicates, correct_formatting, save_to_cleaned_data_file
+"""
+Các thư viện được sử dụng:
+- os: Thư viện cung cấp các hàm để tương tác với hệ điều hành.
+- tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - *: Import tất cả các module con của tkinter.
+    - messagebox: Module con của tkinter để hiển thị các hộp thoại thông báo.
+    - ttk: Module con của tkinter cung cấp các widget nâng cao.
+- PIL: Thư viện Python Imaging Library để xử lý hình ảnh.
+    - Image: Module con của PIL để mở và xử lý hình ảnh.
+    - ImageTk: Module con của PIL để sử dụng hình ảnh trong tkinter.
+- sys: Thư viện cung cấp các hàm và biến để thao tác với trình thông dịch Python.
+- pandas: Thư viện cung cấp các cấu trúc dữ liệu và công cụ phân tích dữ liệu.
+- subprocess: Thư viện để chạy các tiến trình con và giao tiếp với chúng.
+Các module tự định nghĩa:
+- modules.data_crud: Module chứa các hàm để đọc, tạo, cập nhật và xóa dữ liệu.
+    - read_data: Hàm để đọc dữ liệu từ file.
+    - create_data: Hàm để tạo dữ liệu mới.
+    - update_data: Hàm để cập nhật dữ liệu.
+    - delete_data: Hàm để xóa dữ liệu.
+- modules.data_cleaning: Module chứa các hàm để làm sạch dữ liệu.
+    - handle_missing_value: Hàm để xử lý các giá trị thiếu.
+    - remove_duplicates: Hàm để loại bỏ các bản ghi trùng lặp.
+    - correct_formatting: Hàm để sửa định dạng dữ liệu.
+    - save_to_cleaned_data_file: Hàm để lưu dữ liệu đã làm sạch vào file.
+"""
 
 class StudentManagementApp:
     def __init__(self, root):
@@ -42,13 +68,14 @@ class StudentManagementApp:
         self.create_menu_button(M_Frame, "Thêm", self.create, 75)
         self.create_menu_button(M_Frame, "Sửa", self.update, 150)
         self.create_menu_button(M_Frame, "Xóa", self.delete, 220)
-        self.create_menu_button(M_Frame, "Back", self.exit_program, 290)
+        self.create_menu_button(M_Frame, "Làm sạch", self.cleaning, 290)
+        self.create_menu_button(M_Frame, "Back", self.exit_program, 360)
+
 
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
         self.content_frame = Frame(self.root, bg="lightgrey")
         self.content_frame.place(x=200, y=80, width=800, height=470)
-        # self.set_background_image()
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
@@ -61,16 +88,7 @@ class StudentManagementApp:
         """Xóa nội dung trong khung hiển thị nội dung."""
         for widget in self.content_frame.winfo_children():
             widget.destroy()
-        self.set_background_image()
-
-    def set_background_image(self):
-        """Đặt hình nền cho khung nội dung."""
-        bg_path = os.path.join("images", "hcmute_login.png")
-        bg_image = Image.open(bg_path)
-        self.bg_photo = ImageTk.PhotoImage(bg_image)
-        bg_label = Label(self.content_frame, image=self.bg_photo)
-        bg_label.place(relwidth=1, relheight=1)
-
+       
     def read(self):
         """Hiển thị dữ liệu trong file ra bảng."""
         self.clear_content_frame()
@@ -167,21 +185,21 @@ class StudentManagementApp:
         def search_student():
             student_id = student_id_entry.get()
             df = pd.read_csv("data/data_clean.csv")
-            student_data = df[df['id'].astype(str) == student_id]
+            student_data = df[df['id'].astype(str) == student_id] # Tìm sinh viên dựa trên ID
             if student_data.empty:
                 messagebox.showerror("Error", f"Không tìm thấy sinh viên có ID: {student_id}")
-                for entry in entries.values():
+                for entry in entries.values(): # Xóa dữ liệu cũ
                     entry.grid_forget()
-                return False
-            student_data = student_data.iloc[0]
-            for i, (label_text, _) in enumerate(fields):
-                entry = entries[label_text]
-                entry.delete(0, END)
-                entry.insert(0, str(student_data[label_text]))
+                return False # Trả về False nếu không tìm thấy sinh viên
+            student_data = student_data.iloc[0] # Lấy dữ liệu của sinh viên đầu tiên
+            for i, (label_text, _) in enumerate(fields): # Hiển thị dữ liệu của sinh viên
+                entry = entries[label_text] # Lấy entry widget tương ứng với trường dữ liệu 
+                entry.delete(0, END) # Xóa dữ liệu cũ 
+                entry.insert(0, str(student_data[label_text])) # Hiển thị dữ liệu mới
                 entry.config(fg="black", font=("Arial", 11))
                 entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5)
             return True
-        for i, (label_text, placeholder) in enumerate(fields):
+        for i, (label_text, placeholder) in enumerate(fields): # Tạo các trường nhập dữ liệu
             col = i % 2
             row = (i // 2) + 1
             Label(inner_frame, text=label_text, font=10).grid(row=row, column=col * 2, padx=15, pady=5, sticky="w")
@@ -265,6 +283,28 @@ class StudentManagementApp:
                 messagebox.showinfo("Thành công", f"Đã xóa sinh viên có ID {student_id}")
         confirm_button = Button(button_frame, text="Delete", command=confirm_delete)
         confirm_button.pack(side=LEFT, padx=20, pady=10)
+
+    def cleaning(self):
+        """Hàm làm sạch dữ liệu."""
+        self.clear_content_frame()
+        file_path = "data/data_clean.csv"
+        data = pd.read_csv(file_path)
+        # Xử lí dữ liệu
+        data = handle_missing_value(data)
+
+        # Loại bỏ trùng
+        data = remove_duplicates(data)
+
+        # Sửa định dạng
+        data = correct_formatting(data)
+
+        # Lưu dữ liệu
+        cleaned_file_path = "data/data/data_clean.csv"
+        save_to_cleaned_data_file(cleaned_file_path, data)
+
+        # Thông báo
+        messagebox.showinfo(
+            "Thông báo", "Làm sạch thành công.")
 
     def exit_program(self):
         """Thoát chương trình."""

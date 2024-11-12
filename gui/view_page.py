@@ -5,17 +5,46 @@ from PIL import Image, ImageTk
 import sys
 import pandas as pd
 import subprocess
-
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
-
 
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from modules.data_crud import read_data, create_data, update_data, delete_data  
-from modules.data_visualization import plot_grade, plot_age, plot_country
-from modules.data_cleaning import handle_missing_value, remove_duplicates, correct_formatting, save_to_cleaned_data_file
+from modules.data_crud import read_data
+import tkinter as tk
+from modules.data_visualization import plot_grade, plot_age, plot_country, plot_gender
+
+"""
+Thư viện:
+- os: Thư viện cung cấp các hàm để tương tác với hệ điều hành.
+- tkinter: Thư viện GUI tiêu chuẩn cho Python.
+- messagebox: Thư viện con của tkinter, cung cấp các hộp thoại thông báo.
+- ttk: Thư viện con của tkinter, cung cấp các widget có kiểu dáng hiện đại.
+- PIL (Pillow): Thư viện xử lý hình ảnh.
+- sys: Thư viện cung cấp các hàm và biến để thao tác với trình thông dịch Python.
+- pandas: Thư viện xử lý và phân tích dữ liệu.
+- subprocess: Thư viện để chạy các tiến trình con.
+- matplotlib.backends.backend_tkagg: Thư viện con của matplotlib để tích hợp với tkinter.
+- matplotlib.pyplot: Thư viện vẽ đồ thị.
+Các hàm và lớp:
+- ViewPage: Lớp chính của ứng dụng, quản lý giao diện và các chức năng.
+    - __init__(self, root): Khởi tạo lớp ViewPage.
+    - setup_window(self): Thiết lập cửa sổ chính.
+    - create_logo(self): Tạo logo cho ứng dụng.
+    - create_menu(self): Tạo menu cho ứng dụng.
+    - create_content_frame(self): Tạo vùng hiển thị nội dung.
+    - create_menu_button(self, parent, text, command, y_position): Tạo nút menu.
+    - clear_content_frame(self): Xóa nội dung trong khung hiển thị nội dung.
+    - read(self): Hiển thị dữ liệu trong file ra bảng trong cửa sổ hiện tại.
+    - plot_grade(self): Hiển thị biểu đồ điểm số.
+    - plot_country(self): Hiển thị biểu đồ quốc gia.
+    - plot_age(self): Hiển thị biểu đồ độ tuổi.
+    - plot_gender(self): Hiển thị biểu đồ giới tính.
+    - exit_program(self): Thoát chương trình và quay về trang chủ.
+- main(): Hàm chính để chạy ứng dụng.
+"""
+
 
 class ViewPage:
     def __init__(self, root):
@@ -23,8 +52,8 @@ class ViewPage:
         self.setup_window()
         self.create_logo()
         self.create_menu()
-        self.create_content_frame()  
-        root.resizable(False, False)
+        self.create_content_frame()
+        root.resizable(False, False)  # Cho phép cửa sổ thay đổi kích thước
 
     def setup_window(self):
         """Thiết lập cửa sổ chính."""
@@ -48,16 +77,18 @@ class ViewPage:
         M_Frame.place(x=0, y=80, width=200, relheight=1)
 
         # Thêm các nút vào khung menu
-        self.create_menu_button(M_Frame, "Plot Age", self.plot_age, 0)
-        self.create_menu_button(M_Frame, "Plot Country", self.plot_country, 75)
-        self.create_menu_button(M_Frame, "Plot Grade", self.plot_grade, 150)
-        self.create_menu_button(M_Frame, "Cleaning", self.cleaning, 220)
-        self.create_menu_button(M_Frame, "Read", self.read, 290)
-        self.create_menu_button(M_Frame, "Back Home", self.exit_program, 360)
+        self.create_menu_button(M_Frame, "Độ tuổi", self.plot_age, 0)
+        self.create_menu_button(M_Frame, "Quốc gia", self.plot_country, 75)
+        self.create_menu_button(M_Frame, "Điểm số", self.plot_grade, 150)
+        self.create_menu_button(M_Frame, "Giới tính", self.plot_gender, 220)
+        self.create_menu_button(M_Frame, "Đọc data", self.read, 290)
+        self.create_menu_button(M_Frame, "Quay về", self.exit_program, 360)
 
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
         self.content_frame = Frame(self.root, bg="lightgrey")
+        # Dùng relwidth và relheight để mở rộng theo kích thước cửa sổ
+        # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
         self.content_frame.place(x=200, y=80, width=800, height=470)
 
 
@@ -100,7 +131,7 @@ class ViewPage:
             # Đặt tiêu đề cho mỗi cột và tùy chỉnh độ rộng
             for col in columns:
                 tree.heading(col, text=col)
-                tree.column(col, anchor='center', width=150) # Độ rộng cố định
+                tree.column(col, anchor='center', width=150)  # Độ rộng cố định
 
             # Thêm dữ liệu vào bảng
             for row in data[1:]:
@@ -108,71 +139,56 @@ class ViewPage:
 
             # Đặt Treeview và thanh cuộn vào content_frame
             tree.grid(row=0, column=0, sticky="nsew")
-            v_scrollbar.grid(row=0, column=1, sticky="ns") # Cần thêm cột này để thanh cuộn dọc hoạt động
-            h_scrollbar.grid(row=1, column=0, sticky="ew") # Cần thêm hàng này để thanh cuộn ngang hoạt động
+            # Cần thêm cột này để thanh cuộn dọc hoạt động
+            v_scrollbar.grid(row=0, column=1, sticky="ns")
+            # Cần thêm hàng này để thanh cuộn ngang hoạt động
+            h_scrollbar.grid(row=1, column=0, sticky="ew")
 
             # Kết nối thanh cuộn với Treeview
             v_scrollbar.config(command=tree.yview)  # Cuộn dọc
             h_scrollbar.config(command=tree.xview)  # Cuộn ngang
 
             # Thiết lập tỷ lệ mở rộng cho Treeview
-            self.content_frame.grid_rowconfigure(0, weight=1) # Cột 0
-            self.content_frame.grid_columnconfigure(0, weight=1) # Hàng 0
+            self.content_frame.grid_rowconfigure(0, weight=1)  # Cột 0
+            self.content_frame.grid_columnconfigure(0, weight=1)  # Hàng 0
 
         except FileNotFoundError:
             messagebox.showerror("Lỗi", f"Không tìm thấy file: {file_path}")
         except Exception as e:
             messagebox.showerror("Lỗi", f"Có lỗi xảy ra: {e}")
-
-    def plot_age(self):
-        """Hàm trực quan độ tuổi"""
+    
+    def plot_grade(self):
         self.clear_content_frame()
-        file_path = "data/data_clean.csv"
-        plot_age(file_path)
+        FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
+        plot_grade(FILE_PATH, self.content_frame)
 
     def plot_country(self):
-        """Hàm trực quan quốc gia."""
         self.clear_content_frame()
-        file_path = "data/data_clean.csv"
-        plot_country(file_path)
-       
+        FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
+        plot_country(FILE_PATH, self.content_frame)
 
-    def plot_grade(self):
-        """Hàm trực quan điểm học tập."""
+    def plot_age(self):
         self.clear_content_frame()
-        file_path = "data/data_clean.csv"
-        plot_grade(file_path)
+        FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
+        plot_age(FILE_PATH, self.content_frame)
 
-    def cleaning(self):    
-        """Hàm làm sạch dữ liệu."""
+    def plot_gender(self):
         self.clear_content_frame()
-        file_path = "data/data_clean.csv"
-        data = pd.read_csv(file_path)
-        # Xử lí dữ liệu
-        data = handle_missing_value(data)
+        FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
+        plot_gender(FILE_PATH, self.content_frame)
 
-        # Loại bỏ trùng
-        data = remove_duplicates(data)
-
-        # Sửa định dạng
-        data = correct_formatting(data)
-
-        # Lưu dữ liệu
-        cleaned_file_path = "data/data_clean.csv"
-        save_to_cleaned_data_file(cleaned_file_path, data)
-
-        # Thông báo
-        messagebox.showinfo("Thông báo", "Dữ liệu đã được làm sạch và lưu vào file data_clean.csv.")
 
     def exit_program(self):
         """Hàm cho chức năng Exit - Thoát chương trình."""
         self.root.destroy()
         subprocess.run(["python", "gui/home_page.py"])
 
+
 def main():
     root = Tk()
     app = ViewPage(root)
     root.mainloop()
+
 
 if __name__ == "__main__":
     main()
