@@ -10,33 +10,6 @@ class Student:
         self.country = country
         self.total_score = total_score
 
-def stu_filter(students, country):
-    return [student for student in students if student.country.lower() == country.lower()]
-    def display_students_in_frame(students, frame):
-        for widget in frame.winfo_children():
-            widget.destroy()
-
-        columns = ('ID', 'Name', 'Country', 'Total Score')
-        tree = ttk.Treeview(frame, columns=columns, show='headings')
-        tree.heading('ID', text='ID')
-        tree.heading('Name', text='Name')
-        tree.heading('Country', text='Country')
-        tree.heading('Total Score', text='Total Score')
-
-        for student in students:
-            tree.insert('', tk.END, values=(student.student_id, student.name, student.country, student.total_score))
-
-        tree.pack(fill=tk.BOTH, expand=True)
-
-def stu_top(students):
-    return sorted(students, key=lambda student: student.total_score, reverse=True)[:10]
-
-def stu_find(students, student_id):
-    for student in students:
-        if student.student_id == student_id:
-            return student
-    return None
-
 def read_students_from_csv(file_path):
     students = []
     with open(file_path, newline='', encoding='utf-8') as csvfile:
@@ -56,8 +29,7 @@ def sort_increase_point():
 
         # Các cột liên quan đến điểm
         score_columns = [
-            "english.grade", "math.grade", "sciences.grade", "language.grade",
-            "portfolio.rating", "coverletter.rating", "refletter.rating"
+            "english.grade", "math.grade", "sciences.grade", "language.grade", "portfolio.rating", "coverletter.rating", "refletter.rating"
         ]
 
         # Điền giá trị 0 vào các ô trống trong các cột liên quan đến điểm

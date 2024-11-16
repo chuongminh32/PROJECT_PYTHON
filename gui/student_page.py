@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data
-from modules.student_function import stu_filter, stu_top, stu_find, read_students_from_csv, sort_increase_point
+from modules.student_function import sort_increase_point
 """
 Chương trình quản lý sinh viên sử dụng giao diện Tkinter.
 Các thư viện sử dụng:
@@ -87,8 +87,6 @@ class Student:
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
         self.content_frame = Frame(self.root, bg="lightgrey")
-        # Dùng relwidth và relheight để mở rộng theo kích thước cửa sổ
-        # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
         self.content_frame.place(x=200, y=80, width=800, height=470)
 
     def create_menu_button(self, parent, text, command, y_position):
@@ -290,7 +288,7 @@ class Student:
 
         # Thêm dữ liệu vào bảng
         for _, row in top_students.iterrows():
-            tree.insert("", tk.END, values=list(row), tags=("red",))
+            tree.insert("", tk.END, values=list(row))
 
         # Tạo thanh cuộn cho Treeview
         v_scrollbar = tk.Scrollbar(

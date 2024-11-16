@@ -45,7 +45,7 @@ class Main:
 
         # Nền cho khung chính
         self.bg_Home = ImageTk.PhotoImage(Image.open(
-            "images/bg_home2.png").resize((800, 470), Image.LANCZOS))
+            "images/bg_home.png").resize((800, 470), Image.LANCZOS))
         Label(self.root, image=self.bg_Home).place(
             x=200, y=80, width=800, height=470)
 
