@@ -12,8 +12,7 @@ import matplotlib.pyplot as plt
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data
-from modules.student_function import stu_filter, stu_top, stu_find, read_students_from_csv
-
+from modules.student_function import stu_filter, stu_top, stu_find, read_students_from_csv, sort_increase_point
 """
 Chương trình quản lý sinh viên sử dụng giao diện Tkinter.
 Các thư viện sử dụng:
@@ -81,8 +80,9 @@ class Student:
         self.create_menu_button(M_Frame, "Điểm cao nhất", self.stu_find, 0)
         self.create_menu_button(M_Frame, "Lọc sinh viên", self.stu_filter, 75)
         self.create_menu_button(M_Frame, "Top sinh viên", self.stu_top, 150)
-        self.create_menu_button(M_Frame, "Đọc data", self.read, 220)
-        self.create_menu_button(M_Frame, "Quay về", self.exit_program, 290)
+        self.create_menu_button(M_Frame, "Sắp xếp", self.sort_stu_point, 220)
+        self.create_menu_button(M_Frame, "Đọc data", self.read, 290)
+        self.create_menu_button(M_Frame, "Quay về", self.exit_program, 360)
 
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
@@ -105,12 +105,11 @@ class Student:
             widget.destroy()
         return True
 
-    def read(self):
+    def read(self, file_path="data/data_clean.csv"):
         """Hàm cho chức năng Read - Hiển thị dữ liệu trong file ra bảng trong cửa sổ hiện tại."""
         self.clear_content_frame()  # Xóa nội dung cũ trong khung hiển thị nội dung
 
         try:
-            file_path = "data/data_clean.csv"  # Đường dẫn đến file CSV
             data = pd.read_csv(file_path)  # Đọc dữ liệu từ file CSV
 
             if data.empty:
@@ -304,6 +303,16 @@ class Student:
                        xscrollcommand=h_scrollbar.set)
 
         tree.pack(padx=10, pady=10, fill="both", expand=True)
+
+    def sort_stu_point(self):
+        """Hàm cho chức năng Sắp xếp - Sắp xếp sinh viên theo tổng điểm giảm dần."""
+        self.clear_content_frame()  # Xóa nội dung cũ trong khung hiển thị nội dung
+        result = sort_increase_point()
+        if result:
+            messagebox.showinfo("Thông báo", "Sắp xếp thành công.")
+        """Hàm cho chức năng Read - Hiển thị dữ liệu trong file ra bảng trong cửa sổ hiện tại."""
+        self.read("data/sorted_file.csv")
+
 
     def exit_program(self):
         """Hàm cho chức năng Exit - Thoát chương trình."""

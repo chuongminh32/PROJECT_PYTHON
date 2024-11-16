@@ -1,6 +1,7 @@
 import csv
 import tkinter as tk
 from tkinter import ttk
+import pandas as pd
 
 class Student:
     def __init__(self, student_id, name, country, total_score):
@@ -47,51 +48,33 @@ def read_students_from_csv(file_path):
             total_score = sum(float(row[subject]) for subject in ['english.grade', 'math.grade', 'sciences.grade', 'language.grade'])
             students.append(Student(student_id, name, country, total_score))
     return students
-def main():
-    file_path = 'data/data_clean.csv'
-    students = read_students_from_csv(file_path)
 
-    root = tk.Tk()
-    root.title("Student Comparison")
+def sort_increase_point():
+    try:
+        # Đọc dữ liệu từ file CSV
+        df = pd.read_csv("data/data_clean.csv")
 
-    frame = ttk.Frame(root, padding="10")
-    frame.pack(fill=tk.BOTH, expand=True)
+        # Các cột liên quan đến điểm
+        score_columns = [
+            "english.grade", "math.grade", "sciences.grade", "language.grade",
+            "portfolio.rating", "coverletter.rating", "refletter.rating"
+        ]
 
-    # display_students_in_frame(students, frame)
+        # Điền giá trị 0 vào các ô trống trong các cột liên quan đến điểm
+        df[score_columns] = df[score_columns].fillna(0)
 
-    root.mainloop()
+        # Tính tổng điểm
+        df["total_score"] = df[score_columns].sum(axis=1)
 
-if __name__ == "__main__":
-    main()
-    # Create an entry widget for country filter
-    country_label = ttk.Label(root, text="Country:")
-    country_label.pack(side=tk.LEFT, padx=(10, 5))
-    
-    country_entry = ttk.Entry(root)
-    country_entry.pack(side=tk.LEFT, padx=(0, 10))
+        # Sắp xếp giảm dần theo tổng điểm
+        df_sorted_desc = df.sort_values(by="total_score", ascending=False)
 
-    def filter_students():
-        country = country_entry.get()
-        filtered_students = stu_filter(students, country)
-        display_students_in_frame(filtered_students, frame)
+        # Lưu DataFrame đã sắp xếp vào file CSV mới
+        df_sorted_desc.to_csv("data/sorted_file.csv", index=False)
 
-    filter_button = ttk.Button(root, text="Filter", command=filter_students)
-    filter_button.pack(side=tk.LEFT)
-
-    # Create an entry widget for student ID search
-    id_label = ttk.Label(root, text="Student ID:")
-    id_label.pack(side=tk.LEFT, padx=(10, 5))
-    
-    id_entry = ttk.Entry(root)
-    id_entry.pack(side=tk.LEFT, padx=(0, 10))
-
-    def find_student():
-        student_id = int(id_entry.get())
-        student = stu_find(students, student_id)
-        if student:
-            display_students_in_frame([student], frame)
-        else:
-            display_students_in_frame([], frame)
-
-    find_button = ttk.Button(root, text="Find", command=find_student)
-    find_button.pack(side=tk.LEFT)
+        return True  # Trả về True khi hoàn tất
+    except Exception as e:
+        print(f"Lỗi: {e}")
+        return False  # Trả về False nếu xảy ra lỗ
+result = sort_increase_point()
+print(f"Kết quả sắp xếp và lưu file: {result}")

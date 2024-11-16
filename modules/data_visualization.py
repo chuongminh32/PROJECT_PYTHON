@@ -39,7 +39,7 @@ def plot_country(FILE_PATH, frame):
     # Vẽ biểu đồ tròn
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.set(title="Biểu đồ phân bố quốc tịch")
-    wedges, _, autotexts = ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 2.4 else '', startangle=140)
+    wedges, _, autotexts = ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 10 else '', startangle=140)
 
     # Tùy chỉnh hover để hiển thị thông tin chi tiết
     annot = ax.annotate("", xy=(0, 0), xytext=(10, 10), textcoords="offset points", bbox=dict(
