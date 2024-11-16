@@ -7,10 +7,6 @@ def handle_missing_value(df):
       và thay thế tuổi bị thiếu bằng tuổi trung bình.
     - Xóa các hàng có giá trị 'id' bị thiếu.
     """
-    # Xóa cột 'ethnic.group' nếu tồn tại
-    # if 'ethnic.group' in df.columns:
-    #     df = df.drop(columns='ethnic.group')
-
     # Điền dữ liệu chuỗi bị thiếu bằng 'No infor'
     columns_str = ['name', 'nationality', 'city', 'gender']
     for col in columns_str:

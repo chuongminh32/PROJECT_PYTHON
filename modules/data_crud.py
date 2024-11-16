@@ -59,33 +59,6 @@ def create_data(student_data, file_path):
         writer = csv.writer(file)
         writer.writerows(current_data)
 
-
-# def update_data(student_id, new_info):
-#     """Cập nhật thông tin sinh viên trong file CSV."""
-#     updated = False
-
-#     # lấy data trong file demo  -> lưu list row 
-#     with open("data/data_clean.csv", "r") as file:
-#         reader = csv.reader(file)
-#         data = list(reader)
-
-#     # Tìm kiếm ID sinh viên và cập nhật thông tin
-#     for index, col in enumerate(data):
-#         # tìm data sinh viên theo ID (diuyệt qua tất cả các dòng | cột 0 trong data)
-#        if str(col[0]).strip() == student_id.strip():  # Giả sử ID sinh viên nằm ở cột đầu tiên
-#             col[index] = new_info  # Cập nhật thông tin mới
-#             updated = True
-#             break
-
-#     # Ghi dữ liệu cập nhật lại vào file
-#     if updated:
-#         with open("data/data_clean.csv", "w", newline='') as file:
-#             writer = csv.writer(file)
-#             writer.writerows(rows)
-#         return True
-#     else:
-#         return False
-
 def update_data(student_id, new_info):
     """Cập nhật thông tin sinh viên trong file CSV."""
     updated = False
@@ -122,5 +95,3 @@ def delete_data(df, student_id):
         return df
     else:
         return None  # Trả về None nếu không tìm thấy sinh viên
-
-#

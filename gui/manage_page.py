@@ -151,6 +151,7 @@ class StudentManagementApp:
         for i, (label_text, placeholder) in enumerate(fields):  # Tạo các trường nhập dữ liệu
             col = i % 2
             row = (i // 2) + 1
+            # Hiển thị nhãn của trường nhập dữ liệu
             Label(field_frame, text=label_text, font=("Arial", 11)).grid(
                 row=row, column=col * 2, padx=15, pady=5, sticky="w")
             # Tạo biến lưu trữ dữ liệu nhập vào
@@ -171,7 +172,7 @@ class StudentManagementApp:
         button_frame.pack(pady=10)
 
         def fill_sample_data():
-            sample_data = {"ID": "1", "Name": "Chuong", "Nationality": "Vietnam", "City": "Ho Chi Minh",
+            sample_data = {"ID": "9999", "Name": "Chuong", "Nationality": "Vietnam", "City": "Ho Chi Minh",
                            "Latitude (vĩ dộ)": "37.8", "Longitude (kinh độ)": "-122.27", "Gender": "F", "Ethnic Group": "NA",
                            "Age": "22", "English Grade": "4.0", "Math Grade": "3.9", "Sciences Grade": "3.8", "Language Grade": "5",
                            "Portfolio Rating": "4", "Cover Letter Rating": "5", "Reference Letter Rating": "4"}

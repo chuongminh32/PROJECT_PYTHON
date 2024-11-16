@@ -75,8 +75,6 @@ def add_entry(frame, placeholder, y, show=""):
     return entry
 
 # hàm add_signup_button() nhận thêm tham số username, password, confirm_password để kiểm tra thông tin nhập vào
-
-
 def add_signup_button(frame, username, password, confirm_password):
     def signup():
         user = username.get()  # Lấy tên người dùng từ ô nhập liệu
