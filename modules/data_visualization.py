@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import mplcursors
 
 print("TRỰC QUAN HÓA DỮ LIỆU".center(50, '='))
 def plot_grade(FILE_PATH):
@@ -31,7 +32,7 @@ def plot_grade(FILE_PATH):
     # In nghiêng các subject
     plt.xticks(rotation=45)
     plt.legend()
-
+    '''
     # Hover interaction
     annot = ax.annotate("", xy=(0,0), xytext=(11,11),textcoords="offset points",
                         bbox=dict(boxstyle="round", fc="m"),
@@ -63,7 +64,7 @@ def plot_grade(FILE_PATH):
         if visible:
             annot.set_visible(False)
             fig.canvas.draw_idle()
-
+'''
     # Click interaction
     def on_click(event):
         """Xử lý sự kiện khi click."""
@@ -76,7 +77,8 @@ def plot_grade(FILE_PATH):
                     grade = bar.get_height()
                     print(f"Bạn đã chọn: {subject} - Điểm trung bình: {grade:.2f}")
 
-    fig.canvas.mpl_connect("motion_notify_event", on_hover)
+#    fig.canvas.mpl_connect("motion_notify_event", on_hover)
+    mplcursors.cursor(ax, hover=True)
     fig.canvas.mpl_connect("button_press_event", on_click)
 
     plt.tight_layout()
@@ -115,6 +117,7 @@ def plot_country(FILE_PATH):
 
     plt.legend(labels=nationality_counts.index, loc='center left', bbox_to_anchor=(1, 0.5))
 
+    '''
     # Tùy chỉnh hover chuột để xem những nước có % nhỏ
     annot = ax.annotate("", xy=(0,0), xytext=(10,10), textcoords="offset points", bbox=dict     (boxstyle="round", fc="w"), arrowprops=dict(arrowstyle="->"))
     annot.set_visible(False)
@@ -147,9 +150,11 @@ def plot_country(FILE_PATH):
             fig.canvas.draw_idle()
 
     fig.canvas.mpl_connect("motion_notify_event", hover)
+    '''
+    mplcursors.cursor(fig, hover=True)
     plt.show()
 
 
 #plot_grade('data/student-dataset.csv')
 #plot_age('data/student-dataset.csv')
-#plot_country('data/student-dataset.csv')
+plot_country('data/student-dataset.csv')
