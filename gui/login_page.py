@@ -107,7 +107,7 @@ class LoginPage:
                     with open("data/users.txt", "r") as f:
                         users = ast.literal_eval(f.read())  # Đọc dữ liệu người dùng từ tệp
                     if u in users and users[u] == p:  # Kiểm tra nếu tên người dùng và mật khẩu hợp lệ
-                        if u == "chuongdepzai" and p == "111":  # Kiểm tra nếu là admin
+                        if u == "admin" and p == "111":  # Kiểm tra nếu là admin
                             messagebox.showinfo("Login", "Hi Admin !")  # Thông báo với admin
                             self.root.destroy()  # Đóng cửa sổ đăng nhập
                             subprocess.run(["python", "gui/home_page.py"])  # Mở trang chủ
