@@ -1,998 +1,999 @@
 id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grade,math.grade,sciences.grade,language.grade,portfolio.rating,coverletter.rating,refletter.rating,total_score
-156,Katelynn Andrie,United States of America,Kansas City,39.1,-94.58,F,Hispanic or Latino,23,3.0,3.9,3.9,5.0,5,5.0,5,30.8
 220,Jasper Stang,United States of America,Sacramento,38.58,-121.49,M,Asian,24,3.6,3.9,3.3,5.0,5,5.0,5,30.8
 177,George Mann,Russian Federation,Moscow,55.75,37.62,M,NAN,23,3.9,3.9,4.0,4.0,5,5.0,5,30.8
+156,Katelynn Andrie,United States of America,Kansas City,39.1,-94.58,F,Hispanic or Latino,23,3.0,3.9,3.9,5.0,5,5.0,5,30.8
 146,Juhaina al-Bilal,Bangladesh,Dhaka,23.72,90.41,F,NAN,20,3.9,3.9,3.9,5.0,5,4.0,5,30.7
+136,Kevin Curry,United States of America,Phoenix,33.45,-112.07,M,Asian,23,3.9,3.0,3.7,5.0,5,5.0,5,30.6
 254,Branden Cantrell,United States of America,Phoenix,33.45,-112.07,M,Native American,23,2.7,4.0,3.9,5.0,5,5.0,5,30.6
 293,Taryn Springfield,Canada,Vancouver,49.25,-123.13,F,Other,20,3.5,3.7,3.4,5.0,5,5.0,5,30.6
-136,Kevin Curry,United States of America,Phoenix,33.45,-112.07,M,Asian,23,3.9,3.0,3.7,5.0,5,5.0,5,30.6
 195,Joshua Mesan,United States of America,San Jose,37.34,-121.89,M,White,24,4.0,3.8,3.7,5.0,5,4.0,5,30.5
-160,Trevor Bulba,United States of America,Chicago,41.85,-87.65,M,White,21,3.9,3.8,3.8,5.0,5,4.0,5,30.5
 182,Billy Jack Bestle,United States of America,Baltimore,39.29,-76.61,M,Asian,22,3.7,4.0,3.8,5.0,5,4.0,5,30.5
+160,Trevor Bulba,United States of America,Chicago,41.85,-87.65,M,White,21,3.9,3.8,3.8,5.0,5,4.0,5,30.5
 233,Joseph Hazelton,United States of America,Oakland,37.8,-122.27,M,White,22,3.5,4.0,3.9,5.0,5,4.0,5,30.4
 144,Tanner Jones,United States of America,Stockton,37.96,-121.29,M,Hispanic or Latino,23,3.9,3.7,3.7,5.0,4,5.0,5,30.3
 29,Victoria Ibarra,Dominican Republic,Santo Domingo,18.47,-69.9,F,NAN,22,3.4,3.8,4.0,4.0,5,5.0,5,30.2
+167,Dalen Whiting,United States of America,Carrollton,32.95,-96.89,F,Black or African American,23,2.8,3.9,3.3,5.0,5,5.0,5,30.0
 306,Dane Whittemore,Canada,Toronto,43.67,-79.42,M,Other,21,3.8,3.2,4.0,5.0,5,4.0,5,30.0
 286,Michael Griffin,United States of America,New York,40.71,-74.01,M,Black or African American,21,4.0,4.0,4.0,5.0,3,5.0,5,30.0
-167,Dalen Whiting,United States of America,Carrollton,32.95,-96.89,F,Black or African American,23,2.8,3.9,3.3,5.0,5,5.0,5,30.0
 263,Ryan Heidebrecht,United States of America,San Jose,37.34,-121.89,M,Black or African American,22,3.9,3.7,3.8,5.0,5,3.5,5,29.9
-27,Brandon Barbour,United States of America,South Hill,47.14,-122.27,M,Asian,21,3.9,3.7,3.3,5.0,4,5.0,5,29.9
 58,Cameron Steinberg,United States of America,Los Angeles,34.05,-118.24,M,Native American,20,2.1,3.9,3.9,5.0,5,5.0,5,29.9
 227,Patricia Rockhold,United States of America,San Francisco,37.77,-122.42,F,Hispanic or Latino,21,4.0,3.5,3.4,5.0,5,4.0,5,29.9
-235,Ryan Tyler,United States of America,Los Angeles,34.05,-118.24,M,White,20,3.7,3.5,3.5,5.0,4,5.0,5,29.7
+27,Brandon Barbour,United States of America,South Hill,47.14,-122.27,M,Asian,21,3.9,3.7,3.3,5.0,4,5.0,5,29.9
 181,Addie Villavicencio,United States of America,San Jose,37.34,-121.89,F,Hispanic or Latino,20,4.0,3.5,3.2,5.0,5,5.0,4,29.7
-154,Kaitlin Krueger,United States of America,Los Angeles,34.05,-118.24,F,Native American,24,3.7,3.9,4.0,5.0,4,5.0,4,29.6
-490,Seiji,Japan,Osaka,-38.24,63.73,M,Chinese,21,4.9,1.6,4.1,5.0,4,5.0,5,29.6
+235,Ryan Tyler,United States of America,Los Angeles,34.05,-118.24,M,White,20,3.7,3.5,3.5,5.0,4,5.0,5,29.7
+9999,Chuong,Vietnam,Ho Chi Minh,37.8,-122.27,F,,22,4.0,3.9,3.8,5.0,4,5.0,4,29.7
 274,Brenna Chapman,United States of America,Las Vegas,36.17,-115.14,F,Asian,21,3.5,3.8,3.3,5.0,5,4.0,5,29.6
 91,Daisha Schmidt,United States of America,Boulder,40.02,-105.27,F,Native American,22,3.7,3.9,4.0,5.0,5,4.0,4,29.6
+154,Kaitlin Krueger,United States of America,Los Angeles,34.05,-118.24,F,Native American,24,3.7,3.9,4.0,5.0,4,5.0,4,29.6
+490,Seiji,Japan,Osaka,-38.24,63.73,M,Chinese,21,4.9,1.6,4.1,5.0,4,5.0,5,29.6
 240,Rylee Onstott,United States of America,Los Angeles,34.05,-118.24,other,Black or African American,21,4.0,3.8,3.8,5.0,5,5.0,3,29.6
-142,Alexandria Fortner,United States of America,Phoenix,33.45,-112.07,F,Asian,20,3.9,3.8,3.8,5.0,4,4.0,5,29.5
-143,Savannah Kivett,United States of America,Colorado Springs,38.83,-104.82,F,Black or African American,21,3.8,3.9,3.8,5.0,4,4.0,5,29.5
-37,Katrina Saito,Japan,Tokyo,35.69,139.75,F,Korean,22,3.8,4.0,3.7,4.0,5,4.0,5,29.5
-159,Daniel Spurlin,United States of America,San Jose,37.34,-121.89,M,Native American,24,3.9,3.9,3.7,5.0,5,5.0,3,29.5
 303,Madison Fithian,United States of America,Los Angeles,34.05,-118.24,F,Asian,20,3.6,3.9,4.0,5.0,5,5.0,3,29.5
-140,Faviola Soto,Mexico,Cortazar,20.48,-100.93,F,Indigenous,19,4.0,3.8,3.9,3.7,5,5.0,4,29.4
-124,Austin Harline,United States of America,Las Vegas,36.17,-115.14,M,Asian,21,2.8,3.8,3.8,5.0,5,5.0,4,29.4
-193,Hannah Critchfield,United States of America,New York,40.71,-74.01,F,White,21,3.5,3.3,3.6,5.0,5,4.0,5,29.4
-199,Grant Walden,United States of America,San Diego,32.72,-117.16,M,Black or African American,22,3.8,3.3,3.3,5.0,5,4.0,5,29.4
+159,Daniel Spurlin,United States of America,San Jose,37.34,-121.89,M,Native American,24,3.9,3.9,3.7,5.0,5,5.0,3,29.5
+143,Savannah Kivett,United States of America,Colorado Springs,38.83,-104.82,F,Black or African American,21,3.8,3.9,3.8,5.0,4,4.0,5,29.5
+142,Alexandria Fortner,United States of America,Phoenix,33.45,-112.07,F,Asian,20,3.9,3.8,3.8,5.0,4,4.0,5,29.5
+37,Katrina Saito,Japan,Tokyo,35.69,139.75,F,Korean,22,3.8,4.0,3.7,4.0,5,4.0,5,29.5
 302,Austin Haas,United States of America,Columbus,39.96,-83.0,M,Black or African American,20,3.6,3.7,3.1,5.0,4,5.0,5,29.4
-28,Reilly Wagar,United States of America,Modesto,37.64,-121.0,F,Hispanic or Latino,23,3.4,3.2,3.7,5.0,5,4.0,5,29.3
+199,Grant Walden,United States of America,San Diego,32.72,-117.16,M,Black or African American,22,3.8,3.3,3.3,5.0,5,4.0,5,29.4
+124,Austin Harline,United States of America,Las Vegas,36.17,-115.14,M,Asian,21,2.8,3.8,3.8,5.0,5,5.0,4,29.4
+140,Faviola Soto,Mexico,Cortazar,20.48,-100.93,F,Indigenous,19,4.0,3.8,3.9,3.7,5,5.0,4,29.4
+193,Hannah Critchfield,United States of America,New York,40.71,-74.01,F,White,21,3.5,3.3,3.6,5.0,5,4.0,5,29.4
 12,Alexander Sherman,United States of America,Omaha,41.26,-95.94,M,Asian,20,3.8,3.6,3.9,5.0,4,4.0,5,29.3
-1101,Seoyoung,South Korea,Incheon,24.28,159.52,M,Japanese,27,3.2,2.8,4.9,4.4,5,4.0,5,29.3
 147,Siena Ingram,United States of America,Henderson,36.04,-114.98,F,Asian,21,3.8,3.7,3.8,5.0,5,3.0,5,29.3
 155,Jaime Mikesell,United States of America,Los Angeles,34.05,-118.24,F,Asian,20,3.9,3.7,3.7,5.0,4,5.0,4,29.3
-38,Joshua Galloway,United States of America,New York,40.71,-74.01,M,Black or African American,24,3.3,3.3,3.6,5.0,4,5.0,5,29.2
-290,Michaela Schoenbeck,United States of America,Rexburg,43.83,-111.79,F,Native American,22,3.9,4.0,3.3,5.0,5,4.0,4,29.2
+28,Reilly Wagar,United States of America,Modesto,37.64,-121.0,F,Hispanic or Latino,23,3.4,3.2,3.7,5.0,5,4.0,5,29.3
+1101,Seoyoung,South Korea,Incheon,24.28,159.52,M,Japanese,27,3.2,2.8,4.9,4.4,5,4.0,5,29.3
 13,Edgar Sanchez,Mexico,Tijuana,32.53,-117.02,M,White,23,3.7,3.5,4.0,4.0,4,5.0,5,29.2
+290,Michaela Schoenbeck,United States of America,Rexburg,43.83,-111.79,F,Native American,22,3.9,4.0,3.3,5.0,5,4.0,4,29.2
+38,Joshua Galloway,United States of America,New York,40.71,-74.01,M,Black or African American,24,3.3,3.3,3.6,5.0,4,5.0,5,29.2
 131,Shauna Sneed,United States of America,Burlingame,37.58,-122.36,F,White,19,2.7,3.7,3.7,5.0,5,4.0,5,29.1
-210,Carlos Anaya,Mexico,Mexico,19.43,-99.14,M,Indigenous,24,3.7,3.7,3.7,4.0,4,5.0,5,29.1
-239,Kayla Sandefur,United States of America,Los Angeles,34.05,-118.24,F,White,23,3.5,3.1,3.5,5.0,5,4.0,5,29.1
 43,Kenny Fukushima,Japan,Tokyo,35.69,139.75,M,Korean,22,3.9,2.9,3.3,4.0,5,5.0,5,29.1
+239,Kayla Sandefur,United States of America,Los Angeles,34.05,-118.24,F,White,23,3.5,3.1,3.5,5.0,5,4.0,5,29.1
+210,Carlos Anaya,Mexico,Mexico,19.43,-99.14,M,Indigenous,24,3.7,3.7,3.7,4.0,4,5.0,5,29.1
 123,Gareth Newkirk,United States of America,Los Angeles,34.05,-118.24,M,Asian,21,4.0,3.2,3.9,5.0,4,5.0,4,29.1
 289,Daniel Pierce,United States of America,New York,40.71,-74.01,M,Hispanic or Latino,24,3.3,2.8,3.9,5.0,5,4.0,5,29.0
+262,Michelle Goldanloo,United States of America,San Diego,32.72,-117.16,F,Hispanic or Latino,22,3.3,2.8,3.9,5.0,5,5.0,4,29.0
+184,Kimberly Thielke,United States of America,Los Angeles,34.05,-118.24,F,White,21,3.8,3.9,3.3,5.0,3,5.0,5,29.0
 400,Oliver,Canada,Toronto,-79.45,-128.79,F,Other,25,3.9,4.8,1.9,4.4,4,5.0,5,29.0
 197,Troy White,United States of America,New York,40.71,-74.01,M,White,22,4.0,3.6,3.4,5.0,4,4.0,5,29.0
-184,Kimberly Thielke,United States of America,Los Angeles,34.05,-118.24,F,White,21,3.8,3.9,3.3,5.0,3,5.0,5,29.0
-262,Michelle Goldanloo,United States of America,San Diego,32.72,-117.16,F,Hispanic or Latino,22,3.3,2.8,3.9,5.0,5,5.0,4,29.0
-252,Kyle Blanscet,United States of America,Sabattus,44.12,-70.11,M,Native American,23,3.8,3.5,3.7,5.0,4,4.0,5,29.0
 250,Abigail Orgeron,United States of America,Prior Lake,44.71,-93.42,F,White,23,3.2,3.0,3.8,5.0,5,5.0,4,29.0
+252,Kyle Blanscet,United States of America,Sabattus,44.12,-70.11,M,Native American,23,3.8,3.5,3.7,5.0,4,4.0,5,29.0
 206,Lexi Hatton,United States of America,Los Angeles,34.05,-118.24,F,Hispanic or Latino,23,3.3,2.7,4.0,5.0,4,5.0,5,29.0
-214,Christian Chow,China,Handan,36.57,114.53,M,Tibetan,21,2.6,3.9,3.4,4.0,5,5.0,5,28.9
-2293,Naeun,South Korea,Gwangju,-40.43,156.74,M,Other,24,4.3,2.5,5.0,4.1,4,4.0,5,28.9
-119,Megan Salamena,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,23,3.9,3.9,3.1,5.0,4,4.0,5,28.9
-30,Dakota Wirth,United States of America,Sacramento,38.58,-121.49,F,White,22,3.4,3.9,3.6,5.0,3,5.0,5,28.9
 56,Connor Ferry,United States of America,Charlotte,35.23,-80.84,M,White,23,3.1,3.8,4.0,5.0,4,5.0,4,28.9
 259,Zaghlool al-Pasha,India,Deoria,26.5,83.79,M,Muslim,21,2.3,3.8,3.8,4.0,5,5.0,5,28.9
+30,Dakota Wirth,United States of America,Sacramento,38.58,-121.49,F,White,22,3.4,3.9,3.6,5.0,3,5.0,5,28.9
+2293,Naeun,South Korea,Gwangju,-40.43,156.74,M,Other,24,4.3,2.5,5.0,4.1,4,4.0,5,28.9
+214,Christian Chow,China,Handan,36.57,114.53,M,Tibetan,21,2.6,3.9,3.4,4.0,5,5.0,5,28.9
+119,Megan Salamena,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,23,3.9,3.9,3.1,5.0,4,4.0,5,28.9
 294,Matthew Obourn,United States of America,San Diego,32.72,-117.16,M,Black or African American,23,3.9,4.0,3.9,5.0,4,4.0,4,28.8
 33,Sean Rozga,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,21,3.4,3.8,3.6,5.0,4,5.0,4,28.799999999999997
-73,Aurelia Davis Ingham,United States of America,Roseville,38.75,-121.29,F,Native American,22,3.8,2.2,3.7,5.0,4,5.0,5,28.7
 1,Joshua Lonaker,United States of America,Santa Clarita,34.39,-118.54,M,Black or African American,22,2.9,3.2,3.6,5.0,5,4.0,5,28.7
+73,Aurelia Davis Ingham,United States of America,Roseville,38.75,-121.29,F,Native American,22,3.8,2.2,3.7,5.0,4,5.0,5,28.7
 128,Brandy Waldner,Germany,Zülpich,50.7,6.65,F,Russian,20,3.2,3.5,3.9,3.0,5,5.0,5,28.6
-196,Dylan Bell,United States of America,Tucson,32.22,-110.93,M,Hispanic or Latino,20,3.3,3.8,3.5,5.0,5,4.0,4,28.6
+283,Jesse Carballo,Colombia,Bogotá,4.65,-74.06,M,NAN,20,3.8,3.9,3.9,4.0,5,4.0,4,28.6
 161,Jordan Burkhamer,United States of America,San Jose,37.34,-121.89,F,Asian,23,3.0,3.9,3.7,5.0,5,4.0,4,28.6
 74,Taylor Elstun,United States of America,San Diego,32.72,-117.16,F,Black or African American,21,2.3,3.7,3.6,5.0,5,4.0,5,28.6
-283,Jesse Carballo,Colombia,Bogotá,4.65,-74.06,M,NAN,20,3.8,3.9,3.9,4.0,5,4.0,4,28.6
+196,Dylan Bell,United States of America,Tucson,32.22,-110.93,M,Hispanic or Latino,20,3.3,3.8,3.5,5.0,5,4.0,4,28.6
 304,Zachary Mulvahill,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,20,3.2,3.4,3.9,5.0,5,5.0,3,28.5
-108,Riley Mcloughlin,United States of America,Los Angeles,34.05,-118.24,M,Hispanic or Latino,23,3.6,3.6,3.3,5.0,5,4.0,4,28.5
-287,Chad Klemp,United States of America,San Diego,32.72,-117.16,M,Asian,22,3.9,2.6,4.0,5.0,4,4.0,5,28.5
-204,Aaron Knott,United States of America,Santa Ana,33.75,-117.87,M,Native American,23,3.2,3.6,3.7,5.0,4,5.0,4,28.5
 110,Maryah Falloon,United States of America,Phoenix,33.45,-112.07,F,White,23,3.9,3.7,3.9,5.0,3,4.0,5,28.5
-176,Surya Ky,China,Tangshan,37.33,114.7,M,Uighur,21,3.7,4.0,3.8,4.0,4,4.0,5,28.5
+108,Riley Mcloughlin,United States of America,Los Angeles,34.05,-118.24,M,Hispanic or Latino,23,3.6,3.6,3.3,5.0,5,4.0,4,28.5
+204,Aaron Knott,United States of America,Santa Ana,33.75,-117.87,M,Native American,23,3.2,3.6,3.7,5.0,4,5.0,4,28.5
 40,Sharon Fyfe,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,22,3.7,3.0,3.8,5.0,4,5.0,4,28.5
-137,Charles Cramer,United States of America,East Los Angeles,34.02,-118.17,M,Asian,23,3.1,3.5,3.8,5.0,4,5.0,4,28.4
+287,Chad Klemp,United States of America,San Diego,32.72,-117.16,M,Asian,22,3.9,2.6,4.0,5.0,4,4.0,5,28.5
+176,Surya Ky,China,Tangshan,37.33,114.7,M,Uighur,21,3.7,4.0,3.8,4.0,4,4.0,5,28.5
 60,Katelyn Sharp,United States of America,Los Angeles,34.05,-118.24,F,Native American,20,3.9,3.7,2.8,5.0,5,3.0,5,28.4
 44,Tawnie Glaisher,United States of America,Fremont,37.55,-121.99,F,Native American,24,3.4,3.2,3.8,5.0,4,4.0,5,28.4
 228,Kylie Schafer,United States of America,Houston,29.76,-95.36,F,White,22,3.1,3.0,3.3,5.0,5,5.0,4,28.4
 100,Rachel Bakeman,United States of America,Phoenix,33.45,-112.07,F,Asian,24,3.9,3.7,3.8,5.0,4,5.0,3,28.4
+137,Charles Cramer,United States of America,East Los Angeles,34.02,-118.17,M,Asian,23,3.1,3.5,3.8,5.0,4,5.0,4,28.4
 456,Trung Bao,Vietnam,Cần Thơ,59.95,-162.13,F,Tay,22,3.9,3.6,3.1,4.8,5,3.0,5,28.4
-298,Nicolas Papp,United States of America,New York,40.71,-74.01,M,White,23,2.7,3.7,3.9,5.0,5,4.0,4,28.3
-80,Sean Tegtman,United States of America,Kettering,39.69,-84.17,M,Hispanic or Latino,25,3.7,3.8,3.8,5.0,3,4.0,5,28.3
 269,Garrett Heim,United States of America,Mobile,30.69,-88.04,M,Asian,20,4.0,3.2,3.1,5.0,4,4.0,5,28.3
 229,Katherine Beatty,United States of America,Los Angeles,34.05,-118.24,F,Asian,19,4.0,2.4,3.9,5.0,4,5.0,4,28.3
+80,Sean Tegtman,United States of America,Kettering,39.69,-84.17,M,Hispanic or Latino,25,3.7,3.8,3.8,5.0,3,4.0,5,28.3
+298,Nicolas Papp,United States of America,New York,40.71,-74.01,M,White,23,2.7,3.7,3.9,5.0,5,4.0,4,28.3
 209,Makenzie Swann,United States of America,Stockton,37.96,-121.29,F,Native American,22,3.4,2.8,3.1,5.0,5,5.0,4,28.299999999999997
 1083,Zhang Qi,China,Shenzhen,74.64,147.23,M,Tibetan,24,3.1,4.2,5.0,2.9,5,4.0,4,28.200000000000003
-452,Ana Paula,Brazil,Brasília,-30.91,-35.59,F,Black,26,4.7,4.0,3.4,3.1,5,3.0,5,28.2
-602,Danielle,Brazil,São Paulo,74.17,44.45,F,Pardo,27,4.0,1.3,3.6,4.3,5,5.0,5,28.2
 186,Kayla Sales,United States of America,Quincy,42.25,-71.0,F,White,22,2.1,3.1,4.0,5.0,5,4.0,5,28.2
+602,Danielle,Brazil,São Paulo,74.17,44.45,F,Pardo,27,4.0,1.3,3.6,4.3,5,5.0,5,28.2
+297,Cody Smith,United States of America,Charlotte,35.23,-80.84,M,Native American,23,3.8,3.5,3.9,5.0,5,2.0,5,28.2
+452,Ana Paula,Brazil,Brasília,-30.91,-35.59,F,Black,26,4.7,4.0,3.4,3.1,5,3.0,5,28.2
+285,Viridiana Ballesteros,Brazil,Alfenas,-21.43,-45.95,F,White,22,2.8,3.5,3.9,4.0,4,5.0,5,28.2
 277,Katie Abercrombie,United States of America,Stockton,37.96,-121.29,F,Asian,21,3.8,3.8,3.6,5.0,3,5.0,4,28.2
 270,Cody Amen,United States of America,Las Vegas,36.17,-115.14,M,White,23,3.6,3.9,3.7,5.0,4,4.0,4,28.2
-32,Michael Benson,United States of America,Phoenix,33.45,-112.07,M,Hispanic or Latino,21,3.8,3.7,3.7,5.0,4,5.0,3,28.2
 1356,Vsevolod,Russia,Yekaterinburg,-85.7,91.23,F,Russian,30,4.6,3.2,3.1,2.3,5,5.0,5,28.2
-6,Joey Abreu,China,Shenyang,41.79,123.43,M,Han,22,3.7,3.9,3.6,2.0,5,5.0,5,28.2
 71,Joseph Smith,United States of America,Sacramento,38.58,-121.49,M,Asian,21,3.7,3.7,2.8,5.0,5,4.0,4,28.2
-297,Cody Smith,United States of America,Charlotte,35.23,-80.84,M,Native American,23,3.8,3.5,3.9,5.0,5,2.0,5,28.2
-285,Viridiana Ballesteros,Brazil,Alfenas,-21.43,-45.95,F,White,22,2.8,3.5,3.9,4.0,4,5.0,5,28.2
-125,Courtney Martinez,Mexico,Aguascalientes,21.88,-102.3,F,Black,20,3.7,3.7,3.7,3.0,4,5.0,5,28.1
-205,Jessica Greenberg,United States of America,Joplin,37.08,-94.51,F,Hispanic or Latino,23,3.6,3.7,2.8,5.0,4,4.0,5,28.1
-1397,Nayeon,South Korea,Gwangju,49.1,-39.77,M,Other,26,5.0,4.6,3.5,3.0,5,4.0,3,28.1
+32,Michael Benson,United States of America,Phoenix,33.45,-112.07,M,Hispanic or Latino,21,3.8,3.7,3.7,5.0,4,5.0,3,28.2
+6,Joey Abreu,China,Shenyang,41.79,123.43,M,Han,22,3.7,3.9,3.6,2.0,5,5.0,5,28.2
 246,Vittoria Faulkner,United States of America,Chicago,41.85,-87.65,F,White,22,4.0,3.6,2.5,5.0,5,4.0,4,28.1
+1397,Nayeon,South Korea,Gwangju,49.1,-39.77,M,Other,26,5.0,4.6,3.5,3.0,5,4.0,3,28.1
+205,Jessica Greenberg,United States of America,Joplin,37.08,-94.51,F,Hispanic or Latino,23,3.6,3.7,2.8,5.0,4,4.0,5,28.1
+125,Courtney Martinez,Mexico,Aguascalientes,21.88,-102.3,F,Black,20,3.7,3.7,3.7,3.0,4,5.0,5,28.1
 483,Sophia,Australia,Perth,32.9,-43.47,M,Irish,22,2.8,4.6,5.0,4.7,5,4.0,2,28.099999999999998
-222,Jake Seime,United States of America,Reno,39.53,-119.81,M,Hispanic or Latino,22,2.4,3.9,3.7,5.0,4,4.0,5,28.0
-219,Kyler Grieshaber,United States of America,Cohoes,42.77,-73.7,M,Native American,22,3.6,3.4,4.0,5.0,4,3.0,5,28.0
-122,Wesley Nunn,United States of America,Los Angeles,34.05,-118.24,M,Hispanic or Latino,23,3.9,4.0,2.1,5.0,5,5.0,3,28.0
-170,Kaden Yates,United States of America,Salinas,36.68,-121.65,M,White,23,3.6,3.4,4.0,5.0,5,4.0,3,28.0
 224,Anthony Mcdevitt,United States of America,Los Angeles,34.05,-118.24,M,Asian,24,3.1,4.0,3.9,5.0,4,5.0,3,28.0
-267,Melody Bowyer,United States of America,Baytown,29.74,-94.98,F,Black or African American,21,3.2,3.5,3.3,5.0,4,4.0,5,28.0
 201,Tyler Kibel,United States of America,Santa Ana,33.75,-117.87,M,Black or African American,24,4.0,3.2,3.8,5.0,5,3.0,4,28.0
-66,William Grevious,United States of America,Stockton,37.96,-121.29,M,Black or African American,22,3.4,3.4,3.1,5.0,3,5.0,5,27.9
-109,Aimee Apelyan,United States of America,Joliet,41.52,-88.08,F,Native American,24,3.3,3.8,3.8,5.0,4,4.0,4,27.9
+219,Kyler Grieshaber,United States of America,Cohoes,42.77,-73.7,M,Native American,22,3.6,3.4,4.0,5.0,4,3.0,5,28.0
+222,Jake Seime,United States of America,Reno,39.53,-119.81,M,Hispanic or Latino,22,2.4,3.9,3.7,5.0,4,4.0,5,28.0
+267,Melody Bowyer,United States of America,Baytown,29.74,-94.98,F,Black or African American,21,3.2,3.5,3.3,5.0,4,4.0,5,28.0
+170,Kaden Yates,United States of America,Salinas,36.68,-121.65,M,White,23,3.6,3.4,4.0,5.0,5,4.0,3,28.0
+122,Wesley Nunn,United States of America,Los Angeles,34.05,-118.24,M,Hispanic or Latino,23,3.9,4.0,2.1,5.0,5,5.0,3,28.0
 830,Thi Bao,Vietnam,Hà Nội,89.01,119.11,M,Kinh,28,3.2,4.3,4.8,4.6,4,2.0,5,27.9
-83,Luke Davey,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,26,3.8,3.4,3.7,5.0,4,5.0,3,27.9
-191,Jonathan Nevarez,Mexico,Mexico,19.43,-99.14,M,Indigenous,23,2.7,2.6,3.6,5.0,4,5.0,5,27.9
 192,Roger Redfern,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,21,3.9,3.9,3.1,5.0,5,3.0,4,27.9
-173,Sean Bruso,United Kingdom,London,51.51,-0.09,M,NAN,19,3.2,3.7,3.9,5.0,3,5.0,4,27.8
-36,Daniel Garcia,Peru,Lima,-12.05,-77.05,M,NAN,22,3.7,3.1,3.0,3.0,5,5.0,5,27.8
+191,Jonathan Nevarez,Mexico,Mexico,19.43,-99.14,M,Indigenous,23,2.7,2.6,3.6,5.0,4,5.0,5,27.9
+66,William Grevious,United States of America,Stockton,37.96,-121.29,M,Black or African American,22,3.4,3.4,3.1,5.0,3,5.0,5,27.9
+83,Luke Davey,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,26,3.8,3.4,3.7,5.0,4,5.0,3,27.9
+109,Aimee Apelyan,United States of America,Joliet,41.52,-88.08,F,Native American,24,3.3,3.8,3.8,5.0,4,4.0,4,27.9
 749,Sun Yun,China,Guangzhou,-42.46,-101.19,M,Han,19,3.7,2.8,4.5,4.8,5,4.0,3,27.8
 75,Joseph Snider,United States of America,Los Angeles,34.05,-118.24,M,Asian,21,3.2,2.6,3.0,5.0,5,4.0,5,27.8
-237,Veronica Tounzen,Mexico,Tijuana,32.53,-117.02,F,Mestizo,21,3.8,3.5,3.5,4.0,4,4.0,5,27.8
 76,Sourinthone Tran,China,Wuhan,30.58,114.27,M,Han,21,3.5,3.9,3.4,4.0,4,4.0,5,27.8
 301,Vanessa Gonzalez,Nicaragua,León,12.44,-86.88,F,NAN,24,3.3,3.7,3.8,3.0,5,5.0,4,27.8
+173,Sean Bruso,United Kingdom,London,51.51,-0.09,M,NAN,19,3.2,3.7,3.9,5.0,3,5.0,4,27.8
+237,Veronica Tounzen,Mexico,Tijuana,32.53,-117.02,F,Mestizo,21,3.8,3.5,3.5,4.0,4,4.0,5,27.8
+36,Daniel Garcia,Peru,Lima,-12.05,-77.05,M,NAN,22,3.7,3.1,3.0,3.0,5,5.0,5,27.8
+291,Charles Prose,United States of America,Miami,25.77,-80.19,M,Native American,24,3.7,3.2,2.8,5.0,4,4.0,5,27.7
 111,Lucille Mitchell,Canada,Edmonton,53.55,-113.5,F,Other,22,3.5,3.6,2.6,5.0,5,4.0,4,27.7
+245,Matthew Strasburger,United States of America,Los Angeles,34.05,-118.24,M,White,21,3.9,3.9,2.9,5.0,4,4.0,4,27.7
 132,Caitlin Dean,United States of America,Philadelphia,39.95,-75.16,F,Black or African American,22,3.9,3.7,3.1,5.0,4,4.0,4,27.7
 61,Colin Lemont,China,Shanghai,31.05,121.4,M,Tibetan,21,3.6,4.0,3.1,4.0,4,5.0,4,27.7
-291,Charles Prose,United States of America,Miami,25.77,-80.19,M,Native American,24,3.7,3.2,2.8,5.0,4,4.0,5,27.7
-245,Matthew Strasburger,United States of America,Los Angeles,34.05,-118.24,M,White,21,3.9,3.9,2.9,5.0,4,4.0,4,27.7
-255,Hannah Ratterman,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,23,3.5,3.4,3.7,5.0,2,5.0,5,27.6
-81,Casey Vanden Bos,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,22,2.7,2.6,3.3,5.0,5,5.0,4,27.6
-113,Bryce Vaillancourt,United States of America,Pomona,34.06,-117.75,M,Black or African American,22,3.7,3.8,2.1,5.0,4,5.0,4,27.6
-54,Nicole Humpal,United States of America,Walnut Creek,37.91,-122.06,F,Black or African American,22,3.9,3.7,4.0,5.0,3,5.0,3,27.6
-15,Brittany Sath,Japan,Tokyo,35.69,139.75,F,Chinese,21,4.0,3.9,3.7,3.0,5,3.0,5,27.6
-281,Dyllan Paige,United States of America,Sugar Land,29.62,-95.63,M,White,20,2.9,3.1,2.6,5.0,5,5.0,4,27.6
-258,Logan Nighswonger,United States of America,Los Angeles,34.05,-118.24,M,Asian,21,2.7,4.0,3.9,5.0,4,3.0,5,27.6
 138,Emily Warner,United States of America,Lodi,38.13,-121.27,F,White,21,3.5,3.2,3.9,5.0,3,5.0,4,27.6
-88,Lindsey Freund,United States of America,New York,40.71,-74.01,F,Hispanic or Latino,20,3.3,2.3,3.9,5.0,3,5.0,5,27.5
+81,Casey Vanden Bos,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,22,2.7,2.6,3.3,5.0,5,5.0,4,27.6
+15,Brittany Sath,Japan,Tokyo,35.69,139.75,F,Chinese,21,4.0,3.9,3.7,3.0,5,3.0,5,27.6
+54,Nicole Humpal,United States of America,Walnut Creek,37.91,-122.06,F,Black or African American,22,3.9,3.7,4.0,5.0,3,5.0,3,27.6
+281,Dyllan Paige,United States of America,Sugar Land,29.62,-95.63,M,White,20,2.9,3.1,2.6,5.0,5,5.0,4,27.6
+255,Hannah Ratterman,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,23,3.5,3.4,3.7,5.0,2,5.0,5,27.6
+258,Logan Nighswonger,United States of America,Los Angeles,34.05,-118.24,M,Asian,21,2.7,4.0,3.9,5.0,4,3.0,5,27.6
+113,Bryce Vaillancourt,United States of America,Pomona,34.06,-117.75,M,Black or African American,22,3.7,3.8,2.1,5.0,4,5.0,4,27.6
 151,Patrick Carnes,United States of America,Mesa,33.42,-111.82,M,Asian,22,2.4,3.5,3.6,5.0,3,5.0,5,27.5
-1645,Fabio,Brazil,Rio de Janeiro,-28.84,-112.76,M,Asian,18,2.6,4.4,4.8,4.7,3,4.0,4,27.5
-203,Alexander Lizama,Brazil,Belo Horizonte,-19.92,-43.93,M,Asian,21,3.9,3.7,3.9,3.0,4,5.0,4,27.5
-47,Zoe Kern,United States of America,West Jordan,40.61,-111.94,F,Hispanic or Latino,22,2.1,4.0,3.4,5.0,4,5.0,4,27.5
-153,Jenna Whitney,United States of America,San Diego,32.72,-117.16,F,Black or African American,23,3.7,2.9,3.9,5.0,3,4.0,5,27.5
-57,Amanda Tatum,United States of America,San Diego,32.72,-117.16,F,White,22,3.5,2.3,3.7,5.0,4,5.0,4,27.5
 266,Taylor Stone,United States of America,Reno,39.53,-119.81,F,White,22,3.0,3.0,3.5,5.0,5,5.0,3,27.5
+203,Alexander Lizama,Brazil,Belo Horizonte,-19.92,-43.93,M,Asian,21,3.9,3.7,3.9,3.0,4,5.0,4,27.5
+1645,Fabio,Brazil,Rio de Janeiro,-28.84,-112.76,M,Asian,18,2.6,4.4,4.8,4.7,3,4.0,4,27.5
+57,Amanda Tatum,United States of America,San Diego,32.72,-117.16,F,White,22,3.5,2.3,3.7,5.0,4,5.0,4,27.5
+88,Lindsey Freund,United States of America,New York,40.71,-74.01,F,Hispanic or Latino,20,3.3,2.3,3.9,5.0,3,5.0,5,27.5
+153,Jenna Whitney,United States of America,San Diego,32.72,-117.16,F,Black or African American,23,3.7,2.9,3.9,5.0,3,4.0,5,27.5
+47,Zoe Kern,United States of America,West Jordan,40.61,-111.94,F,Hispanic or Latino,22,2.1,4.0,3.4,5.0,4,5.0,4,27.5
+276,Michael Melendrez,United States of America,Shreveport,32.52,-93.75,M,Native American,22,3.4,3.8,3.2,5.0,4,4.0,4,27.4
 158,Colleen Kohout,United States of America,Philadelphia,39.95,-75.16,F,Native American,22,3.5,3.8,3.1,5.0,4,4.0,4,27.4
 188,Juanita Medina,Mexico,Mexico,19.43,-99.14,F,Asian,22,3.8,3.9,3.7,4.0,3,5.0,4,27.4
-276,Michael Melendrez,United States of America,Shreveport,32.52,-93.75,M,Native American,22,3.4,3.8,3.2,5.0,4,4.0,4,27.4
-92,Airabella Koontz,United States of America,Dallas,32.78,-96.8,F,White,22,2.7,3.3,3.4,5.0,4,5.0,4,27.4
 175,Zahraaa el-Yousef,India,Hospet,15.27,76.4,F,Hindu,22,3.9,3.7,3.8,4.0,4,4.0,4,27.4
+92,Airabella Koontz,United States of America,Dallas,32.78,-96.8,F,White,22,2.7,3.3,3.4,5.0,4,5.0,4,27.4
 292,Brittany Kemmerzell,United States of America,New York,40.71,-74.01,F,Black or African American,23,3.2,3.4,3.7,5.0,4,5.0,3,27.3
 11,Sasha Jansen,United States of America,Chicago,41.85,-87.65,F,Hispanic or Latino,21,1.7,4.0,3.6,5.0,4,4.0,5,27.3
 278,Justin Krause,United States of America,Independence,39.09,-94.42,M,White,21,3.9,2.6,2.8,5.0,3,5.0,5,27.3
-498,Leonardo,Argentina,Buenos Aires,88.51,-93.6,M,Indigenous,19,3.7,4.5,2.5,2.6,4,5.0,5,27.299999999999997
 310,Yuki,Japan,Tokyo,56.27,151.28,F,Ryukyuans,25,4.5,4.6,4.8,1.4,3,5.0,4,27.299999999999997
-26,Angela Harding,United States of America,Manteca,37.8,-121.22,F,Hispanic or Latino,22,3.1,2.9,3.2,5.0,3,5.0,5,27.2
+498,Leonardo,Argentina,Buenos Aires,88.51,-93.6,M,Indigenous,19,3.7,4.5,2.5,2.6,4,5.0,5,27.299999999999997
 94,Devon Miranda,Colombia,Pereira,4.81,-75.7,M,NAN,20,3.7,3.7,3.8,1.0,5,5.0,5,27.2
-397,Giulia,Italy,Rome,-31.43,93.13,F,Sardinian,22,2.1,5.0,3.6,4.5,5,5.0,2,27.2
-232,Anna Yoshimura,China,Rizhao,35.39,119.55,F,Uighur,20,3.5,3.8,3.9,4.0,5,5.0,2,27.2
+26,Angela Harding,United States of America,Manteca,37.8,-121.22,F,Hispanic or Latino,22,3.1,2.9,3.2,5.0,3,5.0,5,27.2
 25,Samantha Hicks,United States of America,Santa Barbara,34.42,-119.7,F,Black or African American,22,3.7,3.7,3.8,5.0,3,4.0,4,27.2
 236,Max Flores,Mexico,Tijuana,32.53,-117.02,M,White,23,3.9,2.8,2.5,4.0,4,5.0,5,27.2
-7,Preston Suarez,Brazil,São Paulo,-23.47,-46.67,M,White,22,3.8,3.7,3.6,2.0,5,5.0,4,27.1
-86,Myles Vaught,United States of America,Waukegan,42.36,-87.84,M,White,21,3.4,3.8,3.9,5.0,3,4.0,4,27.1
+232,Anna Yoshimura,China,Rizhao,35.39,119.55,F,Uighur,20,3.5,3.8,3.9,4.0,5,5.0,2,27.2
 685,Anh Thi,Vietnam,Hà Nội,15.56,165.3,F,Tay,18,2.5,4.6,4.4,4.6,1,5.0,5,27.1
-22,Rachel Jambor,United States of America,Chicago,41.85,-87.65,F,White,22,3.6,3.6,3.9,5.0,3,4.0,4,27.1
+86,Myles Vaught,United States of America,Waukegan,42.36,-87.84,M,White,21,3.4,3.8,3.9,5.0,3,4.0,4,27.1
 234,Tiffany Nguyen,Thailand,Bangkok,13.75,100.5,F,NAN,22,3.3,3.9,3.9,2.0,5,4.0,5,27.1
 212,Emma Casias,United States of America,Rochester,43.15,-77.62,F,Hispanic or Latino,22,3.2,3.7,3.2,5.0,4,3.0,5,27.1
+22,Rachel Jambor,United States of America,Chicago,41.85,-87.65,F,White,22,3.6,3.6,3.9,5.0,3,4.0,4,27.1
+7,Preston Suarez,Brazil,São Paulo,-23.47,-46.67,M,White,22,3.8,3.7,3.6,2.0,5,5.0,4,27.1
 19,Kyle Luckey,United States of America,Moreno Valley,33.94,-117.23,M,Black or African American,23,3.7,3.9,3.4,5.0,3,4.0,4,27.0
-248,Tyler Weller,United States of America,New York,40.71,-74.01,M,Hispanic or Latino,22,3.7,3.2,3.1,5.0,4,3.0,5,27.0
-31,Lauren Klocker,United States of America,Los Angeles,34.05,-118.24,F,Native American,22,2.3,3.9,3.8,5.0,5,3.0,4,27.0
-99,Antonio Desai,Japan,Kawasaki,35.52,139.72,M,Korean,22,2.2,3.9,3.9,3.0,5,4.0,5,27.0
-179,Baylen Cloutier,United States of America,Phoenix,33.45,-112.07,M,Black or African American,22,3.9,3.4,3.7,5.0,3,5.0,3,27.0
-1433,Christopher,United States of America,Houston,-35.94,58.46,F,Black or African American,27,4.7,4.3,4.9,3.1,3,3.0,4,27.0
 102,Lindsey Carter,United States of America,Redwood City,37.49,-122.24,F,Black or African American,24,3.2,3.9,3.9,5.0,2,4.0,5,27.0
 172,Aaqil el-Hashemi,India,Bangalore,12.98,77.58,M,Muslim,21,3.4,3.0,3.6,3.0,5,5.0,4,27.0
-114,Brandilyn Collins,United States of America,Los Angeles,34.05,-118.24,F,Native American,21,3.6,3.0,3.3,5.0,4,4.0,4,26.9
-478,Liu Min,China,Chengdu,79.31,119.99,M,Han,21,3.5,5.0,4.0,3.4,2,5.0,4,26.9
-42,Jesse Williams,Russian Federation,Moscow,55.75,37.62,F,NAN,21,3.9,3.4,2.6,4.0,4,4.0,5,26.9
+31,Lauren Klocker,United States of America,Los Angeles,34.05,-118.24,F,Native American,22,2.3,3.9,3.8,5.0,5,3.0,4,27.0
+99,Antonio Desai,Japan,Kawasaki,35.52,139.72,M,Korean,22,2.2,3.9,3.9,3.0,5,4.0,5,27.0
+248,Tyler Weller,United States of America,New York,40.71,-74.01,M,Hispanic or Latino,22,3.7,3.2,3.1,5.0,4,3.0,5,27.0
+179,Baylen Cloutier,United States of America,Phoenix,33.45,-112.07,M,Black or African American,22,3.9,3.4,3.7,5.0,3,5.0,3,27.0
+1433,Christopher,United States of America,Houston,-35.94,58.46,F,Black or African American,27,4.7,4.3,4.9,3.1,3,3.0,4,27.0
 51,Hannah Uren,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,22,3.2,2.2,3.5,5.0,5,3.0,5,26.9
 614,Amos,United States of America,New York,-54.85,-119.61,M,Asian,30,4.6,4.1,4.3,4.9,3,1.0,5,26.9
-288,Weldon Hightower,United States of America,New York,40.71,-74.01,M,Hispanic or Latino,20,2.6,2.1,3.2,5.0,4,5.0,5,26.9
 53,Moira Buttitto,United States of America,Los Angeles,34.05,-118.24,F,Hispanic or Latino,23,1.9,2.8,3.2,5.0,4,5.0,5,26.9
+288,Weldon Hightower,United States of America,New York,40.71,-74.01,M,Hispanic or Latino,20,2.6,2.1,3.2,5.0,4,5.0,5,26.9
+114,Brandilyn Collins,United States of America,Los Angeles,34.05,-118.24,F,Native American,21,3.6,3.0,3.3,5.0,4,4.0,4,26.9
+42,Jesse Williams,Russian Federation,Moscow,55.75,37.62,F,NAN,21,3.9,3.4,2.6,4.0,4,4.0,5,26.9
+478,Liu Min,China,Chengdu,79.31,119.99,M,Han,21,3.5,5.0,4.0,3.4,2,5.0,4,26.9
 429,Wang Min,China,Guangzhou,-64.88,163.94,M,Uighur,20,2.2,4.1,3.3,4.2,5,4.0,4,26.8
-18,David Pulc,Canada,Toronto,43.67,-79.42,M,Canadian,24,3.9,2.9,4.0,5.0,5,4.0,2,26.8
 129,Coleman Keelen,Spain,Callosa de Segura,38.12,-0.88,M,NAN,24,3.4,4.0,3.4,4.0,4,4.0,4,26.8
-24,Sila Nguyen,China,Hebi,35.9,114.19,M,Mongol,23,2.8,3.5,3.5,4.0,5,4.0,4,26.8
-118,Magdalynne Noah,United States of America,New York,40.71,-74.01,F,Black or African American,22,3.2,3.8,3.8,5.0,3,4.0,4,26.8
-139,Mckenzie Haycock,Canada,Toronto,43.67,-79.42,F,French,20,3.8,2.3,3.7,5.0,5,4.0,3,26.8
-282,Cole Hathcoat,United States of America,Lemoore,36.3,-119.78,M,Hispanic or Latino,23,2.4,3.6,2.8,5.0,3,5.0,5,26.8
 256,Alexandria Winter,United States of America,New York,40.71,-74.01,F,Hispanic or Latino,24,3.8,3.8,2.2,5.0,5,3.0,4,26.8
+24,Sila Nguyen,China,Hebi,35.9,114.19,M,Mongol,23,2.8,3.5,3.5,4.0,5,4.0,4,26.8
+457,Marc,France,Toulouse,86.46,-134.63,M,Berber,20,4.8,2.6,4.9,4.5,5,4.0,1,26.8
+282,Cole Hathcoat,United States of America,Lemoore,36.3,-119.78,M,Hispanic or Latino,23,2.4,3.6,2.8,5.0,3,5.0,5,26.8
+118,Magdalynne Noah,United States of America,New York,40.71,-74.01,F,Black or African American,22,3.2,3.8,3.8,5.0,3,4.0,4,26.8
+18,David Pulc,Canada,Toronto,43.67,-79.42,M,Canadian,24,3.9,2.9,4.0,5.0,5,4.0,2,26.8
+139,Mckenzie Haycock,Canada,Toronto,43.67,-79.42,F,French,20,3.8,2.3,3.7,5.0,5,4.0,3,26.8
+314,Rodrigo,Brazil,Brasília,-12.85,-90.95,M,Black,18,3.1,4.1,4.7,2.9,4,5.0,3,26.799999999999997
 439,João,Brazil,Salvador,78.09,176.71,F,Black,20,3.6,3.2,5.0,4.9,3,2.0,5,26.700000000000003
 225,Darby Focken,United States of America,Hinsdale,41.8,-87.94,F,Hispanic or Latino,21,3.5,2.5,3.7,5.0,4,4.0,4,26.7
 1490,Fabian,Argentina,Cordoba,-4.08,-174.88,M,Arab,18,3.7,4.7,4.6,4.7,2,4.0,3,26.7
+1037,Emilio,Mexico,Tijuana,-25.29,-134.09,F,Indigenous,18,4.4,3.3,3.0,1.0,5,5.0,5,26.7
 305,Eliana Michelsen,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,23,3.0,2.8,2.9,5.0,4,4.0,5,26.7
-127,Alexander Swearingen,United States of America,Los Angeles,34.05,-118.24,M,Asian,22,3.9,2.8,4.0,5.0,3,4.0,4,26.7
 202,Kyler Overboe,United States of America,Chicago,41.85,-87.65,M,Hispanic or Latino,21,3.2,4.0,3.5,5.0,4,3.0,4,26.7
 126,Alexandra Graham,United States of America,Los Angeles,34.05,-118.24,F,Hispanic or Latino,22,3.4,3.5,2.8,5.0,4,3.0,5,26.7
-1037,Emilio,Mexico,Tijuana,-25.29,-134.09,F,Indigenous,18,4.4,3.3,3.0,1.0,5,5.0,5,26.7
-672,Miyu,Japan,Nagoya,-6.51,-6.57,M,Ryukyuans,26,4.4,3.9,3.8,4.5,1,4.0,5,26.6
-1761,Vincenzo,Italy,Naples,27.19,117.15,M,Sardinian,20,4.7,3.2,4.9,3.8,2,3.0,5,26.6
+127,Alexander Swearingen,United States of America,Los Angeles,34.05,-118.24,M,Asian,22,3.9,2.8,4.0,5.0,3,4.0,4,26.7
 249,Terri Mergelman,United States of America,Los Angeles,34.05,-118.24,F,Hispanic or Latino,23,2.7,3.9,3.0,5.0,4,4.0,4,26.6
 55,Georgia Williams,United States of America,Memphis,35.15,-90.05,F,Black or African American,23,2.9,3.6,3.1,5.0,5,5.0,2,26.6
-107,Samuel Palmer,United States of America,New York,40.71,-74.01,M,Black or African American,22,3.9,3.3,3.3,5.0,5,4.0,2,26.5
-1118,Denise,France,Lyon,77.43,72.05,F,French,24,3.7,2.0,2.3,3.5,5,5.0,5,26.5
-2029,Megumi,Japan,Osaka,-55.8,-134.91,M,Chinese,18,4.2,4.8,2.9,3.6,2,4.0,5,26.5
-386,Zhou Ming,China,Beijing,17.76,138.59,M,Mongol,30,1.3,2.3,4.4,4.5,5,4.0,5,26.5
+1761,Vincenzo,Italy,Naples,27.19,117.15,M,Sardinian,20,4.7,3.2,4.9,3.8,2,3.0,5,26.6
+672,Miyu,Japan,Nagoya,-6.51,-6.57,M,Ryukyuans,26,4.4,3.9,3.8,4.5,1,4.0,5,26.6
 1557,Anatoly,Russia,Moscow,-20.88,-118.5,M,Russian,21,3.7,3.4,4.5,4.9,3,2.0,5,26.5
+386,Zhou Ming,China,Beijing,17.76,138.59,M,Mongol,30,1.3,2.3,4.4,4.5,5,4.0,5,26.5
+107,Samuel Palmer,United States of America,New York,40.71,-74.01,M,Black or African American,22,3.9,3.3,3.3,5.0,5,4.0,2,26.5
+2029,Megumi,Japan,Osaka,-55.8,-134.91,M,Chinese,18,4.2,4.8,2.9,3.6,2,4.0,5,26.5
+1118,Denise,France,Lyon,77.43,72.05,F,French,24,3.7,2.0,2.3,3.5,5,5.0,5,26.5
 419,Liu Jian,China,Beijing,10.1,-136.28,F,Mongol,24,4.4,4.4,2.4,4.2,5,5.0,1,26.400000000000002
-414,Samantha,United States of America,Los Angeles,-6.96,-46.94,F,Hispanic or Latino,27,4.7,1.0,4.2,4.5,5,3.0,4,26.4
-260,Madeline Kremke,United States of America,Montgomery Village,39.18,-77.2,F,Hispanic or Latino,22,3.2,3.6,2.6,5.0,4,4.0,4,26.4
-275,Blake Loughran,United States of America,San Francisco,37.77,-122.42,M,Native American,21,4.0,3.0,3.4,5.0,4,3.0,4,26.4
+284,Robert Podolski,United States of America,Oakland,37.8,-122.27,M,Native American,22,3.7,3.3,2.4,5.0,4,4.0,4,26.4
 14,Kolbi Strunk,United States of America,Mission Viejo,33.6,-117.67,M,White,21,3.2,3.9,3.3,5.0,4,3.0,4,26.4
-211,Felipe Martinez Acosta,Chile,Santiago,-33.45,-70.67,M,NAN,21,3.7,3.7,4.0,3.0,4,3.0,5,26.4
-311,Pedro,Mexico,Guadalajara,46.4,98.74,M,Indigenous,21,3.8,3.9,3.1,1.6,5,4.0,5,26.4
+260,Madeline Kremke,United States of America,Montgomery Village,39.18,-77.2,F,Hispanic or Latino,22,3.2,3.6,2.6,5.0,4,4.0,4,26.4
+414,Samantha,United States of America,Los Angeles,-6.96,-46.94,F,Hispanic or Latino,27,4.7,1.0,4.2,4.5,5,3.0,4,26.4
 134,Nadia Minks,Russian Federation,Moscow,55.75,37.62,F,NAN,24,3.8,3.1,3.5,4.0,2,5.0,5,26.4
 546,Rita,Italy,Naples,-4.5,-176.16,F,North African,23,3.4,3.1,3.8,3.1,5,5.0,3,26.4
-284,Robert Podolski,United States of America,Oakland,37.8,-122.27,M,Native American,22,3.7,3.3,2.4,5.0,4,4.0,4,26.4
+211,Felipe Martinez Acosta,Chile,Santiago,-33.45,-70.67,M,NAN,21,3.7,3.7,4.0,3.0,4,3.0,5,26.4
+275,Blake Loughran,United States of America,San Francisco,37.77,-122.42,M,Native American,21,4.0,3.0,3.4,5.0,4,3.0,4,26.4
 95,Danielle Nguyen,Japan,Tokyo,35.69,139.75,F,Ryukyuans,23,3.3,3.5,3.6,3.0,5,4.0,4,26.4
-96,Mateo Cisneros,Brazil,Foz do Iguaçu,-25.55,-54.58,M,Pardo,23,3.0,3.4,2.9,4.0,4,4.0,5,26.3
-726,Hilda,Mexico,Guadalajara,-70.21,-9.18,F,Black,20,2.6,4.7,3.8,1.2,4,5.0,5,26.3
-98,Jason Hundsdorfer,United States of America,Los Angeles,34.05,-118.24,M,Native American,20,3.9,3.9,4.0,5.0,3,3.5,3,26.3
-165,Corey Rademacher,Ukraine,Chernihiv,51.51,31.28,M,NAN,22,3.1,3.3,3.9,3.0,4,5.0,4,26.3
-168,Chelsea Persky,United States of America,San Bernardino,34.11,-117.29,F,Black or African American,23,3.9,3.4,4.0,5.0,3,3.0,4,26.3
-241,Kelli De Bartolome,United States of America,San Francisco,37.77,-122.42,F,Native American,23,3.4,3.4,3.5,5.0,2,5.0,4,26.3
 78,Alexandra Levy,United States of America,Los Angeles,34.05,-118.24,F,Asian,23,3.1,2.5,3.7,5.0,4,3.0,5,26.3
+241,Kelli De Bartolome,United States of America,San Francisco,37.77,-122.42,F,Native American,23,3.4,3.4,3.5,5.0,2,5.0,4,26.3
+98,Jason Hundsdorfer,United States of America,Los Angeles,34.05,-118.24,M,Native American,20,3.9,3.9,4.0,5.0,3,3.5,3,26.3
+168,Chelsea Persky,United States of America,San Bernardino,34.11,-117.29,F,Black or African American,23,3.9,3.4,4.0,5.0,3,3.0,4,26.3
+726,Hilda,Mexico,Guadalajara,-70.21,-9.18,F,Black,20,2.6,4.7,3.8,1.2,4,5.0,5,26.3
+96,Mateo Cisneros,Brazil,Foz do Iguaçu,-25.55,-54.58,M,Pardo,23,3.0,3.4,2.9,4.0,4,4.0,5,26.3
+165,Corey Rademacher,Ukraine,Chernihiv,51.51,31.28,M,NAN,22,3.1,3.3,3.9,3.0,4,5.0,4,26.3
 1260,Hoang Minh,Vietnam,Đà Nẵng,-77.64,-152.73,F,H'mong,24,2.9,4.8,3.5,3.1,3,5.0,4,26.299999999999997
-67,Lindsey Job,United States of America,Los Angeles,34.05,-118.24,F,Asian,23,2.7,3.7,1.8,5.0,4,5.0,4,26.200000000000003
+308,Liang Mei,China,Chengdu,-23.33,-146.01,M,Tibetan,25,3.0,3.4,4.4,3.4,5,2.0,5,26.200000000000003
 1431,Liang Ying,China,Guangzhou,-11.19,-114.33,F,Han,21,4.6,1.4,4.3,3.9,4,4.0,4,26.200000000000003
+67,Lindsey Job,United States of America,Los Angeles,34.05,-118.24,F,Asian,23,2.7,3.7,1.8,5.0,4,5.0,4,26.200000000000003
+103,Duncan Kruse,United States of America,Santa Ana,33.75,-117.87,M,Native American,23,3.7,3.8,3.7,5.0,1,5.0,4,26.2
+311,Bhawana,India,Bangalore,3.5,51.58,M,Sikh,22,1.9,4.7,1.7,2.9,5,5.0,5,26.2
+185,Adrian Miguel-Gomez,Colombia,Medellín,6.25,-75.56,M,NAN,22,3.7,3.3,2.2,4.0,4,4.0,5,26.2
+84,Harper Wheeler-Marques,United States of America,San Diego,32.72,-117.16,F,Asian,23,3.9,2.4,3.9,5.0,5,4.0,2,26.2
+116,Andrew Houghton,United States of America,Spokane,47.66,-117.42,M,Asian,22,3.2,3.2,3.8,5.0,2,4.0,5,26.2
+2024,Tatiane,Brazil,São Paulo,-44.76,109.64,M,White,19,3.3,1.7,4.5,4.7,3,5.0,4,26.2
+243,Andrew Yelich,United States of America,Boulder,40.02,-105.27,M,Black or African American,24,2.0,3.9,3.3,5.0,4,4.0,4,26.2
 1021,Wang Xia,China,Shenzhen,11.72,117.14,M,Han,25,4.8,4.4,2.6,2.4,4,4.0,4,26.2
 208,Andrew Brunelli,United States of America,New York,40.71,-74.01,M,Black or African American,23,3.4,3.8,4.0,5.0,4,3.0,3,26.2
-243,Andrew Yelich,United States of America,Boulder,40.02,-105.27,M,Black or African American,24,2.0,3.9,3.3,5.0,4,4.0,4,26.2
-2024,Tatiane,Brazil,São Paulo,-44.76,109.64,M,White,19,3.3,1.7,4.5,4.7,3,5.0,4,26.2
-84,Harper Wheeler-Marques,United States of America,San Diego,32.72,-117.16,F,Asian,23,3.9,2.4,3.9,5.0,5,4.0,2,26.2
-103,Duncan Kruse,United States of America,Santa Ana,33.75,-117.87,M,Native American,23,3.7,3.8,3.7,5.0,1,5.0,4,26.2
-116,Andrew Houghton,United States of America,Spokane,47.66,-117.42,M,Asian,22,3.2,3.2,3.8,5.0,2,4.0,5,26.2
-185,Adrian Miguel-Gomez,Colombia,Medellín,6.25,-75.56,M,NAN,22,3.7,3.3,2.2,4.0,4,4.0,5,26.2
 257,Ryan Russell,United States of America,Vacaville,38.36,-121.99,M,Asian,22,3.0,3.4,3.7,5.0,3,5.0,3,26.1
-10,Maja Nicholson,United States of America,Dallas,32.78,-96.8,F,Hispanic or Latino,23,3.4,3.5,3.2,5.0,4,2.0,5,26.1
 149,Vincent Webster,United States of America,New York,40.71,-74.01,M,Asian,23,2.0,3.7,3.4,5.0,4,3.0,5,26.1
+10,Maja Nicholson,United States of America,Dallas,32.78,-96.8,F,Hispanic or Latino,23,3.4,3.5,3.2,5.0,4,2.0,5,26.1
 104,Callahan Foster,Canada,Toronto,43.67,-79.42,other,French,22,3.2,3.0,3.9,5.0,3,3.0,5,26.1
-101,Mamdooh el-Moustafa,Pakistan,Karachi,24.91,67.08,M,NAN,22,3.3,2.8,3.9,4.0,4,4.0,4,26.0
-247,Tyler Goetz,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,22,3.7,3.5,2.8,5.0,5,4.0,2,26.0
-163,Christopher Jacobo,United States of America,Los Angeles,34.05,-118.24,M,Native American,21,3.4,2.7,3.9,5.0,4,4.0,3,26.0
-451,Ruchi,India,Mumbai,49.25,119.41,M,Other,23,3.9,4.4,2.0,4.7,2,4.0,5,26.0
+265,Arely Rodriguez,Mexico,Morelia,19.7,-101.12,F,Indigenous,21,3.9,3.5,3.6,4.0,4,4.0,3,26.0
 9,Maa'iz al-Dia,Turkey,Istanbul,41.02,28.96,M,NAN,22,2.4,2.8,3.8,3.0,5,5.0,4,26.0
 261,John Ferry,United States of America,Long Beach,33.77,-118.19,M,Hispanic or Latino,21,3.8,2.4,3.8,5.0,4,2.0,5,26.0
-265,Arely Rodriguez,Mexico,Morelia,19.7,-101.12,F,Indigenous,21,3.9,3.5,3.6,4.0,4,4.0,3,26.0
-90,Bradley Monsell,United States of America,New York,40.71,-74.01,M,Asian,22,3.0,3.9,3.1,5.0,5,2.0,4,26.0
+101,Mamdooh el-Moustafa,Pakistan,Karachi,24.91,67.08,M,NAN,22,3.3,2.8,3.9,4.0,4,4.0,4,26.0
+247,Tyler Goetz,United States of America,Los Angeles,34.05,-118.24,M,Black or African American,22,3.7,3.5,2.8,5.0,5,4.0,2,26.0
 650,Rina,India,Mumbai,-6.91,-153.68,F,Sikh,21,4.1,4.8,3.6,2.5,5,1.0,5,26.0
+163,Christopher Jacobo,United States of America,Los Angeles,34.05,-118.24,M,Native American,21,3.4,2.7,3.9,5.0,4,4.0,3,26.0
+451,Ruchi,India,Mumbai,49.25,119.41,M,Other,23,3.9,4.4,2.0,4.7,2,4.0,5,26.0
+90,Bradley Monsell,United States of America,New York,40.71,-74.01,M,Asian,22,3.0,3.9,3.1,5.0,5,2.0,4,26.0
 1737,Truong Thao,Vietnam,Hà Nội,-68.47,-169.71,M,H'mong,24,4.4,3.9,2.4,4.2,5,3.0,3,25.900000000000002
-215,Asad el-Yacoub,India,Thana,19.2,72.97,M,Christian,22,2.6,3.3,4.0,3.0,5,4.0,4,25.9
-115,Konner Gearhart,United States of America,New York,40.71,-74.01,M,Black or African American,22,3.9,3.7,3.3,5.0,4,3.0,3,25.9
-2,Dakota Blanco,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,22,3.9,3.8,3.2,5.0,3,3.0,4,25.9
-106,Ryan Barrett,United States of America,Chicago,41.85,-87.65,M,Hispanic or Latino,20,3.7,3.2,4.0,5.0,5,4.0,1,25.9
-1123,Mikhail,Russia,Yekaterinburg,2.55,155.31,M,Chuvash,30,3.9,5.0,2.3,4.7,4,3.0,3,25.9
 16,Meggan Smith,United States of America,Los Angeles,34.05,-118.24,F,Hispanic or Latino,21,2.9,3.4,3.6,5.0,2,5.0,4,25.9
 121,James Rice,Canada,Toronto,43.67,-79.42,M,Indigenous,20,3.9,2.4,3.6,5.0,4,3.0,4,25.9
-253,Ronald Toth,United States of America,Los Angeles,34.05,-118.24,M,Native American,23,2.7,3.5,3.7,5.0,4,3.0,4,25.9
+336,Yang Lei,China,Chengdu,46.49,179.36,M,Han,23,4.8,4.3,1.8,5.0,4,2.0,4,25.9
+2,Dakota Blanco,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,22,3.9,3.8,3.2,5.0,3,3.0,4,25.9
+1123,Mikhail,Russia,Yekaterinburg,2.55,155.31,M,Chuvash,30,3.9,5.0,2.3,4.7,4,3.0,3,25.9
+106,Ryan Barrett,United States of America,Chicago,41.85,-87.65,M,Hispanic or Latino,20,3.7,3.2,4.0,5.0,5,4.0,1,25.9
+115,Konner Gearhart,United States of America,New York,40.71,-74.01,M,Black or African American,22,3.9,3.7,3.3,5.0,4,3.0,3,25.9
 70,Sheyenne Delgado-Manzanares,Cuba,Manzanillo,20.34,-77.12,F,NAN,21,3.9,2.8,3.2,3.0,4,4.0,5,25.9
+253,Ronald Toth,United States of America,Los Angeles,34.05,-118.24,M,Native American,23,2.7,3.5,3.7,5.0,4,3.0,4,25.9
+215,Asad el-Yacoub,India,Thana,19.2,72.97,M,Christian,22,2.6,3.3,4.0,3.0,5,4.0,4,25.9
 273,Matthew Sputh,United States of America,Modesto,37.64,-121.0,M,Native American,22,3.2,2.6,4.0,5.0,3,3.0,5,25.8
-1917,Johannes,Germany,Cologne,26.78,-36.24,F,Polish,27,4.3,4.7,3.5,4.3,2,5.0,2,25.8
 35,Kinaana al-Jamail,India,Kanpur,26.47,80.35,F,Christian,22,3.3,3.8,3.7,3.0,4,4.0,4,25.8
+1917,Johannes,Germany,Cologne,26.78,-36.24,F,Polish,27,4.3,4.7,3.5,4.3,2,5.0,2,25.8
 1066,Eva,Germany,Hamburg,28.31,82.69,F,Turkish,30,3.3,1.5,3.4,4.6,4,4.0,5,25.799999999999997
-372,Wei,China,Shanghai,-12.07,165.67,F,Han,30,3.7,3.8,3.4,3.8,5,1.0,5,25.7
 1552,Reem,Egypt,Giza,40.76,-22.59,F,Berber,25,4.8,4.6,3.0,4.3,4,4.0,1,25.7
+135,Ivy Lucero,Brazil,São Paulo,-23.47,-46.67,F,Asian,24,3.9,3.6,3.2,3.0,4,4.0,4,25.7
 230,Melissa Bickel,United Kingdom,London,51.51,-0.09,F,NAN,22,3.6,2.6,2.5,5.0,4,4.0,4,25.7
+21,David Weber,China,Peking,39.93,116.39,M,Zhuang,20,3.9,3.9,3.9,2.0,3,4.0,5,25.7
 512,Vandana,India,Chennai,30.48,-64.96,M,Muslim,22,4.7,3.9,3.9,1.2,3,4.0,5,25.7
 46,Alan Trinh,Japan,Tokyo,35.69,139.75,M,Chinese,20,2.8,3.1,3.8,4.0,3,4.0,5,25.7
-135,Ivy Lucero,Brazil,São Paulo,-23.47,-46.67,F,Asian,24,3.9,3.6,3.2,3.0,4,4.0,4,25.7
 354,Alessandra,Brazil,Salvador,76.9,-176.15,F,Black,30,2.3,4.8,3.8,3.8,4,3.0,4,25.7
 268,Bryant Ronquillo,Mexico,Aguascalientes,21.88,-102.3,M,Black,20,4.0,3.2,3.5,4.0,3,5.0,3,25.7
-21,David Weber,China,Peking,39.93,116.39,M,Zhuang,20,3.9,3.9,3.9,2.0,3,4.0,5,25.7
-141,Stephen Wharton,Mexico,Tuxtla Gutiérrez,16.75,-93.12,M,Black,21,2.1,3.7,3.8,4.0,4,5.0,3,25.6
 1127,Galina,Russia,Nizhny Novgorod,53.04,88.86,M,Bashkir,18,4.9,2.8,2.1,3.8,5,2.0,5,25.6
-178,Latino Calderon,Mexico,Hermosillo,29.07,-110.97,M,Mestizo,23,3.6,3.0,3.0,3.0,5,4.0,4,25.6
-1313,Jyoti,India,Mumbai,-2.45,140.79,F,Sikh,22,4.5,4.7,1.8,4.6,5,1.0,4,25.6
 112,Christian Zambrano-Munoz,Mexico,Mexicali,32.65,-115.47,M,Mestizo,23,3.1,3.9,3.6,4.0,4,3.0,4,25.6
-48,Sidney Beavers,United States of America,Los Angeles,34.05,-118.24,M,Asian,23,2.3,2.8,3.5,5.0,4,4.0,4,25.6
+141,Stephen Wharton,Mexico,Tuxtla Gutiérrez,16.75,-93.12,M,Black,21,2.1,3.7,3.8,4.0,4,5.0,3,25.6
+316,Giovanni,Italy,Milan,0.04,-59.51,M,Albanian,29,3.6,2.9,2.3,4.8,5,5.0,2,25.6
 77,Ibrahim al-Sawaya,Tunisia,Manzil Tamim,36.78,10.99,M,NAN,23,3.5,3.1,4.0,4.0,5,3.0,3,25.6
+1313,Jyoti,India,Mumbai,-2.45,140.79,F,Sikh,22,4.5,4.7,1.8,4.6,5,1.0,4,25.6
+178,Latino Calderon,Mexico,Hermosillo,29.07,-110.97,M,Mestizo,23,3.6,3.0,3.0,3.0,5,4.0,4,25.6
+48,Sidney Beavers,United States of America,Los Angeles,34.05,-118.24,M,Asian,23,2.3,2.8,3.5,5.0,4,4.0,4,25.6
 473,Haeun,South Korea,Busan,-50.26,69.34,F,Other,23,3.4,3.8,2.2,4.2,5,4.0,3,25.599999999999998
-509,Tram Anh,Vietnam,Đà Nẵng,-1.34,-37.5,M,H'mong,27,3.7,1.9,4.2,4.7,3,3.0,5,25.5
-1610,Sungmin,South Korea,Incheon,-69.47,-144.29,M,Other,30,4.0,4.0,3.6,2.9,4,2.0,5,25.5
 853,Joseph,United States of America,Houston,-48.87,-8.8,M,White,25,4.7,4.3,3.0,4.5,4,1.0,4,25.5
-166,Alexander Reed,United States of America,Los Angeles,34.05,-118.24,M,Hispanic or Latino,22,3.0,2.7,3.8,5.0,4,2.0,5,25.5
-174,Andrew Bishop,United States of America,Los Angeles,34.05,-118.24,M,Native American,22,4.0,3.7,3.8,5.0,3,3.0,3,25.5
+371,Maxim,Russia,Nizhny Novgorod,56.11,60.32,M,Tatar,18,4.8,1.1,2.7,3.9,5,5.0,3,25.5
+509,Tram Anh,Vietnam,Đà Nẵng,-1.34,-37.5,M,H'mong,27,3.7,1.9,4.2,4.7,3,3.0,5,25.5
 200,Kitty Nguyen,Japan,Tokyo,35.69,139.75,F,Chinese,25,3.4,3.2,2.9,4.0,4,3.0,5,25.5
+174,Andrew Bishop,United States of America,Los Angeles,34.05,-118.24,M,Native American,22,4.0,3.7,3.8,5.0,3,3.0,3,25.5
+1610,Sungmin,South Korea,Incheon,-69.47,-144.29,M,Other,30,4.0,4.0,3.6,2.9,4,2.0,5,25.5
 296,Brittany Fernandez,Mexico,Zamora,19.98,-102.27,F,White,23,3.9,3.7,2.9,4.0,3,4.0,4,25.5
-52,Zachary Bradley,Spain,Madrid,40.41,-3.69,M,NAN,21,3.5,3.5,3.4,2.0,3,5.0,5,25.4
-881,Juliana,Argentina,Buenos Aires,-30.05,107.13,M,Indigenous,27,3.2,4.8,2.3,2.1,5,4.0,4,25.4
-1404,Misaki,Japan,Tokyo,12.26,91.33,M,Japanese,29,2.4,3.3,4.2,4.5,3,3.0,5,25.4
-388,Juanita,Mexico,Cancun,63.14,10.0,F,Asian,19,4.4,3.2,4.3,2.5,1,5.0,5,25.4
+166,Alexander Reed,United States of America,Los Angeles,34.05,-118.24,M,Hispanic or Latino,22,3.0,2.7,3.8,5.0,4,2.0,5,25.5
+591,Samuel,United States of America,Houston,89.06,13.76,M,Black or African American,24,1.2,2.3,4.8,4.2,5,3.0,5,25.5
 198,Sabaaha al-Latif,India,Bangalore,12.98,77.58,F,Sikh,22,3.7,2.7,3.0,3.0,5,3.0,5,25.4
+52,Zachary Bradley,Spain,Madrid,40.41,-3.69,M,NAN,21,3.5,3.5,3.4,2.0,3,5.0,5,25.4
 731,Mariam,Egypt,Aswan,16.32,-142.81,M,Bedouin,25,4.0,3.7,2.3,2.4,5,5.0,3,25.4
-264,Murtidevi Chung,Japan,Tokyo,35.69,139.75,F,Japanese,21,2.9,3.9,3.5,2.0,4,5.0,4,25.3
-157,Maryn Manzanares,United States of America,Laguna Hills,33.61,-117.71,F,Black or African American,21,3.9,3.2,3.2,5.0,2,4.0,4,25.3
-817,Catherine,France,Lyon,52.88,-74.14,M,Berber,21,1.7,4.8,4.9,4.9,1,3.0,5,25.3
+881,Juliana,Argentina,Buenos Aires,-30.05,107.13,M,Indigenous,27,3.2,4.8,2.3,2.1,5,4.0,4,25.4
+388,Juanita,Mexico,Cancun,63.14,10.0,F,Asian,19,4.4,3.2,4.3,2.5,1,5.0,5,25.4
+1404,Misaki,Japan,Tokyo,12.26,91.33,M,Japanese,29,2.4,3.3,4.2,4.5,3,3.0,5,25.4
 604,Quyen Linh,Vietnam,Hồ Chí Minh,-46.01,-69.99,F,Tay,18,4.6,4.6,2.8,2.3,3,4.0,4,25.3
+817,Catherine,France,Lyon,52.88,-74.14,M,Berber,21,1.7,4.8,4.9,4.9,1,3.0,5,25.3
+157,Maryn Manzanares,United States of America,Laguna Hills,33.61,-117.71,F,Black or African American,21,3.9,3.2,3.2,5.0,2,4.0,4,25.3
+264,Murtidevi Chung,Japan,Tokyo,35.69,139.75,F,Japanese,21,2.9,3.9,3.5,2.0,4,5.0,4,25.3
 3,Natasha Yarusso,United States of America,Castro Valley,37.69,-122.09,F,Asian,20,3.3,2.8,3.2,5.0,5,2.0,4,25.3
 2117,Sumin,South Korea,Daegu,7.7,159.65,F,Other,21,4.8,2.5,1.9,2.1,4,5.0,5,25.299999999999997
 1384,Dina,Egypt,Luxor,-39.19,15.46,M,Egyptian,23,2.3,4.5,4.5,3.9,5,1.0,4,25.200000000000003
 1457,Duc Minh,Vietnam,Cần Thơ,27.06,43.68,F,Tay,22,1.5,1.1,4.2,4.4,5,4.0,5,25.200000000000003
-64,Brittany Pratt,United States of America,San Diego,32.72,-117.16,F,Black or African American,22,3.0,3.1,3.1,5.0,3,4.0,4,25.2
 674,Pooja,India,Chennai,-30.58,-89.81,F,Sikh,24,3.5,1.8,4.6,4.3,5,1.0,5,25.2
-218,Nicole Patria,China,Chongqing,29.56,106.55,F,Zhuang,24,3.9,3.3,3.0,2.0,3,5.0,5,25.2
-85,Sherleen Saravanan,Myanmar,Rangoon,16.78,96.17,F,NAN,22,3.1,3.4,3.7,3.0,4,3.0,5,25.2
-5,Rochelle Johnson,United States of America,Indianapolis,39.77,-86.16,F,Hispanic or Latino,21,3.4,3.1,3.7,5.0,2,4.0,4,25.2
 120,Meghan Arnold,Russian Federation,Saint Petersburg,59.89,30.26,F,NAN,24,4.0,3.9,3.3,3.0,5,3.0,3,25.2
+5,Rochelle Johnson,United States of America,Indianapolis,39.77,-86.16,F,Hispanic or Latino,21,3.4,3.1,3.7,5.0,2,4.0,4,25.2
+85,Sherleen Saravanan,Myanmar,Rangoon,16.78,96.17,F,NAN,22,3.1,3.4,3.7,3.0,4,3.0,5,25.2
+218,Nicole Patria,China,Chongqing,29.56,106.55,F,Zhuang,24,3.9,3.3,3.0,2.0,3,5.0,5,25.2
+64,Brittany Pratt,United States of America,San Diego,32.72,-117.16,F,Black or African American,22,3.0,3.1,3.1,5.0,3,4.0,4,25.2
 41,Afnaan el-Mohammed,India,New Delhi,28.6,77.2,F,Sikh,22,1.7,3.5,3.9,2.0,5,5.0,4,25.1
-1881,Zhou Shan,China,Guangzhou,50.45,-105.51,F,Mongol,26,4.2,3.4,3.2,4.3,4,4.0,2,25.1
-583,Sandra,Brazil,São Paulo,-51.62,-98.06,M,White,18,2.5,4.1,4.6,3.9,3,4.0,3,25.1
 1192,Chen Feng,China,Shenzhen,-51.64,105.81,M,Han,28,3.8,3.2,2.2,4.9,4,2.0,5,25.1
+583,Sandra,Brazil,São Paulo,-51.62,-98.06,M,White,18,2.5,4.1,4.6,3.9,3,4.0,3,25.1
+313,Neha,India,Bangalore,-0.89,-60.95,F,Sikh,22,4.2,4.6,4.1,2.2,4,3.0,3,25.1
+1881,Zhou Shan,China,Guangzhou,50.45,-105.51,F,Mongol,26,4.2,3.4,3.2,4.3,4,4.0,2,25.1
 1559,Freya,Germany,Cologne,-42.08,-97.23,M,Polish,30,3.8,4.9,3.6,2.8,2,3.0,5,25.099999999999998
-280,Tiffanie Her,Japan,Tokyo,35.69,139.75,F,Korean,22,3.4,4.0,3.6,3.0,4,4.0,3,25.0
-401,Thomas,United States of America,New York,51.03,-90.82,M,Hispanic or Latino,23,3.5,3.4,2.1,4.0,5,5.0,2,25.0
+87,Juan Guerrero Camacho,Mexico,Mexico,19.43,-99.14,M,Mestizo,21,2.8,3.7,3.5,2.0,4,4.0,5,25.0
+1233,Tarun,India,Chennai,34.12,-153.13,F,Sikh,25,1.1,4.9,3.7,2.3,4,4.0,5,25.0
 1405,Liu Feng,China,Guangzhou,54.62,96.02,F,Zhuang,29,4.1,1.9,4.2,3.8,5,5.0,1,25.0
 117,Marisa Ramey,Mexico,Mexico,19.43,-99.14,F,Indigenous,22,3.2,4.0,3.8,4.0,3,3.0,4,25.0
-87,Juan Guerrero Camacho,Mexico,Mexico,19.43,-99.14,M,Mestizo,21,2.8,3.7,3.5,2.0,4,4.0,5,25.0
-374,Nikolai,Russia,Yekaterinburg,68.05,-170.1,M,Ukrainian,29,2.7,4.8,2.5,5.0,1,4.0,5,25.0
-1233,Tarun,India,Chennai,34.12,-153.13,F,Sikh,25,1.1,4.9,3.7,2.3,4,4.0,5,25.0
-272,William Tierney,United States of America,New York,40.71,-74.01,M,Asian,21,3.8,2.1,3.0,5.0,3,4.0,4,24.9
-1339,Seema,India,Bangalore,-76.15,-86.06,F,Muslim,21,4.8,4.9,1.0,3.2,4,3.0,4,24.9
-510,Zhao Lei,China,Beijing,-11.91,93.24,F,Zhuang,18,1.5,4.6,1.3,3.5,5,5.0,4,24.9
-279,Jennifer Hauge,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,23,2.6,3.0,2.3,5.0,4,4.0,4,24.9
+401,Thomas,United States of America,New York,51.03,-90.82,M,Hispanic or Latino,23,3.5,3.4,2.1,4.0,5,5.0,2,25.0
+280,Tiffanie Her,Japan,Tokyo,35.69,139.75,F,Korean,22,3.4,4.0,3.6,3.0,4,4.0,3,25.0
 89,Savannah Clark,United States of America,Visalia,36.33,-119.29,F,White,20,2.8,3.5,2.6,5.0,3,4.0,4,24.9
-326,John,United States of America,Chicago,-88.72,106.09,F,Asian,26,2.9,2.9,5.0,3.1,5,3.0,3,24.9
-2145,Gaeun,South Korea,Seoul,76.59,-137.17,F,Japanese,21,5.0,4.6,3.5,4.8,3,2.0,2,24.9
 82,Staci Maes,Mexico,Mexico,19.43,-99.14,F,White,23,3.4,2.6,3.9,2.0,5,3.0,5,24.9
+1339,Seema,India,Bangalore,-76.15,-86.06,F,Muslim,21,4.8,4.9,1.0,3.2,4,3.0,4,24.9
 2224,Ayaka,Japan,Osaka,15.53,78.9,F,Ainu,22,4.0,3.8,3.0,1.1,5,5.0,3,24.9
+279,Jennifer Hauge,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,23,2.6,3.0,2.3,5.0,4,4.0,4,24.9
+2145,Gaeun,South Korea,Seoul,76.59,-137.17,F,Japanese,21,5.0,4.6,3.5,4.8,3,2.0,2,24.9
+326,John,United States of America,Chicago,-88.72,106.09,F,Asian,26,2.9,2.9,5.0,3.1,5,3.0,3,24.9
+510,Zhao Lei,China,Beijing,-11.91,93.24,F,Zhuang,18,1.5,4.6,1.3,3.5,5,5.0,4,24.9
+272,William Tierney,United States of America,New York,40.71,-74.01,M,Asian,21,3.8,2.1,3.0,5.0,3,4.0,4,24.9
+62,Donald Nevins,United States of America,San Jose,37.34,-121.89,M,Asian,23,3.6,3.4,2.8,5.0,2,4.0,4,24.8
+792,Luis Fernando,Mexico,Guadalajara,-53.77,-163.5,M,White,30,4.9,2.4,4.2,1.3,3,5.0,4,24.8
 221,Anthony Visocsky,United States of America,Santa Rosa,38.44,-122.71,M,White,21,3.4,2.4,4.0,5.0,2,4.0,4,24.8
+544,Viktoria,Russia,Yekaterinburg,-65.76,138.04,F,Bashkir,25,2.6,1.5,5.0,2.7,4,4.0,5,24.8
 1989,Sandrine,France,Marseille,70.07,10.32,M,African,22,4.6,2.7,3.7,4.8,2,4.0,3,24.8
 295,Travis Poss,United States of America,Los Angeles,34.05,-118.24,M,Native American,23,2.3,3.0,3.5,5.0,1,5.0,5,24.8
-544,Viktoria,Russia,Yekaterinburg,-65.76,138.04,F,Bashkir,25,2.6,1.5,5.0,2.7,4,4.0,5,24.8
-792,Luis Fernando,Mexico,Guadalajara,-53.77,-163.5,M,White,30,4.9,2.4,4.2,1.3,3,5.0,4,24.8
-62,Donald Nevins,United States of America,San Jose,37.34,-121.89,M,Asian,23,3.6,3.4,2.8,5.0,2,4.0,4,24.8
 2002,Monique,France,Marseille,16.92,155.55,F,Asian,30,3.8,3.5,4.9,3.6,2,3.0,4,24.799999999999997
-8,Lee Dong,Philippines,Manila,14.6,120.98,F,NAN,24,3.9,3.6,3.2,2.0,4,3.0,5,24.7
+353,Ana,Brazil,Fortaleza,47.5,131.74,M,Black,18,1.3,3.9,5.0,2.5,4,5.0,3,24.7
 105,Jamie Ortiz,El Salvador,Nueva San Salvador,13.68,-89.28,F,NAN,23,3.3,2.9,3.5,3.0,4,4.0,4,24.7
 145,Luisa Bautista,Mexico,Mexico,19.43,-99.14,F,Black,21,3.3,3.0,3.4,3.0,4,4.0,4,24.7
-353,Ana,Brazil,Fortaleza,47.5,131.74,M,Black,18,1.3,3.9,5.0,2.5,4,5.0,3,24.7
-1581,Eman,Egypt,Alexandria,21.46,16.4,M,Other,25,3.5,3.6,4.6,2.0,3,3.0,5,24.7
-217,Brandilyn Hanselman,Russian Federation,Chelyabinsk,55.15,61.43,F,NAN,21,2.0,3.5,2.2,4.0,4,5.0,4,24.7
 65,Cameron Hancock,Poland,Warsaw,52.25,21.0,M,NAN,21,3.9,3.8,3.0,3.0,4,3.0,4,24.7
-586,Amita,India,Kolkata,-30.02,74.54,F,Other,25,4.7,4.1,2.6,4.2,3,3.0,3,24.6
+217,Brandilyn Hanselman,Russian Federation,Chelyabinsk,55.15,61.43,F,NAN,21,2.0,3.5,2.2,4.0,4,5.0,4,24.7
+1581,Eman,Egypt,Alexandria,21.46,16.4,M,Other,25,3.5,3.6,4.6,2.0,3,3.0,5,24.7
+8,Lee Dong,Philippines,Manila,14.6,120.98,F,NAN,24,3.9,3.6,3.2,2.0,4,3.0,5,24.7
 667,Sun Jun,China,Beijing,-20.04,-155.09,F,Tibetan,26,2.8,1.6,2.1,4.1,4,5.0,5,24.6
-162,Rebecca Ah Fat,China,Tangshan,37.33,114.7,F,Tibetan,22,1.8,3.8,4.0,4.0,4,3.0,4,24.6
 603,Peter,Germany,Cologne,52.54,-35.28,F,Kurdish,24,4.8,2.1,4.1,3.6,5,2.0,3,24.6
-340,Hiroshi,Japan,Kyoto,-12.63,123.76,M,Ainu,30,3.8,4.1,2.7,4.0,3,3.0,4,24.6
 1160,Meena,India,Kolkata,50.36,-13.64,M,Hindu,23,2.5,3.2,4.5,3.4,4,2.0,5,24.6
-34,Cody Vermeylen,United States of America,Detroit,42.33,-83.05,M,Native American,23,3.3,3.8,3.5,5.0,2,3.0,4,24.6
-300,Tessa Rawanduzy,United States of America,Derby,37.55,-97.27,F,Hispanic or Latino,21,3.3,3.3,2.0,5.0,3,3.0,5,24.6
+586,Amita,India,Kolkata,-30.02,74.54,F,Other,25,4.7,4.1,2.6,4.2,3,3.0,3,24.6
+418,Victoria,Canada,Toronto,-18.68,-103.49,F,English,30,1.6,2.2,3.5,4.3,4,4.0,5,24.6
 231,Rachel Boh,United States of America,Roseville,38.75,-121.29,F,Hispanic or Latino,22,3.8,3.9,2.9,5.0,4,3.0,2,24.6
+300,Tessa Rawanduzy,United States of America,Derby,37.55,-97.27,F,Hispanic or Latino,21,3.3,3.3,2.0,5.0,3,3.0,5,24.6
+340,Hiroshi,Japan,Kyoto,-12.63,123.76,M,Ainu,30,3.8,4.1,2.7,4.0,3,3.0,4,24.6
+34,Cody Vermeylen,United States of America,Detroit,42.33,-83.05,M,Native American,23,3.3,3.8,3.5,5.0,2,3.0,4,24.6
+162,Rebecca Ah Fat,China,Tangshan,37.33,114.7,F,Tibetan,22,1.8,3.8,4.0,4.0,4,3.0,4,24.6
 189,Emma Kim,China,Hengshui,37.73,115.7,F,Zhuang,22,2.8,3.9,3.8,2.0,4,4.0,4,24.5
-992,Dylan,United States of America,Chicago,26.62,73.83,F,Black or African American,30,3.7,4.3,3.5,4.0,5,2.0,2,24.5
 337,Isabelle,France,Lyon,34.61,151.02,M,African,27,4.9,4.9,4.4,3.3,1,4.0,2,24.5
+992,Dylan,United States of America,Chicago,26.62,73.83,F,Black or African American,30,3.7,4.3,3.5,4.0,5,2.0,2,24.5
 23,Mus'ab al-Moustafa,Pakistan,Rawalpindi,33.6,73.07,M,NAN,23,3.8,3.9,3.8,2.0,2,5.0,4,24.5
-130,Casey Buhr,United States of America,Phoenix,33.45,-112.07,M,Native American,21,3.7,3.2,2.5,5.0,2,3.0,5,24.4
-1918,Sofia,Mexico,Tijuana,29.26,65.41,F,Asian,22,4.6,1.1,4.3,4.4,4,5.0,1,24.4
-1020,Michele,Italy,Naples,-51.82,8.28,F,Romanian,21,4.9,4.0,4.1,2.4,2,5.0,2,24.4
-17,Ericka Arreola,Mexico,Mexico,19.43,-99.14,other,Asian,23,3.1,3.5,2.8,4.0,4,3.0,4,24.4
-491,Noah,United States of America,Phoenix,9.06,167.36,M,Native American,28,4.0,4.8,2.2,3.4,5,4.0,1,24.4
 766,Elijah,United States of America,Chicago,-64.65,-90.45,F,Hispanic or Latino,23,3.4,3.6,4.6,1.8,4,4.0,3,24.4
-251,Jessica Huynh,Korea (Republic of),Seoul,37.6,126.98,F,NAN,22,3.5,2.7,3.2,2.0,5,3.0,5,24.4
-1842,Hu Yun,China,Guangzhou,-53.58,76.57,M,Zhuang,21,4.6,3.8,1.8,4.2,2,5.0,3,24.4
+1020,Michele,Italy,Naples,-51.82,8.28,F,Romanian,21,4.9,4.0,4.1,2.4,2,5.0,2,24.4
+1918,Sofia,Mexico,Tijuana,29.26,65.41,F,Asian,22,4.6,1.1,4.3,4.4,4,5.0,1,24.4
+434,Vladimir,Russia,Nizhny Novgorod,3.92,-163.04,F,Russian,28,3.3,4.8,2.9,4.4,3,1.0,5,24.4
+130,Casey Buhr,United States of America,Phoenix,33.45,-112.07,M,Native American,21,3.7,3.2,2.5,5.0,2,3.0,5,24.4
 698,Aiko,Japan,Tokyo,45.31,-170.57,M,Chinese,21,1.5,4.5,3.8,3.6,5,3.0,3,24.4
+251,Jessica Huynh,Korea (Republic of),Seoul,37.6,126.98,F,NAN,22,3.5,2.7,3.2,2.0,5,3.0,5,24.4
+17,Ericka Arreola,Mexico,Mexico,19.43,-99.14,other,Asian,23,3.1,3.5,2.8,4.0,4,3.0,4,24.4
+1842,Hu Yun,China,Guangzhou,-53.58,76.57,M,Zhuang,21,4.6,3.8,1.8,4.2,2,5.0,3,24.4
 45,Britany Stevens,United States of America,Lafayette,37.89,-122.12,F,Hispanic or Latino,23,3.6,3.3,3.5,5.0,3,3.0,3,24.4
-980,Daniele,Italy,Rome,35.2,4.58,F,Italian,26,4.6,3.5,1.8,4.4,4,5.0,1,24.3
+491,Noah,United States of America,Phoenix,9.06,167.36,M,Native American,28,4.0,4.8,2.2,3.4,5,4.0,1,24.4
 2198,Prashant,India,Mumbai,2.02,-29.66,F,Other,29,2.9,4.0,3.7,3.7,2,3.0,5,24.3
-1358,Federica,Italy,Naples,-15.04,8.89,M,Romanian,18,4.4,4.3,4.8,2.8,5,1.0,2,24.3
-760,Vittoria,Italy,Turin,-75.49,16.12,F,Albanian,18,1.2,4.2,1.3,4.6,5,5.0,3,24.3
-1854,Yana,Russia,Saint Petersburg,12.17,-32.96,M,Tatar,19,4.7,4.4,2.5,2.7,3,4.0,3,24.3
-532,Rafael,Germany,Berlin,73.84,88.84,M,German,19,4.4,1.8,2.1,4.0,3,5.0,4,24.3
 299,Christopher Inhulsen,United States of America,Fort Worth,32.73,-97.32,M,Hispanic or Latino,23,3.1,3.3,2.9,5.0,2,4.0,4,24.3
+760,Vittoria,Italy,Turin,-75.49,16.12,F,Albanian,18,1.2,4.2,1.3,4.6,5,5.0,3,24.3
+1358,Federica,Italy,Naples,-15.04,8.89,M,Romanian,18,4.4,4.3,4.8,2.8,5,1.0,2,24.3
+532,Rafael,Germany,Berlin,73.84,88.84,M,German,19,4.4,1.8,2.1,4.0,3,5.0,4,24.3
+980,Daniele,Italy,Rome,35.2,4.58,F,Italian,26,4.6,3.5,1.8,4.4,4,5.0,1,24.3
+1854,Yana,Russia,Saint Petersburg,12.17,-32.96,M,Tatar,19,4.7,4.4,2.5,2.7,3,4.0,3,24.3
 97,William Pablo,Japan,Kashiwara,34.58,135.62,M,Korean,24,2.9,3.3,3.1,4.0,2,5.0,4,24.299999999999997
 463,Avery,United States of America,Chicago,-50.54,-146.38,F,White,23,2.8,3.5,4.9,4.1,5,1.0,3,24.299999999999997
-737,Ali,Egypt,Aswan,38.59,-104.46,M,Egyptian,21,2.5,1.6,1.5,4.6,5,5.0,4,24.2
-335,Bob,United States of America,New York,27.93,89.95,M,Black or African American,29,1.3,3.8,4.0,4.1,5,1.0,5,24.2
-242,Thomas Chanlynn,United States of America,Bay Point,38.03,-121.96,M,Asian,22,2.4,3.0,3.8,5.0,3,4.0,3,24.2
 482,Luciano,Brazil,Rio de Janeiro,-34.78,65.18,F,White,30,3.3,1.8,4.0,3.1,5,3.0,4,24.2
-49,Miriam Aguilar,Mexico,Mexicali,32.65,-115.47,F,Black,22,3.6,3.8,2.8,2.0,4,4.0,4,24.2
+737,Ali,Egypt,Aswan,38.59,-104.46,M,Egyptian,21,2.5,1.6,1.5,4.6,5,5.0,4,24.2
 213,Adolf Malik,Korea (Republic of),Seoul,37.6,126.98,M,NAN,21,3.1,3.5,3.6,3.0,4,4.0,3,24.2
+242,Thomas Chanlynn,United States of America,Bay Point,38.03,-121.96,M,Asian,22,2.4,3.0,3.8,5.0,3,4.0,3,24.2
+49,Miriam Aguilar,Mexico,Mexicali,32.65,-115.47,F,Black,22,3.6,3.8,2.8,2.0,4,4.0,4,24.2
+335,Bob,United States of America,New York,27.93,89.95,M,Black or African American,29,1.3,3.8,4.0,4.1,5,1.0,5,24.2
+395,Suresh,India,Chennai,-9.8,72.52,F,Christian,22,3.6,4.5,3.1,4.9,1,5.0,2,24.1
+152,Shawn O Bryan,United States of America,Fairfield,38.25,-122.04,M,Asian,23,2.9,3.7,1.5,5.0,3,5.0,3,24.1
+835,Gustavo,Brazil,Salvador,36.18,-38.41,M,Indigenous,23,4.8,1.8,4.6,4.9,1,5.0,2,24.1
+271,Jasmine Lopez,Brazil,Guaxupé,-21.3,-46.7,F,Pardo,21,3.8,3.8,1.5,4.0,4,3.0,4,24.1
+1182,Oleg,Russia,Saint Petersburg,-75.16,127.52,F,Bashkir,18,3.8,3.6,4.4,4.3,4,2.0,2,24.1
 1546,Elise,United States of America,Phoenix,-16.8,-156.24,F,Black or African American,24,2.6,3.5,1.8,4.2,5,2.0,5,24.1
 223,Dasha Bannock Lee,United States of America,San Diego,32.72,-117.16,other,White,20,2.8,3.3,4.0,5.0,4,3.0,2,24.1
-152,Shawn O Bryan,United States of America,Fairfield,38.25,-122.04,M,Asian,23,2.9,3.7,1.5,5.0,3,5.0,3,24.1
-271,Jasmine Lopez,Brazil,Guaxupé,-21.3,-46.7,F,Pardo,21,3.8,3.8,1.5,4.0,4,3.0,4,24.1
-395,Suresh,India,Chennai,-9.8,72.52,F,Christian,22,3.6,4.5,3.1,4.9,1,5.0,2,24.1
-835,Gustavo,Brazil,Salvador,36.18,-38.41,M,Indigenous,23,4.8,1.8,4.6,4.9,1,5.0,2,24.1
-1182,Oleg,Russia,Saint Petersburg,-75.16,127.52,F,Bashkir,18,3.8,3.6,4.4,4.3,4,2.0,2,24.1
-518,Hana,South Korea,Busan,44.24,135.75,F,Korean,29,4.0,4.1,3.0,3.0,3,2.0,5,24.1
-316,Emily,Canada,Montreal,16.4,172.76,M,Other,28,4.6,4.7,3.7,2.1,4,3.0,2,24.1
 981,Leticia,Mexico,Monterrey,-54.19,120.23,F,Indigenous,19,3.7,2.4,4.8,3.2,5,4.0,1,24.099999999999998
-350,James,Canada,Toronto,-38.38,144.9,M,French,28,2.8,3.5,4.1,2.7,2,4.0,5,24.099999999999998
-790,Jacqueline,France,Nice,-26.31,65.71,M,Berber,29,2.5,4.1,4.1,4.3,4,1.0,4,24.0
-418,Pierre,France,Marseille,66.27,120.24,M,African,22,4.9,4.3,1.9,2.9,4,5.0,1,24.0
-695,Emma,United States of America,Los Angeles,11.98,140.19,M,Hispanic or Latino,30,4.5,2.0,2.2,1.3,5,5.0,4,24.0
-424,David,United States of America,Phoenix,-62.39,-80.74,M,Black or African American,22,3.8,3.2,4.9,4.1,1,5.0,2,24.0
-637,Khong Hieu,Vietnam,Cần Thơ,-28.02,-158.72,M,Kinh,19,2.4,2.2,3.5,4.9,3,5.0,3,24.0
-636,Brody,Canada,Ottawa,23.67,114.49,M,Indigenous,18,2.8,4.7,4.6,2.9,3,4.0,2,24.0
-632,Roberto,Argentina,Cordoba,83.09,-22.16,M,Indigenous,21,3.5,3.3,4.9,4.3,3,3.0,2,24.0
-387,Tessa,Canada,Toronto,-74.87,81.52,M,English,24,4.8,3.7,1.1,3.4,4,2.0,5,24.0
 20,Rojesh Her,Japan,Tokyo,35.69,139.75,M,Ryukyuans,22,3.8,3.6,3.6,2.0,4,4.0,3,24.0
+424,David,United States of America,Phoenix,-62.39,-80.74,M,Black or African American,22,3.8,3.2,4.9,4.1,1,5.0,2,24.0
+695,Emma,United States of America,Los Angeles,11.98,140.19,M,Hispanic or Latino,30,4.5,2.0,2.2,1.3,5,5.0,4,24.0
 180,Nicole Torres-Valadez,Brazil,Rio de Janeiro,-22.9,-43.23,F,Pardo,24,3.9,3.1,3.0,1.0,4,5.0,4,24.0
 2008,Robson,Brazil,Rio de Janeiro,-71.63,-12.76,M,Indigenous,19,1.9,5.0,1.3,2.8,4,4.0,5,24.0
+632,Roberto,Argentina,Cordoba,83.09,-22.16,M,Indigenous,21,3.5,3.3,4.9,4.3,3,3.0,2,24.0
 194,Chue Fue Richter,China,Qiqihar,47.34,123.97,M,Han,23,3.0,3.6,1.4,4.0,5,3.0,4,24.0
+637,Khong Hieu,Vietnam,Cần Thơ,-28.02,-158.72,M,Kinh,19,2.4,2.2,3.5,4.9,3,5.0,3,24.0
+636,Brody,Canada,Ottawa,23.67,114.49,M,Indigenous,18,2.8,4.7,4.6,2.9,3,4.0,2,24.0
+330,Li Qian,China,Beijing,64.17,39.07,F,Uighur,28,1.7,4.0,1.4,3.9,5,3.0,5,24.0
 1367,Tamer,Egypt,Aswan,49.77,-163.68,F,Nubian,29,2.2,3.2,2.8,3.8,5,3.0,4,24.0
-471,Rohit,India,Kolkata,38.21,-137.34,F,Muslim,21,4.4,1.9,1.6,5.0,3,4.0,4,23.9
+790,Jacqueline,France,Nice,-26.31,65.71,M,Berber,29,2.5,4.1,4.1,4.3,4,1.0,4,24.0
+387,Tessa,Canada,Toronto,-74.87,81.52,M,English,24,4.8,3.7,1.1,3.4,4,2.0,5,24.0
 723,Zhao Ling,China,Chengdu,-9.29,142.35,F,Tibetan,25,3.9,2.7,4.4,1.9,5,3.0,3,23.9
-382,Maya,India,Chennai,17.68,59.94,M,Sikh,21,3.2,4.8,3.8,3.1,2,2.0,5,23.9
-605,Shota,Japan,Osaka,-24.24,110.21,M,Japanese,23,2.7,1.9,2.7,4.6,5,4.0,3,23.9
-627,Tomoko,Japan,Kyoto,10.51,138.62,F,Japanese,28,3.1,4.6,3.0,2.2,4,2.0,5,23.9
-341,Addison,United States of America,New York,71.71,-162.15,M,Native American,19,3.0,1.6,3.0,4.3,5,3.0,4,23.9
 1499,Miguel Angel,Mexico,Cancun,-70.02,17.38,M,Black,23,2.7,1.1,2.6,4.5,3,5.0,5,23.9
-449,Philippe,France,Nice,73.74,70.25,M,Berber,29,4.4,4.9,4.9,1.6,5,2.0,1,23.8
+627,Tomoko,Japan,Kyoto,10.51,138.62,F,Japanese,28,3.1,4.6,3.0,2.2,4,2.0,5,23.9
+471,Rohit,India,Kolkata,38.21,-137.34,F,Muslim,21,4.4,1.9,1.6,5.0,3,4.0,4,23.9
+605,Shota,Japan,Osaka,-24.24,110.21,M,Japanese,23,2.7,1.9,2.7,4.6,5,4.0,3,23.9
+341,Addison,United States of America,New York,71.71,-162.15,M,Native American,19,3.0,1.6,3.0,4.3,5,3.0,4,23.9
+382,Maya,India,Chennai,17.68,59.94,M,Sikh,21,3.2,4.8,3.8,3.1,2,2.0,5,23.9
 574,Friedrich,Germany,Hamburg,77.62,173.65,F,Turkish,22,1.3,3.5,3.6,4.4,2,5.0,4,23.8
-1859,Quang Hieu,Vietnam,Nha Trang,-42.59,-144.34,F,Thai,22,2.3,4.7,3.9,2.9,1,5.0,4,23.8
-1836,Ryo,Japan,Kyoto,-88.86,-134.98,F,Ainu,27,4.7,4.4,3.4,4.3,3,1.0,3,23.8
-705,Saki,Japan,Sapporo,64.83,-17.01,M,Ainu,21,3.6,1.9,2.8,4.5,2,4.0,5,23.8
-187,Haafiza al-Attar,Morocco,Rabat,34.01,-6.84,F,NAN,21,2.4,3.6,3.8,3.0,3,5.0,3,23.8
 1422,Murilo,Brazil,Fortaleza,4.77,67.29,F,Asian,26,2.6,4.8,4.2,2.2,4,3.0,3,23.8
+187,Haafiza al-Attar,Morocco,Rabat,34.01,-6.84,F,NAN,21,2.4,3.6,3.8,3.0,3,5.0,3,23.8
+1859,Quang Hieu,Vietnam,Nha Trang,-42.59,-144.34,F,Thai,22,2.3,4.7,3.9,2.9,1,5.0,4,23.8
+705,Saki,Japan,Sapporo,64.83,-17.01,M,Ainu,21,3.6,1.9,2.8,4.5,2,4.0,5,23.8
+1836,Ryo,Japan,Kyoto,-88.86,-134.98,F,Ainu,27,4.7,4.4,3.4,4.3,3,1.0,3,23.8
+449,Philippe,France,Nice,73.74,70.25,M,Berber,29,4.4,4.9,4.9,1.6,5,2.0,1,23.8
 661,Alessandro,Italy,Milan,-34.93,144.71,F,Romanian,26,2.1,4.9,1.2,2.6,3,5.0,5,23.799999999999997
-1390,Richa,India,Bangalore,75.71,76.49,F,Hindu,23,4.4,1.7,2.5,3.1,4,4.0,4,23.700000000000003
 4,Brooke Cazares,Brazil,São José dos Campos,-23.18,-45.88,F,Asian,21,3.7,2.6,3.4,1.0,4,4.0,5,23.700000000000003
+1390,Richa,India,Bangalore,75.71,76.49,F,Hindu,23,4.4,1.7,2.5,3.1,4,4.0,4,23.700000000000003
 626,Seungwoo,South Korea,Incheon,-40.28,-122.48,M,Chinese,28,2.5,4.6,4.2,1.4,5,5.0,1,23.700000000000003
+895,Dohyun,South Korea,Seoul,-32.03,-68.79,F,Japanese,25,3.9,4.7,4.8,4.3,3,1.0,2,23.7
+384,Jieun,South Korea,Seoul,60.81,-102.39,M,Korean,24,3.6,4.6,4.6,3.9,1,5.0,1,23.7
 190,Mckayla Dopler,Netherlands,Kerkrade,50.87,6.07,F,NAN,21,2.5,3.5,3.7,4.0,2,4.0,4,23.7
 216,Holly Marshall,United States of America,San Francisco,37.77,-122.42,F,Black or African American,22,3.0,2.7,2.0,5.0,3,4.0,4,23.7
-384,Jieun,South Korea,Seoul,60.81,-102.39,M,Korean,24,3.6,4.6,4.6,3.9,1,5.0,1,23.7
-79,Macie Nguyen,Japan,Tokyo,35.69,139.75,F,Korean,23,3.1,3.8,3.8,4.0,2,4.0,3,23.7
 747,Ankit,India,Mumbai,-63.32,112.8,F,Christian,28,3.2,3.5,3.4,4.6,1,4.0,4,23.7
-895,Dohyun,South Korea,Seoul,-32.03,-68.79,F,Japanese,25,3.9,4.7,4.8,4.3,3,1.0,2,23.7
+79,Macie Nguyen,Japan,Tokyo,35.69,139.75,F,Korean,23,3.1,3.8,3.8,4.0,2,4.0,3,23.7
 244,Dimitri Castillo,Colombia,Dos Quebradas,4.84,-75.67,M,NAN,21,3.9,3.0,3.8,3.0,2,4.0,4,23.7
-1352,Nancy,Mexico,Guadalajara,66.06,111.12,M,Asian,29,4.2,4.6,4.4,1.4,5,2.0,2,23.6
-1317,Cristiane,Brazil,Salvador,17.69,172.46,M,Black,24,1.9,1.0,4.2,4.5,5,5.0,2,23.6
+556,Zane,United States of America,Phoenix,-43.84,120.28,F,Hispanic or Latino,28,4.7,1.2,3.7,4.0,5,1.0,4,23.6
 1351,Farida,Egypt,Luxor,63.36,-135.59,F,Egyptian,24,3.4,2.9,3.1,4.2,3,4.0,3,23.6
 164,Min Singal,Japan,Tokyo,35.69,139.75,F,Chinese,24,3.8,2.9,2.9,4.0,5,3.0,2,23.6
-556,Zane,United States of America,Phoenix,-43.84,120.28,F,Hispanic or Latino,28,4.7,1.2,3.7,4.0,5,1.0,4,23.6
-922,Alexander,Canada,Vancouver,-64.28,-95.71,F,Canadian,23,3.4,3.6,4.6,1.0,5,1.0,5,23.6
+1352,Nancy,Mexico,Guadalajara,66.06,111.12,M,Asian,29,4.2,4.6,4.4,1.4,5,2.0,2,23.6
+1317,Cristiane,Brazil,Salvador,17.69,172.46,M,Black,24,1.9,1.0,4.2,4.5,5,5.0,2,23.6
 1514,Giorgio,Italy,Naples,-28.31,170.25,F,Albanian,22,2.0,2.6,3.7,4.3,5,4.0,2,23.6
+922,Alexander,Canada,Vancouver,-64.28,-95.71,F,Canadian,23,3.4,3.6,4.6,1.0,5,1.0,5,23.6
 1822,Chase,Canada,Ottawa,53.39,158.66,M,Canadian,18,1.9,3.8,2.6,2.3,4,5.0,4,23.599999999999998
-763,Evgeny,Russia,Nizhny Novgorod,73.32,-3.23,F,Tatar,23,4.9,3.0,2.2,2.4,3,4.0,4,23.5
-1027,Bernard,France,Toulouse,26.62,2.5,M,Asian,28,2.8,3.5,4.8,3.4,2,2.0,5,23.5
 312,Yunji,South Korea,Busan,-28.58,161.11,M,Korean,29,4.5,3.8,4.2,1.0,2,5.0,3,23.5
 59,Shuraih el-Karim,Pakistan,Khalabat,34.06,72.89,M,NAN,22,3.1,2.1,2.3,4.0,4,4.0,4,23.5
+763,Evgeny,Russia,Nizhny Novgorod,73.32,-3.23,F,Tatar,23,4.9,3.0,2.2,2.4,3,4.0,4,23.5
+1027,Bernard,France,Toulouse,26.62,2.5,M,Asian,28,2.8,3.5,4.8,3.4,2,2.0,5,23.5
 700,Tejas,India,Mumbai,74.8,-26.42,M,Other,30,2.2,2.1,4.3,1.8,5,4.0,4,23.400000000000002
-1375,Scarlett,Canada,Vancouver,-63.31,151.09,M,Other,30,2.7,3.2,2.4,3.1,3,4.0,5,23.4
-238,Haley Ingrim-Hyrup,United States of America,Fontana,34.09,-117.43,F,Native American,22,3.2,3.6,2.6,5.0,2,4.0,3,23.4
-609,Sunil,India,Mumbai,38.7,-150.94,M,Other,22,4.9,3.6,3.8,1.1,5,1.0,4,23.4
-826,Júlia,Brazil,Salvador,-44.92,-31.74,F,White,20,3.3,4.8,3.4,4.9,1,4.0,2,23.4
 325,Luca,Italy,Rome,77.52,19.95,M,Romanian,25,2.0,3.9,2.3,3.2,2,5.0,5,23.4
-69,Allison Brink-Lomme,United States of America,Portland,45.52,-122.67,F,White,24,2.8,3.6,4.0,5.0,4,3.0,1,23.4
+609,Sunil,India,Mumbai,38.7,-150.94,M,Other,22,4.9,3.6,3.8,1.1,5,1.0,4,23.4
+1375,Scarlett,Canada,Vancouver,-63.31,151.09,M,Other,30,2.7,3.2,2.4,3.1,3,4.0,5,23.4
 1929,Parveen,India,Mumbai,-53.58,-111.88,M,Sikh,28,3.9,3.9,4.7,1.9,1,4.0,4,23.4
-1738,Hong Minh,Vietnam,Đà Nẵng,31.41,4.13,F,Thai,28,4.5,3.8,2.0,3.1,5,3.0,2,23.4
 1524,Renato,Italy,Florence,81.15,-139.35,M,Sardinian,20,1.5,4.8,4.4,1.7,4,2.0,5,23.4
-686,Heejae,South Korea,Gwangju,6.79,45.64,F,Chinese,25,2.7,4.1,2.8,1.8,3,4.0,5,23.4
 947,Hyejin,South Korea,Daegu,58.56,176.5,F,Chinese,29,4.7,3.5,2.8,1.4,4,2.0,5,23.4
+1738,Hong Minh,Vietnam,Đà Nẵng,31.41,4.13,F,Thai,28,4.5,3.8,2.0,3.1,5,3.0,2,23.4
+686,Heejae,South Korea,Gwangju,6.79,45.64,F,Chinese,25,2.7,4.1,2.8,1.8,3,4.0,5,23.4
 169,Karla Taylor,Mexico,Mexico,19.43,-99.14,F,Black,21,3.7,3.0,3.7,4.0,4,3.0,2,23.4
+69,Allison Brink-Lomme,United States of America,Portland,45.52,-122.67,F,White,24,2.8,3.6,4.0,5.0,4,3.0,1,23.4
+826,Júlia,Brazil,Salvador,-44.92,-31.74,F,White,20,3.3,4.8,3.4,4.9,1,4.0,2,23.4
+238,Haley Ingrim-Hyrup,United States of America,Fontana,34.09,-117.43,F,Native American,22,3.2,3.6,2.6,5.0,2,4.0,3,23.4
 0,Kiana Lor,China,Suzhou,31.31,120.62,F,Tibetan,22,3.5,3.7,3.1,1.0,4,4.0,4,23.3
 171,Maimoona el-Soliman,Turkey,Ankara,39.91,32.84,F,NAN,21,2.8,2.6,3.9,3.0,4,3.0,4,23.3
-63,Macaela Kadillak,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,20,2.7,3.3,3.3,5.0,4,1.0,4,23.3
-207,Jesse Hodapp,United States of America,Danville,37.82,-122.0,M,Hispanic or Latino,21,3.8,3.0,3.5,5.0,4,2.0,2,23.3
 183,Isabella Martinez,Colombia,Bogotá,4.65,-74.06,F,NAN,23,2.6,4.0,2.7,4.0,3,4.0,3,23.3
+207,Jesse Hodapp,United States of America,Danville,37.82,-122.0,M,Hispanic or Latino,21,3.8,3.0,3.5,5.0,4,2.0,2,23.3
+63,Macaela Kadillak,United States of America,Los Angeles,34.05,-118.24,F,Black or African American,20,2.7,3.3,3.3,5.0,4,1.0,4,23.3
 332,Jin,South Korea,Gwangju,-79.43,-86.48,M,Japanese,19,2.3,4.5,4.5,1.9,5,3.0,2,23.200000000000003
-1517,Amr,Egypt,Luxor,-66.47,130.38,M,Bedouin,20,1.7,2.4,4.2,3.9,5,5.0,1,23.200000000000003
 1039,Sonali,India,Delhi,-0.95,-82.55,M,Other,29,2.7,1.2,4.9,4.4,5,3.0,2,23.200000000000003
+1517,Amr,Egypt,Luxor,-66.47,130.38,M,Bedouin,20,1.7,2.4,4.2,3.9,5,5.0,1,23.200000000000003
 1926,Piper,United States of America,New York,77.5,13.93,M,Native American,24,3.9,1.3,3.5,2.5,3,4.0,5,23.2
 440,Li Hao,China,Beijing,-73.56,4.08,M,Uighur,25,2.9,3.9,3.7,3.7,3,3.0,3,23.2
-50,Issac Mata,Mexico,Tehuacán,18.45,-97.38,M,Black,23,2.4,3.1,2.7,1.0,5,5.0,4,23.2
 150,Abdul Jabbaar el-Abdul,Egypt,Cairo,30.05,31.25,M,Berber,20,1.5,3.5,3.2,3.0,3,5.0,4,23.2
+1042,Mai Linh,Vietnam,Cần Thơ,-71.72,-99.87,F,H'mong,22,4.6,4.9,1.7,3.0,2,4.0,3,23.2
 1702,Gilberto,Mexico,Monterrey,51.58,-92.18,M,Asian,21,4.1,3.9,3.5,3.7,3,4.0,1,23.2
 1601,Géraldine,France,Lyon,80.71,127.31,M,African,30,4.3,4.4,2.3,1.2,4,5.0,2,23.2
-1042,Mai Linh,Vietnam,Cần Thơ,-71.72,-99.87,F,H'mong,22,4.6,4.9,1.7,3.0,2,4.0,3,23.2
+50,Issac Mata,Mexico,Tehuacán,18.45,-97.38,M,Black,23,2.4,3.1,2.7,1.0,5,5.0,4,23.2
 996,Yunho,South Korea,Busan,-33.9,-50.1,M,Korean,26,3.2,2.9,1.8,4.3,2,5.0,4,23.2
 39,Aylin Mendoza,Mexico,Mexico,19.43,-99.14,F,Black,22,3.0,2.3,3.9,4.0,2,4.0,4,23.2
-457,Olga,Russia,Moscow,-35.38,130.82,M,Ukrainian,29,4.5,1.8,4.4,1.4,5,3.0,3,23.1
-704,Elizaveta,Russia,Moscow,-63.48,-170.01,F,Bashkir,30,3.2,3.5,2.6,2.8,2,5.0,4,23.1
-610,Nitin,India,Bangalore,-59.73,-35.21,M,Other,25,4.4,3.0,3.8,3.9,3,3.0,2,23.1
 398,Sienna,United States of America,Los Angeles,59.68,124.36,F,Native American,28,1.7,4.7,2.2,3.5,5,1.0,5,23.1
-1325,Karan,India,Kolkata,-50.36,137.25,M,Other,22,3.7,4.7,2.9,1.8,2,3.0,5,23.1
+344,Belen,Argentina,Buenos Aires,29.26,126.8,M,Mestizo,28,1.6,2.0,3.9,4.6,3,3.0,5,23.1
 900,Minjeong,South Korea,Busan,-56.94,175.77,M,Korean,19,3.8,1.6,2.6,1.1,5,5.0,4,23.1
 1275,Luigi,Italy,Turin,-26.06,-171.71,M,North African,18,1.4,2.0,4.0,4.7,2,5.0,4,23.1
-1525,Agustin,Argentina,Buenos Aires,15.18,163.15,M,White,28,3.9,1.3,4.7,3.1,2,3.0,5,23.0
+1325,Karan,India,Kolkata,-50.36,137.25,M,Other,22,3.7,4.7,2.9,1.8,2,3.0,5,23.1
+610,Nitin,India,Bangalore,-59.73,-35.21,M,Other,25,4.4,3.0,3.8,3.9,3,3.0,2,23.1
+704,Elizaveta,Russia,Moscow,-63.48,-170.01,F,Bashkir,30,3.2,3.5,2.6,2.8,2,5.0,4,23.1
+327,Kazuya,Japan,Tokyo,-31.15,-156.8,M,Korean,18,3.2,2.8,2.8,4.2,3,2.0,5,23.0
 1028,Poonam,India,Mumbai,-49.58,22.89,M,Hindu,25,4.3,4.4,4.2,1.1,3,2.0,4,23.0
-324,Klara,Germany,Frankfurt,-89.87,-101.12,F,Polish,21,1.6,2.6,3.7,4.1,5,3.0,3,23.0
-917,Sanjay,India,Delhi,10.33,103.89,F,Christian,24,3.3,3.0,4.2,1.5,5,1.0,5,23.0
+1525,Agustin,Argentina,Buenos Aires,15.18,163.15,M,White,28,3.9,1.3,4.7,3.1,2,3.0,5,23.0
 562,Helen,Germany,Munich,-31.12,157.05,F,Polish,23,4.1,4.2,1.0,1.7,5,5.0,2,23.0
+917,Sanjay,India,Delhi,10.33,103.89,F,Christian,24,3.3,3.0,4.2,1.5,5,1.0,5,23.0
 1380,Liu Hong,China,Beijing,-49.0,-97.24,F,Mongol,23,4.2,1.1,3.9,2.7,3,5.0,3,22.900000000000002
-1870,Liu Ling,China,Guangzhou,-49.95,5.56,M,Mongol,29,4.3,3.6,4.3,4.7,2,3.0,1,22.9
-588,Ludmila,Russia,Novosibirsk,83.91,12.38,F,Ukrainian,25,1.3,1.7,2.4,4.5,5,3.0,5,22.9
-1494,Thi Thanh,Vietnam,Hà Nội,46.09,-129.75,F,Kinh,26,4.5,1.4,4.5,4.5,3,2.0,3,22.9
 376,Yasmin,Egypt,Alexandria,70.69,-80.99,M,Nubian,28,1.0,3.6,4.5,4.8,4,4.0,1,22.9
+588,Ludmila,Russia,Novosibirsk,83.91,12.38,F,Ukrainian,25,1.3,1.7,2.4,4.5,5,3.0,5,22.9
 1539,Hiroki,Japan,Nagoya,89.14,-15.38,M,Korean,21,3.3,3.4,3.2,1.0,3,5.0,4,22.9
-1038,Austin,Canada,Vancouver,14.19,-77.37,F,Indigenous,28,2.2,3.5,4.2,1.9,4,2.0,5,22.8
-371,Hoa Nguyen,Vietnam,Đà Nẵng,82.14,18.18,M,Kinh,30,2.0,4.8,2.5,3.5,3,5.0,2,22.8
-1652,Fayza,Egypt,Giza,48.28,-49.26,M,Egyptian,20,3.3,2.2,1.8,3.5,5,4.0,3,22.8
+1870,Liu Ling,China,Guangzhou,-49.95,5.56,M,Mongol,29,4.3,3.6,4.3,4.7,2,3.0,1,22.9
+1494,Thi Thanh,Vietnam,Hà Nội,46.09,-129.75,F,Kinh,26,4.5,1.4,4.5,4.5,3,2.0,3,22.9
 404,Jackson,United States of America,Phoenix,13.83,112.13,F,Hispanic or Latino,21,1.0,5.0,3.9,3.9,2,3.0,4,22.8
+1652,Fayza,Egypt,Giza,48.28,-49.26,M,Egyptian,20,3.3,2.2,1.8,3.5,5,4.0,3,22.8
+1038,Austin,Canada,Vancouver,14.19,-77.37,F,Indigenous,28,2.2,3.5,4.2,1.9,4,2.0,5,22.8
 926,Liang Yun,China,Guangzhou,-36.0,-11.45,F,Tibetan,21,1.1,4.9,4.3,2.4,5,3.0,2,22.700000000000003
 363,Alka,India,Mumbai,2.18,-7.85,F,Muslim,29,2.7,2.9,3.7,2.4,4,5.0,2,22.700000000000003
 1328,Jean-François,France,Lyon,16.13,15.94,F,Berber,20,3.8,1.4,2.9,2.6,2,5.0,5,22.7
-346,Truong Anh,Vietnam,Đà Nẵng,0.82,-102.7,M,Kinh,24,3.0,2.8,4.7,2.2,5,4.0,1,22.7
 1796,Deepak,India,Delhi,40.46,-69.93,M,Christian,29,3.7,3.6,1.7,3.7,4,5.0,1,22.7
-378,Jean-Pierre,France,Paris,-17.3,-175.29,F,Asian,26,3.0,3.3,2.1,3.3,4,4.0,3,22.7
-1054,Emilia,Argentina,Cordoba,-86.2,-118.54,M,Arab,26,2.8,1.6,2.8,3.5,5,2.0,5,22.7
-702,Valentina,Russia,Moscow,24.55,-121.37,F,Russian,28,1.9,2.4,4.2,4.2,3,2.0,5,22.7
 1469,Nathalie,France,Toulouse,-38.27,49.48,M,French,29,3.9,3.1,1.7,4.0,4,2.0,4,22.7
+702,Valentina,Russia,Moscow,24.55,-121.37,F,Russian,28,1.9,2.4,4.2,4.2,3,2.0,5,22.7
+346,Truong Anh,Vietnam,Đà Nẵng,0.82,-102.7,M,Kinh,24,3.0,2.8,4.7,2.2,5,4.0,1,22.7
+1054,Emilia,Argentina,Cordoba,-86.2,-118.54,M,Arab,26,2.8,1.6,2.8,3.5,5,2.0,5,22.7
+378,Jean-Pierre,France,Paris,-17.3,-175.29,F,Asian,26,3.0,3.3,2.1,3.3,4,4.0,3,22.7
 347,Preeti,India,Mumbai,71.75,-6.53,M,Other,20,4.4,3.7,3.3,4.2,5,1.0,1,22.6
-1783,Harvinder,India,Chennai,-62.06,-24.88,M,Other,27,1.2,4.6,4.5,3.3,1,5.0,3,22.6
 634,Owen,United States of America,Phoenix,70.28,37.81,M,Native American,23,2.8,5.0,4.3,1.5,5,3.0,1,22.6
-613,Fiona,Germany,Frankfurt,24.25,29.23,F,Russian,19,2.4,1.8,3.1,4.3,5,2.0,4,22.6
 925,Svetlana,Russia,Nizhny Novgorod,-71.4,37.28,F,Bashkir,24,3.9,2.5,4.3,1.9,4,4.0,2,22.6
+613,Fiona,Germany,Frankfurt,24.25,29.23,F,Russian,19,2.4,1.8,3.1,4.3,5,2.0,4,22.6
 1962,Haruki,Japan,Sapporo,71.49,51.53,M,Ainu,24,5.0,2.5,3.2,3.9,3,2.0,3,22.6
 422,Liang Fen,China,Chengdu,-54.26,-91.53,M,Tibetan,22,4.4,4.6,3.4,4.2,1,1.0,4,22.6
+1783,Harvinder,India,Chennai,-62.06,-24.88,M,Other,27,1.2,4.6,4.5,3.3,1,5.0,3,22.6
 2112,Boris,Russia,Novosibirsk,-36.09,18.55,M,Chuvash,30,3.1,4.6,2.7,1.2,5,3.0,3,22.599999999999998
-226,Abigail Gallegos,Brazil,Belém,-1.45,-48.48,F,White,24,3.4,3.0,2.1,4.0,3,3.0,4,22.5
-1460,Rajat,India,Delhi,24.87,-96.2,M,Sikh,30,3.6,2.4,4.7,4.8,2,1.0,4,22.5
-1323,Nikita,India,Bangalore,42.69,-15.05,F,Christian,24,2.0,2.7,5.0,3.8,5,1.0,3,22.5
-660,Violet,Canada,Ottawa,-4.68,-2.04,M,Indigenous,25,4.2,3.0,4.9,1.4,2,2.0,5,22.5
-1141,Wu Lan,China,Beijing,-38.45,-40.44,F,Tibetan,24,1.2,4.6,2.1,4.6,2,3.0,5,22.5
-860,Kiran,India,Kolkata,8.78,-104.32,F,Muslim,21,3.1,2.3,4.8,3.3,3,5.0,1,22.5
 1574,Nuri,South Korea,Daegu,62.39,-32.9,M,Chinese,30,2.5,2.6,1.7,4.7,5,2.0,4,22.5
-1502,Andres,Argentina,Buenos Aires,22.02,-102.76,F,Indigenous,18,3.0,4.4,2.3,3.8,5,3.0,1,22.5
+860,Kiran,India,Kolkata,8.78,-104.32,F,Muslim,21,3.1,2.3,4.8,3.3,3,5.0,1,22.5
 1243,Ekaterina,Russia,Saint Petersburg,-59.45,153.56,F,Russian,22,4.6,2.8,4.6,4.5,3,2.0,1,22.5
+660,Violet,Canada,Ottawa,-4.68,-2.04,M,Indigenous,25,4.2,3.0,4.9,1.4,2,2.0,5,22.5
+1502,Andres,Argentina,Buenos Aires,22.02,-102.76,F,Indigenous,18,3.0,4.4,2.3,3.8,5,3.0,1,22.5
+1141,Wu Lan,China,Beijing,-38.45,-40.44,F,Tibetan,24,1.2,4.6,2.1,4.6,2,3.0,5,22.5
+1323,Nikita,India,Bangalore,42.69,-15.05,F,Christian,24,2.0,2.7,5.0,3.8,5,1.0,3,22.5
+1460,Rajat,India,Delhi,24.87,-96.2,M,Sikh,30,3.6,2.4,4.7,4.8,2,1.0,4,22.5
+226,Abigail Gallegos,Brazil,Belém,-1.45,-48.48,F,White,24,3.4,3.0,2.1,4.0,3,3.0,4,22.5
+317,Li Jia,China,Shenzhen,81.66,102.37,F,Mongol,24,2.5,2.7,4.5,4.8,2,5.0,1,22.5
 383,Johann,Germany,Cologne,-13.97,-44.79,M,German,21,1.8,4.4,4.4,2.8,2,4.0,3,22.400000000000002
 529,Victor,Russia,Yekaterinburg,-57.22,51.11,F,Tatar,29,2.0,3.9,4.2,1.3,3,4.0,4,22.400000000000002
-93,Hailey Malle,Russian Federation,Nizhniy Novgorod,56.33,44.01,F,NAN,22,3.7,2.5,3.2,2.0,3,3.0,5,22.4
-433,Xu Qian,China,Shanghai,58.24,-59.55,F,Uighur,21,4.2,3.9,1.5,4.8,5,1.0,2,22.4
-361,Evelyn,Canada,Montreal,-23.19,142.92,F,Indigenous,21,1.1,2.1,3.6,3.6,4,4.0,4,22.4
-334,Maria,Mexico,Monterrey,-45.11,-176.27,M,Indigenous,20,3.4,2.1,3.3,1.6,4,5.0,3,22.4
-526,Maha,Egypt,Aswan,38.06,-75.8,F,Berber,18,3.8,2.6,4.0,1.0,5,3.0,3,22.4
-1218,Zhang Ping,China,Guangzhou,-12.78,72.36,F,Han,27,3.4,4.2,2.4,1.4,2,5.0,4,22.4
+397,Carter,Canada,Toronto,41.53,-130.73,F,French,20,3.0,2.9,4.2,3.3,2,3.0,4,22.400000000000002
 1216,Jaejoong,South Korea,Daegu,38.88,-82.14,F,Korean,18,4.2,4.6,3.2,2.4,2,3.0,3,22.4
-317,Nam Le,Vietnam,Đà Nẵng,10.18,178.7,F,Thai,25,4.7,3.4,1.8,4.4,2,5.0,1,22.3
+407,Esteban,Argentina,Buenos Aires,-53.82,65.15,F,Indigenous,23,4.5,4.7,1.5,1.7,4,3.0,3,22.4
+433,Xu Qian,China,Shanghai,58.24,-59.55,F,Uighur,21,4.2,3.9,1.5,4.8,5,1.0,2,22.4
+526,Maha,Egypt,Aswan,38.06,-75.8,F,Berber,18,3.8,2.6,4.0,1.0,5,3.0,3,22.4
+93,Hailey Malle,Russian Federation,Nizhniy Novgorod,56.33,44.01,F,NAN,22,3.7,2.5,3.2,2.0,3,3.0,5,22.4
+1218,Zhang Ping,China,Guangzhou,-12.78,72.36,F,Han,27,3.4,4.2,2.4,1.4,2,5.0,4,22.4
+361,Evelyn,Canada,Montreal,-23.19,142.92,F,Indigenous,21,1.1,2.1,3.6,3.6,4,4.0,4,22.4
+515,Li Hua,China,Shenzhen,-9.6,-140.48,M,Tibetan,25,2.3,4.5,1.7,3.8,2,4.0,4,22.3
 1797,Isaac,Australia,Perth,-78.88,-91.76,F,Indigenous,22,3.9,2.6,2.1,3.7,4,3.0,3,22.3
+676,Rosa,Mexico,Monterrey,-73.65,-90.35,F,Asian,28,2.5,3.7,2.7,3.4,1,5.0,4,22.3
 899,Xu Jie,China,Beijing,-28.35,-101.28,M,Uighur,29,3.4,4.0,2.4,2.5,3,2.0,5,22.3
 912,Thu Thao,Vietnam,Nha Trang,29.52,30.56,M,Muong,25,1.4,1.1,4.9,3.9,5,5.0,1,22.3
-676,Rosa,Mexico,Monterrey,-73.65,-90.35,F,Asian,28,2.5,3.7,2.7,3.4,1,5.0,4,22.3
-515,Li Hua,China,Shenzhen,-9.6,-140.48,M,Tibetan,25,2.3,4.5,1.7,3.8,2,4.0,4,22.3
-802,Rajeev,India,Mumbai,-7.3,11.84,M,Sikh,24,3.9,3.7,4.1,3.6,1,2.0,4,22.299999999999997
-460,Thao Nguyen,Vietnam,Hà Nội,64.53,-30.11,M,Thai,18,3.5,4.9,3.8,1.1,5,1.0,3,22.299999999999997
 739,Oksana,Russia,Saint Petersburg,29.84,45.78,F,Russian,28,1.4,3.1,4.1,1.7,3,4.0,5,22.299999999999997
-950,Chandrika,India,Kolkata,2.88,128.11,M,Other,21,4.1,4.5,2.3,3.4,2,3.0,3,22.299999999999997
+802,Rajeev,India,Mumbai,-7.3,11.84,M,Sikh,24,3.9,3.7,4.1,3.6,1,2.0,4,22.299999999999997
 373,Maddie,United States of America,Los Angeles,25.37,30.73,F,Asian,27,1.8,4.5,1.8,1.2,5,4.0,4,22.299999999999997
-370,Mohamed,Egypt,Giza,81.69,-147.69,F,Other,27,4.4,3.2,3.6,2.0,4,4.0,1,22.200000000000003
+460,Paula,Germany,Berlin,-30.94,-72.65,F,German,22,2.7,3.9,3.8,4.9,1,5.0,1,22.299999999999997
+950,Chandrika,India,Kolkata,2.88,128.11,M,Other,21,4.1,4.5,2.3,3.4,2,3.0,3,22.299999999999997
 409,Laxmi,India,Mumbai,21.27,28.26,M,Hindu,23,1.5,3.7,1.6,4.4,4,2.0,5,22.200000000000003
-744,Vinay,India,Bangalore,61.5,153.82,M,Hindu,27,3.1,3.5,4.3,2.3,5,2.0,2,22.2
-998,Alok,India,Chennai,82.63,-15.2,F,Hindu,30,2.4,2.4,4.7,4.7,2,3.0,3,22.2
-1790,Youssef,Egypt,Aswan,-52.95,-73.79,M,Other,18,3.9,4.4,3.7,1.2,1,3.0,5,22.2
-1299,Alexandra,Russia,Moscow,4.28,112.24,F,Bashkir,30,2.3,4.7,4.2,3.0,2,2.0,4,22.2
-1001,Anton,Russia,Novosibirsk,76.09,-71.97,M,Ukrainian,30,3.9,3.3,3.6,4.4,1,5.0,1,22.2
-879,Ramon,Mexico,Mexico City,48.5,-42.22,M,White,27,3.5,4.5,3.2,1.0,5,1.0,4,22.2
-1952,Pierre-Louis,France,Lyon,-14.72,-54.76,F,African,23,4.4,4.9,3.5,3.4,1,4.0,1,22.2
-436,Lukas,Germany,Munich,-57.12,-38.2,F,German,24,4.5,4.4,2.0,3.3,1,5.0,2,22.2
-2187,Éric,France,Paris,-20.99,-127.99,M,African,30,4.7,2.7,2.1,2.7,4,4.0,2,22.2
-1578,Sherif,Egypt,Aswan,-44.92,-127.53,F,Other,26,1.2,3.8,2.8,2.4,5,5.0,2,22.2
+370,Mohamed,Egypt,Giza,81.69,-147.69,F,Other,27,4.4,3.2,3.6,2.0,4,4.0,1,22.200000000000003
 664,Rahul,India,Bangalore,13.83,-152.75,F,Other,28,3.0,2.9,2.0,2.3,3,4.0,5,22.2
-522,Charlie,United States of America,Los Angeles,-88.92,104.75,M,Native American,30,2.9,1.5,2.1,2.6,4,5.0,4,22.1
-435,Ethan,Canada,Vancouver,-15.77,148.66,M,Other,28,3.9,2.8,1.8,3.6,2,4.0,4,22.1
-735,Liliana,Argentina,Cordoba,49.46,138.98,M,White,28,2.9,4.4,3.1,2.7,1,3.0,5,22.1
-779,Luisa,Mexico,Tijuana,83.11,-142.58,M,Indigenous,24,2.1,4.7,3.8,3.5,1,4.0,3,22.1
+1299,Alexandra,Russia,Moscow,4.28,112.24,F,Bashkir,30,2.3,4.7,4.2,3.0,2,2.0,4,22.2
+744,Vinay,India,Bangalore,61.5,153.82,M,Hindu,27,3.1,3.5,4.3,2.3,5,2.0,2,22.2
+879,Ramon,Mexico,Mexico City,48.5,-42.22,M,White,27,3.5,4.5,3.2,1.0,5,1.0,4,22.2
+2187,Éric,France,Paris,-20.99,-127.99,M,African,30,4.7,2.7,2.1,2.7,4,4.0,2,22.2
+1952,Pierre-Louis,France,Lyon,-14.72,-54.76,F,African,23,4.4,4.9,3.5,3.4,1,4.0,1,22.2
+1001,Anton,Russia,Novosibirsk,76.09,-71.97,M,Ukrainian,30,3.9,3.3,3.6,4.4,1,5.0,1,22.2
+998,Alok,India,Chennai,82.63,-15.2,F,Hindu,30,2.4,2.4,4.7,4.7,2,3.0,3,22.2
+436,Lukas,Germany,Munich,-57.12,-38.2,F,German,24,4.5,4.4,2.0,3.3,1,5.0,2,22.2
+1790,Youssef,Egypt,Aswan,-52.95,-73.79,M,Other,18,3.9,4.4,3.7,1.2,1,3.0,5,22.2
+1578,Sherif,Egypt,Aswan,-44.92,-127.53,F,Other,26,1.2,3.8,2.8,2.4,5,5.0,2,22.2
 369,Jaime,Mexico,Mexico City,-51.22,29.42,F,Asian,20,2.5,1.9,3.9,4.8,3,5.0,1,22.1
-475,Minseok,South Korea,Busan,-33.16,29.11,F,Japanese,19,2.1,3.2,4.0,4.8,3,2.0,3,22.1
 816,Sujin,South Korea,Daegu,-65.57,106.67,M,Korean,24,3.4,1.8,4.9,2.0,2,5.0,3,22.1
+522,Charlie,United States of America,Los Angeles,-88.92,104.75,M,Native American,30,2.9,1.5,2.1,2.6,4,5.0,4,22.1
+735,Liliana,Argentina,Cordoba,49.46,138.98,M,White,28,2.9,4.4,3.1,2.7,1,3.0,5,22.1
+435,Ethan,Canada,Vancouver,-15.77,148.66,M,Other,28,3.9,2.8,1.8,3.6,2,4.0,4,22.1
 445,Andrew,United States of America,New York,-14.93,-134.83,M,Native American,24,2.9,4.8,2.0,3.4,1,4.0,4,22.1
-133,Andrew Kirin,United States of America,Odessa,31.85,-102.37,M,Black or African American,25,3.8,2.2,3.0,5.0,3,2.0,3,22.0
-1542,Stefania,Italy,Rome,-53.77,133.38,M,Italian,29,4.9,2.0,1.4,4.7,3,1.0,5,22.0
+475,Minseok,South Korea,Busan,-33.16,29.11,F,Japanese,19,2.1,3.2,4.0,4.8,3,2.0,3,22.1
+403,Ezequiel,Argentina,Rosario,36.81,129.27,F,Arab,23,2.8,1.7,4.2,4.4,2,4.0,3,22.1
+779,Luisa,Mexico,Tijuana,83.11,-142.58,M,Indigenous,24,2.1,4.7,3.8,3.5,1,4.0,3,22.1
 691,Krishna,India,Delhi,5.48,12.74,F,Muslim,25,1.7,1.5,5.0,4.8,2,4.0,3,22.0
 1456,Nadia,Egypt,Cairo,38.6,121.71,F,Bedouin,25,2.4,1.1,3.1,2.4,4,5.0,4,22.0
+133,Andrew Kirin,United States of America,Odessa,31.85,-102.37,M,Black or African American,25,3.8,2.2,3.0,5.0,3,2.0,3,22.0
+372,Amelia,Australia,Adelaide,73.82,-103.29,F,English,25,1.6,4.1,2.0,4.3,2,4.0,4,22.0
 1550,Zhang Hua,China,Shanghai,47.32,-87.54,M,Tibetan,28,4.3,3.5,4.1,1.1,3,3.0,3,22.0
 1835,Riko,Japan,Sapporo,42.94,17.55,F,Korean,27,1.7,3.7,2.3,3.3,3,3.0,5,22.0
-327,Xia,China,Shanghai,-50.62,-140.56,M,Uighur,22,2.7,2.8,4.9,2.5,2,4.0,3,21.9
-1636,Sora,Japan,Tokyo,-0.01,-146.56,M,Ryukyuans,23,3.0,1.7,2.5,1.7,5,4.0,4,21.9
-1633,Nikolay,Russia,Moscow,52.52,-87.9,F,Russian,27,2.1,4.8,1.7,3.3,2,3.0,5,21.9
-1915,Santiago,Argentina,Buenos Aires,-9.99,-146.89,M,Indigenous,24,4.3,3.0,4.6,3.0,2,4.0,1,21.9
+1542,Stefania,Italy,Rome,-53.77,133.38,M,Italian,29,4.9,2.0,1.4,4.7,3,1.0,5,22.0
+1076,Felipe,Brazil,Rio de Janeiro,88.68,-23.04,F,White,23,2.7,1.6,3.5,3.1,5,3.0,3,21.9
 377,Hyewon,South Korea,Gwangju,30.1,71.82,F,Other,27,3.3,2.9,4.3,1.4,5,4.0,1,21.9
 1439,Rodolfo,Mexico,Cancun,-42.46,-64.42,M,Indigenous,21,3.0,5.0,3.5,2.4,1,3.0,4,21.9
-368,Harper,United States of America,Los Angeles,66.9,70.47,M,White,25,3.3,4.4,1.2,2.0,5,5.0,1,21.9
-1423,Yang Ling,China,Chengdu,37.78,-115.43,F,Tibetan,26,4.0,4.5,3.5,4.9,1,3.0,1,21.9
+1636,Sora,Japan,Tokyo,-0.01,-146.56,M,Ryukyuans,23,3.0,1.7,2.5,1.7,5,4.0,4,21.9
+518,Thierry,France,Lyon,69.46,-37.99,F,French,28,4.6,2.1,1.4,2.8,5,4.0,2,21.9
 525,Fabienne,France,Paris,12.51,5.37,F,French,21,2.6,3.1,1.4,2.8,4,5.0,3,21.9
-1076,Felipe,Brazil,Rio de Janeiro,88.68,-23.04,F,White,23,2.7,1.6,3.5,3.1,5,3.0,3,21.9
-927,Bao Hoa,Vietnam,Hồ Chí Minh,35.33,54.95,F,Kinh,29,4.6,4.4,3.4,4.4,2,1.0,2,21.8
-1294,Yvonne,France,Nice,-84.12,94.43,M,Berber,28,4.5,1.5,2.4,2.4,3,3.0,5,21.8
+1915,Santiago,Argentina,Buenos Aires,-9.99,-146.89,M,Indigenous,24,4.3,3.0,4.6,3.0,2,4.0,1,21.9
+1423,Yang Ling,China,Chengdu,37.78,-115.43,F,Tibetan,26,4.0,4.5,3.5,4.9,1,3.0,1,21.9
+1633,Nikolay,Russia,Moscow,52.52,-87.9,F,Russian,27,2.1,4.8,1.7,3.3,2,3.0,5,21.9
+368,Harper,United States of America,Los Angeles,66.9,70.47,M,White,25,3.3,4.4,1.2,2.0,5,5.0,1,21.9
+465,Miguel,Mexico,Tijuana,35.78,129.65,M,Black,25,1.2,4.3,4.4,3.0,2,4.0,3,21.9
 72,Fikra al-Mina,India,Bombay,18.98,72.83,F,Hindu,21,3.1,2.4,3.3,3.0,1,5.0,4,21.8
 1813,Gao Hui,China,Shanghai,-34.98,69.87,F,Zhuang,20,3.9,4.4,1.8,3.7,4,1.0,3,21.8
+1294,Yvonne,France,Nice,-84.12,94.43,M,Berber,28,4.5,1.5,2.4,2.4,3,3.0,5,21.8
+927,Bao Hoa,Vietnam,Hồ Chí Minh,35.33,54.95,F,Kinh,29,4.6,4.4,3.4,4.4,2,1.0,2,21.8
 955,Yusuke,Japan,Tokyo,64.28,58.74,M,Ainu,23,4.5,1.9,3.7,4.7,4,2.0,1,21.8
-622,Luciana,Argentina,Buenos Aires,-25.5,-30.63,M,White,26,4.2,4.0,4.6,3.0,1,1.0,4,21.799999999999997
 1262,Fatma,Egypt,Alexandria,-0.58,-176.85,M,Other,21,2.1,4.5,3.8,4.4,3,1.0,3,21.799999999999997
 801,Eleanor,United States of America,New York,65.95,-167.55,M,White,23,4.6,4.6,4.1,3.5,2,2.0,1,21.799999999999997
+622,Luciana,Argentina,Buenos Aires,-25.5,-30.63,M,White,26,4.2,4.0,4.6,3.0,1,1.0,4,21.799999999999997
 813,Xu Ying,China,Shenzhen,9.22,11.01,F,Uighur,23,2.1,2.2,4.5,4.9,3,4.0,1,21.700000000000003
 750,Camila,Brazil,Salvador,-71.24,-106.1,F,Indigenous,25,3.0,2.4,3.6,1.7,1,5.0,5,21.7
-850,Li Hong,China,Guangzhou,-3.82,131.21,M,Zhuang,21,1.5,2.1,4.1,3.0,2,4.0,5,21.7
+1286,Sun Hong,China,Shenzhen,-27.43,178.77,F,Han,26,2.2,4.1,3.9,2.5,4,1.0,4,21.7
 873,Ashok,India,Mumbai,-12.85,19.48,M,Other,18,3.7,2.9,2.1,4.0,1,3.0,5,21.7
 318,Raquel,Mexico,Guadalajara,1.63,110.95,M,White,22,1.1,1.9,4.2,1.5,5,3.0,5,21.7
+850,Li Hong,China,Guangzhou,-3.82,131.21,M,Zhuang,21,1.5,2.1,4.1,3.0,2,4.0,5,21.7
 818,Zhou Ying,China,Chengdu,-7.99,-170.14,M,Uighur,26,3.8,3.3,3.4,2.2,3,1.0,5,21.7
-1286,Sun Hong,China,Shenzhen,-27.43,178.77,F,Han,26,2.2,4.1,3.9,2.5,4,1.0,4,21.7
+374,Madelyn,United States of America,Los Angeles,29.3,-136.55,F,Native American,30,2.6,1.3,4.4,3.3,3,2.0,5,21.6
+309,Luc,France,Marseille,-49.59,139.09,M,Arab,28,2.6,2.5,1.1,4.4,5,5.0,1,21.6
+1015,Francesca,Italy,Florence,-57.17,94.33,M,Italian,21,3.6,1.6,3.8,3.6,2,3.0,4,21.6
+464,Riley,United States of America,Houston,-12.55,21.67,F,Hispanic or Latino,18,4.1,4.4,3.0,4.1,1,2.0,3,21.6
+479,Viktor,Russia,Novosibirsk,-86.82,-97.61,M,Tatar,23,3.2,1.9,4.9,2.6,3,5.0,1,21.6
+1429,Issei,Japan,Nagoya,-60.46,109.01,M,Japanese,24,3.6,3.3,3.1,1.6,4,5.0,1,21.6
 869,Hajin,South Korea,Busan,-13.49,34.1,M,Korean,25,4.5,1.7,1.2,4.2,1,4.0,5,21.6
 501,Kirill,Russia,Novosibirsk,7.3,38.5,M,Russian,24,3.2,4.6,1.9,3.9,2,1.0,5,21.6
 430,Alexei,Russia,Moscow,44.51,-100.22,F,Russian,29,3.0,3.0,4.9,1.7,3,3.0,3,21.6
 887,Li Ling,China,Chengdu,-73.86,-123.73,F,Han,19,3.3,5.0,2.3,4.0,4,1.0,2,21.6
-309,Luc,France,Marseille,-49.59,139.09,M,Arab,28,2.6,2.5,1.1,4.4,5,5.0,1,21.6
-1429,Issei,Japan,Nagoya,-60.46,109.01,M,Japanese,24,3.6,3.3,3.1,1.6,4,5.0,1,21.6
-464,Riley,United States of America,Houston,-12.55,21.67,F,Hispanic or Latino,18,4.1,4.4,3.0,4.1,1,2.0,3,21.6
-1015,Francesca,Italy,Florence,-57.17,94.33,M,Italian,21,3.6,1.6,3.8,3.6,2,3.0,4,21.6
-479,Viktor,Russia,Novosibirsk,-86.82,-97.61,M,Tatar,23,3.2,1.9,4.9,2.6,3,5.0,1,21.6
-513,Tyson,United States of America,Los Angeles,-23.82,-13.76,F,White,20,4.6,3.2,3.6,4.1,1,2.0,3,21.5
-1205,Ava,United States of America,Houston,-53.22,-157.83,M,White,21,2.0,3.3,2.5,3.7,3,2.0,5,21.5
-539,Madhuri,India,Bangalore,54.56,113.03,M,Hindu,20,3.8,4.9,1.6,2.2,2,2.0,5,21.5
-1595,Alina,Germany,Munich,19.93,-113.78,M,Kurdish,24,1.5,2.0,2.5,3.5,3,5.0,4,21.5
-1682,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1.0,4,21.5
+350,Grace,United States of America,New York,-49.89,-163.97,M,Hispanic or Latino,25,4.8,4.6,3.1,3.1,2,3.0,1,21.599999999999998
 393,Nisha,India,Chennai,76.31,-70.87,F,Sikh,30,2.6,1.2,3.0,4.7,5,2.0,3,21.5
-1453,Li Ping,China,Guangzhou,-86.43,-6.44,F,Uighur,23,4.4,1.4,4.5,2.2,5,1.0,3,21.5
-1093,Valeria,Argentina,La Plata,-32.79,-148.04,F,African,19,2.0,4.7,3.5,3.3,1,5.0,2,21.5
-710,Laura,Italy,Turin,-19.62,151.81,M,Romanian,21,4.6,4.7,2.0,1.2,1,4.0,4,21.5
+1205,Ava,United States of America,Houston,-53.22,-157.83,M,White,21,2.0,3.3,2.5,3.7,3,2.0,5,21.5
+1682,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1.0,4,21.5
+1595,Alina,Germany,Munich,19.93,-113.78,M,Kurdish,24,1.5,2.0,2.5,3.5,3,5.0,4,21.5
 1877,Simon,Germany,Cologne,76.44,52.41,F,German,29,3.1,4.2,3.4,2.8,2,2.0,4,21.5
+1093,Valeria,Argentina,La Plata,-32.79,-148.04,F,African,19,2.0,4.7,3.5,3.3,1,5.0,2,21.5
 1253,Shivani,India,Bangalore,-70.35,-82.14,M,Christian,29,4.5,4.8,4.5,1.7,3,1.0,2,21.5
-2236,Parker,Canada,Calgary,8.86,39.29,F,Canadian,22,1.6,2.5,3.3,4.0,5,3.0,2,21.4
-1265,Minh Hieu,Vietnam,Nha Trang,-8.92,163.54,F,H'mong,22,1.5,3.8,2.3,3.8,4,4.0,2,21.4
-2079,Zhou Yun,China,Shenzhen,68.82,169.49,M,Tibetan,26,1.9,4.2,2.4,2.9,3,2.0,5,21.4
-2144,Stéphane,France,Marseille,50.1,-105.3,F,French,26,3.8,2.1,1.8,1.7,5,2.0,5,21.4
+710,Laura,Italy,Turin,-19.62,151.81,M,Romanian,21,4.6,4.7,2.0,1.2,1,4.0,4,21.5
+1453,Li Ping,China,Guangzhou,-86.43,-6.44,F,Uighur,23,4.4,1.4,4.5,2.2,5,1.0,3,21.5
+319,Michel,France,Lyon,-71.09,-32.78,F,French,18,1.5,4.6,4.8,1.6,3,5.0,1,21.5
+539,Madhuri,India,Bangalore,54.56,113.03,M,Hindu,20,3.8,4.9,1.6,2.2,2,2.0,5,21.5
+513,Tyson,United States of America,Los Angeles,-23.82,-13.76,F,White,20,4.6,3.2,3.6,4.1,1,2.0,3,21.5
 450,Parul,India,Bangalore,62.4,-40.86,F,Hindu,28,2.1,3.8,3.9,1.6,1,4.0,5,21.4
-1377,Fumiko,Japan,Tokyo,-71.82,39.65,M,Ryukyuans,22,4.2,4.7,2.0,4.5,4,1.0,1,21.4
+2236,Parker,Canada,Calgary,8.86,39.29,F,Canadian,22,1.6,2.5,3.3,4.0,5,3.0,2,21.4
+2144,Stéphane,France,Marseille,50.1,-105.3,F,French,26,3.8,2.1,1.8,1.7,5,2.0,5,21.4
 487,Max,Germany,Hamburg,-42.11,86.6,M,Turkish,30,3.6,3.8,3.8,2.2,2,5.0,1,21.4
-584,Seoeun,South Korea,Busan,1.13,-17.2,F,Chinese,24,2.4,4.2,2.8,2.0,4,5.0,1,21.4
+2079,Zhou Yun,China,Shenzhen,68.82,169.49,M,Tibetan,26,1.9,4.2,2.4,2.9,3,2.0,5,21.4
+1265,Minh Hieu,Vietnam,Nha Trang,-8.92,163.54,F,H'mong,22,1.5,3.8,2.3,3.8,4,4.0,2,21.4
 443,Gabriela,Mexico,Cancun,-87.75,-40.59,F,Asian,28,2.8,3.2,3.0,3.4,3,5.0,1,21.4
+584,Seoeun,South Korea,Busan,1.13,-17.2,F,Chinese,24,2.4,4.2,2.8,2.0,4,5.0,1,21.4
+1377,Fumiko,Japan,Tokyo,-71.82,39.65,M,Ryukyuans,22,4.2,4.7,2.0,4.5,4,1.0,1,21.4
 720,Lucas,United States of America,Chicago,-36.88,-84.22,F,Native American,26,1.4,2.7,1.6,2.7,3,5.0,5,21.4
-517,Ravindra,India,Bangalore,-13.16,142.0,F,Other,23,4.6,3.4,1.6,3.7,2,1.0,5,21.3
 2160,Zainab,Egypt,Alexandria,-0.84,99.91,M,Other,22,1.4,4.5,4.4,2.0,1,4.0,4,21.3
-567,Osman,Egypt,Luxor,-81.23,113.6,F,Nubian,20,3.8,1.3,3.3,2.9,5,2.0,3,21.299999999999997
-362,Lena,Germany,Frankfurt,-11.95,-114.33,M,German,28,3.9,1.3,3.9,1.2,4,3.0,4,21.299999999999997
+517,Ravindra,India,Bangalore,-13.16,142.0,F,Other,23,4.6,3.4,1.6,3.7,2,1.0,5,21.3
 732,Suman,India,Delhi,86.64,-67.34,M,Sikh,26,3.0,2.8,3.3,1.2,3,3.0,5,21.299999999999997
 1464,Chiyo,Japan,Kyoto,38.55,144.03,F,Korean,18,3.8,4.9,2.1,2.5,3,1.0,4,21.299999999999997
 825,Hieu Hoa,Vietnam,Hà Nội,6.67,61.62,F,Muong,23,3.0,3.6,3.5,1.2,2,4.0,4,21.299999999999997
-359,Matthew,United States of America,Phoenix,52.86,-131.61,F,Hispanic or Latino,20,4.9,4.7,1.8,3.8,1,2.0,3,21.200000000000003
+567,Osman,Egypt,Luxor,-81.23,113.6,F,Nubian,20,3.8,1.3,3.3,2.9,5,2.0,3,21.299999999999997
+362,Lena,Germany,Frankfurt,-11.95,-114.33,M,German,28,3.9,1.3,3.9,1.2,4,3.0,4,21.299999999999997
 1073,Zoe,Canada,Montreal,31.97,-48.93,M,English,21,4.5,4.8,1.5,3.4,5,1.0,1,21.200000000000003
 594,Joana,Brazil,Rio de Janeiro,-87.25,-124.53,M,Black,18,4.0,1.2,2.1,3.9,3,5.0,2,21.200000000000003
+359,Matthew,United States of America,Phoenix,52.86,-131.61,F,Hispanic or Latino,20,4.9,4.7,1.8,3.8,1,2.0,3,21.200000000000003
 1145,Irina,Russia,Saint Petersburg,-79.97,-96.47,F,Ukrainian,22,2.1,3.2,1.2,4.7,3,3.0,4,21.200000000000003
-988,Lucia,Brazil,Brasília,-87.68,-99.5,M,Pardo,26,1.6,4.6,3.8,2.2,1,3.0,5,21.2
-1031,Oscar,United States of America,Phoenix,5.46,-13.02,F,Hispanic or Latino,27,1.3,4.7,1.3,1.9,5,4.0,3,21.2
-829,Inna,Russia,Saint Petersburg,6.38,142.32,M,Ukrainian,28,3.4,2.0,2.2,4.6,3,3.0,3,21.2
-333,Luis,Mexico,Mexico City,-48.44,-85.51,M,Mestizo,20,2.8,2.8,2.3,2.3,4,3.0,4,21.2
 963,Jayden,United States of America,Los Angeles,-73.47,-57.76,M,Hispanic or Latino,21,4.9,4.6,1.2,3.5,2,3.0,2,21.2
+333,Luis,Mexico,Mexico City,-48.44,-85.51,M,Mestizo,20,2.8,2.8,2.3,2.3,4,3.0,4,21.2
+988,Lucia,Brazil,Brasília,-87.68,-99.5,M,Pardo,26,1.6,4.6,3.8,2.2,1,3.0,5,21.2
 1455,Horacio,Argentina,Rosario,-83.2,127.26,M,African,18,4.4,1.3,3.0,4.5,1,3.0,4,21.2
-1529,Nari,South Korea,Incheon,-35.6,-19.77,F,Korean,24,4.5,4.7,3.8,2.1,3,1.0,2,21.1
+829,Inna,Russia,Saint Petersburg,6.38,142.32,M,Ukrainian,28,3.4,2.0,2.2,4.6,3,3.0,3,21.2
+1031,Oscar,United States of America,Phoenix,5.46,-13.02,F,Hispanic or Latino,27,1.3,4.7,1.3,1.9,5,4.0,3,21.2
+1531,Tatiana,Russia,Yekaterinburg,-4.1,-119.07,M,Chuvash,18,2.5,4.4,2.2,3.0,5,2.0,2,21.1
 655,Taro,Japan,Osaka,-2.01,-104.65,F,Ryukyuans,21,1.3,2.1,2.1,4.6,4,4.0,3,21.1
-322,Rajesh,India,Delhi,47.84,32.85,M,Muslim,29,4.0,1.5,1.3,4.3,1,5.0,4,21.1
-1785,Ami,Japan,Sapporo,41.21,96.47,M,Ainu,27,2.7,4.6,3.6,2.2,3,3.0,2,21.1
 1008,Yui,Japan,Osaka,29.59,-17.56,F,Ryukyuans,30,2.2,1.2,3.3,2.4,5,2.0,5,21.1
 1837,Eliane,Brazil,São Paulo,60.14,-160.86,F,Indigenous,30,4.7,1.2,1.6,4.6,1,4.0,4,21.1
-408,Jose,Mexico,Cancun,-41.22,-61.76,F,Mestizo,21,2.1,1.5,2.3,3.2,5,4.0,3,21.1
-1531,Tatiana,Russia,Yekaterinburg,-4.1,-119.07,M,Chuvash,18,2.5,4.4,2.2,3.0,5,2.0,2,21.1
+1529,Nari,South Korea,Incheon,-35.6,-19.77,F,Korean,24,4.5,4.7,3.8,2.1,3,1.0,2,21.1
 1726,Hyunjoon,South Korea,Daegu,-12.38,102.87,M,Chinese,27,2.6,2.6,3.8,1.1,4,3.0,4,21.1
-366,Eve,United States of America,Chicago,51.65,-144.69,F,Native American,23,4.5,2.1,3.8,3.7,2,4.0,1,21.099999999999998
+1785,Ami,Japan,Sapporo,41.21,96.47,M,Ainu,27,2.7,4.6,3.6,2.2,3,3.0,2,21.1
+322,Rajesh,India,Delhi,47.84,32.85,M,Muslim,29,4.0,1.5,1.3,4.3,1,5.0,4,21.1
 595,Vineet,India,Kolkata,43.8,175.03,M,Hindu,22,2.4,4.8,2.7,3.2,1,5.0,2,21.099999999999998
 523,Subhash,India,Kolkata,-64.07,76.02,M,Christian,22,4.3,4.1,1.6,4.1,4,1.0,2,21.099999999999998
-394,Aaron,United States of America,Chicago,-69.94,-153.57,M,Hispanic or Latino,25,4.8,1.4,1.7,1.1,2,5.0,5,21.0
+366,Eve,United States of America,Chicago,51.65,-144.69,F,Native American,23,4.5,2.1,3.8,3.7,2,4.0,1,21.099999999999998
 2226,Zhang Min,China,Shenzhen,-63.03,119.55,M,Han,24,1.3,2.6,4.5,1.6,5,1.0,5,21.0
-848,Alfred,United States of America,Los Angeles,28.18,176.15,M,White,27,1.9,4.9,2.9,2.3,2,3.0,4,21.0
-547,Bich Phuong,Vietnam,Đà Nẵng,-30.8,37.12,F,Muong,18,1.0,2.5,3.2,4.3,5,4.0,1,21.0
 932,Pauline,France,Paris,-15.25,-109.07,F,Asian,26,1.4,3.2,4.4,5.0,4,2.0,1,21.0
-514,Mai,Japan,Tokyo,-45.24,125.83,M,Korean,23,3.7,4.2,2.3,3.7,2,2.0,3,20.9
-2289,Caroline,France,Marseille,59.54,-122.72,F,Asian,30,4.2,1.4,1.5,1.8,4,4.0,4,20.9
+394,Aaron,United States of America,Chicago,-69.94,-153.57,M,Hispanic or Latino,25,4.8,1.4,1.7,1.1,2,5.0,5,21.0
+547,Bich Phuong,Vietnam,Đà Nẵng,-30.8,37.12,F,Muong,18,1.0,2.5,3.2,4.3,5,4.0,1,21.0
+848,Alfred,United States of America,Los Angeles,28.18,176.15,M,White,27,1.9,4.9,2.9,2.3,2,3.0,4,21.0
 656,Thi Nguyen,Vietnam,Hà Nội,23.27,57.54,F,Muong,24,1.0,2.9,4.8,4.2,3,4.0,1,20.9
-822,Minjae,South Korea,Incheon,25.5,-98.16,F,Japanese,21,2.3,3.5,2.9,4.2,2,3.0,3,20.9
+1532,Peyton,Australia,Perth,-26.55,-52.78,F,Scottish,20,1.4,2.6,4.4,4.5,1,3.0,4,20.9
+514,Mai,Japan,Tokyo,-45.24,125.83,M,Korean,23,3.7,4.2,2.3,3.7,2,2.0,3,20.9
 1907,Wang Yu,China,Chengdu,37.15,171.24,M,Mongol,19,3.9,1.1,4.1,1.8,4,4.0,2,20.9
 365,Elena,Italy,Milan,9.72,2.0,F,Italian,27,3.7,3.0,1.5,3.7,3,2.0,4,20.9
-2103,Élise,France,Marseille,15.01,-119.31,F,Asian,20,3.9,3.4,1.4,3.2,1,3.0,5,20.9
-1532,Peyton,Australia,Perth,-26.55,-52.78,F,Scottish,20,1.4,2.6,4.4,4.5,1,3.0,4,20.9
 827,Ilaria,Italy,Florence,-54.79,25.95,F,Albanian,21,1.7,4.8,1.8,4.6,3,1.0,4,20.9
-1314,Daniela,Argentina,Mendoza,-68.61,-119.35,F,Indigenous,27,2.1,1.3,2.2,4.2,5,2.0,4,20.8
-733,Ramy,Egypt,Alexandria,-76.04,100.87,M,Bedouin,26,4.9,4.0,4.2,3.7,1,2.0,1,20.8
+822,Minjae,South Korea,Incheon,25.5,-98.16,F,Japanese,21,2.3,3.5,2.9,4.2,2,3.0,3,20.9
+2289,Caroline,France,Marseille,59.54,-122.72,F,Asian,30,4.2,1.4,1.5,1.8,4,4.0,4,20.9
+2103,Élise,France,Marseille,15.01,-119.31,F,Asian,20,3.9,3.4,1.4,3.2,1,3.0,5,20.9
 345,Carolina,Mexico,Tijuana,20.38,137.65,M,White,22,2.0,3.3,2.0,3.5,2,3.0,5,20.8
 68,Gabrielle Smith,Korea (Republic of),Seoul,37.6,126.98,F,NAN,23,4.0,3.0,2.8,3.0,2,2.0,4,20.8
-423,Jakob,Germany,Cologne,59.64,130.76,M,German,20,2.8,3.9,3.4,1.7,3,3.0,3,20.799999999999997
+733,Ramy,Egypt,Alexandria,-76.04,100.87,M,Bedouin,26,4.9,4.0,4.2,3.7,1,2.0,1,20.8
+1314,Daniela,Argentina,Mendoza,-68.61,-119.35,F,Indigenous,27,2.1,1.3,2.2,4.2,5,2.0,4,20.8
 553,Nina,Germany,Hamburg,-65.64,-38.68,M,Polish,26,2.9,1.7,1.1,3.1,5,3.0,4,20.799999999999997
-2152,Seungah,South Korea,Gwangju,75.21,-42.34,F,Chinese,30,4.0,4.1,2.6,3.0,3,3.0,1,20.7
+396,Igor,Russia,Nizhny Novgorod,-30.01,-168.51,M,Tatar,19,2.9,3.8,1.1,5.0,3,3.0,2,20.799999999999997
+423,Jakob,Germany,Cologne,59.64,130.76,M,German,20,2.8,3.9,3.4,1.7,3,3.0,3,20.799999999999997
+734,Seul,South Korea,Incheon,-16.38,109.08,M,Japanese,25,4.4,3.3,2.5,1.5,2,5.0,2,20.7
 1765,Carmen,Argentina,Mendoza,18.54,74.37,M,Mestizo,25,1.5,4.1,4.1,2.0,1,4.0,4,20.7
+351,Karina,Argentina,Mendoza,-75.92,46.79,M,Mestizo,22,2.8,4.1,4.7,3.1,4,1.0,1,20.7
+2152,Seungah,South Korea,Gwangju,75.21,-42.34,F,Chinese,30,4.0,4.1,2.6,3.0,3,3.0,1,20.7
 1224,Tuan Quyen,Vietnam,Nha Trang,-78.41,164.3,F,Tay,27,2.5,3.6,2.5,3.1,4,3.0,2,20.7
 2005,Hu Xin,China,Guangzhou,79.44,-14.17,M,Uighur,27,2.3,2.9,3.4,4.1,4,3.0,1,20.7
-351,Karina,Argentina,Mendoza,-75.92,46.79,M,Mestizo,22,2.8,4.1,4.7,3.1,4,1.0,1,20.7
-734,Seul,South Korea,Incheon,-16.38,109.08,M,Japanese,25,4.4,3.3,2.5,1.5,2,5.0,2,20.7
 1492,Jacob,Canada,Montreal,-15.78,-84.05,M,Indigenous,26,1.5,2.7,4.2,2.2,4,3.0,3,20.6
-358,Ling,China,Guangzhou,-11.26,14.14,M,Tibetan,29,1.1,4.9,4.4,3.2,3,3.0,1,20.6
-1187,Joshua,United States of America,New York,2.31,170.2,M,Black or African American,19,2.3,1.1,1.1,4.1,3,5.0,4,20.6
 1102,Berenice,Mexico,Tijuana,-57.28,-20.83,M,Black,19,1.3,2.1,3.8,2.4,5,3.0,3,20.6
-1268,Brijesh,India,Delhi,-88.77,36.02,M,Sikh,26,3.9,2.5,2.9,2.3,5,2.0,2,20.6
 1295,Gao Lei,China,Shanghai,-69.31,-145.78,F,Zhuang,24,3.0,1.9,3.1,4.6,1,3.0,4,20.6
-1100,Karl,Germany,Hamburg,33.15,-172.01,M,Russian,21,1.8,1.5,2.0,1.2,5,4.0,5,20.5
+358,Ling,China,Guangzhou,-11.26,14.14,M,Tibetan,29,1.1,4.9,4.4,3.2,3,3.0,1,20.6
+1268,Brijesh,India,Delhi,-88.77,36.02,M,Sikh,26,3.9,2.5,2.9,2.3,5,2.0,2,20.6
+1187,Joshua,United States of America,New York,2.31,170.2,M,Black or African American,19,2.3,1.1,1.1,4.1,3,5.0,4,20.6
 438,Tuan Khoi,Vietnam,Hà Nội,60.92,-121.78,F,Tay,24,2.5,1.7,4.0,1.3,2,4.0,5,20.5
-847,Hoang Nguyen,Vietnam,Đà Nẵng,-74.67,26.47,M,H'mong,21,3.4,1.3,4.3,1.5,4,4.0,2,20.5
-461,Trung Nguyen,Vietnam,Hà Nội,-87.52,-127.85,F,Kinh,19,3.5,1.9,4.1,3.0,3,1.0,4,20.5
-851,Lily,United States of America,New York,-66.1,-85.33,M,Native American,26,3.3,2.5,1.4,3.3,2,4.0,4,20.5
 331,Jiwon,South Korea,Gwangju,-39.22,153.38,M,Chinese,25,2.6,2.0,1.2,3.7,4,4.0,3,20.5
+847,Hoang Nguyen,Vietnam,Đà Nẵng,-74.67,26.47,M,H'mong,21,3.4,1.3,4.3,1.5,4,4.0,2,20.5
+851,Lily,United States of America,New York,-66.1,-85.33,M,Native American,26,3.3,2.5,1.4,3.3,2,4.0,4,20.5
+1100,Karl,Germany,Hamburg,33.15,-172.01,M,Russian,21,1.8,1.5,2.0,1.2,5,4.0,5,20.5
 446,Cooper,United States of America,Houston,-10.97,51.26,F,Black or African American,21,4.9,1.4,2.8,3.3,1,3.0,4,20.400000000000002
-1221,Thi Mai,Vietnam,Đà Nẵng,49.09,157.51,F,Thai,27,4.2,2.7,1.0,3.5,2,3.0,4,20.4
 965,Francisco,Mexico,Monterrey,69.24,-136.4,F,White,28,1.9,2.0,3.8,2.7,1,5.0,4,20.4
-462,Yuri,South Korea,Daegu,-9.47,-109.26,F,Japanese,25,3.2,2.1,2.3,3.8,5,1.0,3,20.4
 357,Daniel,United States of America,New York,68.44,-138.38,M,Black or African American,18,4.9,4.7,2.1,1.7,5,1.0,1,20.4
+462,Yuri,South Korea,Daegu,-9.47,-109.26,F,Japanese,25,3.2,2.1,2.3,3.8,5,1.0,3,20.4
 538,Benjamin,United States of America,New York,60.19,123.91,M,Hispanic or Latino,20,1.1,3.2,4.0,2.1,4,5.0,1,20.4
+1221,Thi Mai,Vietnam,Đà Nẵng,49.09,157.51,F,Thai,27,4.2,2.7,1.0,3.5,2,3.0,4,20.4
 690,Ajay,India,Delhi,-42.34,178.17,F,Christian,28,1.2,2.4,1.6,1.2,5,4.0,5,20.4
-815,André,France,Nice,-1.31,-44.23,M,African,18,1.0,3.5,2.7,3.1,4,4.0,2,20.3
-1969,Fady,Egypt,Cairo,-22.11,81.7,F,Berber,21,3.7,4.3,3.3,1.0,2,5.0,1,20.3
 687,Madison,Canada,Calgary,-20.5,115.74,M,Canadian,28,4.3,2.5,1.7,4.8,2,3.0,2,20.3
-812,Evan,Australia,Brisbane,13.49,70.21,F,Irish,22,4.5,1.9,3.2,1.6,1,5.0,3,20.200000000000003
+1969,Fady,Egypt,Cairo,-22.11,81.7,F,Berber,21,3.7,4.3,3.3,1.0,2,5.0,1,20.3
+815,André,France,Nice,-1.31,-44.23,M,African,18,1.0,3.5,2.7,3.1,4,4.0,2,20.3
 349,Carlos,Argentina,Cordoba,35.98,65.38,F,Arab,26,3.0,2.8,3.5,2.9,3,2.0,3,20.200000000000003
-1396,Liang Ji,China,Beijing,30.35,21.97,F,Mongol,20,3.4,2.3,2.4,1.1,3,4.0,4,20.2
-1198,Miriam,Argentina,Buenos Aires,-55.7,-150.74,F,Arab,26,3.8,4.3,1.0,1.1,2,5.0,3,20.2
-410,Ben,Australia,Melbourne,-47.75,54.4,M,Indigenous,20,1.3,4.1,4.0,4.8,3,2.0,1,20.2
+812,Evan,Australia,Brisbane,13.49,70.21,F,Irish,22,4.5,1.9,3.2,1.6,1,5.0,3,20.200000000000003
 587,Neeraj,India,Delhi,-75.1,-50.28,F,Hindu,20,2.2,1.8,3.0,2.2,3,5.0,3,20.2
-313,Mika,Germany,Cologne,30.94,137.38,M,Kurdish,27,1.3,3.1,1.8,2.0,5,2.0,5,20.2
+1198,Miriam,Argentina,Buenos Aires,-55.7,-150.74,F,Arab,26,3.8,4.3,1.0,1.1,2,5.0,3,20.2
+348,Khaled,Egypt,Giza,-71.52,-22.79,F,Egyptian,23,1.7,2.8,3.2,2.5,1,4.0,5,20.2
 1183,Hai Nguyen,Vietnam,Cần Thơ,-10.4,64.18,F,Tay,23,2.4,2.5,2.7,4.6,2,5.0,1,20.2
-336,Jia,China,Chengdu,10.59,24.91,M,Mongol,30,3.5,2.6,2.1,5.0,2,2.0,3,20.2
-1007,Li Ying,China,Chengdu,66.09,2.59,F,Tibetan,18,3.0,4.9,1.1,1.1,5,3.0,2,20.1
-1808,Sun Fen,China,Shenzhen,-13.69,-30.3,F,Zhuang,23,3.3,2.5,3.1,2.2,3,3.0,3,20.1
-880,Mariana,Brazil,Fortaleza,67.97,139.81,F,Asian,28,3.4,1.9,1.7,2.1,4,3.0,4,20.1
+1396,Liang Ji,China,Beijing,30.35,21.97,F,Mongol,20,3.4,2.3,2.4,1.1,3,4.0,4,20.2
+410,Ben,Australia,Melbourne,-47.75,54.4,M,Indigenous,20,1.3,4.1,4.0,4.8,3,2.0,1,20.2
 752,François,France,Marseille,87.8,163.4,M,Arab,18,1.3,3.2,3.9,4.7,2,2.0,3,20.1
-148,Alondra Gardea Corral,Mexico,Ensenada,31.87,-116.62,F,White,20,2.2,3.8,3.1,2.0,3,4.0,2,20.1
-2052,He Mei,China,Beijing,75.02,127.9,F,Zhuang,30,2.0,3.5,3.6,3.0,1,4.0,3,20.1
-2267,César,Brazil,São Paulo,86.12,25.19,F,White,29,1.9,3.9,3.5,1.8,3,2.0,4,20.1
 974,Fernanda,Brazil,Brasília,22.07,143.95,M,Black,18,3.5,2.7,2.5,4.4,4,2.0,1,20.1
-688,Xu Han,China,Guangzhou,-2.42,94.69,M,Han,18,1.9,2.1,4.8,2.2,5,2.0,2,20.0
-861,Lucrezia,Italy,Naples,41.68,105.02,M,Romanian,27,1.9,4.2,2.9,2.0,2,4.0,3,20.0
-504,Huong Nguyen,Vietnam,Cần Thơ,-6.84,165.94,M,Muong,30,2.0,2.3,1.1,3.6,4,3.0,4,20.0
+880,Mariana,Brazil,Fortaleza,67.97,139.81,F,Asian,28,3.4,1.9,1.7,2.1,4,3.0,4,20.1
+1808,Sun Fen,China,Shenzhen,-13.69,-30.3,F,Zhuang,23,3.3,2.5,3.1,2.2,3,3.0,3,20.1
+2267,César,Brazil,São Paulo,86.12,25.19,F,White,29,1.9,3.9,3.5,1.8,3,2.0,4,20.1
+2052,He Mei,China,Beijing,75.02,127.9,F,Zhuang,30,2.0,3.5,3.6,3.0,1,4.0,3,20.1
+148,Alondra Gardea Corral,Mexico,Ensenada,31.87,-116.62,F,White,20,2.2,3.8,3.1,2.0,3,4.0,2,20.1
+1007,Li Ying,China,Chengdu,66.09,2.59,F,Tibetan,18,3.0,4.9,1.1,1.1,5,3.0,2,20.1
+1616,Takahiro,Japan,Kyoto,-70.9,7.92,F,Japanese,22,3.3,1.6,4.3,3.8,5,1.0,1,20.0
 1110,Liu Tao,China,Shenzhen,-56.94,-149.6,F,Zhuang,27,3.6,4.6,2.3,1.5,5,1.0,2,20.0
 1147,Paolo,Italy,Milan,-49.53,129.72,F,Italian,18,4.3,2.4,3.8,2.5,1,5.0,1,20.0
-591,Mai Anh Le,Vietnam,Hồ Chí Minh,59.06,-139.29,F,Tay,23,4.8,1.3,3.1,1.8,3,5.0,1,20.0
-1440,Larisa,Russia,Moscow,80.56,-177.14,M,Ukrainian,26,2.3,4.5,3.3,3.9,4,1.0,1,20.0
-1616,Takahiro,Japan,Kyoto,-70.9,7.92,F,Japanese,22,3.3,1.6,4.3,3.8,5,1.0,1,20.0
+861,Lucrezia,Italy,Naples,41.68,105.02,M,Romanian,27,1.9,4.2,2.9,2.0,2,4.0,3,20.0
 804,Sarita,India,Kolkata,51.48,-58.56,M,Sikh,29,2.0,1.7,2.4,1.9,2,5.0,5,20.0
-973,Tim,Germany,Berlin,21.78,-148.31,M,Kurdish,23,3.6,3.7,1.3,4.3,2,1.0,4,19.900000000000002
+1440,Larisa,Russia,Moscow,80.56,-177.14,M,Ukrainian,26,2.3,4.5,3.3,3.9,4,1.0,1,20.0
+688,Xu Han,China,Guangzhou,-2.42,94.69,M,Han,18,1.9,2.1,4.8,2.2,5,2.0,2,20.0
+504,Huong Nguyen,Vietnam,Cần Thơ,-6.84,165.94,M,Muong,30,2.0,2.3,1.1,3.6,4,3.0,4,20.0
 323,Julien,France,Nice,64.05,42.2,F,Arab,26,1.6,4.7,4.9,2.7,3,2.0,1,19.900000000000002
+973,Tim,Germany,Berlin,21.78,-148.31,M,Kurdish,23,3.6,3.7,1.3,4.3,2,1.0,4,19.900000000000002
 1984,Kenta,Japan,Osaka,70.8,-81.41,F,Ryukyuans,28,3.3,3.9,4.0,1.7,3,1.0,3,19.9
-665,Silvia,Argentina,Cordoba,51.85,32.43,F,Indigenous,18,3.7,1.3,3.5,4.4,3,2.0,2,19.9
-344,Tao,China,Shanghai,-66.51,-159.9,F,Uighur,25,3.1,2.3,1.4,4.1,3,5.0,1,19.9
 669,Rika,Japan,Tokyo,-72.94,-163.08,F,Korean,28,1.4,2.6,1.2,4.7,5,4.0,1,19.9
 343,Yang Yun,China,Shanghai,-28.33,-81.31,F,Tibetan,22,4.3,2.3,3.7,3.6,3,2.0,1,19.9
+665,Silvia,Argentina,Cordoba,51.85,32.43,F,Indigenous,18,3.7,1.3,3.5,4.4,3,2.0,2,19.9
 647,Renaud,France,Nice,-82.05,139.93,M,Asian,19,3.0,4.6,4.4,2.8,1,2.0,2,19.8
 1530,Eri,Japan,Tokyo,16.99,32.2,F,Japanese,21,4.0,3.2,2.8,3.8,2,1.0,3,19.8
 592,Jiho,South Korea,Incheon,19.77,-164.93,F,Chinese,22,2.3,4.5,2.8,3.2,5,1.0,1,19.8
 876,Elisabetta,Italy,Florence,75.23,-150.06,F,Sardinian,29,1.7,2.6,2.7,2.8,3,2.0,5,19.8
-474,Jessica,Argentina,Buenos Aires,-43.72,-36.63,F,Mestizo,23,3.7,4.0,3.5,4.6,2,1.0,1,19.799999999999997
 840,Wang Zhi,China,Guangzhou,75.34,-133.15,F,Zhuang,20,1.5,4.1,2.6,1.6,4,4.0,2,19.799999999999997
-308,Charlotte,Canada,Ottawa,-25.66,-8.0,F,Canadian,25,4.9,2.6,2.7,1.6,4,2.0,2,19.799999999999997
+474,Jessica,Argentina,Buenos Aires,-43.72,-36.63,F,Mestizo,23,3.7,4.0,3.5,4.6,2,1.0,1,19.799999999999997
 1735,Mario,Italy,Rome,-65.28,-49.6,M,North African,29,3.6,2.8,1.9,4.4,3,1.0,3,19.700000000000003
-321,Amit,India,Bangalore,52.99,125.77,F,Muslim,19,3.3,5.0,1.6,1.8,5,2.0,1,19.700000000000003
 1483,Hong Dao,Vietnam,Đà Nẵng,61.67,-172.19,F,Thai,25,1.2,4.1,2.0,3.4,2,2.0,5,19.7
-1059,Charles,United States of America,Houston,54.9,28.33,F,Asian,20,1.7,3.5,2.7,3.8,2,2.0,4,19.7
-884,Angelica,Mexico,Guadalajara,75.86,-25.67,M,White,26,1.1,2.4,4.6,1.6,3,4.0,3,19.7
-315,Alice,United States of America,New York,-58.72,-72.8,F,Hispanic or Latino,21,2.8,1.8,2.5,4.6,4,2.0,2,19.7
-1787,Roxana,Argentina,La Plata,-14.15,-4.79,M,Mestizo,20,4.7,3.2,3.6,2.2,1,3.0,2,19.7
 1149,Benedikt,Germany,Frankfurt,-49.44,-176.26,F,Russian,30,1.6,4.2,2.6,2.3,3,3.0,3,19.7
+1059,Charles,United States of America,Houston,54.9,28.33,F,Asian,20,1.7,3.5,2.7,3.8,2,2.0,4,19.7
+1787,Roxana,Argentina,La Plata,-14.15,-4.79,M,Mestizo,20,4.7,3.2,3.6,2.2,1,3.0,2,19.7
+884,Angelica,Mexico,Guadalajara,75.86,-25.67,M,White,26,1.1,2.4,4.6,1.6,3,4.0,3,19.7
 1052,Sami,Egypt,Cairo,-55.58,-18.4,F,Egyptian,18,3.7,3.3,2.1,4.6,2,2.0,2,19.7
+315,Alice,United States of America,New York,-58.72,-72.8,F,Hispanic or Latino,21,2.8,1.8,2.5,4.6,4,2.0,2,19.7
+329,Tanu,India,Delhi,-4.91,-135.77,M,Hindu,20,2.8,1.4,1.8,2.6,3,4.0,4,19.6
 506,Soojin,South Korea,Gwangju,17.62,-70.59,M,Other,28,3.3,2.5,3.7,3.1,2,1.0,4,19.6
-1238,Jisoo,South Korea,Incheon,23.46,70.15,F,Chinese,23,2.0,4.8,2.5,2.3,4,1.0,3,19.6
 956,Li Yan,China,Shanghai,-32.96,-115.18,M,Tibetan,28,1.0,3.0,4.9,1.7,5,1.0,3,19.6
-1721,Cíntia,Brazil,Salvador,58.46,-15.09,F,Pardo,27,1.8,2.3,2.0,2.5,5,2.0,4,19.6
+1238,Jisoo,South Korea,Incheon,23.46,70.15,F,Chinese,23,2.0,4.8,2.5,2.3,4,1.0,3,19.6
 990,Sungho,South Korea,Seoul,-34.27,-64.45,M,Chinese,24,4.4,3.4,3.8,4.0,1,2.0,1,19.6
+1721,Cíntia,Brazil,Salvador,58.46,-15.09,F,Pardo,27,1.8,2.3,2.0,2.5,5,2.0,4,19.6
 1019,Ian,United States of America,New York,89.52,-82.73,F,White,26,2.4,3.3,2.1,3.8,4,2.0,2,19.599999999999998
-694,Ella,United States of America,Chicago,28.35,-40.83,M,Native American,29,1.8,4.3,2.2,1.2,5,1.0,4,19.5
-1274,Viviana,Argentina,Cordoba,-51.13,-84.71,F,Arab,18,4.2,2.2,1.1,2.0,3,2.0,5,19.5
-1308,Yang Lin,China,Shenzhen,63.34,-138.24,M,Zhuang,22,3.0,4.0,1.9,1.6,3,5.0,1,19.5
-890,Alberto,Italy,Turin,-3.31,-103.16,F,Italian,26,4.0,2.9,3.2,2.4,4,2.0,1,19.5
-1277,Vanessa,Brazil,São Paulo,-68.08,-103.52,F,White,24,2.0,1.6,2.3,2.6,3,5.0,3,19.5
-1010,Naomi,Japan,Kyoto,-78.26,136.07,F,Ryukyuans,25,2.3,2.8,2.3,4.1,4,3.0,1,19.5
-1964,Armin,Germany,Munich,-27.02,68.46,F,Kurdish,20,4.5,2.6,1.5,2.9,5,1.0,2,19.5
 480,Xu Zhi,China,Chengdu,28.17,29.99,F,Han,21,4.6,1.4,3.5,2.0,1,2.0,5,19.5
-902,Luisana,Argentina,Buenos Aires,71.25,44.63,M,Arab,24,2.5,3.8,3.3,1.8,4,1.0,3,19.4
-1415,Mélanie,France,Paris,53.83,114.64,M,Berber,23,5.0,3.8,1.9,1.7,1,1.0,5,19.4
+1274,Viviana,Argentina,Cordoba,-51.13,-84.71,F,Arab,18,4.2,2.2,1.1,2.0,3,2.0,5,19.5
+1277,Vanessa,Brazil,São Paulo,-68.08,-103.52,F,White,24,2.0,1.6,2.3,2.6,3,5.0,3,19.5
+890,Alberto,Italy,Turin,-3.31,-103.16,F,Italian,26,4.0,2.9,3.2,2.4,4,2.0,1,19.5
+694,Ella,United States of America,Chicago,28.35,-40.83,M,Native American,29,1.8,4.3,2.2,1.2,5,1.0,4,19.5
+1964,Armin,Germany,Munich,-27.02,68.46,F,Kurdish,20,4.5,2.6,1.5,2.9,5,1.0,2,19.5
+1010,Naomi,Japan,Kyoto,-78.26,136.07,F,Ryukyuans,25,2.3,2.8,2.3,4.1,4,3.0,1,19.5
+1308,Yang Lin,China,Shenzhen,63.34,-138.24,M,Zhuang,22,3.0,4.0,1.9,1.6,3,5.0,1,19.5
 1438,Bhupendra,India,Kolkata,78.17,165.37,F,Hindu,29,2.6,4.6,3.7,1.5,1,1.0,5,19.4
-431,Mia,Australia,Perth,43.38,-172.58,M,English,19,1.9,1.6,1.0,4.9,4,3.0,3,19.4
+1415,Mélanie,France,Paris,53.83,114.64,M,Berber,23,5.0,3.8,1.9,1.7,1,1.0,5,19.4
+902,Luisana,Argentina,Buenos Aires,71.25,44.63,M,Arab,24,2.5,3.8,3.3,1.8,4,1.0,3,19.4
+321,Li Zhen,China,Chengdu,35.0,-171.74,M,Zhuang,22,3.5,2.7,1.9,4.3,1,2.0,4,19.4
+461,Dmitri,Russia,Yekaterinburg,-56.73,-17.26,F,Bashkir,19,3.5,1.3,1.4,3.2,4,1.0,5,19.4
 1144,Natalia,Argentina,Mendoza,33.47,-108.29,F,Arab,20,4.4,1.1,3.7,2.2,2,1.0,5,19.4
-444,Veronica,Argentina,Buenos Aires,-8.71,-173.87,F,Indigenous,18,3.1,2.4,1.9,1.9,3,4.0,3,19.3
-2068,Timofey,Russia,Nizhny Novgorod,-73.31,-162.09,M,Bashkir,26,2.5,3.4,2.5,1.9,2,4.0,3,19.3
+431,Mia,Australia,Perth,43.38,-172.58,M,English,19,1.9,1.6,1.0,4.9,4,3.0,3,19.4
 854,Caleb,United States of America,Chicago,75.26,-32.66,M,Native American,29,4.4,2.5,5.0,1.4,4,1.0,1,19.3
-1250,Sama,Egypt,Aswan,-9.03,62.08,F,Bedouin,29,1.5,2.6,2.2,2.0,4,3.0,4,19.3
+2068,Timofey,Russia,Nizhny Novgorod,-73.31,-162.09,M,Bashkir,26,2.5,3.4,2.5,1.9,2,4.0,3,19.3
 458,Javier,Mexico,Monterrey,48.34,24.3,F,Asian,26,1.9,1.1,4.3,3.0,2,2.0,5,19.3
 1168,Anshika,India,Delhi,49.49,-44.22,M,Other,20,4.2,1.3,3.8,2.0,4,3.0,1,19.3
+444,Veronica,Argentina,Buenos Aires,-8.71,-173.87,F,Indigenous,18,3.1,2.4,1.9,1.9,3,4.0,3,19.3
+1250,Sama,Egypt,Aswan,-9.03,62.08,F,Bedouin,29,1.5,2.6,2.2,2.0,4,3.0,4,19.3
 1348,Johanna,Germany,Munich,15.22,143.59,M,Russian,30,3.0,3.1,4.8,1.4,4,2.0,1,19.299999999999997
-1085,Zhou Fang,China,Guangzhou,-7.37,-54.77,M,Han,21,2.6,2.5,3.5,1.7,3,2.0,4,19.299999999999997
 1305,Jorge,Argentina,Rosario,16.6,-145.45,M,African,23,4.8,2.2,2.2,2.1,5,1.0,2,19.299999999999997
+1085,Zhou Fang,China,Guangzhou,-7.37,-54.77,M,Han,21,2.6,2.5,3.5,1.7,3,2.0,4,19.299999999999997
 485,Kien Trung,Vietnam,Nha Trang,-70.74,-162.86,M,Muong,23,4.9,4.7,2.3,1.3,1,1.0,4,19.200000000000003
-411,Rie,Japan,Tokyo,65.65,-149.66,F,Japanese,23,3.3,1.1,1.2,2.6,5,3.0,3,19.200000000000003
 1637,Wang Ji,China,Shanghai,3.0,-157.95,F,Mongol,18,1.8,2.6,4.9,1.9,1,3.0,4,19.200000000000003
-985,Gurpreet,India,Delhi,64.84,113.55,M,Christian,25,2.4,1.9,1.2,3.7,3,4.0,3,19.2
-1252,Jasmine,United States of America,Chicago,-53.45,103.67,F,White,25,2.3,2.5,3.3,1.1,5,4.0,1,19.2
+411,Rie,Japan,Tokyo,65.65,-149.66,F,Japanese,23,3.3,1.1,1.2,2.6,5,3.0,3,19.200000000000003
 364,Manoj,India,Bangalore,33.21,-40.29,M,Sikh,19,1.8,2.9,2.0,3.5,5,1.0,3,19.2
 1992,Konstantin,Russia,Saint Petersburg,72.37,48.82,F,Russian,23,1.9,4.5,2.3,1.5,1,5.0,3,19.2
+985,Gurpreet,India,Delhi,64.84,113.55,M,Christian,25,2.4,1.9,1.2,3.7,3,4.0,3,19.2
+1252,Jasmine,United States of America,Chicago,-53.45,103.67,F,White,25,2.3,2.5,3.3,1.1,5,4.0,1,19.2
+1171,Levi,United States of America,New York,-83.44,-101.55,M,White,22,2.6,1.4,2.0,4.2,1,3.0,5,19.2
 1513,Yuto,Japan,Nagoya,9.97,-126.79,M,Ainu,30,5.0,1.1,2.4,4.7,2,2.0,2,19.2
 615,Sara,Egypt,Giza,45.57,-108.37,M,Bedouin,23,1.2,3.9,2.4,4.7,1,5.0,1,19.2
-1171,Levi,United States of America,New York,-83.44,-101.55,M,White,22,2.6,1.4,2.0,4.2,1,3.0,5,19.2
-516,Lina,Germany,Hamburg,68.17,97.8,M,German,26,4.4,2.7,1.8,1.2,3,3.0,3,19.1
-886,Patrick,France,Marseille,52.14,120.38,M,Arab,23,2.0,3.9,3.9,1.3,1,3.0,4,19.1
 392,Aiden,United States of America,Chicago,-20.66,-61.86,F,Native American,29,1.8,4.8,1.3,3.2,1,5.0,2,19.1
+886,Patrick,France,Marseille,52.14,120.38,M,Arab,23,2.0,3.9,3.9,1.3,1,3.0,4,19.1
 405,Marie,France,Nice,51.12,-49.15,M,Asian,27,1.1,2.1,1.8,1.1,4,4.0,5,19.1
+516,Lina,Germany,Hamburg,68.17,97.8,M,German,26,4.4,2.7,1.8,1.2,3,3.0,3,19.1
 1498,Patricia,Argentina,Cordoba,-26.05,41.31,F,Indigenous,27,3.8,1.9,2.3,4.1,2,3.0,2,19.099999999999998
-924,Ricardo,Mexico,Guadalajara,43.94,155.58,F,Mestizo,29,2.8,4.6,1.9,3.8,4,1.0,1,19.099999999999998
 572,Eduarda,Argentina,Mendoza,-25.46,130.87,M,Indigenous,18,2.8,2.4,2.1,3.8,2,3.0,3,19.099999999999998
+924,Ricardo,Mexico,Guadalajara,43.94,155.58,F,Mestizo,29,2.8,4.6,1.9,3.8,4,1.0,1,19.099999999999998
+916,Seonghyun,South Korea,Seoul,-59.23,173.63,F,Japanese,20,2.4,3.4,2.3,3.9,5,1.0,1,19.0
 1614,Jacques,France,Marseille,83.15,99.41,F,French,25,2.4,1.3,3.9,1.4,3,2.0,5,19.0
 1045,Harish,India,Bangalore,21.82,-126.55,M,Other,27,3.0,5.0,1.2,4.8,1,1.0,3,19.0
+334,Quinn,United States of America,Houston,-2.7,151.16,F,Asian,18,1.4,2.9,1.8,3.9,4,2.0,3,19.0
 566,Isabella,Canada,Toronto,-33.93,128.71,F,English,30,2.7,2.3,3.4,1.6,1,5.0,3,19.0
-916,Seonghyun,South Korea,Seoul,-59.23,173.63,F,Japanese,20,2.4,3.4,2.3,3.9,5,1.0,1,19.0
 507,Raghav,India,Delhi,89.24,26.99,F,Other,25,1.3,3.9,4.7,4.1,3,1.0,1,19.0
 1692,Mustafa,Egypt,Alexandria,48.72,-131.88,F,Other,22,4.9,1.2,3.5,1.3,1,2.0,5,18.900000000000002
-2241,Takumi,Japan,Kyoto,-59.83,31.03,F,Chinese,22,3.3,2.0,2.3,1.3,4,1.0,5,18.9
-1050,Satoru,Japan,Osaka,-44.41,-90.23,F,Ainu,24,3.3,2.2,1.2,1.2,2,5.0,4,18.9
 552,Vânia,Brazil,Brasília,-58.33,-83.87,F,White,22,1.9,1.9,1.8,4.3,4,1.0,4,18.9
-396,Min,South Korea,Daegu,84.29,160.51,F,Chinese,26,1.3,4.9,1.8,1.9,3,1.0,5,18.9
+1050,Satoru,Japan,Osaka,-44.41,-90.23,F,Ainu,24,3.3,2.2,1.2,1.2,2,5.0,4,18.9
+2241,Takumi,Japan,Kyoto,-59.83,31.03,F,Chinese,22,3.3,2.0,2.3,1.3,4,1.0,5,18.9
 1393,Clara,Germany,Berlin,-43.68,-145.3,F,Russian,24,4.4,4.2,4.9,1.3,2,1.0,1,18.800000000000004
-2162,Aleksey,Russia,Yekaterinburg,-68.27,-39.62,F,Chuvash,19,1.6,3.0,1.5,4.7,1,5.0,2,18.8
 741,Liang Qian,China,Guangzhou,61.28,-96.81,M,Tibetan,24,4.9,1.2,2.4,2.3,3,1.0,4,18.8
-1209,Gao Jun,China,Shenzhen,77.78,-65.8,M,Mongol,19,1.0,3.3,4.3,3.2,3,2.0,2,18.8
-976,Zhao Wei,China,Guangzhou,-38.86,14.29,F,Tibetan,20,1.7,4.2,2.1,3.8,1,1.0,5,18.8
 1178,Jihoon,South Korea,Daegu,-47.34,-168.78,M,Other,27,2.1,1.4,2.7,4.6,5,1.0,2,18.8
-565,Jaya,India,Kolkata,44.38,94.65,M,Other,22,4.1,2.5,2.3,2.9,1,4.0,2,18.799999999999997
+976,Zhao Wei,China,Guangzhou,-38.86,14.29,F,Tibetan,20,1.7,4.2,2.1,3.8,1,1.0,5,18.8
+1209,Gao Jun,China,Shenzhen,77.78,-65.8,M,Mongol,19,1.0,3.3,4.3,3.2,3,2.0,2,18.8
+2162,Aleksey,Russia,Yekaterinburg,-68.27,-39.62,F,Chuvash,19,1.6,3.0,1.5,4.7,1,5.0,2,18.8
 413,Mira,Egypt,Alexandria,38.77,-63.84,F,Berber,24,3.3,1.7,3.2,4.6,3,2.0,1,18.799999999999997
-828,Shailendra,India,Kolkata,-15.51,-105.85,M,Sikh,25,3.7,1.1,3.3,4.6,2,3.0,1,18.700000000000003
+565,Jaya,India,Kolkata,44.38,94.65,M,Other,22,4.1,2.5,2.3,2.9,1,4.0,2,18.799999999999997
 1257,Liang Tao,China,Shanghai,-86.11,135.08,M,Zhuang,22,3.0,4.2,2.6,3.9,2,2.0,1,18.700000000000003
-1189,Thuy An,Vietnam,Nha Trang,84.86,-31.24,M,Thai,29,2.5,2.4,2.1,3.7,3,1.0,4,18.7
+828,Shailendra,India,Kolkata,-15.51,-105.85,M,Sikh,25,3.7,1.1,3.3,4.6,2,3.0,1,18.700000000000003
 2131,Eliza,United States of America,Los Angeles,-36.13,89.34,M,Hispanic or Latino,21,1.7,1.5,3.4,3.1,5,2.0,2,18.7
+1189,Thuy An,Vietnam,Nha Trang,84.86,-31.24,M,Thai,29,2.5,2.4,2.1,3.7,3,1.0,4,18.7
+806,Kaito,Japan,Kyoto,-69.81,-12.04,M,Korean,24,4.5,1.3,1.3,2.6,3,2.0,4,18.7
 467,Juan,Argentina,Rosario,70.11,19.96,F,Mestizo,22,2.8,1.9,2.9,2.1,5,3.0,1,18.7
 866,Ludivine,France,Lyon,74.0,38.3,M,Berber,20,4.3,4.3,1.9,3.2,2,2.0,1,18.7
-806,Kaito,Japan,Kyoto,-69.81,-12.04,M,Korean,24,4.5,1.3,1.3,2.6,3,2.0,4,18.7
-891,Felix,Germany,Munich,21.49,72.09,F,Russian,28,1.5,2.1,1.2,3.8,3,4.0,3,18.6
 569,Pablo,Argentina,Cordoba,-21.12,-83.82,F,Indigenous,23,3.7,3.7,1.2,4.0,1,3.0,2,18.6
 1388,Daisuke,Japan,Osaka,42.44,60.85,F,Chinese,29,3.5,3.0,2.2,3.9,1,3.0,2,18.6
+324,Yang Xiu,China,Shanghai,75.89,-26.18,M,Zhuang,28,2.4,2.2,2.9,3.1,3,3.0,2,18.6
 836,Ryan,Australia,Melbourne,-25.54,112.72,M,Australian,27,2.2,2.0,1.4,2.0,4,3.0,4,18.6
+891,Felix,Germany,Munich,21.49,72.09,F,Russian,28,1.5,2.1,1.2,3.8,3,4.0,3,18.6
 1084,Marcos,Brazil,Rio de Janeiro,-85.8,-44.89,M,Indigenous,18,4.4,2.3,2.4,2.5,2,3.0,2,18.6
-600,William,United States of America,Chicago,-30.2,-75.04,F,Hispanic or Latino,23,3.6,3.0,2.0,3.9,2,1.0,3,18.5
-939,Shalini,India,Delhi,11.48,-5.43,F,Christian,22,2.1,2.9,1.5,2.0,3,5.0,2,18.5
-1748,Rogério,Brazil,Fortaleza,-43.19,39.99,F,Asian,26,5.0,2.6,1.7,1.2,1,4.0,3,18.5
 798,Franck,France,Nice,40.37,-83.94,M,Asian,19,1.6,3.9,4.8,4.2,2,1.0,1,18.5
+600,William,United States of America,Chicago,-30.2,-75.04,F,Hispanic or Latino,23,3.6,3.0,2.0,3.9,2,1.0,3,18.5
+1748,Rogério,Brazil,Fortaleza,-43.19,39.99,F,Asian,26,5.0,2.6,1.7,1.2,1,4.0,3,18.5
+939,Shalini,India,Delhi,11.48,-5.43,F,Christian,22,2.1,2.9,1.5,2.0,3,5.0,2,18.5
+399,Gia Bao,Vietnam,Đà Nẵng,-88.57,-41.61,F,H'mong,23,1.2,2.9,3.8,4.6,2,2.0,2,18.5
+2239,Khong Lan,Vietnam,Đà Nẵng,-10.94,52.77,M,H'mong,30,2.5,2.8,3.1,1.1,4,4.0,1,18.5
 1301,Gabriele,Italy,Florence,-65.82,121.0,F,Italian,19,1.9,2.2,1.2,3.2,4,1.0,5,18.5
 494,Satish,India,Kolkata,21.67,160.28,M,Muslim,28,4.6,1.6,1.2,3.1,4,1.0,3,18.5
-2239,Khong Lan,Vietnam,Đà Nẵng,-10.94,52.77,M,H'mong,30,2.5,2.8,3.1,1.1,4,4.0,1,18.5
-399,Gia Bao,Vietnam,Đà Nẵng,-88.57,-41.61,F,H'mong,23,1.2,2.9,3.8,4.6,2,2.0,2,18.5
-425,Thi Lan,Vietnam,Đà Nẵng,43.23,-85.38,M,Thai,26,4.3,1.4,2.8,1.9,3,2.0,3,18.4
-1424,Raffaella,Italy,Rome,31.91,-82.35,F,Romanian,27,2.2,1.2,2.4,4.6,2,1.0,5,18.4
-964,Mai Son,Vietnam,Cần Thơ,-62.11,113.33,M,Muong,25,4.8,1.8,1.3,1.5,1,5.0,3,18.4
-1663,Walter,Argentina,Rosario,48.94,-72.01,F,Arab,21,1.9,2.8,2.1,2.6,4,3.0,2,18.4
-753,Yogesh,India,Mumbai,29.47,-34.27,M,Sikh,18,2.9,4.3,1.9,1.3,5,1.0,2,18.4
-505,Sun Jian,China,Beijing,5.52,-56.28,F,Han,25,3.1,3.2,2.2,1.9,1,5.0,2,18.4
 736,Thuy Linh,Vietnam,Nha Trang,26.55,-53.48,F,Thai,29,2.3,4.8,3.3,2.0,1,2.0,3,18.4
+964,Mai Son,Vietnam,Cần Thơ,-62.11,113.33,M,Muong,25,4.8,1.8,1.3,1.5,1,5.0,3,18.4
+505,Sun Jian,China,Beijing,5.52,-56.28,F,Han,25,3.1,3.2,2.2,1.9,1,5.0,2,18.4
 2179,Matti,Germany,Hamburg,-59.93,-27.68,F,German,22,1.1,1.8,2.8,1.7,4,2.0,5,18.4
 581,Kátia,Brazil,Salvador,-80.63,137.69,F,Asian,19,2.4,1.3,2.6,1.1,5,3.0,3,18.4
+1663,Walter,Argentina,Rosario,48.94,-72.01,F,Arab,21,1.9,2.8,2.1,2.6,4,3.0,2,18.4
+753,Yogesh,India,Mumbai,29.47,-34.27,M,Sikh,18,2.9,4.3,1.9,1.3,5,1.0,2,18.4
+1424,Raffaella,Italy,Rome,31.91,-82.35,F,Romanian,27,2.2,1.2,2.4,4.6,2,1.0,5,18.4
+425,Thi Lan,Vietnam,Đà Nẵng,43.23,-85.38,M,Thai,26,4.3,1.4,2.8,1.9,3,2.0,3,18.4
 1309,Sven,Germany,Hamburg,-5.36,-12.06,F,Polish,26,1.0,2.9,1.1,4.3,4,2.0,3,18.3
 991,Jackie,United States of America,Phoenix,-18.85,-155.93,F,Asian,29,3.9,3.3,2.1,4.0,1,3.0,1,18.299999999999997
-1119,Dalia,Egypt,Aswan,11.06,151.85,F,Berber,22,2.7,3.2,1.9,1.4,2,2.0,5,18.200000000000003
 1613,Débora,Brazil,São Paulo,62.61,26.78,M,Asian,20,3.7,1.0,3.1,2.4,5,1.0,2,18.200000000000003
-607,Megan,United States of America,Phoenix,6.7,44.45,F,Hispanic or Latino,29,2.7,3.4,2.9,1.2,2,4.0,2,18.2
-486,Quoc Duy,Vietnam,Hồ Chí Minh,-65.7,-87.94,F,Kinh,30,2.4,4.3,2.0,1.5,1,4.0,3,18.2
-1285,Bao An,Vietnam,Hồ Chí Minh,-63.89,136.42,F,Thai,21,3.7,4.0,1.4,4.1,1,3.0,1,18.2
-1696,Robert,France,Nice,15.4,-139.15,F,Arab,24,2.4,1.2,4.8,1.8,2,4.0,2,18.2
+1119,Dalia,Egypt,Aswan,11.06,151.85,F,Berber,22,2.7,3.2,1.9,1.4,2,2.0,5,18.200000000000003
 441,Beatriz,Brazil,Brasília,46.44,7.39,F,Black,22,1.9,2.7,1.7,4.9,2,1.0,4,18.2
-993,Usha,India,Delhi,-50.17,171.23,M,Other,24,2.8,1.7,2.2,2.5,2,5.0,2,18.2
 642,Seojin,South Korea,Daegu,-68.7,-10.11,M,Korean,29,2.4,2.2,1.3,4.3,1,4.0,3,18.2
-1143,Kou,Japan,Sapporo,-60.26,-22.49,F,Korean,30,2.3,2.0,2.5,2.4,2,5.0,2,18.2
-415,Yang Wei,China,Shenzhen,-88.02,-29.15,M,Zhuang,21,2.0,2.9,1.8,1.5,3,3.0,4,18.2
 469,Ivan,Russia,Yekaterinburg,-4.96,148.58,F,Bashkir,20,3.1,3.0,1.4,3.7,3,2.0,2,18.2
+993,Usha,India,Delhi,-50.17,171.23,M,Other,24,2.8,1.7,2.2,2.5,2,5.0,2,18.2
+607,Megan,United States of America,Phoenix,6.7,44.45,F,Hispanic or Latino,29,2.7,3.4,2.9,1.2,2,4.0,2,18.2
+1696,Robert,France,Nice,15.4,-139.15,F,Arab,24,2.4,1.2,4.8,1.8,2,4.0,2,18.2
+486,Quoc Duy,Vietnam,Hồ Chí Minh,-65.7,-87.94,F,Kinh,30,2.4,4.3,2.0,1.5,1,4.0,3,18.2
+415,Yang Wei,China,Shenzhen,-88.02,-29.15,M,Zhuang,21,2.0,2.9,1.8,1.5,3,3.0,4,18.2
+1143,Kou,Japan,Sapporo,-60.26,-22.49,F,Korean,30,2.3,2.0,2.5,2.4,2,5.0,2,18.2
+1285,Bao An,Vietnam,Hồ Chí Minh,-63.89,136.42,F,Thai,21,3.7,4.0,1.4,4.1,1,3.0,1,18.2
 561,Estefania,Argentina,Mendoza,10.31,-42.34,M,Mestizo,30,2.1,2.4,3.1,1.5,1,5.0,3,18.1
 1191,Giovanna,Italy,Rome,-11.47,-133.42,M,Italian,25,3.4,2.1,1.1,4.5,1,3.0,3,18.1
 571,Chantal,France,Toulouse,-82.79,139.71,F,French,25,1.1,1.9,4.5,4.6,2,2.0,2,18.1
 784,Sakura,Japan,Tokyo,28.49,54.29,F,Chinese,23,1.1,4.1,3.7,4.1,1,3.0,1,18.0
 1280,Sheetal,India,Bangalore,-83.49,-173.6,F,Hindu,21,1.5,4.3,3.8,2.4,1,3.0,2,18.0
 678,Yang Qing,China,Shanghai,8.16,4.92,M,Tibetan,23,2.3,2.3,2.2,3.2,2,1.0,5,18.0
-1056,Jeonghan,South Korea,Daegu,-8.68,103.54,F,Other,22,3.5,2.2,1.0,3.3,2,5.0,1,18.0
 420,Mason,United States of America,Phoenix,43.16,-76.44,M,Native American,25,4.8,1.0,3.4,1.8,5,1.0,1,18.0
+1056,Jeonghan,South Korea,Daegu,-8.68,103.54,F,Other,22,3.5,2.2,1.0,3.3,2,5.0,1,18.0
 1169,Paola,Italy,Florence,-77.69,-104.91,F,Italian,28,3.4,2.0,2.3,1.3,4,2.0,3,18.0
-621,Barbara,Italy,Naples,-68.08,-34.52,M,Romanian,22,2.8,1.2,1.3,2.6,4,3.0,3,17.9
-946,Aline,Brazil,Salvador,-63.86,149.02,F,Asian,19,1.1,2.3,3.4,2.1,1,5.0,3,17.9
 681,Fernando,Argentina,La Plata,71.57,27.19,F,African,24,2.8,1.6,3.3,3.2,2,4.0,1,17.9
+621,Barbara,Italy,Naples,-68.08,-34.52,M,Romanian,22,2.8,1.2,1.3,2.6,4,3.0,3,17.9
 761,Claudio,Italy,Rome,76.76,52.5,M,North African,27,1.6,1.4,2.2,2.7,3,5.0,2,17.9
+946,Aline,Brazil,Salvador,-63.86,149.02,F,Asian,19,1.1,2.3,3.4,2.1,1,5.0,3,17.9
 577,Kenji,Japan,Sapporo,5.29,177.03,F,Ainu,26,2.7,1.8,1.8,4.6,4,1.0,2,17.9
-1125,Matthias,Germany,Frankfurt,-8.01,144.54,F,German,21,2.0,2.4,1.4,2.0,5,3.0,2,17.8
 495,Jiyoung,South Korea,Gwangju,16.95,107.4,F,Chinese,27,2.4,1.8,2.9,2.7,4,3.0,1,17.8
+1125,Matthias,Germany,Frankfurt,-8.01,144.54,F,German,21,2.0,2.4,1.4,2.0,5,3.0,2,17.8
 871,Dinesh,India,Mumbai,-22.86,114.14,F,Muslim,24,4.2,3.8,2.6,1.2,2,1.0,3,17.799999999999997
 689,Wu Ming,China,Chengdu,49.99,140.81,M,Zhuang,29,4.1,3.0,1.8,1.8,2,4.0,1,17.700000000000003
-500,Mona,Egypt,Giza,-16.22,115.99,M,Other,19,2.1,3.7,1.8,1.1,5,1.0,3,17.700000000000003
 1873,Seungmin,South Korea,Incheon,49.15,33.04,M,Korean,28,4.2,4.9,1.1,2.5,1,3.0,1,17.700000000000003
-314,Jack,Australia,Melbourne,10.36,-106.86,F,English,26,3.2,3.5,1.1,1.9,2,2.0,4,17.700000000000003
+500,Mona,Egypt,Giza,-16.22,115.99,M,Other,19,2.1,3.7,1.8,1.1,5,1.0,3,17.700000000000003
+849,Carlo,Italy,Rome,-39.61,-123.87,M,North African,19,3.0,1.5,1.6,3.6,3,2.0,3,17.7
 633,Yeji,South Korea,Seoul,-67.73,-76.12,F,Other,26,1.1,3.5,4.3,4.8,1,2.0,1,17.7
 807,Vincent,France,Paris,61.93,-163.76,M,Arab,28,1.0,2.9,2.8,2.0,1,5.0,3,17.7
 355,Ankita,India,Bangalore,60.11,-127.82,F,Sikh,22,3.3,1.1,1.5,4.8,1,5.0,1,17.7
-849,Carlo,Italy,Rome,-39.61,-123.87,M,North African,19,3.0,1.5,1.6,3.6,3,2.0,3,17.7
-407,Giuseppe,Italy,Naples,-42.14,-114.28,M,North African,23,2.0,2.6,4.0,4.1,2,2.0,1,17.7
 1872,Kaitlyn,Canada,Calgary,-76.86,-174.22,M,Indigenous,30,2.5,4.2,2.6,1.3,2,3.0,2,17.6
-697,Xu Ling,China,Beijing,15.86,-143.12,F,Zhuang,18,4.9,1.1,1.1,1.5,5,2.0,2,17.6
 1620,Komal,India,Mumbai,69.57,118.58,F,Sikh,20,4.1,1.3,1.5,1.7,2,4.0,3,17.6
-342,Anjali,India,Bangalore,-87.24,71.61,F,Christian,25,3.1,1.2,2.3,2.0,2,3.0,4,17.6
 1421,Leandro,Argentina,La Plata,-7.58,139.69,F,African,27,4.6,1.7,1.1,3.2,2,3.0,2,17.6
-521,Pankaj,India,Chennai,-59.05,57.12,M,Christian,23,1.7,3.6,1.1,4.1,3,2.0,2,17.5
-1651,Roberta,Italy,Turin,50.39,-71.2,F,North African,26,1.7,1.2,1.3,4.3,3,4.0,2,17.5
+342,Anjali,India,Bangalore,-87.24,71.61,F,Christian,25,3.1,1.2,2.3,2.0,2,3.0,4,17.6
+697,Xu Ling,China,Beijing,15.86,-143.12,F,Zhuang,18,4.9,1.1,1.1,1.5,5,2.0,2,17.6
 717,Amira,Egypt,Alexandria,-66.84,159.69,F,Berber,18,3.7,2.6,1.8,1.4,2,2.0,4,17.5
-598,Raul,Mexico,Monterrey,46.17,-4.26,F,Mestizo,21,3.7,3.5,1.3,2.0,1,2.0,4,17.5
-820,Tyler,United States of America,Phoenix,-81.66,160.02,M,Asian,27,2.3,3.7,2.6,1.9,1,3.0,3,17.5
 2300,Aarti,India,Delhi,41.54,18.99,F,Hindu,20,1.3,1.0,2.3,3.9,4,1.0,4,17.5
+598,Raul,Mexico,Monterrey,46.17,-4.26,F,Mestizo,21,3.7,3.5,1.3,2.0,1,2.0,4,17.5
+521,Pankaj,India,Chennai,-59.05,57.12,M,Christian,23,1.7,3.6,1.1,4.1,3,2.0,2,17.5
+820,Tyler,United States of America,Phoenix,-81.66,160.02,M,Asian,27,2.3,3.7,2.6,1.9,1,3.0,3,17.5
+1651,Roberta,Italy,Turin,50.39,-71.2,F,North African,26,1.7,1.2,1.3,4.3,3,4.0,2,17.5
+677,Cristina,Mexico,Guadalajara,-46.3,40.62,M,Indigenous,26,1.0,2.2,2.7,2.5,4,2.0,3,17.4
+675,Adriana,Italy,Milan,-36.81,45.49,F,Italian,26,4.0,1.4,3.8,1.2,4,2.0,1,17.4
+1937,Hannah,Australia,Adelaide,-58.39,41.89,F,Indigenous,23,2.3,2.0,4.8,3.3,1,1.0,3,17.4
+1487,Heejin,South Korea,Gwangju,-12.23,163.65,F,Chinese,20,1.5,1.1,3.5,3.3,2,4.0,2,17.4
 519,Sun Qi,China,Guangzhou,-22.1,-143.51,F,Mongol,30,4.1,2.1,1.1,3.1,3,1.0,3,17.4
 1292,Wang Qi,China,Chengdu,86.45,-40.3,M,Zhuang,19,2.4,4.1,3.3,2.6,2,2.0,1,17.4
-675,Adriana,Italy,Milan,-36.81,45.49,F,Italian,26,4.0,1.4,3.8,1.2,4,2.0,1,17.4
-1487,Heejin,South Korea,Gwangju,-12.23,163.65,F,Chinese,20,1.5,1.1,3.5,3.3,2,4.0,2,17.4
-1937,Hannah,Australia,Adelaide,-58.39,41.89,F,Indigenous,23,2.3,2.0,4.8,3.3,1,1.0,3,17.4
-677,Cristina,Mexico,Guadalajara,-46.3,40.62,M,Indigenous,26,1.0,2.2,2.7,2.5,4,2.0,3,17.4
 1291,Anna,Italy,Naples,5.39,159.31,M,Romanian,30,1.2,4.3,2.2,1.6,3,4.0,1,17.3
-434,Ahmed,Egypt,Alexandria,-18.09,30.34,M,Nubian,26,1.4,3.5,1.8,4.6,2,1.0,3,17.3
 617,Eduardo,Argentina,La Plata,69.9,-39.0,M,Mestizo,29,2.3,1.5,4.1,1.4,4,1.0,3,17.299999999999997
 651,Anh Tu,Vietnam,Hà Nội,-70.84,-7.12,M,Kinh,23,2.9,3.2,3.5,2.6,2,1.0,2,17.2
-329,Mary,United States of America,Phoenix,-30.0,-63.46,F,White,19,2.2,3.5,1.9,4.6,3,1.0,1,17.2
 682,Zhang Wei,China,Shenzhen,8.16,69.57,F,Han,27,1.4,1.7,4.2,4.9,2,2.0,1,17.2
-1452,Aleksei,Russia,Saint Petersburg,-70.42,-166.53,F,Tatar,20,2.2,2.8,2.9,2.2,3,1.0,3,17.1
-453,He Jing,China,Shanghai,-52.87,48.67,M,Uighur,28,4.3,3.8,1.3,2.7,1,1.0,3,17.1
-1180,Julieta,Mexico,Mexico City,-58.13,-135.15,M,Black,28,4.0,1.5,4.1,1.5,1,1.0,4,17.1
 666,Thanh Mai,Vietnam,Hồ Chí Minh,-72.35,14.66,M,Thai,27,3.3,2.6,1.9,3.3,4,1.0,1,17.1
-1303,Diana,Brazil,Salvador,-34.94,-115.84,F,Black,30,3.9,2.1,3.8,1.2,2,1.0,3,17.0
+453,He Jing,China,Shanghai,-52.87,48.67,M,Uighur,28,4.3,3.8,1.3,2.7,1,1.0,3,17.1
+1452,Aleksei,Russia,Saint Petersburg,-70.42,-166.53,F,Tatar,20,2.2,2.8,2.9,2.2,3,1.0,3,17.1
+1180,Julieta,Mexico,Mexico City,-58.13,-135.15,M,Black,28,4.0,1.5,4.1,1.5,1,1.0,4,17.1
 649,Hélène,France,Lyon,-9.4,178.52,M,French,29,2.0,3.6,2.2,2.2,2,4.0,1,17.0
+1303,Diana,Brazil,Salvador,-34.94,-115.84,F,Black,30,3.9,2.1,3.8,1.2,2,1.0,3,17.0
 657,Vikram,India,Mumbai,67.9,48.6,M,Hindu,25,1.6,3.3,2.9,3.2,3,2.0,1,17.0
-1900,Salma,Egypt,Aswan,-40.06,-41.82,F,Nubian,24,2.7,4.5,1.8,5.0,1,1.0,1,17.0
 908,Márcia,Brazil,São Paulo,16.91,-55.63,F,Indigenous,23,2.0,2.0,2.7,3.3,1,5.0,1,17.0
 1708,Bernardo,Mexico,Mexico City,72.39,127.37,F,White,21,1.1,1.3,1.6,3.0,1,5.0,4,17.0
 910,Ibrahim,Egypt,Aswan,34.47,-26.18,F,Berber,21,1.2,4.2,1.0,4.6,1,3.0,2,17.0
+1900,Salma,Egypt,Aswan,-40.06,-41.82,F,Nubian,24,2.7,4.5,1.8,5.0,1,1.0,1,17.0
 560,Yekaterina,Russia,Yekaterinburg,-39.98,-157.64,M,Bashkir,25,1.7,2.3,1.9,1.0,3,5.0,2,16.9
-379,Thanh Hoang,Vietnam,Đà Nẵng,22.46,135.12,F,Thai,29,1.6,2.0,2.0,3.3,4,2.0,2,16.9
 668,Luana,Brazil,Fortaleza,-60.46,-32.45,F,Pardo,19,3.7,1.7,4.3,1.2,2,1.0,3,16.9
+381,Henry,United States of America,Houston,7.22,19.39,M,White,21,1.8,3.1,1.7,1.3,3,3.0,3,16.9
+379,Thanh Hoang,Vietnam,Đà Nẵng,22.46,135.12,F,Thai,29,1.6,2.0,2.0,3.3,4,2.0,2,16.9
 1446,Amandeep,India,Delhi,70.04,118.21,M,Hindu,19,1.3,1.8,3.3,2.4,3,1.0,4,16.8
 338,Ayumi,Japan,Kyoto,-14.89,-174.15,F,Japanese,20,1.8,3.0,2.8,3.2,3,2.0,1,16.8
 1316,Carla,Italy,Milan,-60.22,-70.31,M,Italian,21,1.9,1.2,4.3,2.4,4,2.0,1,16.799999999999997
 1002,Vadim,Russia,Moscow,-62.82,-123.93,F,Russian,20,1.2,3.3,4.2,1.1,2,4.0,1,16.799999999999997
 380,Martine,France,Lyon,-8.84,-122.91,F,Asian,23,3.5,3.2,2.5,3.6,2,1.0,1,16.799999999999997
+2012,Ignacio,Argentina,Rosario,-19.95,110.43,M,Mestizo,21,2.1,2.4,1.4,4.8,1,1.0,4,16.7
+2075,Rania,Egypt,Alexandria,60.94,-73.71,M,Bedouin,26,2.8,2.6,3.0,4.3,2,1.0,1,16.7
 1174,Mai Minh,Vietnam,Nha Trang,60.44,-164.23,F,H'mong,20,1.9,3.1,2.2,1.5,1,4.0,3,16.7
 1063,Vikrant,India,Bangalore,75.71,5.17,M,Hindu,26,1.4,2.4,2.5,3.4,2,4.0,1,16.7
-2075,Rania,Egypt,Alexandria,60.94,-73.71,M,Bedouin,26,2.8,2.6,3.0,4.3,2,1.0,1,16.7
-2012,Ignacio,Argentina,Rosario,-19.95,110.43,M,Mestizo,21,2.1,2.4,1.4,4.8,1,1.0,4,16.7
 1269,Shunya,Japan,Nagoya,89.01,33.96,F,Korean,28,3.2,1.2,2.9,1.3,3,3.0,2,16.6
-307,Marco,Italy,Milan,67.99,-38.49,F,North African,28,2.1,1.6,3.0,4.9,1,1.0,3,16.6
 1320,Xu Wei,China,Chengdu,19.89,129.36,F,Zhuang,19,2.3,2.4,1.1,4.8,1,1.0,4,16.599999999999998
-389,Hassan,Egypt,Giza,66.54,179.77,F,Berber,25,4.6,2.5,2.0,2.4,1,3.0,1,16.5
 949,Lucie,France,Lyon,-49.44,-70.31,M,African,25,1.8,1.6,4.8,3.3,2,2.0,1,16.5
+389,Hassan,Egypt,Giza,66.54,179.77,F,Berber,25,4.6,2.5,2.0,2.4,1,3.0,1,16.5
 1246,Tiziana,Italy,Rome,20.94,-151.54,M,Romanian,28,2.8,4.5,1.0,3.2,1,3.0,1,16.5
-381,Omar,Egypt,Alexandria,-43.98,49.83,M,Nubian,23,1.8,1.3,4.4,2.0,1,2.0,4,16.5
-319,Liam,Canada,Toronto,59.34,-130.75,F,Indigenous,29,1.0,4.4,2.6,1.5,1,3.0,3,16.5
 1381,Chen Mei,China,Chengdu,65.5,-153.76,M,Tibetan,24,3.0,2.7,2.9,1.8,3,1.0,2,16.4
-865,Lan Anh,Vietnam,Đà Nẵng,-4.23,-67.02,F,Thai,21,1.1,2.0,3.4,4.9,1,1.0,3,16.4
-367,Liang Jian,China,Guangzhou,-63.62,-25.39,F,Tibetan,22,2.4,1.1,3.2,2.7,1,3.0,3,16.4
 2242,Nour,Egypt,Cairo,2.34,8.96,F,Bedouin,21,1.2,3.7,2.2,1.3,4,2.0,2,16.4
-477,Xu Dong,China,Shenzhen,24.61,161.6,F,Uighur,26,2.2,1.1,3.5,2.6,2,4.0,1,16.4
+367,Liang Jian,China,Guangzhou,-63.62,-25.39,F,Tibetan,22,2.4,1.1,3.2,2.7,1,3.0,3,16.4
 2210,Wu Jia,China,Beijing,14.7,-157.4,M,Han,18,3.2,3.2,3.9,3.1,1,1.0,1,16.4
-708,Yegor,Russia,Nizhny Novgorod,-12.77,155.64,M,Ukrainian,23,4.4,1.7,1.5,3.7,2,2.0,1,16.3
+477,Xu Dong,China,Shenzhen,24.61,161.6,F,Uighur,26,2.2,1.1,3.5,2.6,2,4.0,1,16.4
+865,Lan Anh,Vietnam,Đà Nẵng,-4.23,-67.02,F,Thai,21,1.1,2.0,3.4,4.9,1,1.0,3,16.4
 638,Thiago,Brazil,Brasília,8.11,-147.25,M,Asian,18,1.5,4.5,2.4,3.9,2,1.0,1,16.3
+708,Yegor,Russia,Nizhny Novgorod,-12.77,155.64,M,Ukrainian,23,4.4,1.7,1.5,3.7,2,2.0,1,16.3
 920,Zhou Zhen,China,Shanghai,-36.48,113.37,M,Uighur,19,1.4,3.0,1.8,3.1,1,5.0,1,16.3
 659,Olivia,United States of America,Houston,-48.73,-165.35,M,White,28,2.1,1.1,4.4,1.7,2,4.0,1,16.3
 1225,Malte,Germany,Hamburg,62.16,-85.22,M,German,23,3.5,1.3,2.4,2.1,4,2.0,1,16.299999999999997
 1251,Wang Hui,China,Shenzhen,15.78,-53.89,F,Han,20,2.4,1.2,4.3,3.4,2,1.0,2,16.299999999999997
 1634,Leah,United States of America,Phoenix,28.12,-80.43,F,Hispanic or Latino,20,1.6,1.4,4.9,1.3,3,1.0,3,16.200000000000003
-2009,Indira,India,Chennai,-68.68,119.79,M,Christian,27,2.6,1.6,1.7,1.3,4,2.0,3,16.2
-402,Béatrice,France,Marseille,-41.36,-144.58,M,French,26,3.5,2.6,3.6,3.5,1,1.0,1,16.2
 540,Layla,United States of America,Houston,-60.54,-20.49,M,Black or African American,21,1.1,1.7,4.1,2.3,5,1.0,1,16.2
-1311,Johnathan,United States of America,Los Angeles,-65.89,-107.53,M,Hispanic or Latino,26,1.3,2.7,3.0,2.2,3,3.0,1,16.2
 2194,Yura,South Korea,Gwangju,77.44,52.0,M,Chinese,22,1.5,3.3,2.6,2.8,4,1.0,1,16.2
+2009,Indira,India,Chennai,-68.68,119.79,M,Christian,27,2.6,1.6,1.7,1.3,4,2.0,3,16.2
+1311,Johnathan,United States of America,Los Angeles,-65.89,-107.53,M,Hispanic or Latino,26,1.3,2.7,3.0,2.2,3,3.0,1,16.2
+402,Béatrice,France,Marseille,-41.36,-144.58,M,French,26,3.5,2.6,3.6,3.5,1,1.0,1,16.2
 528,Vinita,India,Bangalore,-50.95,-12.65,F,Sikh,18,1.5,2.1,4.4,3.1,1,2.0,2,16.1
 953,Caterina,Italy,Milan,-19.15,-152.29,F,North African,27,2.3,2.0,3.1,2.6,1,1.0,4,16.0
 1908,Minh Lan,Vietnam,Hồ Chí Minh,57.42,-55.32,M,H'mong,18,3.0,4.5,1.7,1.7,2,1.0,2,15.899999999999999
 1261,Kayla,United States of America,Houston,-88.36,1.59,F,White,27,2.7,2.5,1.5,2.1,3,1.0,3,15.8
-412,Nathalia,Brazil,São Paulo,51.89,-155.28,F,Asian,26,1.5,1.7,2.9,2.7,5,1.0,1,15.8
 2086,Bao Quyen,Vietnam,Cần Thơ,50.32,-13.65,M,Thai,21,1.1,2.4,3.5,2.8,3,2.0,1,15.8
 391,Zhou Wei,China,Shenzhen,16.99,91.25,F,Mongol,20,2.0,2.1,4.9,1.8,2,1.0,2,15.8
+412,Nathalia,Brazil,São Paulo,51.89,-155.28,F,Asian,26,1.5,1.7,2.9,2.7,5,1.0,1,15.8
 1950,Esther,Mexico,Cancun,83.45,63.46,M,Mestizo,30,2.9,2.5,4.1,1.2,2,2.0,1,15.7
-330,Ravi,India,Bangalore,-43.73,17.97,F,Muslim,25,2.4,1.4,1.4,3.5,1,2.0,4,15.7
 1521,Tatyana,Russia,Nizhny Novgorod,41.31,-3.28,M,Bashkir,27,1.5,3.6,2.4,3.1,1,1.0,3,15.6
-360,Priya,India,Mumbai,24.54,-122.96,F,Other,29,2.0,2.0,2.3,2.2,4,1.0,2,15.5
 476,Bernadette,France,Toulouse,-55.66,13.26,M,African,20,3.1,2.4,1.7,2.3,4,1.0,1,15.5
-2297,Elliot,United States of America,Phoenix,-12.03,40.21,F,Black or African American,20,1.7,3.6,1.0,2.2,4,2.0,1,15.5
 573,Alma,Mexico,Mexico City,44.84,179.87,M,Asian,22,1.4,3.7,1.8,1.6,4,2.0,1,15.5
+2297,Elliot,United States of America,Phoenix,-12.03,40.21,F,Black or African American,20,1.7,3.6,1.0,2.2,4,2.0,1,15.5
 975,Gao Ying,China,Guangzhou,-69.16,7.59,F,Han,24,1.8,3.0,1.6,1.0,4,3.0,1,15.4
 1468,Ngoc Lan,Vietnam,Cần Thơ,-31.72,42.64,F,Muong,21,3.2,1.5,1.0,4.7,1,3.0,1,15.4
 570,Maud,France,Paris,-28.56,120.2,F,Berber,24,1.9,4.8,1.2,1.5,2,3.0,1,15.399999999999999
-403,An Vo,Vietnam,Nha Trang,20.57,109.61,F,H'mong,22,2.2,1.6,2.2,3.3,4,1.0,1,15.3
 599,Chloe,United States of America,Chicago,-83.21,55.38,F,Hispanic or Latino,30,1.6,2.4,3.7,1.6,3,1.0,2,15.3
 782,Thanh Son,Vietnam,Cần Thơ,-48.99,43.9,F,Thai,22,2.6,4.4,3.8,1.4,1,1.0,1,15.200000000000001
 1331,Nanami,Japan,Tokyo,-36.81,-74.51,F,Ryukyuans,23,1.9,1.4,2.9,2.0,2,2.0,3,15.2
 585,Lola,United States of America,Chicago,-88.65,21.01,F,Black or African American,18,2.3,1.3,2.7,1.9,2,3.0,2,15.2
 1627,Miles,United States of America,Chicago,77.48,-97.47,F,Hispanic or Latino,22,1.3,3.9,2.9,3.1,1,2.0,1,15.2
-1219,Ramiro,Mexico,Mexico City,-29.15,31.79,F,Indigenous,28,1.7,3.0,2.6,1.7,2,1.0,3,15.0
+360,Nguyen Lan,Vietnam,Đà Nẵng,73.18,11.06,M,Kinh,21,3.1,1.1,1.5,4.4,2,1.0,2,15.100000000000001
 1478,Chihiro,Japan,Osaka,-79.85,-168.72,M,Ryukyuans,30,2.2,1.3,2.3,2.2,4,2.0,1,15.0
+1219,Ramiro,Mexico,Mexico City,-29.15,31.79,F,Indigenous,28,1.7,3.0,2.6,1.7,2,1.0,3,15.0
 1549,Haemin,South Korea,Seoul,80.64,-19.65,M,Korean,21,1.6,1.6,3.0,1.6,2,2.0,3,14.8
+307,Ruby,United States of America,Phoenix,47.7,158.71,M,Hispanic or Latino,22,1.2,1.3,2.3,2.9,2,4.0,1,14.7
 484,Eunseo,South Korea,Incheon,-36.71,-133.21,F,Japanese,29,2.9,2.1,2.7,2.0,3,1.0,1,14.7
 1990,Yumiko,Japan,Tokyo,-12.64,-56.04,M,Japanese,18,2.0,2.4,1.6,3.3,3,1.0,1,14.3
-465,Jean,France,Paris,9.86,-116.05,M,French,20,2.4,2.4,2.0,1.4,1,1.0,4,14.2
-421,Fatima,Egypt,Aswan,67.1,-162.82,F,Berber,29,2.1,2.2,5.0,1.8,1,1.0,1,14.100000000000001
 1551,Michael,United States of America,Chicago,5.78,51.98,M,White,23,1.5,2.8,1.6,2.2,2,3.0,1,14.100000000000001
+421,Fatima,Egypt,Aswan,67.1,-162.82,F,Berber,29,2.1,2.2,5.0,1.8,1,1.0,1,14.100000000000001
 481,Daria,Russia,Nizhny Novgorod,-89.96,-152.76,F,Tatar,24,2.5,1.1,1.1,1.2,3,3.0,2,13.9
-348,Sophie,France,Paris,43.25,-170.48,M,African,26,1.2,1.4,3.1,3.0,2,2.0,1,13.7
 1032,Madeline,United States of America,New York,29.69,176.39,F,Native American,19,1.6,1.2,4.4,3.4,1,1.0,1,13.6
 623,Guadalupe,Mexico,Guadalajara,-39.98,178.45,M,Indigenous,19,1.8,4.1,2.2,1.5,1,1.0,2,13.6
 2129,Anh Hoa,Vietnam,Hồ Chí Minh,-13.23,134.72,M,Kinh,22,1.2,2.1,1.4,2.8,1,2.0,3,13.5
 1074,Miku,Japan,Osaka,79.5,-175.7,M,Korean,27,2.3,1.4,1.7,4.0,2,1.0,1,13.399999999999999
 967,Andrei,Russia,Novosibirsk,-18.27,53.76,M,Russian,20,4.6,1.2,2.3,1.1,2,1.0,1,13.2
 1078,Bich Thu,Vietnam,Nha Trang,-84.86,101.11,F,H'mong,20,1.5,3.5,3.5,1.6,1,1.0,1,13.1
+408,Cecilia,Argentina,Rosario,-78.65,67.44,F,Indigenous,28,3.9,1.9,3.0,1.0,1,1.0,1,12.8
 375,Isabel,Germany,Hamburg,-44.45,-120.74,M,German,27,1.2,4.9,1.3,1.3,1,2.0,1,12.700000000000001
 2193,Julian,Mexico,Monterrey,-32.57,151.91,F,Black,19,1.1,1.6,3.6,3.2,1,1.0,1,12.5
 756,Vikas,India,Bangalore,58.5,-81.99,M,Hindu,28,3.3,1.9,1.0,2.9,1,1.0,1,12.1

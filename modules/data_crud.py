@@ -64,7 +64,7 @@ def update_data(student_id, new_info):
     updated = False
 
     # Đọc dữ liệu từ file CSV
-    with open("data/data-clean.csv", "r") as file:
+    with open("data/data_clean.csv", "r") as file:
         reader = csv.reader(file)
         rows = list(reader)
 
