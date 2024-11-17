@@ -42,10 +42,29 @@ def sort_increase_point():
         df_sorted_desc = df.sort_values(by="total_score", ascending=False)
 
         # Lưu DataFrame đã sắp xếp vào file CSV mới
-        df_sorted_desc.to_csv("data/sorted_file.csv", index=False)
+        df_sorted_desc.to_csv("data/sorted_by_point.csv", index=False)
 
         return True  # Trả về True khi hoàn tất
     except Exception as e:
         print(f"Lỗi: {e}")
         return False  # Trả về False nếu xảy ra lỗ
+def sort_increase_age():
+    try:
+        # Đọc dữ liệu từ file CSV
+        df = pd.read_csv("data/data_clean.csv")
+
+        # Điền giá trị 0 vào các ô trống trong cột tuổi nếu có
+        df["age"] = df["age"].fillna(0)
+
+        # Sắp xếp tăng dần theo cột Tuổi
+        df_sorted_age = df.sort_values(by="age", ascending=True)
+
+        # Lưu DataFrame đã sắp xếp vào file CSV mới
+        df_sorted_age.to_csv("data/sorted_by_age.csv", index=False)
+
+        return True  # Trả về True khi hoàn tất
+    except Exception as e:
+        print(f"Lỗi: {e}")
+        return False  # Trả về False nếu xảy ra lỗi
+
 
