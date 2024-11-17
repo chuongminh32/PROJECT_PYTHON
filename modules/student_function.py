@@ -48,5 +48,4 @@ def sort_increase_point():
     except Exception as e:
         print(f"Lỗi: {e}")
         return False  # Trả về False nếu xảy ra lỗ
-result = sort_increase_point()
-print(f"Kết quả sắp xếp và lưu file: {result}")
+
