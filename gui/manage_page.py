@@ -11,6 +11,47 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data, create_data, update_data, delete_data
 from modules.data_cleaning import handle_missing_value, remove_duplicates, correct_formatting, save_to_cleaned_data_file
 
+"""Mô tả:
+    Đây là một trang quản lý sinh viên được xây dựng bằng thư viện Tkinter trong Python.
+    Trang quản lý này cho phép người dùng thực hiện các chức năng như đọc, thêm, cập nhật, xóa và làm sạch dữ liệu sinh viên từ file CSV.
+Thư viện sử dụng:
+    - tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - tkinter.messagebox: Thư viện con của tkinter để hiển thị các hộp thoại thông báo.
+    - tkinter.ttk: Thư viện con của tkinter để tạo các widget nâng cao.
+    - subprocess: Thư viện để chạy các tiến trình con.
+    - os: Thư viện cung cấp nhiều chức năng liên quan đến hệ điều hành.
+    - pandas: Thư viện để xử lý và phân tích dữ liệu.
+    - PIL (Pillow): Thư viện xử lý hình ảnh.
+Lớp:
+    - StudentManagementApp: Lớp đại diện cho trang quản lý sinh viên.
+Phương thức của lớp StudentManagementApp:
+    - __init__(self, root): Khởi tạo đối tượng StudentManagementApp.
+    - setup_window(self): Thiết lập cửa sổ chính của ứng dụng.
+    - create_logo(self): Thêm logo cho trang quản lý.
+    - create_menu(self): Tạo menu chức năng cho trang quản lý.
+    - create_content_frame(self): Tạo khung nội dung để hiển thị dữ liệu và các form nhập liệu.
+    - create_menu_button(self, parent, text, command, y_position): Tạo các nút trong menu.
+    - clear_content_frame(self): Xóa nội dung trong khung nội dung.
+    - read(self, file_path="data/data_clean.csv", title="DANH SÁCH SINH VIÊN"): Đọc và hiển thị dữ liệu sinh viên từ file CSV.
+    - display_data_table(self, data, title): Hiển thị dữ liệu trong DataFrame dưới dạng bảng.
+    - create(self): Tạo form nhập liệu để thêm sinh viên mới.
+    - create_form(self, fields, title): Tạo form nhập liệu cho các chức năng thêm, cập nhật và xóa sinh viên.
+    - create_sample_button(self, entries, fields): Tạo nút thêm dữ liệu mẫu vào form nhập liệu.
+    - fill_sample_data(self, entries, fields): Điền dữ liệu mẫu vào các ô nhập liệu.
+    - create_confirm_button(self, entries, fields, confirm_command, title): Tạo nút xác nhận cho các chức năng thêm, cập nhật và xóa sinh viên.
+    - confirm_create(self, entries, fields): Xác nhận và thêm dữ liệu sinh viên mới vào file CSV.
+    - update(self): Tạo form nhập liệu để cập nhật thông tin sinh viên.
+    - create_search_button(self, entries, fields, search_command): Tạo nút tìm kiếm sinh viên theo ID.
+    - search_student_for_update(self, entries, fields): Tìm kiếm và hiển thị thông tin sinh viên cần cập nhật.
+    - confirm_update(self, entries, fields): Xác nhận và cập nhật thông tin sinh viên trong file CSV.
+    - delete(self): Tạo form nhập liệu để xóa sinh viên.
+    - search_student_for_delete(self, entries, fields): Tìm kiếm và hiển thị thông tin sinh viên cần xóa.
+    - confirm_delete(self, entries, fields): Xác nhận và xóa sinh viên khỏi file CSV.
+    - cleaning(self): Làm sạch dữ liệu sinh viên trong file CSV.
+    - exit_program(self): Thoát khỏi ứng dụng và quay lại trang chính.
+Hàm:
+    - main(): Hàm chính để khởi chạy ứng dụng."""
+
 class StudentManagementApp():
     def __init__(self, root):
         super().__init__()

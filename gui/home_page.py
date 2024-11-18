@@ -13,7 +13,7 @@ class HomePage:
 
     def setup_window(self):
         self.root.title("Hệ thống quản lý sinh viên")
-        self.root.geometry("1000x550+300+200")
+        self.root.geometry("1000x550+300+200") # width x height + X + Y (X, Y: vị trí hiển thị cửa sổ)
         self.root.configure(background="white")
         self.root.resizable(False, False)
 

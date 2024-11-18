@@ -13,36 +13,49 @@ import numpy as np
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_visualization import plot_grade, plot_grade_btn, plot_age, plot_age_btn, plot_country, plot_country_btn, plot_gender, plot_gender_btn, plot_point_rating, plot_point_rating_btn, plot_personal, plot_personal_btn, plot_point_old, plot_point_old_btn
-
-
 """
-Thư viện:
-- os: Thư viện cung cấp các hàm để tương tác với hệ điều hành.
-- tkinter: Thư viện GUI tiêu chuẩn cho Python.
-- messagebox: Thư viện con của tkinter, cung cấp các hộp thoại thông báo.
-- ttk: Thư viện con của tkinter, cung cấp các widget có kiểu dáng hiện đại.
-- PIL (Pillow): Thư viện xử lý hình ảnh.
-- sys: Thư viện cung cấp các hàm và biến để thao tác với trình thông dịch Python.
-- pandas: Thư viện xử lý và phân tích dữ liệu.
-- subprocess: Thư viện để chạy các tiến trình con.
-- matplotlib.backends.backend_tkagg: Thư viện con của matplotlib để tích hợp với tkinter.
-- matplotlib.pyplot: Thư viện vẽ đồ thị.
-Các hàm và lớp:
-- ViewPage: Lớp chính của ứng dụng, quản lý giao diện và các chức năng.
-    - __init__(self, root): Khởi tạo lớp ViewPage.
-    - setup_window(self): Thiết lập cửa sổ chính.
+Mô tả:
+    Đây là một trang hiển thị dữ liệu và biểu đồ được xây dựng bằng thư viện Tkinter trong Python.
+    Trang này cho phép người dùng xem dữ liệu và các biểu đồ phân tích liên quan đến sinh viên.
+Thư viện sử dụng:
+    - tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - tkinter.messagebox: Thư viện con của tkinter để hiển thị các hộp thoại thông báo.
+    - tkinter.ttk: Thư viện con của tkinter để tạo các widget nâng cao.
+    - subprocess: Thư viện để chạy các tiến trình con.
+    - os: Thư viện cung cấp nhiều chức năng liên quan đến hệ điều hành.
+    - PIL (Pillow): Thư viện xử lý hình ảnh.
+    - pandas: Thư viện để xử lý và phân tích dữ liệu.
+    - matplotlib: Thư viện để vẽ biểu đồ.
+    - numpy: Thư viện hỗ trợ tính toán khoa học.
+Lớp:
+    - ViewPage: Lớp đại diện cho trang hiển thị dữ liệu và biểu đồ.
+Phương thức của lớp ViewPage:
+    - __init__(self, root): Khởi tạo đối tượng ViewPage.
+    - setup_window(self): Thiết lập cửa sổ chính của ứng dụng.
     - create_logo(self): Tạo logo cho ứng dụng.
     - create_menu(self): Tạo menu cho ứng dụng.
     - create_content_frame(self): Tạo vùng hiển thị nội dung.
     - create_menu_button(self, parent, text, command, y_position): Tạo nút menu.
     - clear_content_frame(self): Xóa nội dung trong khung hiển thị nội dung.
+    - plot_grade_btn(self, filepath): Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu.
     - read(self): Hiển thị dữ liệu trong file ra bảng trong cửa sổ hiện tại.
-    - plot_grade(self): Hiển thị biểu đồ điểm số.
-    - plot_country(self): Hiển thị biểu đồ quốc gia.
-    - plot_age(self): Hiển thị biểu đồ độ tuổi.
-    - plot_gender(self): Hiển thị biểu đồ giới tính.
-    - exit_program(self): Thoát chương trình và quay về trang chủ.
-- main(): Hàm chính để chạy ứng dụng.
+    - plot_grade_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ điểm học tập trung bình.
+    - plot_conuntry_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ quốc gia.
+    - plot_age_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ độ tuổi.
+    - plot_gender_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ giới tính.
+    - plot_point_old_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ điểm vs tuổi.
+    - plot_personal_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ cá nhân.
+    - plot_point_rating_detail(self, FILE_PATH): Hiển thị chi tiết biểu đồ điểm vs năng lực.
+    - plot_grade(self): Vẽ biểu đồ điểm học tập trung bình.
+    - plot_country(self): Vẽ biểu đồ quốc gia.
+    - plot_age(self): Vẽ biểu đồ độ tuổi.
+    - plot_gender(self): Vẽ biểu đồ giới tính.
+    - plot_point_old(self): Vẽ biểu đồ điểm vs tuổi.
+    - plot_personal(self): Vẽ biểu đồ cá nhân.
+    - plot_point_rating(self): Vẽ biểu đồ điểm vs năng lực.
+    - exit_program(self): Thoát chương trình.
+Hàm:
+    - main(): Hàm chính để khởi chạy ứng dụng.
 """
 
 

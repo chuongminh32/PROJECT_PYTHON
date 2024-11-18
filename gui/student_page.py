@@ -12,6 +12,57 @@ import matplotlib.pyplot as plt
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data
 from modules.student_function import sort_desc_gpa, sort_increase_age, plot_distribution, plot_correlation
+"""
+Mô tả:
+    Đây là một trang quản lý sinh viên được xây dựng bằng thư viện Tkinter trong Python. 
+    Trang này cho phép người dùng xem, lọc, sắp xếp và hiển thị biểu đồ dữ liệu sinh viên.
+Thư viện sử dụng:
+    - tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - tkinter.messagebox: Thư viện con của tkinter để hiển thị các hộp thoại thông báo.
+    - tkinter.ttk: Thư viện con của tkinter để tạo các widget nâng cao.
+    - subprocess: Thư viện để chạy các tiến trình con.
+    - os: Thư viện cung cấp nhiều chức năng liên quan đến hệ điều hành.
+    - PIL (Pillow): Thư viện xử lý hình ảnh.
+    - pandas: Thư viện để xử lý dữ liệu.
+    - matplotlib: Thư viện để vẽ biểu đồ.
+Lớp:
+    - Student: Lớp đại diện cho trang quản lý sinh viên.
+Phương thức của lớp Student:
+    - __init__(self, root): Khởi tạo đối tượng Student.
+    - setup_window(self): Thiết lập cửa sổ chính của ứng dụng.
+    - create_logo(self): Thêm logo vào cửa sổ chính.
+    - create_menu(self): Tạo menu chức năng cho ứng dụng.
+    - create_content_frame(self): Tạo khung nội dung để hiển thị dữ liệu.
+    - create_menu_button(self, parent, text, command, y_position): Tạo các nút trong menu.
+    - clear_content_frame(self): Xóa nội dung hiện tại trong khung nội dung.
+    - read(self, file_path="data/data_clean.csv", title="DANH SÁCH SINH VIÊN"): Đọc và hiển thị dữ liệu từ file CSV.
+    - create_treeview(self, parent_frame, dataframe, title): Tạo bảng hiển thị dữ liệu.
+    - plot_distribution(self, filepath, column_name): Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu.
+    - chart(self): Hiển thị giao diện các biểu đồ.
+    - stu_filter(self): Hiển thị giao diện lọc sinh viên.
+    - search_by_field(self): Tìm kiếm sinh viên theo trường và giá trị nhập vào.
+    - show_top_total(self): Hiển thị giao diện top sinh viên có tổng điểm cao nhất.
+    - top_rating(self): Hiển thị top sinh viên có tổng điểm đánh giá cao nhất.
+    - top_grade(self): Hiển thị top sinh viên có tổng điểm các môn cao nhất.
+    - top_grade_rating(self): Hiển thị top sinh viên có tổng điểm đánh giá và môn học cao nhất.
+    - show_top_students_by_column(self, columns, new_column, title): Hiển thị top sinh viên theo cột chỉ định.
+    - show_top_students(self): Hiển thị giao diện top sinh viên điểm cao.
+    - top_10_math(self): Hiển thị top 10 sinh viên điểm toán cao nhất.
+    - top_10_science(self): Hiển thị top 10 sinh viên điểm khoa học cao nhất.
+    - top_10_english(self): Hiển thị top 10 sinh viên điểm tiếng anh cao nhất.
+    - top_10_language(self): Hiển thị top 10 sinh viên điểm ngôn ngữ cao nhất.
+    - top_10_portfolio(self): Hiển thị top 10 sinh viên điểm đánh giá hồ sơ cao nhất.
+    - top_10_coverletter(self): Hiển thị top 10 sinh viên điểm đánh giá thư xin việc cao nhất.
+    - top_10_refletter(self): Hiển thị top 10 sinh viên điểm đánh giá thư giới thiệu cao nhất.
+    - sort_stu(self): Hiển thị giao diện sắp xếp sinh viên.
+    - sort_by_age(self): Sắp xếp sinh viên theo tuổi.
+    - sort_by_avg(self): Sắp xếp sinh viên theo GPA.
+    - sort_and_display(self, file_path, title, sort_function): Sắp xếp và hiển thị dữ liệu sinh viên.
+    - exit_program(self): Thoát khỏi chương trình và quay về trang chủ.
+Hàm:
+    - main(): Hàm chính để khởi chạy ứng dụng.
+"""
+
 
 class Student:
     def __init__(self, root):
