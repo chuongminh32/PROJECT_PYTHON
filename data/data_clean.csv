@@ -307,88 +307,57 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 305,Eliana Michelsen,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,23,3.0,2.8,2.9,5.0,4,4.0,5
 306,Dane Whittemore,Canada,Toronto,43.67,-79.42,M,Other,21,3.8,3.2,4.0,5.0,5,4.0,5
 307,Ruby,United States of America,Phoenix,47.7,158.71,M,Hispanic or Latino,22,1.2,1.3,2.3,2.9,2,4.0,1
-307,Marco,Italy,Milan,67.99,-38.49,F,North African,28,2.1,1.6,3.0,4.9,1,1.0,3
 308,Liang Mei,China,Chengdu,-23.33,-146.01,M,Tibetan,25,3.0,3.4,4.4,3.4,5,2.0,5
-308,Charlotte,Canada,Ottawa,-25.66,-8.0,F,Canadian,25,4.9,2.6,2.7,1.6,4,2.0,2
 309,Luc,France,Marseille,-49.59,139.09,M,Arab,28,2.6,2.5,1.1,4.4,5,5.0,1
-309,Antonio,Italy,Naples,-63.36,139.24,F,Italian,20,2.6,4.2,2.8,1.8,2,5.0,4
 310,Yuki,Japan,Tokyo,56.27,151.28,F,Ryukyuans,25,4.5,4.6,4.8,1.4,3,5.0,4
 311,Bhawana,India,Bangalore,3.5,51.58,M,Sikh,22,1.9,4.7,1.7,2.9,5,5.0,5
-311,Pedro,Mexico,Guadalajara,46.4,98.74,M,Indigenous,21,3.8,3.9,3.1,1.6,5,4.0,5
 312,Yunji,South Korea,Busan,-28.58,161.11,M,Korean,29,4.5,3.8,4.2,1.0,2,5.0,3
 313,Neha,India,Bangalore,-0.89,-60.95,F,Sikh,22,4.2,4.6,4.1,2.2,4,3.0,3
-313,Mika,Germany,Cologne,30.94,137.38,M,Kurdish,27,1.3,3.1,1.8,2.0,5,2.0,5
 314,Rodrigo,Brazil,Brasília,-12.85,-90.95,M,Black,18,3.1,4.1,4.7,2.9,4,5.0,3
-314,Jack,Australia,Melbourne,10.36,-106.86,F,English,26,3.2,3.5,1.1,1.9,2,2.0,4
 315,Alice,United States of America,New York,-58.72,-72.8,F,Hispanic or Latino,21,2.8,1.8,2.5,4.6,4,2.0,2
-315,Sadie,United States of America,Phoenix,-30.06,-33.11,F,Native American,30,2.1,5.0,2.1,1.3,1,4.0,4
 316,Giovanni,Italy,Milan,0.04,-59.51,M,Albanian,29,3.6,2.9,2.3,4.8,5,5.0,2
-316,Emily,Canada,Montreal,16.4,172.76,M,Other,28,4.6,4.7,3.7,2.1,4,3.0,2
 317,Li Jia,China,Shenzhen,81.66,102.37,F,Mongol,24,2.5,2.7,4.5,4.8,2,5.0,1
-317,Nam Le,Vietnam,Đà Nẵng,10.18,178.7,F,Thai,25,4.7,3.4,1.8,4.4,2,5.0,1
 318,Raquel,Mexico,Guadalajara,1.63,110.95,M,White,22,1.1,1.9,4.2,1.5,5,3.0,5
 319,Michel,France,Lyon,-71.09,-32.78,F,French,18,1.5,4.6,4.8,1.6,3,5.0,1
-319,Liam,Canada,Toronto,59.34,-130.75,F,Indigenous,29,1.0,4.4,2.6,1.5,1,3.0,3
 321,Li Zhen,China,Chengdu,35.0,-171.74,M,Zhuang,22,3.5,2.7,1.9,4.3,1,2.0,4
-321,Amit,India,Bangalore,52.99,125.77,F,Muslim,19,3.3,5.0,1.6,1.8,5,2.0,1
 322,Rajesh,India,Delhi,47.84,32.85,M,Muslim,29,4.0,1.5,1.3,4.3,1,5.0,4
-322,Nidhi,India,Chennai,40.4,-92.85,M,Hindu,25,1.2,3.0,2.2,4.4,2,2.0,4
 323,Julien,France,Nice,64.05,42.2,F,Arab,26,1.6,4.7,4.9,2.7,3,2.0,1
 324,Yang Xiu,China,Shanghai,75.89,-26.18,M,Zhuang,28,2.4,2.2,2.9,3.1,3,3.0,2
-324,Klara,Germany,Frankfurt,-89.87,-101.12,F,Polish,21,1.6,2.6,3.7,4.1,5,3.0,3
 325,Luca,Italy,Rome,77.52,19.95,M,Romanian,25,2.0,3.9,2.3,3.2,2,5.0,5
-325,Enrique,Mexico,Cancun,-19.63,16.02,M,White,18,2.4,3.8,2.1,4.3,1,2.0,5
 326,John,United States of America,Chicago,-88.72,106.09,F,Asian,26,2.9,2.9,5.0,3.1,5,3.0,3
-326,Connor,United States of America,Chicago,72.2,30.32,F,Asian,23,4.6,5.0,3.9,2.2,2,5.0,2
 327,Kazuya,Japan,Tokyo,-31.15,-156.8,M,Korean,18,3.2,2.8,2.8,4.2,3,2.0,5
-327,Xia,China,Shanghai,-50.62,-140.56,M,Uighur,22,2.7,2.8,4.9,2.5,2,4.0,3
 329,Tanu,India,Delhi,-4.91,-135.77,M,Hindu,20,2.8,1.4,1.8,2.6,3,4.0,4
-329,Mary,United States of America,Phoenix,-30.0,-63.46,F,White,19,2.2,3.5,1.9,4.6,3,1.0,1
 330,Li Qian,China,Beijing,64.17,39.07,F,Uighur,28,1.7,4.0,1.4,3.9,5,3.0,5
-330,Ravi,India,Bangalore,-43.73,17.97,F,Muslim,25,2.4,1.4,1.4,3.5,1,2.0,4
 331,Jiwon,South Korea,Gwangju,-39.22,153.38,M,Chinese,25,2.6,2.0,1.2,3.7,4,4.0,3
-331,Pavel,Russia,Novosibirsk,87.07,-72.38,M,Ukrainian,25,3.2,2.0,3.8,1.6,2,2.0,5
 332,Jin,South Korea,Gwangju,-79.43,-86.48,M,Japanese,19,2.3,4.5,4.5,1.9,5,3.0,2
-332,Swati,India,Chennai,-84.87,-94.43,M,Other,29,2.0,3.1,2.0,4.5,1,2.0,3
 333,Luis,Mexico,Mexico City,-48.44,-85.51,M,Mestizo,20,2.8,2.8,2.3,2.3,4,3.0,4
-333,Anastasia,Russia,Saint Petersburg,13.2,131.74,M,Russian,28,1.9,1.2,4.5,3.8,5,5.0,5
 334,Quinn,United States of America,Houston,-2.7,151.16,F,Asian,18,1.4,2.9,1.8,3.9,4,2.0,3
-334,Maria,Mexico,Monterrey,-45.11,-176.27,M,Indigenous,20,3.4,2.1,3.3,1.6,4,5.0,3
 335,Bob,United States of America,New York,27.93,89.95,M,Black or African American,29,1.3,3.8,4.0,4.1,5,1.0,5
-335,Sandeep,India,Kolkata,4.21,-6.96,M,Sikh,21,2.5,1.1,2.6,1.2,4,5.0,3
 336,Yang Lei,China,Chengdu,46.49,179.36,M,Han,23,4.8,4.3,1.8,5.0,4,2.0,4
-336,Jia,China,Chengdu,10.59,24.91,M,Mongol,30,3.5,2.6,2.1,5.0,2,2.0,3
 337,Isabelle,France,Lyon,34.61,151.02,M,African,27,4.9,4.9,4.4,3.3,1,4.0,2
 338,Ayumi,Japan,Kyoto,-14.89,-174.15,F,Japanese,20,1.8,3.0,2.8,3.2,3,2.0,1
 340,Hiroshi,Japan,Kyoto,-12.63,123.76,M,Ainu,30,3.8,4.1,2.7,4.0,3,3.0,4
-340,Mikayla,United States of America,Houston,85.59,22.41,M,Asian,23,1.9,1.1,3.4,4.0,1,5.0,2
 341,Addison,United States of America,New York,71.71,-162.15,M,Native American,19,3.0,1.6,3.0,4.3,5,3.0,4
 342,Anjali,India,Bangalore,-87.24,71.61,F,Christian,25,3.1,1.2,2.3,2.0,2,3.0,4
 343,Yang Yun,China,Shanghai,-28.33,-81.31,F,Tibetan,22,4.3,2.3,3.7,3.6,3,2.0,1
 344,Belen,Argentina,Buenos Aires,29.26,126.8,M,Mestizo,28,1.6,2.0,3.9,4.6,3,3.0,5
-344,Tao,China,Shanghai,-66.51,-159.9,F,Uighur,25,3.1,2.3,1.4,4.1,3,5.0,1
 345,Carolina,Mexico,Tijuana,20.38,137.65,M,White,22,2.0,3.3,2.0,3.5,2,3.0,5
 346,Truong Anh,Vietnam,Đà Nẵng,0.82,-102.7,M,Kinh,24,3.0,2.8,4.7,2.2,5,4.0,1
 347,Preeti,India,Mumbai,71.75,-6.53,M,Other,20,4.4,3.7,3.3,4.2,5,1.0,1
 348,Khaled,Egypt,Giza,-71.52,-22.79,F,Egyptian,23,1.7,2.8,3.2,2.5,1,4.0,5
-348,Sophie,France,Paris,43.25,-170.48,M,African,26,1.2,1.4,3.1,3.0,2,2.0,1
 349,Carlos,Argentina,Cordoba,35.98,65.38,F,Arab,26,3.0,2.8,3.5,2.9,3,2.0,3
 350,Grace,United States of America,New York,-49.89,-163.97,M,Hispanic or Latino,25,4.8,4.6,3.1,3.1,2,3.0,1
-350,James,Canada,Toronto,-38.38,144.9,M,French,28,2.8,3.5,4.1,2.7,2,4.0,5
 351,Karina,Argentina,Mendoza,-75.92,46.79,M,Mestizo,22,2.8,4.1,4.7,3.1,4,1.0,1
 353,Ana,Brazil,Fortaleza,47.5,131.74,M,Black,18,1.3,3.9,5.0,2.5,4,5.0,3
 354,Alessandra,Brazil,Salvador,76.9,-176.15,F,Black,30,2.3,4.8,3.8,3.8,4,3.0,4
 355,Ankita,India,Bangalore,60.11,-127.82,F,Sikh,22,3.3,1.1,1.5,4.8,1,5.0,1
 356,Keiko,Japan,Sapporo,-16.1,-19.31,F,Chinese,23,1.2,1.6,1.5,3.3,1,1.0,2
-356,Vinod,India,Mumbai,29.99,-112.58,M,Sikh,24,4.9,3.3,1.6,4.9,3,1.0,3
 357,Daniel,United States of America,New York,68.44,-138.38,M,Black or African American,18,4.9,4.7,2.1,1.7,5,1.0,1
 358,Ling,China,Guangzhou,-11.26,14.14,M,Tibetan,29,1.1,4.9,4.4,3.2,3,3.0,1
 359,Matthew,United States of America,Phoenix,52.86,-131.61,F,Hispanic or Latino,20,4.9,4.7,1.8,3.8,1,2.0,3
 360,Nguyen Lan,Vietnam,Đà Nẵng,73.18,11.06,M,Kinh,21,3.1,1.1,1.5,4.4,2,1.0,2
-360,Priya,India,Mumbai,24.54,-122.96,F,Other,29,2.0,2.0,2.3,2.2,4,1.0,2
 361,Evelyn,Canada,Montreal,-23.19,142.92,F,Indigenous,21,1.1,2.1,3.6,3.6,4,4.0,4
 362,Lena,Germany,Frankfurt,-11.95,-114.33,M,German,28,3.9,1.3,3.9,1.2,4,3.0,4
-362,Kavita,India,Mumbai,36.14,-47.57,F,Sikh,25,2.1,4.9,3.2,4.2,1,5.0,4
 363,Alka,India,Mumbai,2.18,-7.85,F,Muslim,29,2.7,2.9,3.7,2.4,4,5.0,2
 364,Manoj,India,Bangalore,33.21,-40.29,M,Sikh,19,1.8,2.9,2.0,3.5,5,1.0,3
 365,Elena,Italy,Milan,9.72,2.0,F,Italian,27,3.7,3.0,1.5,3.7,3,2.0,4
@@ -398,12 +367,9 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 369,Jaime,Mexico,Mexico City,-51.22,29.42,F,Asian,20,2.5,1.9,3.9,4.8,3,5.0,1
 370,Mohamed,Egypt,Giza,81.69,-147.69,F,Other,27,4.4,3.2,3.6,2.0,4,4.0,1
 371,Maxim,Russia,Nizhny Novgorod,56.11,60.32,M,Tatar,18,4.8,1.1,2.7,3.9,5,5.0,3
-371,Hoa Nguyen,Vietnam,Đà Nẵng,82.14,18.18,M,Kinh,30,2.0,4.8,2.5,3.5,3,5.0,2
 372,Amelia,Australia,Adelaide,73.82,-103.29,F,English,25,1.6,4.1,2.0,4.3,2,4.0,4
-372,Wei,China,Shanghai,-12.07,165.67,F,Han,30,3.7,3.8,3.4,3.8,5,1.0,5
 373,Maddie,United States of America,Los Angeles,25.37,30.73,F,Asian,27,1.8,4.5,1.8,1.2,5,4.0,4
 374,Madelyn,United States of America,Los Angeles,29.3,-136.55,F,Native American,30,2.6,1.3,4.4,3.3,3,2.0,5
-374,Nikolai,Russia,Yekaterinburg,68.05,-170.1,M,Ukrainian,29,2.7,4.8,2.5,5.0,1,4.0,5
 375,Isabel,Germany,Hamburg,-44.45,-120.74,M,German,27,1.2,4.9,1.3,1.3,1,2.0,1
 376,Yasmin,Egypt,Alexandria,70.69,-80.99,M,Nubian,28,1.0,3.6,4.5,4.8,4,4.0,1
 377,Hyewon,South Korea,Gwangju,30.1,71.82,F,Other,27,3.3,2.9,4.3,1.4,5,4.0,1
@@ -411,7 +377,6 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 379,Thanh Hoang,Vietnam,Đà Nẵng,22.46,135.12,F,Thai,29,1.6,2.0,2.0,3.3,4,2.0,2
 380,Martine,France,Lyon,-8.84,-122.91,F,Asian,23,3.5,3.2,2.5,3.6,2,1.0,1
 381,Henry,United States of America,Houston,7.22,19.39,M,White,21,1.8,3.1,1.7,1.3,3,3.0,3
-381,Omar,Egypt,Alexandria,-43.98,49.83,M,Nubian,23,1.8,1.3,4.4,2.0,1,2.0,4
 382,Maya,India,Chennai,17.68,59.94,M,Sikh,21,3.2,4.8,3.8,3.1,2,2.0,5
 383,Johann,Germany,Cologne,-13.97,-44.79,M,German,21,1.8,4.4,4.4,2.8,2,4.0,3
 384,Jieun,South Korea,Seoul,60.81,-102.39,M,Korean,24,3.6,4.6,4.6,3.9,1,5.0,1
@@ -425,24 +390,17 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 394,Aaron,United States of America,Chicago,-69.94,-153.57,M,Hispanic or Latino,25,4.8,1.4,1.7,1.1,2,5.0,5
 395,Suresh,India,Chennai,-9.8,72.52,F,Christian,22,3.6,4.5,3.1,4.9,1,5.0,2
 396,Igor,Russia,Nizhny Novgorod,-30.01,-168.51,M,Tatar,19,2.9,3.8,1.1,5.0,3,3.0,2
-396,Min,South Korea,Daegu,84.29,160.51,F,Chinese,26,1.3,4.9,1.8,1.9,3,1.0,5
 397,Carter,Canada,Toronto,41.53,-130.73,F,French,20,3.0,2.9,4.2,3.3,2,3.0,4
-397,Giulia,Italy,Rome,-31.43,93.13,F,Sardinian,22,2.1,5.0,3.6,4.5,5,5.0,2
 398,Sienna,United States of America,Los Angeles,59.68,124.36,F,Native American,28,1.7,4.7,2.2,3.5,5,1.0,5
 399,Gia Bao,Vietnam,Đà Nẵng,-88.57,-41.61,F,H'mong,23,1.2,2.9,3.8,4.6,2,2.0,2
 400,Oliver,Canada,Toronto,-79.45,-128.79,F,Other,25,3.9,4.8,1.9,4.4,4,5.0,5
-400,Dmitriy,Russia,Saint Petersburg,38.3,70.05,F,Ukrainian,20,4.7,3.5,4.7,4.7,2,2.0,4
 401,Thomas,United States of America,New York,51.03,-90.82,M,Hispanic or Latino,23,3.5,3.4,2.1,4.0,5,5.0,2
 402,Béatrice,France,Marseille,-41.36,-144.58,M,French,26,3.5,2.6,3.6,3.5,1,1.0,1
 403,Ezequiel,Argentina,Rosario,36.81,129.27,F,Arab,23,2.8,1.7,4.2,4.4,2,4.0,3
-403,An Vo,Vietnam,Nha Trang,20.57,109.61,F,H'mong,22,2.2,1.6,2.2,3.3,4,1.0,1
 404,Jackson,United States of America,Phoenix,13.83,112.13,F,Hispanic or Latino,21,1.0,5.0,3.9,3.9,2,3.0,4
 405,Marie,France,Nice,51.12,-49.15,M,Asian,27,1.1,2.1,1.8,1.1,4,4.0,5
-405,Xu Jing,China,Beijing,-83.25,-166.92,F,Uighur,29,2.7,2.0,3.0,2.4,5,1.0,2
 407,Esteban,Argentina,Buenos Aires,-53.82,65.15,F,Indigenous,23,4.5,4.7,1.5,1.7,4,3.0,3
-407,Giuseppe,Italy,Naples,-42.14,-114.28,M,North African,23,2.0,2.6,4.0,4.1,2,2.0,1
 408,Cecilia,Argentina,Rosario,-78.65,67.44,F,Indigenous,28,3.9,1.9,3.0,1.0,1,1.0,1
-408,Jose,Mexico,Cancun,-41.22,-61.76,F,Mestizo,21,2.1,1.5,2.3,3.2,5,4.0,3
 409,Laxmi,India,Mumbai,21.27,28.26,M,Hindu,23,1.5,3.7,1.6,4.4,4,2.0,5
 410,Ben,Australia,Melbourne,-47.75,54.4,M,Indigenous,20,1.3,4.1,4.0,4.8,3,2.0,1
 411,Rie,Japan,Tokyo,65.65,-149.66,F,Japanese,23,3.3,1.1,1.2,2.6,5,3.0,3
@@ -451,7 +409,6 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 414,Samantha,United States of America,Los Angeles,-6.96,-46.94,F,Hispanic or Latino,27,4.7,1.0,4.2,4.5,5,3.0,4
 415,Yang Wei,China,Shenzhen,-88.02,-29.15,M,Zhuang,21,2.0,2.9,1.8,1.5,3,3.0,4
 418,Victoria,Canada,Toronto,-18.68,-103.49,F,English,30,1.6,2.2,3.5,4.3,4,4.0,5
-418,Pierre,France,Marseille,66.27,120.24,M,African,22,4.9,4.3,1.9,2.9,4,5.0,1
 419,Liu Jian,China,Beijing,10.1,-136.28,F,Mongol,24,4.4,4.4,2.4,4.2,5,5.0,1
 420,Mason,United States of America,Phoenix,43.16,-76.44,M,Native American,25,4.8,1.0,3.4,1.8,5,1.0,1
 421,Fatima,Egypt,Aswan,67.1,-162.82,F,Berber,29,2.1,2.2,5.0,1.8,1,1.0,1
@@ -461,11 +418,9 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 425,Thi Lan,Vietnam,Đà Nẵng,43.23,-85.38,M,Thai,26,4.3,1.4,2.8,1.9,3,2.0,3
 429,Wang Min,China,Guangzhou,-64.88,163.94,M,Uighur,20,2.2,4.1,3.3,4.2,5,4.0,4
 430,Alexei,Russia,Moscow,44.51,-100.22,F,Russian,29,3.0,3.0,4.9,1.7,3,3.0,3
-430,Vera,Russia,Saint Petersburg,50.61,-6.0,F,Russian,29,2.0,2.1,1.7,3.3,2,2.0,5
 431,Mia,Australia,Perth,43.38,-172.58,M,English,19,1.9,1.6,1.0,4.9,4,3.0,3
 433,Xu Qian,China,Shanghai,58.24,-59.55,F,Uighur,21,4.2,3.9,1.5,4.8,5,1.0,2
 434,Vladimir,Russia,Nizhny Novgorod,3.92,-163.04,F,Russian,28,3.3,4.8,2.9,4.4,3,1.0,5
-434,Ahmed,Egypt,Alexandria,-18.09,30.34,M,Nubian,26,1.4,3.5,1.8,4.6,2,1.0,3
 435,Ethan,Canada,Vancouver,-15.77,148.66,M,Other,28,3.9,2.8,1.8,3.6,2,4.0,4
 436,Lukas,Germany,Munich,-57.12,-38.2,F,German,24,4.5,4.4,2.0,3.3,1,5.0,2
 438,Tuan Khoi,Vietnam,Hà Nội,60.92,-121.78,F,Tay,24,2.5,1.7,4.0,1.3,2,4.0,5
@@ -483,21 +438,15 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 453,He Jing,China,Shanghai,-52.87,48.67,M,Uighur,28,4.3,3.8,1.3,2.7,1,1.0,3
 456,Trung Bao,Vietnam,Cần Thơ,59.95,-162.13,F,Tay,22,3.9,3.6,3.1,4.8,5,3.0,5
 457,Marc,France,Toulouse,86.46,-134.63,M,Berber,20,4.8,2.6,4.9,4.5,5,4.0,1
-457,Olga,Russia,Moscow,-35.38,130.82,M,Ukrainian,29,4.5,1.8,4.4,1.4,5,3.0,3
 458,Javier,Mexico,Monterrey,48.34,24.3,F,Asian,26,1.9,1.1,4.3,3.0,2,2.0,5
 460,Paula,Germany,Berlin,-30.94,-72.65,F,German,22,2.7,3.9,3.8,4.9,1,5.0,1
-460,Thao Nguyen,Vietnam,Hà Nội,64.53,-30.11,M,Thai,18,3.5,4.9,3.8,1.1,5,1.0,3
 461,Dmitri,Russia,Yekaterinburg,-56.73,-17.26,F,Bashkir,19,3.5,1.3,1.4,3.2,4,1.0,5
-461,Trung Nguyen,Vietnam,Hà Nội,-87.52,-127.85,F,Kinh,19,3.5,1.9,4.1,3.0,3,1.0,4
 462,Yuri,South Korea,Daegu,-9.47,-109.26,F,Japanese,25,3.2,2.1,2.3,3.8,5,1.0,3
 463,Avery,United States of America,Chicago,-50.54,-146.38,F,White,23,2.8,3.5,4.9,4.1,5,1.0,3
 464,Riley,United States of America,Houston,-12.55,21.67,F,Hispanic or Latino,18,4.1,4.4,3.0,4.1,1,2.0,3
 465,Miguel,Mexico,Tijuana,35.78,129.65,M,Black,25,1.2,4.3,4.4,3.0,2,4.0,3
-465,Jean,France,Paris,9.86,-116.05,M,French,20,2.4,2.4,2.0,1.4,1,1.0,4
 467,Juan,Argentina,Rosario,70.11,19.96,F,Mestizo,22,2.8,1.9,2.9,2.1,5,3.0,1
-467,Amitabh,India,Kolkata,-85.83,-44.5,M,Muslim,21,3.2,1.3,2.4,2.3,2,1.0,5
 469,Ivan,Russia,Yekaterinburg,-4.96,148.58,F,Bashkir,20,3.1,3.0,1.4,3.7,3,2.0,2
-469,Martin,Mexico,Monterrey,74.91,-140.38,F,Mestizo,22,1.8,2.8,2.1,1.9,3,4.0,4
 471,Rohit,India,Kolkata,38.21,-137.34,F,Muslim,21,4.4,1.9,1.6,5.0,3,4.0,4
 473,Haeun,South Korea,Busan,-50.26,69.34,F,Other,23,3.4,3.8,2.2,4.2,5,4.0,3
 474,Jessica,Argentina,Buenos Aires,-43.72,-36.63,F,Mestizo,23,3.7,4.0,3.5,4.6,2,1.0,1
@@ -514,14 +463,12 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 485,Kien Trung,Vietnam,Nha Trang,-70.74,-162.86,M,Muong,23,4.9,4.7,2.3,1.3,1,1.0,4
 486,Quoc Duy,Vietnam,Hồ Chí Minh,-65.7,-87.94,F,Kinh,30,2.4,4.3,2.0,1.5,1,4.0,3
 487,Max,Germany,Hamburg,-42.11,86.6,M,Turkish,30,3.6,3.8,3.8,2.2,2,5.0,1
-487,Emiliano,Argentina,Cordoba,44.26,-29.18,F,Mestizo,24,4.2,1.5,3.5,1.1,4,1.0,3
 490,Seiji,Japan,Osaka,-38.24,63.73,M,Chinese,21,4.9,1.6,4.1,5.0,4,5.0,5
 491,Noah,United States of America,Phoenix,9.06,167.36,M,Native American,28,4.0,4.8,2.2,3.4,5,4.0,1
 494,Satish,India,Kolkata,21.67,160.28,M,Muslim,28,4.6,1.6,1.2,3.1,4,1.0,3
 495,Jiyoung,South Korea,Gwangju,16.95,107.4,F,Chinese,27,2.4,1.8,2.9,2.7,4,3.0,1
 498,Leonardo,Argentina,Buenos Aires,88.51,-93.6,M,Indigenous,19,3.7,4.5,2.5,2.6,4,5.0,5
 500,Mona,Egypt,Giza,-16.22,115.99,M,Other,19,2.1,3.7,1.8,1.1,5,1.0,3
-500,Dominique,France,Toulouse,28.22,-112.16,M,Asian,19,2.3,2.1,4.3,2.3,3,2.0,4
 501,Kirill,Russia,Novosibirsk,7.3,38.5,M,Russian,24,3.2,4.6,1.9,3.9,2,1.0,5
 504,Huong Nguyen,Vietnam,Cần Thơ,-6.84,165.94,M,Muong,30,2.0,2.3,1.1,3.6,4,3.0,4
 505,Sun Jian,China,Beijing,5.52,-56.28,F,Han,25,3.1,3.2,2.2,1.9,1,5.0,2
@@ -536,7 +483,6 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 516,Lina,Germany,Hamburg,68.17,97.8,M,German,26,4.4,2.7,1.8,1.2,3,3.0,3
 517,Ravindra,India,Bangalore,-13.16,142.0,F,Other,23,4.6,3.4,1.6,3.7,2,1.0,5
 518,Thierry,France,Lyon,69.46,-37.99,F,French,28,4.6,2.1,1.4,2.8,5,4.0,2
-518,Hana,South Korea,Busan,44.24,135.75,F,Korean,29,4.0,4.1,3.0,3.0,3,2.0,5
 519,Sun Qi,China,Guangzhou,-22.1,-143.51,F,Mongol,30,4.1,2.1,1.1,3.1,3,1.0,3
 521,Pankaj,India,Chennai,-59.05,57.12,M,Christian,23,1.7,3.6,1.1,4.1,3,2.0,2
 522,Charlie,United States of America,Los Angeles,-88.92,104.75,M,Native American,30,2.9,1.5,2.1,2.6,4,5.0,4
@@ -576,7 +522,6 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 587,Neeraj,India,Delhi,-75.1,-50.28,F,Hindu,20,2.2,1.8,3.0,2.2,3,5.0,3
 588,Ludmila,Russia,Novosibirsk,83.91,12.38,F,Ukrainian,25,1.3,1.7,2.4,4.5,5,3.0,5
 591,Samuel,United States of America,Houston,89.06,13.76,M,Black or African American,24,1.2,2.3,4.8,4.2,5,3.0,5
-591,Mai Anh Le,Vietnam,Hồ Chí Minh,59.06,-139.29,F,Tay,23,4.8,1.3,3.1,1.8,3,5.0,1
 592,Jiho,South Korea,Incheon,19.77,-164.93,F,Chinese,22,2.3,4.5,2.8,3.2,5,1.0,1
 594,Joana,Brazil,Rio de Janeiro,-87.25,-124.53,M,Black,18,4.0,1.2,2.1,3.9,3,5.0,2
 595,Vineet,India,Kolkata,43.8,175.03,M,Hindu,22,2.4,4.8,2.7,3.2,1,5.0,2
