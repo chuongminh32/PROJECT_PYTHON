@@ -37,7 +37,7 @@ class StudentManagementApp():
         M_Frame = LabelFrame(self.root, text="Menu", bg="white", font=("Arial", 12, "bold"))
         M_Frame.place(x=0, y=80, width=200, relheight=1)
         menu_items = [("Đọc", self.read), ("Thêm", self.create), ("Sửa", self.update),
-                      ("Xóa", self.delete), ("Làm sạch", self.cleaning), ("Back", self.exit_program)]
+                      ("Xóa", self.delete), ("Làm sạch", self.cleaning), ("Quay lại", self.exit_program)]
         for i, (text, command) in enumerate(menu_items): # Tạo các nút trong menu
             self.create_menu_button(M_Frame, text, command, i * 75)
 

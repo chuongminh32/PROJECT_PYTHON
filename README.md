@@ -20,7 +20,8 @@
     │
     ├── data/                           # Thư mục chứa tập tin dữ liệu
     │   ├── student-dataset.csv         # Tập dữ liệu nguồn
-    │   ├── data_demo.csv               # Tập dữ liệu nguồn
+    │   ├── sorted_by_age.csv           # Tập dữ liệu săp xếp theo tuổi
+    │   ├── sorted_by_gpa.csv           # Tập dữ liệu sắp xếp theo gpa
     │   ├── data_clean.csv              # Tập dữ liệu đã làm sạch (sau khi xử lý)
     │   └── users.txt                   # lưu trữ account
     │

@@ -82,7 +82,7 @@ class Student:
             widget.destroy()
         title_label = tk.Label(parent_frame, text=title, font=("Arial", 17, "bold"), bg="lightgrey")
         title_label.pack(padx=5, pady=5)
-        if "TOTAL" in title:
+        if "TỔNG" in title:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_total)
             back_btn.place(x=10, y=10)
         elif title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO TUỔI" or title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO ĐIỂM":
@@ -173,7 +173,7 @@ class Student:
 
     def show_top_total(self):
         self.clear_content_frame()
-        tk.Label(self.content_frame, text="TOP STUDENT TOTAL SCORE AND RATING", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
+        tk.Label(self.content_frame, text="TOP SINH VIÊN CÓ TỔNG ĐIỂM CAO NHẤT", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
         buttons = [
             ("Top sinh viên có tổng điểm đáng giá cao nhất", self.top_rating),
             ("Top sinh viên có tổng điểm các môn cao nhất", self.top_grade),
@@ -183,13 +183,13 @@ class Student:
             tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=15)
 
     def top_rating(self):
-        self.show_top_students_by_column(['portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_rating', "TOP 10 STUDENTS - TOTAL RATING")
+        self.show_top_students_by_column(['portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_rating', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM ĐÁNH GIÁ CAO NHẤT")
 
     def top_grade(self):
-        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade'], 'total_grade', "TOP 10 STUDENTS - TOTAL GRADE")
+        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade'], 'total_grade', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM MÔN HỌC CAO NHẤT")
 
     def top_grade_rating(self):
-        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade', 'portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_grade_rating', "TOP 10 STUDENTS - TOTAL POINT AND RATING")
+        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade', 'portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_grade_rating', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM CAO NHẤT")
 
     def show_top_students_by_column(self, columns, new_column, title):
         self.clear_content_frame()
@@ -203,7 +203,7 @@ class Student:
 
     def show_top_students(self):
         self.clear_content_frame()
-        tk.Label(self.content_frame, text="TOP STUDENT BEST SCORE", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
+        tk.Label(self.content_frame, text="TOP SINH VIÊN ĐIỂM CAO", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
         buttons = [
             ("Top 10 sinh viên điểm toán cao nhất", self.top_10_math),
             ("Top 10 sinh viên điểm khoa học cao nhất", self.top_10_science),
@@ -217,25 +217,25 @@ class Student:
             tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=15)
 
     def top_10_math(self):
-        self.show_top_students_by_column(['math.grade'], 'math.grade', "TOP 10 STUDENTS - MATH GRADE")
+        self.show_top_students_by_column(['math.grade'], 'math.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN TOÁN")
 
     def top_10_science(self):
-        self.show_top_students_by_column(['sciences.grade'], 'sciences.grade', "TOP 10 STUDENTS - SCIENCE GRADE")
+        self.show_top_students_by_column(['sciences.grade'], 'sciences.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN KHOA HỌC")
 
     def top_10_english(self):
-        self.show_top_students_by_column(['english.grade'], 'english.grade', "TOP 10 STUDENTS - ENGLISH GRADE")
+        self.show_top_students_by_column(['english.grade'], 'english.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN ANH")
 
     def top_10_language(self):
-        self.show_top_students_by_column(['language.grade'], 'language.grade', "TOP 10 STUDENTS - LANGUAGE GRADE")
+        self.show_top_students_by_column(['language.grade'], 'language.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN NGÔN NGỮ")
 
     def top_10_portfolio(self):
-        self.show_top_students_by_column(['portfolio.rating'], 'portfolio.rating', "TOP 10 STUDENTS - PORTFOLIO RATING")
+        self.show_top_students_by_column(['portfolio.rating'], 'portfolio.rating', "TOP 10 SINH VIÊN CÓ ĐIỂM CAO ĐÁNH GIÁ HỒ SƠ CÁ NHÂN")
 
     def top_10_coverletter(self):
-        self.show_top_students_by_column(['coverletter.rating'], 'coverletter.rating', "TOP 10 STUDENTS - COVERLETTER RATING")
+        self.show_top_students_by_column(['coverletter.rating'], 'coverletter.rating', "TOP 10 SINH VIÊN CÓ ĐIỂM CAO ĐÁNH GIÁ  THƯ XIN VIỆC")
 
     def top_10_refletter(self):
-        self.show_top_students_by_column(['refletter.rating'], 'refletter.rating', "TOP 10 STUDENTS - REFLETTER RATING")
+        self.show_top_students_by_column(['refletter.rating'], 'refletter.rating', "TOP 10 SINH VIÊN CÓ ĐIỂM CAO ĐÁNH GIÁ THƯ GIỚI THIỆU")
 
     def sort_stu(self):
         self.clear_content_frame()
