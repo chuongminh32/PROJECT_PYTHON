@@ -7,6 +7,9 @@ def handle_missing_value(df):
       và thay thế tuổi bị thiếu bằng tuổi trung bình.
     - Xóa các hàng có giá trị 'id' bị thiếu.
     """
+    #Loại bỏ record khi không chứa id
+    df = df.dropna(subset=['id'])
+
     # Điền dữ liệu chuỗi bị thiếu bằng 'No infor'
     columns_str = ['name', 'nationality', 'city', 'gender']
     for col in columns_str:
@@ -48,8 +51,11 @@ def correct_formatting(df):
     columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
     for col in columns_int:
         if col in df.columns:
-            df[col] = abs(df[col]) % 6
+            df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
+            df[col] = df[col].apply(lambda x: x if 0 <= x <= 5 else 0)
 
+    # df['coverletter.rating'] = pd.to_numeric(df['coverletter.rating'], errors='coerce').fillna(0).astype(int)
+    # df['coverletter.rating'] = df['coverletter.rating'].apply(lambda x: x if 0 <= x <= 5 else 0)
     return df
 
 def save_to_cleaned_data_file(filepath, result_df):
