@@ -5,8 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
-
 class Student:
     def __init__(self, student_id, name, country, total_score):
         self.student_id = student_id
