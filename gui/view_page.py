@@ -1,3 +1,4 @@
+import tkinter as tk
 import os
 from tkinter import *
 from tkinter import messagebox, ttk
@@ -7,13 +8,12 @@ import pandas as pd
 import subprocess
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Thêm thư mục gốc của dự án vào sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from modules.data_visualization import plot_grade, plot_grade_btn, plot_age, plot_age_btn, plot_country, plot_country_btn, plot_gender, plot_gender_btn, plot_point_rating, plot_point_rating_btn, plot_personal, plot_personal_btn, plot_point_old, plot_point_old_btn
 
-from modules.data_crud import read_data
-import tkinter as tk
-from modules.data_visualization import plot_grade, plot_age, plot_country, plot_gender, plot_point_rating, plot_personal, plot_point_old
 
 """
 Thư viện:
@@ -53,6 +53,7 @@ class ViewPage:
         self.create_logo()
         self.create_menu()
         self.create_content_frame()
+        self.canvas = None
         root.resizable(False, False)  # Cho phép cửa sổ thay đổi kích thước
 
     def setup_window(self):
@@ -81,9 +82,11 @@ class ViewPage:
         self.create_menu_button(M_Frame, "Quốc gia", self.plot_country, 50)
         self.create_menu_button(M_Frame, "Điểm số", self.plot_grade, 100)
         self.create_menu_button(M_Frame, "Giới tính", self.plot_gender, 150)
-        self.create_menu_button(M_Frame, "Điểm vs Năng lực", self.plot_point_rating, 200)
+        self.create_menu_button(
+            M_Frame, "Điểm vs Năng lực", self.plot_point_rating, 200)
         self.create_menu_button(M_Frame, "Cá nhân", self.plot_personal, 250)
-        self.create_menu_button(M_Frame, "Điểm vs Tuổi", self.plot_point_old, 300)
+        self.create_menu_button(M_Frame, "Điểm vs Tuổi",
+                                self.plot_point_old, 300)
         self.create_menu_button(M_Frame, "Quay về", self.exit_program, 350)
 
     def create_content_frame(self):
@@ -92,7 +95,6 @@ class ViewPage:
         # Dùng relwidth và relheight để mở rộng theo kích thước cửa sổ
         # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
         self.content_frame.place(x=170, y=80, width=830, height=470)
-
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
@@ -106,6 +108,10 @@ class ViewPage:
         """Xóa nội dung trong khung hiển thị nội dung."""
         for widget in self.content_frame.winfo_children():
             widget.destroy()
+
+    def plot_grade_btn(self, filepath):
+        """Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu."""
+        plot_grade_btn(filepath)
 
     def read(self):
         """Hàm cho chức năng Read - Hiển thị dữ liệu trong file ra bảng trong cửa sổ hiện tại."""
@@ -158,42 +164,81 @@ class ViewPage:
             messagebox.showerror("Lỗi", f"Không tìm thấy file: {file_path}")
         except Exception as e:
             messagebox.showerror("Lỗi", f"Có lỗi xảy ra: {e}")
-    
+
+    def plot_grade_detail(self, FILE_PATH):
+        plot_grade_btn(FILE_PATH)
+
+    def plot_conuntry_detail(self, FILE_PATH):
+        plot_country_btn(FILE_PATH)
+
+    def plot_age_detail(self, FILE_PATH):
+        plot_age_btn(FILE_PATH)
+
+    def plot_gender_detail(self, FILE_PATH):
+        plot_gender_btn(FILE_PATH)
+
+
+    def plot_point_old_detail(self, FILE_PATH):
+        plot_point_old_btn(FILE_PATH)
+
+    def plot_personal_detail(self, FILE_PATH):
+        plot_personal_btn(FILE_PATH)
+
+    def plot_point_rating_detail(self, FILE_PATH):
+        plot_point_rating_btn(FILE_PATH)
+
     def plot_grade(self):
-        self.clear_content_frame()
+        """Vẽ biểu đồ điểm học tập trung bình"""
+        self.clear_content_frame()  # Xóa tất cả widget trong content_frame
         FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
         plot_grade(FILE_PATH, self.content_frame)
+
+        # lambda: hàm vô danh, không tên, không cần khai báo trước, chỉ sử dụng 1 lần
+        # Tạo các nút động
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_grade_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
 
     def plot_country(self):
         self.clear_content_frame()
         FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
         plot_country(FILE_PATH, self.content_frame)
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_conuntry_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
 
     def plot_age(self):
         self.clear_content_frame()
         FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
         plot_age(FILE_PATH, self.content_frame)
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_age_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
 
     def plot_gender(self):
         self.clear_content_frame()
         FILE_PATH = 'data/data_clean.csv'  # Đường dẫn tới file CSV
         plot_gender(FILE_PATH, self.content_frame)
-    
-    def plot_point_rating(self):
-        self.clear_content_frame()
-        FILE_PATH = 'data/data_clean.csv'
-        plot_point_rating(FILE_PATH, self.content_frame)
-    
-    def plot_personal(self):
-        self.clear_content_frame()
-        FILE_PATH = 'data/data_clean.csv'
-        plot_personal(FILE_PATH, self.content_frame)
-    
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_gender_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
+
     def plot_point_old(self):
         self.clear_content_frame()
         FILE_PATH = 'data/data_clean.csv'
         plot_point_old(FILE_PATH, self.content_frame)
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_point_old_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
 
+    def plot_personal(self):
+        self.clear_content_frame()
+        FILE_PATH = 'data/data_clean.csv'
+        plot_personal(FILE_PATH, self.content_frame)
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_personal_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
+
+    def plot_point_rating(self):
+        self.clear_content_frame()
+        FILE_PATH = 'data/data_clean.csv'
+        plot_point_rating(FILE_PATH, self.content_frame)
+        Button(self.content_frame, text="Detail", command=lambda: self.plot_point_rating_detail("data/data_clean.csv"),
+               width=15).place(x=90, y=4, height=30, width=100)
 
     def exit_program(self):
         """Hàm cho chức năng Exit - Thoát chương trình."""
