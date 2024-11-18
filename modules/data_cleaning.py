@@ -52,8 +52,6 @@ def correct_formatting(df):
     for col in columns_int:
         if col in df.columns:
             df[col] = pd.Series(df[col], dtype=pd.Int64Dtype())
-            df[col] = abs(df[col])
-
     return df
 
 def save_to_cleaned_data_file(filepath, result_df):
