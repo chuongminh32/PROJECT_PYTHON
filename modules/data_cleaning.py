@@ -7,6 +7,9 @@ def handle_missing_value(df):
       và thay thế tuổi bị thiếu bằng tuổi trung bình.
     - Xóa các hàng có giá trị 'id' bị thiếu.
     """
+    #Loại bỏ record khi không chứa id
+    df = df.dropna(subset=['id'])
+
     # Điền dữ liệu chuỗi bị thiếu bằng 'No infor'
     columns_str = ['name', 'nationality', 'city', 'gender']
     for col in columns_str:
