@@ -85,9 +85,10 @@ def remove_duplicates(FILE_PATH, FILE_CLEAN_DATA_PATH):
     return 1
 
 
-def correct_formatting(df):
+def correct_formatting(FILE_PATH):
     """Sửa định dạng dữ liệu, làm cho cột 'age' và các cột đánh giá thành số nguyên không âm."""
-    # Chuyển đổi 'age' thành số nguyên dương
+    df = pd.read_csv(FILE_PATH)
+   # Chuyển đổi 'age' thành số nguyên dương
     if 'age' in df.columns:
         df['age'] = pd.Series(df['age'], dtype=pd.Int64Dtype())
         df['age'] = abs(df['age'])
@@ -95,8 +96,7 @@ def correct_formatting(df):
     # Đảm bảo các cột đánh giá là số nguyên không âm từ 0 đến 5
     columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
     for col in columns_int:
-        if col in df.columns:
-            df[col] = abs(df[col])%6
+        df[col] = pd.Series(df[col], dtype=pd.Int64Dtype())
     save_to_cleaned_data_file(FILE_CLEAN_DATA_PATH, df)
 
     return df
@@ -120,22 +120,22 @@ thứ 2, 3, 4 truyền FILE_CLEAN_DATA_PATH
 
 # Chạy demo
 if __name__ == "__main__":
-    FILE_CLEAN_DATA_PATH = r"data\data_clean.csv"
+    FILE_CLEAN_DATA_PATH = "data\data_clean.csv"
     # Đường dẫn đến file dataset_demo.csv
-    dataset_path = r"data\student-dataset.csv"  # Đường dẫn tuyệt đối tới file dữ liệu nguồn
+    dataset_path = "data\student-dataset.csv"  # Đường dẫn tuyệt đối tới file dữ liệu nguồn
     print("Data source path:", dataset_path)
     
     # Bước 1: Xóa các bản ghi trùng lặp
-    df_no_duplicates = remove_duplicates(dataset_path, FILE_CLEAN_DATA_PATH)
+    # df_no_duplicates = remove_duplicates(dataset_path, FILE_CLEAN_DATA_PATH)
     
-    # Bước 2: Xử lý các giá trị bị thiếu
-    df_cleaned = handle_missing_value(dataset_path, FILE_CLEAN_DATA_PATH)
+    # # Bước 2: Xử lý các giá trị bị thiếu
+    # df_cleaned = handle_missing_value(dataset_path, FILE_CLEAN_DATA_PATH)
     
     # Bước 3: Sửa định dạng dữ liệu
-    df_corrected = correct_formatting(df_cleaned)
+    df_corrected = correct_formatting(FILE_CLEAN_DATA_PATH)
     
     # Lưu dữ liệu đã sửa định dạng
-    save_to_cleaned_data_file(FILE_CLEAN_DATA_PATH, df_corrected)
+    # save_to_cleaned_data_file(FILE_CLEAN_DATA_PATH, df_corrected)
 
 # remove_duplicates("data\dataset_demo.csv") #xóa comment để chạy demo
 # handle_missing_value(FILE_CLEAN_DATA_PATH) #xóa comment để chạy demo

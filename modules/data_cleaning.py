@@ -51,6 +51,7 @@ def correct_formatting(df):
     columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
     for col in columns_int:
         df[col] = pd.Series(df[col], dtype=pd.Int64Dtype())
+        df[col] = df[col].apply(lambda x: x if 0 <= x <= 5 else 0)
     return df
 
 def save_to_cleaned_data_file(filepath, result_df):
