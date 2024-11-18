@@ -51,7 +51,8 @@ def correct_formatting(df):
     columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
     for col in columns_int:
         if col in df.columns:
-            df[col] = abs(df[col]) % 6
+            df[col] = pd.Series(df[col], dtype=pd.Int64Dtype())
+            df[col] = abs(df[col])
 
     return df
 
