@@ -53,7 +53,7 @@ def correct_formatting(df):
     #     df[col] = pd.Series(df[col], dtype=pd.Int64Dtype())
     #     df[col] = df[col].apply(lambda x: x if 0 <= x <= 5 else 0)
 
-    df['coverletter.rating'] = pd.Series(df['coverletter.rating'], dtype=pd.Int64Dtype())
+    df['coverletter.rating'] = pd.Series(df['coverletter.rating'].values, dtype=pd.Int64Dtype())
     df['coverletter.rating'] = df['coverletter.rating'].apply(lambda x: x if 0 <= x <= 5 else 0)
     return df
 
