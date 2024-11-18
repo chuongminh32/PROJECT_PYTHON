@@ -34,7 +34,7 @@ def initialize_root():
 
 
 def add_background(root):
-    img = PhotoImage(file="images/sign_up3.png")
+    img = PhotoImage(file="images/sign_up.png")
     Label(root, image=img, bg="white", border=0).place(
         x=50, y=50, width=450, height=450)
     root.bg_image = img  # giữ tham chiếu để tránh bị xóa khỏi bộ nhớ
@@ -55,8 +55,6 @@ def add_logo_and_heading(frame):
           bg="white", fg="#1C2442").place(x=80, y=15)
 
 # hàm add_entry() nhận thêm tham số show để ẩn mật khẩu
-
-
 def add_entry(frame, placeholder, y, show=""):
     entry = Entry(frame, width=35, fg='#1C2442', border=0,
                   bg="white", font=("Arial", 11), show=show)
@@ -77,8 +75,6 @@ def add_entry(frame, placeholder, y, show=""):
     return entry
 
 # hàm add_signup_button() nhận thêm tham số username, password, confirm_password để kiểm tra thông tin nhập vào
-
-
 def add_signup_button(frame, username, password, confirm_password):
     def signup():
         user = username.get()  # Lấy tên người dùng từ ô nhập liệu
@@ -89,9 +85,8 @@ def add_signup_button(frame, username, password, confirm_password):
             # Hiển thị thông báo lỗi
             messagebox.showerror("Sign Up", "Vui lòng điền đầy đủ thông tin.")
             return
-
         try:
-            # Mở (hoặc tạo) file users.txt trong chế độ append
+            # Mở (hoặc tạo) file users.txt trong chế độ đọc và ghi
             with open("data/users.txt", "a+") as file:
                 file.seek(0)  # Đưa con trỏ về đầu file
                 data = file.read() or "{}"  # Đọc dữ liệu từ file, nếu rỗng thì gán là dict rỗng
@@ -105,13 +100,17 @@ def add_signup_button(frame, username, password, confirm_password):
 
                 if pwd == confirm_pwd:  # Kiểm tra nếu mật khẩu và mật khẩu xác nhận khớp
                     users[user] = pwd  # Thêm người dùng mới vào dict
-                    file.seek(0)
-                    file.truncate()  # Xóa nội dung file trước khi ghi mới
-                    file.write(str(users))  # Ghi dict người dùng vào file
+                    
+                    # Mở lại file ở chế độ ghi để cập nhật dữ liệu mới mà không xóa thông tin cũ
+                    with open("data/users.txt", "w") as file_write:
+                        file_write.write(str(users))  # Ghi dict người dùng vào file
 
                     # Hiển thị thông báo thành công
                     messagebox.showinfo(
                         "Sign Up", "Đăng ký thành công! Chuyển đến trang đăng nhập.")
+                    root.destroy()
+                    subprocess.run(["python", "gui/login_page.py"])
+
                 else:
                     # Hiển thị thông báo lỗi nếu mật khẩu không khớp
                     messagebox.showerror(

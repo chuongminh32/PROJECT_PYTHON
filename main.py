@@ -1,5 +1,5 @@
-import subprocess
-import sys
+import subprocess # Thư viện subprocess giúp chạy lệnh terminal từ Python
+import sys # Thư viện sys giúp truy cập các biến môi trường và hàm tương tác với hệ thống
 
 # Danh sách các thư viện cần cài đặt
 REQUIRED_LIBRARIES = [
