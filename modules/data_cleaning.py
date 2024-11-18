@@ -44,7 +44,7 @@ def correct_formatting(df):
     """Sửa định dạng dữ liệu, làm cho cột 'age' và các cột đánh giá thành số nguyên không âm."""
     # Chuyển đổi 'age' thành số nguyên dương
     if 'age' in df.columns:
-        df['age'] = pd.Series(df['age'], dtype=pd.Int64Dtype())
+        df['age'] = pd.to_numeric(df['age'], errors='coerce').fillna(0).astype(int)
         df['age'] = abs(df['age'])
 
     # Đảm bảo các cột đánh giá là số nguyên không âm từ 0 đến 5
