@@ -1071,4 +1071,4 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 2300,Aarti,India,Delhi,41.54,18.99,F,Hindu,20,1.3,1.0,2.3,3.9,4,1.0,4
 2226,Zhang Min,China,Shenzhen,-63.03,119.55,M,Han,24,1.3,2.6,4.5,1.6,5,1.0,5
 1990,Yumiko,Japan,Tokyo,-12.64,-56.04,M,Japanese,18,2.0,2.4,1.6,3.3,3,1.0,1
-1999,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1.0,4
+,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1.0,4
