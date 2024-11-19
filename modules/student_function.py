@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def show_top_students(df):
-    return df.nlargest(10, new_column)
+def show_top_students(df, column_name):
+    return df.nlargest(10, column_name)
     
 # sắp xếp giảm dần theo GPA
 def sort_desc_gpa():

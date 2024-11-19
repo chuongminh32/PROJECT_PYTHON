@@ -250,7 +250,7 @@ class Student:
             messagebox.showerror("Lỗi", "Không có dữ liệu để hiển thị.")
             return
         df[new_column] = df[columns].sum(axis=1)
-        top_students = show_top_students(df)
+        top_students = show_top_students(df, new_column)
         self.create_treeview(self.content_frame, top_students, title)
 
     def show_top_students(self):
