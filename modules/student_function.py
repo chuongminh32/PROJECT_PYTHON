@@ -1,30 +1,24 @@
 import csv
-import tkinter as tk
-from tkinter import ttk
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-class Student:
-    def __init__(self, student_id, name, country, total_score):
-        self.student_id = student_id
-        self.name = name
-        self.country = country
-        self.total_score = total_score
-
-def read_students_from_csv(file_path):
-    students = []
-    with open(file_path, newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            student_id = int(row['id'])
-            name = row['name']
-            country = row['nationality']
-            total_score = sum(float(row[subject]) for subject in ['english.grade', 'math.grade', 'sciences.grade', 'language.grade'])
-            students.append(Student(student_id, name, country, total_score))
-    return students
-
+def show_top_students(df):
+    return df.nlargest(10, new_column)
+    
+# sắp xếp giảm dần theo GPA
 def sort_desc_gpa():
+    """
+    Sắp xếp dữ liệu sinh viên theo điểm GPA giảm dần và lưu vào file CSV mới.
+    Hàm này thực hiện các bước sau:
+    1. Đọc dữ liệu từ file CSV "data/data_clean.csv".
+    2. Điền giá trị 0 vào các ô trống trong các cột GPA.
+    3. Tính điểm GPA trung bình cho mỗi sinh viên.
+    4. Sắp xếp dữ liệu theo điểm GPA giảm dần.
+    5. Lưu dữ liệu đã sắp xếp vào file CSV mới "data/sorted_by_gpa.csv".
+    Returns:
+        bool: Trả về True nếu quá trình hoàn tất thành công, ngược lại trả về False nếu có lỗi xảy ra.
+    """
     try:
         # Đọc dữ liệu từ file CSV
         df = pd.read_csv("data/data_clean.csv")
@@ -50,6 +44,7 @@ def sort_desc_gpa():
         print(f"Lỗi: {e}")
         return False  # Trả về False nếu xảy ra lỗi
 
+# sắp xếp tăng dần theo tuổi
 def sort_increase_age():
     try:
         # Đọc dữ liệu từ file CSV
@@ -69,7 +64,7 @@ def sort_increase_age():
         print(f"Lỗi: {e}")
         return False  # Trả về False nếu xảy ra lỗi
 
-# chart
+# biểu đồ phân bố điểm số
 def plot_distribution(data_path, subject):
     df = pd.read_csv(data_path)
     grades = df[subject]
@@ -83,8 +78,7 @@ def plot_distribution(data_path, subject):
     plt.grid()
     plt.show()
 
-
-
+# biểu đồ tương quan giữa các yếu tố
 def plot_correlation(data_path):
     df = pd.read_csv(data_path)
     correlation_matrix = df[['english.grade', 'math.grade', 'sciences.grade', 'language.grade', 'age']].corr()
@@ -94,6 +88,3 @@ def plot_correlation(data_path):
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
     plt.title("Ma trận tương quan giữa các yếu tố")
     plt.show()
-
-
-

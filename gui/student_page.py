@@ -11,7 +11,58 @@ import matplotlib.pyplot as plt
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data
-from modules.student_function import sort_desc_gpa, sort_increase_age, plot_distribution, plot_correlation
+from modules.student_function import sort_desc_gpa, sort_increase_age, plot_distribution, plot_correlation, show_top_students
+"""
+Mô tả:
+    Đây là một trang quản lý sinh viên được xây dựng bằng thư viện Tkinter trong Python. 
+    Trang này cho phép người dùng xem, lọc, sắp xếp và hiển thị biểu đồ dữ liệu sinh viên.
+Thư viện sử dụng:
+    - tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - tkinter.messagebox: Thư viện con của tkinter để hiển thị các hộp thoại thông báo.
+    - tkinter.ttk: Thư viện con của tkinter để tạo các widget nâng cao.
+    - subprocess: Thư viện để chạy các tiến trình con.
+    - os: Thư viện cung cấp nhiều chức năng liên quan đến hệ điều hành.
+    - PIL (Pillow): Thư viện xử lý hình ảnh.
+    - pandas: Thư viện để xử lý dữ liệu.
+    - matplotlib: Thư viện để vẽ biểu đồ.
+Lớp:
+    - Student: Lớp đại diện cho trang quản lý sinh viên.
+Phương thức của lớp Student:
+    - __init__(self, root): Khởi tạo đối tượng Student.
+    - setup_window(self): Thiết lập cửa sổ chính của ứng dụng.
+    - create_logo(self): Thêm logo vào cửa sổ chính.
+    - create_menu(self): Tạo menu chức năng cho ứng dụng.
+    - create_content_frame(self): Tạo khung nội dung để hiển thị dữ liệu.
+    - create_menu_button(self, parent, text, command, y_position): Tạo các nút trong menu.
+    - clear_content_frame(self): Xóa nội dung hiện tại trong khung nội dung.
+    - read(self, file_path="data/data_clean.csv", title="DANH SÁCH SINH VIÊN"): Đọc và hiển thị dữ liệu từ file CSV.
+    - create_treeview(self, parent_frame, dataframe, title): Tạo bảng hiển thị dữ liệu.
+    - plot_distribution(self, filepath, column_name): Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu.
+    - chart(self): Hiển thị giao diện các biểu đồ.
+    - stu_filter(self): Hiển thị giao diện lọc sinh viên.
+    - search_by_field(self): Tìm kiếm sinh viên theo trường và giá trị nhập vào.
+    - show_top_total(self): Hiển thị giao diện top sinh viên có tổng điểm cao nhất.
+    - top_rating(self): Hiển thị top sinh viên có tổng điểm đánh giá cao nhất.
+    - top_grade(self): Hiển thị top sinh viên có tổng điểm các môn cao nhất.
+    - top_grade_rating(self): Hiển thị top sinh viên có tổng điểm đánh giá và môn học cao nhất.
+    - show_top_students_by_column(self, columns, new_column, title): Hiển thị top sinh viên theo cột chỉ định.
+    - show_top_students(self): Hiển thị giao diện top sinh viên điểm cao.
+    - top_10_math(self): Hiển thị top 10 sinh viên điểm toán cao nhất.
+    - top_10_science(self): Hiển thị top 10 sinh viên điểm khoa học cao nhất.
+    - top_10_english(self): Hiển thị top 10 sinh viên điểm tiếng anh cao nhất.
+    - top_10_language(self): Hiển thị top 10 sinh viên điểm ngôn ngữ cao nhất.
+    - top_10_portfolio(self): Hiển thị top 10 sinh viên điểm đánh giá hồ sơ cao nhất.
+    - top_10_coverletter(self): Hiển thị top 10 sinh viên điểm đánh giá thư xin việc cao nhất.
+    - top_10_refletter(self): Hiển thị top 10 sinh viên điểm đánh giá thư giới thiệu cao nhất.
+    - sort_stu(self): Hiển thị giao diện sắp xếp sinh viên.
+    - sort_by_age(self): Sắp xếp sinh viên theo tuổi.
+    - sort_by_avg(self): Sắp xếp sinh viên theo GPA.
+    - sort_and_display(self, file_path, title, sort_function): Sắp xếp và hiển thị dữ liệu sinh viên.
+    - exit_program(self): Thoát khỏi chương trình và quay về trang chủ.
+Hàm:
+    - main(): Hàm chính để khởi chạy ứng dụng.
+"""
+
 
 class Student:
     def __init__(self, root):
@@ -20,7 +71,7 @@ class Student:
         self.create_logo()
         self.create_menu()
         self.create_content_frame()
-        root.resizable(False, False)
+        # root.resizable(False, False)
 
     def setup_window(self):
         self.root.title("Hệ thống quản lý sinh viên")
@@ -31,7 +82,7 @@ class Student:
         logo_path = os.path.join("images", "logo_fit.png")
         logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS)
         self.logo_dash = ImageTk.PhotoImage(logo_image)
-        Label(self.root, text="Sinh Viên", image=self.logo_dash, padx=10, compound=LEFT,
+        Label(self.root, text="Thống kê", image=self.logo_dash, padx=10, compound=LEFT,
               bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
 
     def create_menu(self):
@@ -51,6 +102,7 @@ class Student:
     def create_content_frame(self):
         self.content_frame = Frame(self.root, bg="lightgrey")
         self.content_frame.place(x=200, y=80, width=800, height=470)
+        # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
 
     def create_menu_button(self, parent, text, command, y_position):
         button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"),
@@ -82,10 +134,10 @@ class Student:
             widget.destroy()
         title_label = tk.Label(parent_frame, text=title, font=("Arial", 17, "bold"), bg="lightgrey")
         title_label.pack(padx=5, pady=5)
-        if "TOTAL" in title:
+        if "TỔNG" in title:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_total)
             back_btn.place(x=10, y=10)
-        elif title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO TUỔI" or title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO ĐIỂM":
+        elif title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO TUỔI" or title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO GPA":
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.sort_stu)
             back_btn.place(x=10, y=10)
         else:
@@ -173,7 +225,7 @@ class Student:
 
     def show_top_total(self):
         self.clear_content_frame()
-        tk.Label(self.content_frame, text="TOP STUDENT TOTAL SCORE AND RATING", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
+        tk.Label(self.content_frame, text="TOP SINH VIÊN CÓ TỔNG ĐIỂM CAO NHẤT", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
         buttons = [
             ("Top sinh viên có tổng điểm đáng giá cao nhất", self.top_rating),
             ("Top sinh viên có tổng điểm các môn cao nhất", self.top_grade),
@@ -183,13 +235,13 @@ class Student:
             tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=15)
 
     def top_rating(self):
-        self.show_top_students_by_column(['portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_rating', "TOP 10 STUDENTS - TOTAL RATING")
+        self.show_top_students_by_column(['portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_rating', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM ĐÁNH GIÁ CAO NHẤT")
 
     def top_grade(self):
-        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade'], 'total_grade', "TOP 10 STUDENTS - TOTAL GRADE")
+        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade'], 'total_grade', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM MÔN HỌC CAO NHẤT")
 
     def top_grade_rating(self):
-        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade', 'portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_grade_rating', "TOP 10 STUDENTS - TOTAL POINT AND RATING")
+        self.show_top_students_by_column(['sciences.grade', 'math.grade', 'language.grade', 'english.grade', 'portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_grade_rating', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM CAO NHẤT")
 
     def show_top_students_by_column(self, columns, new_column, title):
         self.clear_content_frame()
@@ -198,12 +250,12 @@ class Student:
             messagebox.showerror("Lỗi", "Không có dữ liệu để hiển thị.")
             return
         df[new_column] = df[columns].sum(axis=1)
-        top_students = df.nlargest(10, new_column) # top 10 students
+        top_students = show_top_students(df)
         self.create_treeview(self.content_frame, top_students, title)
 
     def show_top_students(self):
         self.clear_content_frame()
-        tk.Label(self.content_frame, text="TOP STUDENT BEST SCORE", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
+        tk.Label(self.content_frame, text="TOP SINH VIÊN ĐIỂM CAO", font=("Arial", 17, "bold"), bg="lightgrey").pack(pady=10)
         buttons = [
             ("Top 10 sinh viên điểm toán cao nhất", self.top_10_math),
             ("Top 10 sinh viên điểm khoa học cao nhất", self.top_10_science),
@@ -217,25 +269,25 @@ class Student:
             tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=15)
 
     def top_10_math(self):
-        self.show_top_students_by_column(['math.grade'], 'math.grade', "TOP 10 STUDENTS - MATH GRADE")
+        self.show_top_students_by_column(['math.grade'], 'math.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN TOÁN")
 
     def top_10_science(self):
-        self.show_top_students_by_column(['sciences.grade'], 'sciences.grade', "TOP 10 STUDENTS - SCIENCE GRADE")
+        self.show_top_students_by_column(['sciences.grade'], 'sciences.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN KHOA HỌC")
 
     def top_10_english(self):
-        self.show_top_students_by_column(['english.grade'], 'english.grade', "TOP 10 STUDENTS - ENGLISH GRADE")
+        self.show_top_students_by_column(['english.grade'], 'english.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN ANH")
 
     def top_10_language(self):
-        self.show_top_students_by_column(['language.grade'], 'language.grade', "TOP 10 STUDENTS - LANGUAGE GRADE")
+        self.show_top_students_by_column(['language.grade'], 'language.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN NGÔN NGỮ")
 
     def top_10_portfolio(self):
-        self.show_top_students_by_column(['portfolio.rating'], 'portfolio.rating', "TOP 10 STUDENTS - PORTFOLIO RATING")
+        self.show_top_students_by_column(['portfolio.rating'], 'portfolio.rating', "TOP 10 SINH VIÊN CÓ ĐIỂM CAO ĐÁNH GIÁ HỒ SƠ CÁ NHÂN")
 
     def top_10_coverletter(self):
-        self.show_top_students_by_column(['coverletter.rating'], 'coverletter.rating', "TOP 10 STUDENTS - COVERLETTER RATING")
+        self.show_top_students_by_column(['coverletter.rating'], 'coverletter.rating', "TOP 10 SINH VIÊN CÓ ĐIỂM CAO ĐÁNH GIÁ  THƯ XIN VIỆC")
 
     def top_10_refletter(self):
-        self.show_top_students_by_column(['refletter.rating'], 'refletter.rating', "TOP 10 STUDENTS - REFLETTER RATING")
+        self.show_top_students_by_column(['refletter.rating'], 'refletter.rating', "TOP 10 SINH VIÊN CÓ ĐIỂM CAO ĐÁNH GIÁ THƯ GIỚI THIỆU")
 
     def sort_stu(self):
         self.clear_content_frame()

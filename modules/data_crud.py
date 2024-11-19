@@ -3,15 +3,9 @@ import os
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-def read_data(file_path = "data/data_clean.csv"):
+def read_data(file_path):
     """
     Đọc dữ liệu từ file CSV và trả về danh sách các hàng.
-    
-    Args:
-        file_path (str): Đường dẫn đến file CSV.
-
-    Returns:
-        list: Danh sách các hàng dữ liệu từ file CSV hoặc None nếu có lỗi hoặc không có dữ liệu.
     """
     try:
         with open(file_path, newline='', encoding='utf-8') as csvfile:
