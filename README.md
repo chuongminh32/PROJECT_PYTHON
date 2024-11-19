@@ -3,17 +3,17 @@
 ### Thành viên 1
 - **Họ và tên**: Phạm Hàn Minh Chương.
 - **MSSV**: 23110187.
-- **Vai trò**: Leader, Quản lí dự án, lên kế hoạch, điều phối nhóm, code GUI [FE].
+- **Vai trò**:  code GUI, chức năng CRUD, Leader, Quản lí dự án, lên kế hoạch, điều phối nhóm,.
 
 ### Thành viên 2
 - **Họ và tên**: Nguyễn Thanh Bình Minh.
 - **MSSV**: 23110266.
-- **Vai trò**: BE, Code chức năng CRUD, làm sạch data.
+- **Vai trò**: Code chức năng Cleaning data, thống kê dữ liệu, sắp xếp dữ liệu.
 
 ### Thành viên 3
 - **Họ và tên**: Nguyễn Thị Thanh Thùy.
 - **MSSV**: 23110336.
-- **Vai trò**: BE, Vẽ biểu đồ, chuẩn hóa thống nhất data, Tester.
+- **Vai trò**: Code chức năng trực quan dữ liệu, vẽ biểu đồ, chuẩn hóa thống nhất data(nếu có), phân tích dữ liệu.
 
 * Cấu trúc thư mục đồ án:
     PROJECT_PYTHON/
