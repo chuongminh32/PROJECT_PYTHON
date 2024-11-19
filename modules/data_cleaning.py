@@ -47,6 +47,9 @@ def correct_formatting(df):
         df['age'] = pd.to_numeric(df['age'], errors='coerce').fillna(0).astype(int)
         df['age'] = abs(df['age'])
 
+    if 'id' in df.columns:
+        df['id'] = pd.to_numeric(df['id'], errors='coerce').fillna(0).astype(int)
+
     # Đảm bảo các cột đánh giá là số nguyên không âm từ 0 đến 5
     columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
     for col in columns_int:
