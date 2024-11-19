@@ -1,4 +1,4 @@
-import csv
+import csv # Thư viện xử lý file CSV
 import os
 import tkinter as tk
 from tkinter import messagebox, ttk
@@ -45,7 +45,7 @@ def create_data(student_data, file_path):
                              "Sciences Grade", "Language Grade", "Portfolio Rating", 
                              "Cover Letter Rating", "Reference Letter Rating"])
 
-    # Thêm dữ liệu mới vào cuối danh sách (bỏ qua tiêu đề)
+    # Thêm dữ liệu mới vào cuối danh sách (bỏ qua tiêu đề)      
     current_data.append(student_data)
 
     # Ghi lại toàn bộ dữ liệu vào file
@@ -63,7 +63,7 @@ def update_data(student_id, new_info):
         rows = list(reader)
 
     # Kiểm tra và cập nhật dữ liệu
-    for index, row in enumerate(rows):
+    for index, row in enumerate(rows): # Duyệt qua từng hàng
         if str(row[0]).strip() == student_id.strip():  # Kiểm tra ID sinh viên
             # Cập nhật thông tin mới, giữ ID trong cột đầu tiên
             rows[index] = [student_id] + new_info[1:]  # Giữ lại ID và thay thế các trường còn lại
