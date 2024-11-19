@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from modules.data_crud import read_data
-from modules.student_function import sort_desc_gpa, sort_increase_age, plot_distribution, plot_correlation
+from modules.student_function import sort_desc_gpa, sort_increase_age, plot_distribution, plot_correlation, show_top_students
 """
 Mô tả:
     Đây là một trang quản lý sinh viên được xây dựng bằng thư viện Tkinter trong Python. 
@@ -71,7 +71,7 @@ class Student:
         self.create_logo()
         self.create_menu()
         self.create_content_frame()
-        root.resizable(False, False)
+        # root.resizable(False, False)
 
     def setup_window(self):
         self.root.title("Hệ thống quản lý sinh viên")
@@ -82,7 +82,7 @@ class Student:
         logo_path = os.path.join("images", "logo_fit.png")
         logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS)
         self.logo_dash = ImageTk.PhotoImage(logo_image)
-        Label(self.root, text="Sinh Viên", image=self.logo_dash, padx=10, compound=LEFT,
+        Label(self.root, text="Thống kê", image=self.logo_dash, padx=10, compound=LEFT,
               bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
 
     def create_menu(self):
@@ -102,6 +102,7 @@ class Student:
     def create_content_frame(self):
         self.content_frame = Frame(self.root, bg="lightgrey")
         self.content_frame.place(x=200, y=80, width=800, height=470)
+        # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
 
     def create_menu_button(self, parent, text, command, y_position):
         button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"),
@@ -136,7 +137,7 @@ class Student:
         if "TỔNG" in title:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_total)
             back_btn.place(x=10, y=10)
-        elif title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO TUỔI" or title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO ĐIỂM":
+        elif title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO TUỔI" or title == "DANH SÁCH SINH VIÊN SẮP XẾP THEO GPA":
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.sort_stu)
             back_btn.place(x=10, y=10)
         else:
@@ -249,7 +250,7 @@ class Student:
             messagebox.showerror("Lỗi", "Không có dữ liệu để hiển thị.")
             return
         df[new_column] = df[columns].sum(axis=1)
-        top_students = df.nlargest(10, new_column) # top 10 students
+        top_students = show_top_students(df)
         self.create_treeview(self.content_frame, top_students, title)
 
     def show_top_students(self):

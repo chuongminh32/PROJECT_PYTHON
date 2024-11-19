@@ -4,6 +4,31 @@ from PIL import Image, ImageTk
 import os
 import subprocess
 
+"""
+Mô tả:
+    Đây là một trang chủ được xây dựng bằng thư viện Tkinter trong Python. 
+    Trang chủ này cung cấp giao diện người dùng để quản lý sinh viên với các chức năng như quản lý, trực quan, sinh viên, đăng xuất và thoát chương trình.
+Thư viện sử dụng:
+    - tkinter: Thư viện GUI tiêu chuẩn của Python.
+    - tkinter.messagebox: Thư viện con của tkinter để hiển thị các hộp thoại thông báo.
+    - subprocess: Thư viện để chạy các tiến trình con.
+    - os: Thư viện cung cấp nhiều chức năng liên quan đến hệ điều hành.
+    - PIL (Pillow): Thư viện xử lý hình ảnh.
+Lớp:
+    - HomePage: Lớp đại diện cho trang chủ.
+Phương thức của lớp HomePage:
+    - __init__(self, root): Khởi tạo đối tượng HomePage.
+    - setup_window(self): Thiết lập cửa sổ chính của ứng dụng.
+    - create_logo(self): Tạo và hiển thị logo trên trang chủ.
+    - create_menu(self): Tạo và hiển thị menu với các chức năng quản lý.
+    - create_menu_button(self, parent, text, command, y_position): Tạo các nút trong menu.
+    - manage(self): Chuyển đến trang quản lý.
+    - show_view(self): Chuyển đến trang trực quan.
+    - logout(self): Xử lý đăng xuất khỏi hệ thống.
+    - stu(self): Chuyển đến trang sinh viên.
+    - exit_program(self): Thoát khỏi chương trình.
+    - run_subprocess(self, script): Chạy một tiến trình con để mở một script khác.
+"""
 class HomePage:
     def __init__(self, root):
         self.root = root
@@ -28,7 +53,7 @@ class HomePage:
         M_Frame = LabelFrame(self.root, text="Menu", bg="white", font=("Arial", 12, "bold"))
         M_Frame.place(x=0, y=80, width=200, relheight=1)
         menu_items = [("Quản lí", self.manage), ("Trực quan", self.show_view), 
-                      ("Sinh viên", self.stu), ("Đăng xuất", self.logout), ("Thoát", self.exit_program)]
+                      ("Thống kê", self.stu), ("Đăng xuất", self.logout), ("Thoát", self.exit_program)]
         for i, (text, command) in enumerate(menu_items):
             self.create_menu_button(M_Frame, text, command, i * 75)
         self.bg_Home = ImageTk.PhotoImage(Image.open("images/bg_home.png").resize((800, 470), Image.LANCZOS))

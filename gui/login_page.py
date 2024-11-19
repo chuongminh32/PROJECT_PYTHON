@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import subprocess
+import subprocess 
 import os
 from PIL import Image, ImageTk
 import ast
@@ -107,19 +107,13 @@ class LoginPage:
                     with open("data/users.txt", "r") as f:
                         users = ast.literal_eval(f.read())  # Đọc dữ liệu người dùng từ tệp
                     if u in users and users[u] == p:  # Kiểm tra nếu tên người dùng và mật khẩu hợp lệ
-                        if u == "admin" and p == "111":  # Kiểm tra nếu là admin
-                            messagebox.showinfo("Login", "Hi Admin !")  # Thông báo với admin
-                            self.root.destroy()  # Đóng cửa sổ đăng nhập
-                            subprocess.run(["python", "gui/home_page.py"])  # Mở trang chủ
-                        else:
-                            messagebox.showinfo(
-                                "Login", "Đăng nhập thành công")  # Thông báo đăng nhập thành công
-                            self.root.destroy()  # Đóng cửa sổ đăng nhập
-                            subprocess.run(["python", "gui/home_page.py"])  # Mở trang chủ
+                        messagebox.showinfo("Login", " Đăng nhập thành công!")  # Thông báo với admin
+                        self.root.destroy()  # Đóng cửa sổ đăng nhập
+                        subprocess.run(["python", "gui/home_page.py"])  # Mở trang chủ
                     else:
                         messagebox.showerror(
                             "Login", "Tên người dùng hoặc mật khẩu không đúng")  # Thông báo nếu đăng nhập sai
-                except Exception as e:
+                except Exception as e:  
                     messagebox.showerror(
                         "Error", f"Có lỗi xảy ra khi đọc file: {str(e)}")  # Thông báo lỗi khi đọc tệp
             else:
@@ -128,7 +122,7 @@ class LoginPage:
 
         btn_signup = Button(self.frame, width=26, height=2, border=0, text="Sign In", bg="#1C2442", fg="white",
                             font=("Arial", 13, "bold"), command=signin)  # Tạo nút đăng nhập
-        btn_signup.place(x=30, y=220)  # Đặt nút vào khung
+        btn_signup.place(x=30, y=220)  # Đặt nút vào khung  đăng nhập
         btn_signup.bind("<Enter>", lambda e: btn_signup.config(
             bg="grey", fg="#1C2442", cursor="hand2"))  # Thay đổi màu khi di chuột vào nút
         btn_signup.bind("<Leave>", lambda e: btn_signup.config(

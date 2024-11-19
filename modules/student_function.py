@@ -3,6 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+def show_top_students(df):
+    return df.nlargest(10, new_column)
+    
 # sắp xếp giảm dần theo GPA
 def sort_desc_gpa():
     """

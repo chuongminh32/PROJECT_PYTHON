@@ -67,7 +67,7 @@ class ViewPage:
         self.create_menu()
         self.create_content_frame()
         self.canvas = None
-        root.resizable(False, False)  # Cho phép cửa sổ thay đổi kích thước
+        root.resizable(False, False)  # không cho phép cửa sổ thay đổi kích thước
 
     def setup_window(self):
         """Thiết lập cửa sổ chính."""
@@ -77,9 +77,9 @@ class ViewPage:
 
     def create_logo(self):
         """Tạo logo cho ứng dụng."""
-        logo_path = os.path.join("images", "logo_fit.png")
-        logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS)
-        self.logo_dash = ImageTk.PhotoImage(logo_image)
+        logo_path = os.path.join("images", "logo_fit.png") # Đường dẫn đến file ảnh logo
+        logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS) # Mở và thay đổi kích thước ảnh
+        self.logo_dash = ImageTk.PhotoImage(logo_image) # Tạo ảnh từ ảnh đã thay đổi kích thước
 
         Label(self.root, text="Trực Quan", image=self.logo_dash, padx=10, compound=LEFT,
               bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
@@ -126,57 +126,6 @@ class ViewPage:
         """Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu."""
         plot_grade_btn(filepath)
 
-    def read(self):
-        """Hàm cho chức năng Read - Hiển thị dữ liệu trong file ra bảng trong cửa sổ hiện tại."""
-        self.clear_content_frame()  # Xóa nội dung cũ trong khung hiển thị nội dung
-
-        try:
-            file_path = "data/data_clean.csv"  # Đường dẫn đến file CSV
-            data = read_data(file_path)  # Lấy dữ liệu từ file CSV
-
-            if not data:
-                messagebox.showinfo(
-                    "Thông báo", "Không có dữ liệu để hiển thị.")
-                return
-
-            # Tạo thanh cuộn dọc và ngang cho Treeview
-            v_scrollbar = ttk.Scrollbar(self.content_frame, orient="vertical")
-            h_scrollbar = ttk.Scrollbar(
-                self.content_frame, orient="horizontal")
-
-            # Tạo Treeview để hiển thị bảng dữ liệu
-            columns = data[0]  # Lấy hàng đầu tiên làm tên cột
-            tree = ttk.Treeview(self.content_frame, columns=columns, show="headings",
-                                yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
-
-            # Đặt tiêu đề cho mỗi cột và tùy chỉnh độ rộng
-            for col in columns:
-                tree.heading(col, text=col)
-                tree.column(col, anchor='center', width=150)  # Độ rộng cố định
-
-            # Thêm dữ liệu vào bảng
-            for row in data[1:]:
-                tree.insert("", "end", values=row)
-
-            # Đặt Treeview và thanh cuộn vào content_frame
-            tree.grid(row=0, column=0, sticky="nsew")
-            # Cần thêm cột này để thanh cuộn dọc hoạt động
-            v_scrollbar.grid(row=0, column=1, sticky="ns")
-            # Cần thêm hàng này để thanh cuộn ngang hoạt động
-            h_scrollbar.grid(row=1, column=0, sticky="ew")
-
-            # Kết nối thanh cuộn với Treeview
-            v_scrollbar.config(command=tree.yview)  # Cuộn dọc
-            h_scrollbar.config(command=tree.xview)  # Cuộn ngang
-
-            # Thiết lập tỷ lệ mở rộng cho Treeview
-            self.content_frame.grid_rowconfigure(0, weight=1)  # Cột 0
-            self.content_frame.grid_columnconfigure(0, weight=1)  # Hàng 0
-
-        except FileNotFoundError:
-            messagebox.showerror("Lỗi", f"Không tìm thấy file: {file_path}")
-        except Exception as e:
-            messagebox.showerror("Lỗi", f"Có lỗi xảy ra: {e}")
 
     def plot_grade_detail(self, FILE_PATH):
         plot_grade_btn(FILE_PATH)
