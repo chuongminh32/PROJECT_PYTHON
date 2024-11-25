@@ -111,7 +111,7 @@ class ViewPage:
 
     def create_menu_button(self, parent, text, command, y_position):
         """Tạo nút menu."""
-        button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"),
+        button = Button(parent, text=text, border=0, bg="#242533", fg="white", cursor="hand2", font=("Arial", 12, "bold"),
                         command=command)
         button.place(x=0, y=y_position, width=170, height=40)
         button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))

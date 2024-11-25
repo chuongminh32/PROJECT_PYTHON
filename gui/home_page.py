@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import Image, ImageTk
-import os
-import subprocess
+from PIL import Image, ImageTk  
+import os 
+import subprocess 
 
 """
 Mô tả:
@@ -29,6 +29,8 @@ Phương thức của lớp HomePage:
     - exit_program(self): Thoát khỏi chương trình.
     - run_subprocess(self, script): Chạy một tiến trình con để mở một script khác.
 """
+
+
 class HomePage:
     def __init__(self, root):
         self.root = root
@@ -38,29 +40,34 @@ class HomePage:
 
     def setup_window(self):
         self.root.title("Hệ thống quản lý sinh viên")
-        self.root.geometry("1000x550+300+200") # width x height + X + Y (X, Y: vị trí hiển thị cửa sổ)
+        # width x height + X + Y (X, Y: vị trí hiển thị cửa sổ)
+        self.root.geometry("1000x550+300+200")
         self.root.configure(background="white")
         self.root.resizable(False, False)
 
     def create_logo(self):
-        logo_path = os.path.join("images", "logo_fit.png")
-        logo_image = Image.open(logo_path).resize((50, 50), Image.LANCZOS) # LANCZOS: một thuật toán lọc hình ảnh
-        self.logo_dash = ImageTk.PhotoImage(logo_image) # Chuyển hình ảnh sang định dạng hình ảnh của Tkinter
-        Label(self.root, text="Trang chủ", image=self.logo_dash, padx=10, compound=LEFT, 
-              bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80) # relwidth=1: chiếm toàn bộ chiều rộng
+        logo_image = Image.open(os.path.join("images", "logo_fit.png")).resize((50, 50), Image.LANCZOS) # LANCZOS: một thuật toán lọc hình ảnh
+        self.logo_dash = ImageTk.PhotoImage(logo_image) # Chuyển ảnh sang định dạng hình ảnh của Tkinter
+        Label(self.root, text="Trang chủ", image=self.logo_dash, padx=10, compound=LEFT,
+              bg="#1C2442", fg="white", font=("Arial", 24, "bold")).place(x=0, y=0, relwidth=1, height=80)
 
     def create_menu(self):
-        M_Frame = LabelFrame(self.root, text="Menu", bg="white", font=("Arial", 12, "bold"))
+        M_Frame = LabelFrame(self.root, text="Menu",
+                             bg="white", font=("Arial", 12, "bold"))
         M_Frame.place(x=0, y=80, width=200, relheight=1)
-        menu_items = [("Quản lí", self.manage), ("Trực quan", self.show_view), 
+        menu_items = [("Quản lí", self.manage), ("Trực quan", self.show_view),
                       ("Thống kê", self.stu), ("Đăng xuất", self.logout), ("Thoát", self.exit_program)]
-        for i, (text, command) in enumerate(menu_items): # enumerate: lấy cả index và giá trị của một phần tử
-            self.create_menu_button(M_Frame, text, command, i * 75) # i * 75: mỗi nút cách nhau 75 đơn vị y
-        self.bg_Home = ImageTk.PhotoImage(Image.open("images/bg_home.png").resize((800, 470), Image.LANCZOS)) # LANCZOS: một thuật toán lọc hình ảnh
-        Label(self.root, image=self.bg_Home).place(x=200, y=80, width=800, height=470) # Hiển thị hình nền
+        for i, (text, command) in enumerate(menu_items):
+            # i * 75: mỗi nút cách nhau 75 đơn vị y
+            self.create_menu_button(M_Frame, text, command, i * 75)
+        self.bg_Home = ImageTk.PhotoImage(Image.open("images/bg_home.png").resize(
+            (800, 470), Image.LANCZOS))  # LANCZOS: một thuật toán lọc hình ảnh
+        Label(self.root, image=self.bg_Home).place(
+            x=200, y=80, width=800, height=470)  # Hiển thị hình nền
 
     def create_menu_button(self, parent, text, command, y_position):
-        button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"), command=command)
+        button = Button(parent, text=text, border=0, bg="#242533",
+                        fg="white", font=("Arial", 12, "bold"),cursor="hand2", command=command)
         button.place(x=0, y=y_position, width=200, height=50)
         button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))
         button.bind("<Leave>", lambda e: button.config(bg="#242533"))
@@ -85,6 +92,7 @@ class HomePage:
     def run_subprocess(self, script):
         self.root.destroy()
         subprocess.run(["python", script])
+
 
 if __name__ == "__main__":
     root = Tk()

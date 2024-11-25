@@ -896,10 +896,7 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 1610,Sungmin,South Korea,Incheon,-69.47,-144.29,M,Other,30,4.0,4.0,3.6,2.9,4,2,5
 1613,Débora,Brazil,São Paulo,62.61,26.78,M,Asian,20,3.7,1.0,3.1,2.4,5,1,2
 1614,Jacques,France,Marseille,83.15,99.41,F,French,25,2.4,1.3,3.9,1.4,3,2,5
-<<<<<<< HEAD
-=======
 1682,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1,4
->>>>>>> 2ce9e313ad168e7cf9c6fab83b172013491d291f
 1616,Takahiro,Japan,Kyoto,-70.9,7.92,F,Japanese,22,3.3,1.6,4.3,3.8,5,1,1
 1620,Komal,India,Mumbai,69.57,118.58,F,Sikh,20,4.1,1.3,1.5,1.7,2,4,3
 1627,Miles,United States of America,Chicago,77.48,-97.47,F,Hispanic or Latino,22,1.3,3.9,2.9,3.1,1,2,1
@@ -911,10 +908,6 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 1651,Roberta,Italy,Turin,50.39,-71.2,F,North African,26,1.7,1.2,1.3,4.3,3,4,2
 1652,Fayza,Egypt,Giza,48.28,-49.26,M,Egyptian,20,3.3,2.2,1.8,3.5,5,4,3
 1663,Walter,Argentina,Rosario,48.94,-72.01,F,Arab,21,1.9,2.8,2.1,2.6,4,3,2
-<<<<<<< HEAD
-1682,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1,4
-=======
->>>>>>> 2ce9e313ad168e7cf9c6fab83b172013491d291f
 1692,Mustafa,Egypt,Alexandria,48.72,-131.88,F,Other,22,4.9,1.2,3.5,1.3,1,2,5
 1696,Robert,France,Nice,15.4,-139.15,F,Arab,24,2.4,1.2,4.8,1.8,2,4,2
 1702,Gilberto,Mexico,Monterrey,51.58,-92.18,M,Asian,21,4.1,3.9,3.5,3.7,3,4,1
@@ -1005,7 +998,4 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 2293,Naeun,South Korea,Gwangju,-40.43,156.74,M,Other,24,4.3,2.5,5.0,4.1,4,4,5
 2297,Elliot,United States of America,Phoenix,-12.03,40.21,F,Black or African American,20,1.7,3.6,1.0,2.2,4,2,1
 2300,Aarti,India,Delhi,41.54,18.99,F,Hindu,20,1.3,1.0,2.3,3.9,4,1,4
-<<<<<<< HEAD
-1999,Wu Jian,China,BacKinh,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1,4
-=======
->>>>>>> 2ce9e313ad168e7cf9c6fab83b172013491d291f
+1999,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1,4

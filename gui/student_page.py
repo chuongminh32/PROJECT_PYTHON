@@ -102,15 +102,14 @@ class Student:
     def create_content_frame(self):
         self.content_frame = Frame(self.root, bg="lightgrey")
         self.content_frame.place(x=200, y=80, width=800, height=470)
-        # self.content_frame.place(x=200, y=80, relwidth=1, relheight=1)
 
     def create_menu_button(self, parent, text, command, y_position):
-        button = Button(parent, text=text, border=0, bg="#242533", fg="white", font=("Arial", 12, "bold"),
+        button = Button(parent, text=text, border=0, bg="#242533", fg="white", cursor="hand2", font=("Arial", 12, "bold"),
                         command=command)
         button.place(x=0, y=y_position, width=200, height=50)
         button.bind("<Enter>", lambda e: button.config(bg="#3B3F4C"))
         button.bind("<Leave>", lambda e: button.config(bg="#242533"))
-
+    
     def clear_content_frame(self):
         for widget in self.content_frame.winfo_children():
             widget.destroy()
@@ -134,6 +133,7 @@ class Student:
             widget.destroy()
         title_label = tk.Label(parent_frame, text=title, font=("Arial", 17, "bold"), bg="lightgrey")
         title_label.pack(padx=5, pady=5)
+        
         if "TỔNG" in title:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_total)
             back_btn.place(x=10, y=10)
@@ -151,12 +151,12 @@ class Student:
             tree.column(col, width=150, anchor="center")
         for _, row in dataframe.iterrows():
             tree.insert("", "end", values=list(row))
-        v_scrollbar = tk.Scrollbar(parent_frame, orient="vertical", command=tree.yview)
-        h_scrollbar = tk.Scrollbar(parent_frame, orient="horizontal", command=tree.xview)
-        tree.configure(yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
+        y = tk.Scrollbar(parent_frame, orient="vertical", command=tree.yview)
+        x = tk.Scrollbar(parent_frame, orient="horizontal", command=tree.xview)
+        tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
         tree.pack(padx=10, pady=10, fill="both", expand=True)
-        v_scrollbar.pack(side="right", fill="y")
-        h_scrollbar.pack(side="bottom", fill="x")
+        y.pack(side="right", fill="y")
+        x.pack(side="bottom", fill="x")
 
     def plot_distribution(self, filepath, column_name):
         """Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu."""
@@ -178,33 +178,51 @@ class Student:
 
         # Tạo các nút động
         for text, command in buttons:
-            Button(self.content_frame, text=text, command=command, width=15).pack(padx=5, pady=10)
+            Button(self.content_frame, text=text, cursor="hand2", command=command, width=15).pack(padx=5, pady=10)
 
+    # treeview là: một widget hiển thị dữ liệu dạng bảng, giống như bảng tính Excel. 
     def stu_filter(self):
-        self.clear_content_frame()
-        global df
-        df = pd.read_csv("data/data_clean.csv")
-        field_name_label = tk.Label(self.content_frame, text="Nhập tên trường cần lọc:")
-        field_name_label.pack(padx=5, pady=5)
-        self.field_name_entry = tk.Entry(self.content_frame, width=30)
-        self.field_name_entry.pack(padx=5, pady=5)
-        field_value_label = tk.Label(self.content_frame, text="Nhập giá trị cần tìm:")
+        self.clear_content_frame()  # Xóa nội dung cũ
+        global df # df là biến toàn cục chứa dữ liệu sinh viên
+        df = pd.read_csv("data/data_clean.csv") # Đọc dữ liệu từ file CSV
+        field_name_label = tk.Label(self.content_frame, text="Nhập tên trường cần lọc:") # Tạo nhãn nhập trường cần lọc
+        field_name_label.pack(padx=5, pady=5) # Đặt nhãn vào khung
+        self.field_name_entry = tk.Entry(self.content_frame, width=30) # Tạo trường nhập liệu
+        self.field_name_entry.pack(padx=5, pady=5) # Đặt trường nhập liệu vào khung
+        field_value_label = tk.Label(self.content_frame, text="Nhập giá trị cần tìm:") 
         field_value_label.pack(padx=5, pady=5)
+
         self.field_value_entry = tk.Entry(self.content_frame, width=30)
         self.field_value_entry.pack(padx=5, pady=5)
-        search_button = tk.Button(self.content_frame, text="Tìm kiếm", command=self.search_by_field)
+        search_button = tk.Button(self.content_frame, text="Tìm kiếm",cursor="hand2", command=self.search_by_field) 
         search_button.pack(pady=5)
-        columns = list(df.columns)
-        self.tree = ttk.Treeview(self.content_frame, columns=columns, show="headings", height=10)
+
+        # nut xoa du lieu
+        button_clear = Button(self.content_frame, text="Clear", command=self.clear_data_treeview, cursor="hand2")
+        button_clear.place(x=10, y=140, width=70, height=40)
+    
+        columns = list(df.columns) # Lấy danh sách các cột trong dữ liệu, ví dụ ['name', 'age', 'math.grade', ...]
+
+        # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
+        self.tree = ttk.Treeview(self.content_frame, columns=columns, show = "headings")
         for col in columns:
             self.tree.heading(col, text=col)
             self.tree.column(col, width=150, anchor="center")
-        v_scrollbar = tk.Scrollbar(self.content_frame, orient="vertical", command=self.tree.yview)
-        v_scrollbar.pack(side="right", fill="y")
-        h_scrollbar = tk.Scrollbar(self.content_frame, orient="horizontal", command=self.tree.xview)
-        h_scrollbar.pack(side="bottom", fill="x")
+            
+        v_scrollbar = tk.Scrollbar(self.content_frame, orient="vertical", command=self.tree.yview) # Tạo thanh cuộn dọc(vertical)
+        # command=self.tree.yview: Liên kết thanh cuộn với phương thức yview của Treeview, cho phép thanh cuộn điều khiển việc cuộn dọc của Treeview.
+        v_scrollbar.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
+        h_scrollbar = tk.Scrollbar(self.content_frame, orient="horizontal", command=self.tree.xview) # Tạo thanh cuộn ngang(horizontal)
+        h_scrollbar.pack(side="bottom", fill="x") # Đặt thanh cuộn vào khung
+        # Cấu hình treeview để có thanh cuộn dọc và ngang
+        """ yscrollcommand=v_scrollbar.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
+        xscrollcommand=h_scrollbar.set: Liên kết thanh cuộn ngang với Treeview, cho phép thanh cuộn ngang cập nhật khi nội dung Treeview thay đổi."""
         self.tree.configure(yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
-        self.tree.pack(padx=10, pady=10, fill="both", expand=True)
+        self.tree.pack(padx=10, pady=10, expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
+    def clear_data_treeview(self):
+            # Xóa dữ liệu cũ
+            for item in self.tree.get_children():
+                self.tree.delete(item)
 
     def search_by_field(self):
         field_name = self.field_name_entry.get()
@@ -212,16 +230,14 @@ class Student:
         if field_name not in df.columns:
             messagebox.showerror("Error", f"Trường '{field_name}' không tồn tại trong dữ liệu.")
             return False
-        result_data = df[df[field_name].astype(str).str.lower() == field_value.lower()]
+        # Tìm kiếm dữ liệu, result_data là DataFrame chứa dữ liệu sau khi tìm kiếm theo trường và giá trị nhập vào
+        result_data = df[df[field_name].astype(str).str.lower() == field_value.lower()] # Tìm kiếm không phân biệt chữ hoa, thường
         if result_data.empty:
             messagebox.showerror("Error", f"Không tìm thấy dữ liệu với {field_name} = '{field_value}'")
-            for item in self.tree.get_children():
-                self.tree.delete(item)
-            return False
-        for item in self.tree.get_children():
-            self.tree.delete(item)
-        for _, row in result_data.iterrows():
-            self.tree.insert("", tk.END, values=list(row))
+
+        # Hiển thị dữ liệu mới
+        for _, row in result_data.iterrows(): # Duyệt qua từng dòng dữ liệu
+            self.tree.insert("", tk.END, values=list(row)) # thêm dòng dữ liệu vào treeview 
 
     def show_top_total(self):
         self.clear_content_frame()
@@ -232,7 +248,7 @@ class Student:
             ("Top sinh viên có tổng điểm đánh giá và môn học cao nhất", self.top_grade_rating)
         ]
         for text, command in buttons:
-            tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=15)
+            tk.Button(self.content_frame, text=text, cursor="hand2", command=command).pack(padx=5, pady=15)
 
     def top_rating(self):
         self.show_top_students_by_column(['portfolio.rating', 'coverletter.rating', 'refletter.rating'], 'total_rating', "TOP 10 SINH VIÊN CÓ TỔNG ĐIỂM ĐÁNH GIÁ CAO NHẤT")
@@ -266,7 +282,7 @@ class Student:
             ("Top 10 sinh viên điểm đánh giá thư giới thiệu cao nhất", self.top_10_refletter)
         ]
         for text, command in buttons:
-            tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=15)
+            tk.Button(self.content_frame, text=text, cursor="hand2", command=command).pack(padx=5, pady=15)
 
     def top_10_math(self):
         self.show_top_students_by_column(['math.grade'], 'math.grade', "TOP 10 SINH VIÊN ĐIỂM CAO MÔN TOÁN")
@@ -297,7 +313,7 @@ class Student:
             ("Sắp xếp theo GPA", self.sort_by_avg)
         ]
         for text, command in buttons:
-            tk.Button(self.content_frame, text=text, command=command).pack(padx=5, pady=30)
+            tk.Button(self.content_frame, text=text, cursor="hand2", command=command).pack(padx=5, pady=30)
 
     def sort_by_age(self):
         self.sort_and_display("data/sorted_by_age.csv", "DANH SÁCH SINH VIÊN SẮP XẾP THEO TUỔI", sort_increase_age)

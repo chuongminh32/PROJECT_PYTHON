@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 def show_top_students(df, column_name):
     return df.nlargest(10, column_name)

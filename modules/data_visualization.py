@@ -1,24 +1,31 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg 
 import mplcursors
-from mpl_toolkits.mplot3d import Axes3D
 
+
+# FigureCanvasTkAgg biến một đối tượng Figure (biểu đồ) của Matplotlib
+#  thành một widget của Tkinter để bạn có thể nhúng vào giao diện.
+# widget là một widget của Tkinter, frame là một widget Frame của Tkinter.
+# Tạo một widget FigureCanvasTkAgg từ một đối tượng Figure của Matplotlib.
 def create_canvas(fig, frame):
     canvas = FigureCanvasTkAgg(fig, master=frame)
     canvas.draw()
     canvas.get_tk_widget().pack(fill="both", expand=True)
 
+
+# Tạo biểu đồ cột từ một DataFrame.
 def create_bar_chart(df, cols, title, xlabel, ylabel):
     fig, ax = plt.subplots(figsize=(10, 6))
     bars = ax.bar(cols, df[cols].mean(), color=plt.cm.Blues(np.linspace(0.5, 1, len(cols))))
     ax.set(title=title, xlabel=xlabel, ylabel=ylabel)
     plt.grid(axis='y', linestyle='--', alpha=0.5)
-    for i, value in enumerate(df[cols].mean()):
+    for i, value in enumerate(df[cols].mean()): # Hiển thị giá trị trên cột
         plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom')
     return fig
 
+# Tạo biểu đồ hình tròn từ một DataFrame.
 def create_pie_chart(df, col, title):
     """
     Tạo biểu đồ hình tròn từ một DataFrame.
@@ -51,8 +58,8 @@ def create_pie_chart(df, col, title):
 
     def update_annot(wedge, event):
         angle = (wedge.theta2 - wedge.theta1) / 2 + wedge.theta1
-        x = wedge.r * 0.5 * np.cos(np.radians(angle))
-        y = wedge.r * 0.5 * np.sin(np.radians(angle))
+        x = wedge.r * 0.5 * np.cos(np.radians(angle)) # r = 1
+        y = wedge.r * 0.5 * np.sin(np.radians(angle)) # r = 1
         annot.xy = (x, y)
         label = counts.index[wedges.index(wedge)]
         percent = sizes[wedges.index(wedge)] / total * 100
@@ -74,11 +81,13 @@ def create_pie_chart(df, col, title):
     fig.canvas.mpl_connect("motion_notify_event", hover)
     return fig
 
+# Tạo biểu đồ đường từ một DataFrame.
 def plot_grade(FILE_PATH, frame):
     df = pd.read_csv(FILE_PATH)
     fig = create_bar_chart(df, ['english.grade', 'math.grade', 'sciences.grade', 'language.grade'], "Biểu đồ điểm học tập trung bình", "Môn học", "Điểm")
     create_canvas(fig, frame)
 
+# Tạo biểu đồ đường từ một DataFrame detail
 def plot_grade_btn(FILE_PATH):
     plt.close('all')
     df = pd.read_csv(FILE_PATH)
@@ -96,6 +105,7 @@ def plot_country_btn(FILE_PATH):
     fig = create_pie_chart(df, 'nationality', "Biểu đồ phân bố quốc tịch")
     plt.show()
 
+# Tạo biểu đồ cột từ một DataFrame.
 def plot_age(FILE_PATH, frame):
     df = pd.read_csv(FILE_PATH)
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -119,16 +129,18 @@ def plot_age_btn(FILE_PATH):
     plt.tight_layout()
     plt.show()
 
+# 
 def plot_gender(FILE_PATH, frame):
     df = pd.read_csv(FILE_PATH)
     fig = create_pie_chart(df, 'gender', "Biểu đồ Tỉ Lệ Nam Nữ")
-    create_canvas(fig, frame)
+    create_canvas(fig, frame) 
 
 def plot_gender_btn(FILE_PATH):
     plt.close('all')
     df = pd.read_csv(FILE_PATH)
     fig = create_pie_chart(df, 'gender', "Biểu đồ Tỉ Lệ Nam Nữ")
     plt.show()
+
 
 def plot_point_old(FILE_PATH, frame):
     data = pd.read_csv(FILE_PATH)
