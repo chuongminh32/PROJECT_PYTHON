@@ -160,19 +160,18 @@ class StudentManagementApp():
         title_label.pack(pady=10)
         field_frame = Frame(self.content_frame)
         field_frame.pack(fill="both", expand=True, pady=10, padx=15)
-       
-       # enumerate(fields): Trả về một đối tượng liệt kê, mỗi phần tử của đối tượng liệt kê là một bộ gồm chỉ số và giá trị của phần tử tương ứng trong iterable.
+        # enumerate(fields): Trả về một đối tượng liệt kê, mỗi phần tử của đối tượng liệt kê là một bộ gồm chỉ số và
+        #  giá trị của phần tử tương ứng trong iterable.
         for i, (label_text, placeholder) in enumerate(fields):  # Tạo các label và entry widget
             col = i % 2  # Tính toán cột
-            row = (i // 2) + 1  # Tính toán vị trí hàng và cột
+            row = (i // 2) + 1  # Tính toán vị trí hàng và cột, +1 để bỏ qua hàng đầu tiên
             
-            # Tạo label cho mỗi trường
-            Label(field_frame, text=label_text, font=("Arial", 11)).grid(row=row, column=col * 2, padx=15, pady=5, sticky="w")
+            # Tạo label cho mỗi trường, col*2 -> bỏ qua col entry widget
+            Label(field_frame, text=label_text, font=("Arial", 11)).grid(row=row, column=col*2 , padx=15, pady=5, sticky="w")
             
-            # var = StringVar(value=placeholder): Tạo một biến StringVar với giá trị mặc định là placeholder
-            var = StringVar(value=placeholder)
+            var = StringVar(value=placeholder) # Tạo biến var để lưu giá trị nhập vào
             entry = Entry(field_frame, textvariable=var, fg="grey", font=("Arial", 11))  # Tạo ô nhập liệu
-            entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5)  # Đặt ô nhập liệu vào frame
+            entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5)  # Đặt ô nhập liệu vào frame, col*2 + 1 -> kề label(ví dụ label col 0 -> entry col 1)
             
             # chỉ cho nhập id đồi với các form chỉnh sửa và xóa
             if title == "CẬP NHẬT SINH VIÊN" or title == "XÓA SINH VIÊN":
@@ -239,6 +238,8 @@ class StudentManagementApp():
 
     # Update
     def update(self):
+        message = "Nhập ID của sinh viên cần cập nhật."
+        messagebox.showinfo("Thông báo", message)
         self.clear_content_frame()
         fields = [("id", "e.g., 0, 1, 2..."), ("name", "e.g., Kiana Lor"), ("nationality", "e.g., United States of America"),
                   ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
@@ -296,6 +297,8 @@ class StudentManagementApp():
     
     # Delete
     def delete(self):
+        message = "Nhập ID của sinh viên cần xoá."
+        messagebox.showinfo("Thông báo", message)
         self.clear_content_frame()
         fields = [("id", "e.g., 0, 1, 2..."), ("name", "e.g., Kiana Lor"), ("nationality", "e.g., United States of America"),
                   ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
