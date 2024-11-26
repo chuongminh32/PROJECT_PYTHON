@@ -121,13 +121,13 @@ class StudentManagementApp():
         columns = list(data.columns) # Lấy tên các cột
        
 
-           # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
+        # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
         tree = ttk.Treeview(self.content_frame, columns=columns, show = "headings")
         for col in columns:
-            tree.heading(col, text=col)
-            tree.column(col, width=150, anchor="center")
+            tree.heading(col, text=col) # Đặt tiêu đề cho từng cột
+            tree.column(col, width=150, anchor="center") # Đặt chiều rộng và căn giữa cho từng cột
         for _, row in data.iterrows(): # Duyệt qua từng dòng dữ liệu
-            tree.insert("", tk.END, values=list(row)) #
+            tree.insert("", tk.END, values=list(row)) # Thêm dòng
         y = tk.Scrollbar(self.content_frame, orient="vertical", command=tree.yview) # Tạo thanh cuộn dọc(vertical)
         # command=tree.yview: Liên kết thanh cuộn với phương thức yview của Treeview, cho phép thanh cuộn điều khiển việc cuộn dọc của Treeview.
         y.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
