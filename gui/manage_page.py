@@ -119,19 +119,25 @@ class StudentManagementApp():
         title_label.pack(padx=5, pady=5)
             
         columns = list(data.columns) # Lấy tên các cột
-        tree = ttk.Treeview(self.content_frame, columns=columns, show="headings")
+       
+
+           # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
+        tree = ttk.Treeview(self.content_frame, columns=columns, show = "headings")
         for col in columns:
             tree.heading(col, text=col)
             tree.column(col, width=150, anchor="center")
-        for _, row in data.iterrows():
-            tree.insert("", "end", values=list(row)) 
-        # Tạo thanh cuộn
-        y = tk.Scrollbar(self.content_frame, orient="vertical", command=tree.yview) # Thanh cuộn dọc
-        x = tk.Scrollbar(self.content_frame, orient="horizontal", command=tree.xview) # Thanh cuộn nganwq    
+        for _, row in data.iterrows(): # Duyệt qua từng dòng dữ liệu
+            tree.insert("", tk.END, values=list(row)) #
+        y = tk.Scrollbar(self.content_frame, orient="vertical", command=tree.yview) # Tạo thanh cuộn dọc(vertical)
+        # command=tree.yview: Liên kết thanh cuộn với phương thức yview của Treeview, cho phép thanh cuộn điều khiển việc cuộn dọc của Treeview.
+        y.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
+        x = tk.Scrollbar(self.content_frame, orient="horizontal", command=tree.xview) # Tạo thanh cuộn ngang(horizontal)
+        x.pack(side="bottom", fill="x") # Đặt thanh cuộn vào khung
+        # Cấu hình treeview để có thanh cuộn dọc và ngang
+        # yscrollcommand=y.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
         tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
-        tree.pack(padx=10, pady=10, fill="both", expand=True)
-        y.pack(side="right", fill="y")
-        x.pack(side="bottom", fill="x")
+        tree.pack(padx=10, pady=10,fill="both", expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
+
 
 
     # Create

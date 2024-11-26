@@ -129,11 +129,15 @@ class Student:
             messagebox.showerror("Lỗi", f"Có lỗi xảy ra: {e}")
 
     def create_treeview(self, parent_frame, dataframe, title):
+        # Clear any previous widgets
         for widget in parent_frame.winfo_children():
             widget.destroy()
+
+        # Create the title label
         title_label = tk.Label(parent_frame, text=title, font=("Arial", 17, "bold"), bg="lightgrey")
         title_label.pack(padx=5, pady=5)
-        
+            
+        # Create the back button based on the title
         if "TỔNG" in title:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_total)
             back_btn.place(x=10, y=10)
@@ -143,20 +147,27 @@ class Student:
         else:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_students)
             back_btn.place(x=10, y=10)
-            
-        columns = list(dataframe.columns) # columns = ['name', 'age', 'math.grade', ...]
-        tree = ttk.Treeview(parent_frame, columns=columns, show="headings", height=10)
+                
+       
+        columns = list(dataframe.columns)  # columns = ['name', 'age', 'math.grade', ...]
+          # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
+        tree = ttk.Treeview(parent_frame, columns=columns, show = "headings")
         for col in columns:
             tree.heading(col, text=col)
             tree.column(col, width=150, anchor="center")
-        for _, row in dataframe.iterrows():
-            tree.insert("", "end", values=list(row))
-        y = tk.Scrollbar(parent_frame, orient="vertical", command=tree.yview)
-        x = tk.Scrollbar(parent_frame, orient="horizontal", command=tree.xview)
+        for _, row in dataframe.iterrows(): # Duyệt qua từng dòng dữ liệu
+            tree.insert("", tk.END, values=list(row)) #
+        y = tk.Scrollbar(parent_frame, orient="vertical", command=tree.yview) # Tạo thanh cuộn dọc(vertical)
+        # command=tree.yview: Liên kết thanh cuộn với phương thức yview của Treeview, cho phép thanh cuộn điều khiển việc cuộn dọc của Treeview.
+        y.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
+        x = tk.Scrollbar(parent_frame, orient="horizontal", command=tree.xview) # Tạo thanh cuộn ngang(horizontal)
+        x.pack(side="bottom", fill="x") # Đặt thanh cuộn vào khung
+        # Cấu hình treeview để có thanh cuộn dọc và ngang
+        # yscrollcommand=y.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
         tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
-        tree.pack(padx=10, pady=10, fill="both", expand=True)
-        y.pack(side="right", fill="y")
-        x.pack(side="bottom", fill="x")
+        tree.pack(padx=10, pady=10,fill="both", expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
+
+
 
     def plot_distribution(self, filepath, column_name):
         """Vẽ biểu đồ phân bố điểm số dựa trên cột trong dữ liệu."""
@@ -196,7 +207,7 @@ class Student:
         search_button = tk.Button(self.content_frame, text="Tìm kiếm",cursor="hand2", command=self.search_by_field).pack(pady=5)
 
         # nut xoa du lieu
-        button_clear = Button(self.content_frame, text="Clear", command=self.clear_data_treeview, cursor="hand2").place(x=10, y=140, width=70, height=40)
+        button_clear = Button(self.content_frame, text="Clear", command=self.clear_data_treeview, cursor="hand2").place(x=10, y=120, width=70, height=40)
         columns = list(df.columns) # Lấy danh sách các cột trong dữ liệu, ví dụ ['name', 'age', 'math.grade', ...]
 
         # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
@@ -213,7 +224,7 @@ class Student:
         # Cấu hình treeview để có thanh cuộn dọc và ngang
         # yscrollcommand=y.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
         self.tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
-        self.tree.pack(padx=10, pady=10, expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
+        self.tree.pack(padx=10, pady=10,fill="both", expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
 
     def clear_data_treeview(self):
             # Xóa dữ liệu cũ
