@@ -144,7 +144,7 @@ class Student:
             back_btn = tk.Button(parent_frame, text="Quay lại", command=self.show_top_students)
             back_btn.place(x=10, y=10)
             
-        columns = list(dataframe.columns)
+        columns = list(dataframe.columns) # columns = ['name', 'age', 'math.grade', ...]
         tree = ttk.Treeview(parent_frame, columns=columns, show="headings", height=10)
         for col in columns:
             tree.heading(col, text=col)
@@ -185,22 +185,18 @@ class Student:
         self.clear_content_frame()  # Xóa nội dung cũ
         global df # df là biến toàn cục chứa dữ liệu sinh viên
         df = pd.read_csv("data/data_clean.csv") # Đọc dữ liệu từ file CSV
-        field_name_label = tk.Label(self.content_frame, text="Nhập tên trường cần lọc:") # Tạo nhãn nhập trường cần lọc
-        field_name_label.pack(padx=5, pady=5) # Đặt nhãn vào khung
+        field_name_label = tk.Label(self.content_frame, text="Nhập tên trường cần lọc:").pack(padx=5, pady=5) # Đặt nhãn vào khung
         self.field_name_entry = tk.Entry(self.content_frame, width=30) # Tạo trường nhập liệu
         self.field_name_entry.pack(padx=5, pady=5) # Đặt trường nhập liệu vào khung
-        field_value_label = tk.Label(self.content_frame, text="Nhập giá trị cần tìm:") 
-        field_value_label.pack(padx=5, pady=5)
 
+        field_value_label = tk.Label(self.content_frame, text="Nhập giá trị cần tìm:").pack(padx=5, pady=5)
         self.field_value_entry = tk.Entry(self.content_frame, width=30)
         self.field_value_entry.pack(padx=5, pady=5)
-        search_button = tk.Button(self.content_frame, text="Tìm kiếm",cursor="hand2", command=self.search_by_field) 
-        search_button.pack(pady=5)
+
+        search_button = tk.Button(self.content_frame, text="Tìm kiếm",cursor="hand2", command=self.search_by_field).pack(pady=5)
 
         # nut xoa du lieu
-        button_clear = Button(self.content_frame, text="Clear", command=self.clear_data_treeview, cursor="hand2")
-        button_clear.place(x=10, y=140, width=70, height=40)
-    
+        button_clear = Button(self.content_frame, text="Clear", command=self.clear_data_treeview, cursor="hand2").place(x=10, y=140, width=70, height=40)
         columns = list(df.columns) # Lấy danh sách các cột trong dữ liệu, ví dụ ['name', 'age', 'math.grade', ...]
 
         # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
@@ -209,16 +205,16 @@ class Student:
             self.tree.heading(col, text=col)
             self.tree.column(col, width=150, anchor="center")
             
-        v_scrollbar = tk.Scrollbar(self.content_frame, orient="vertical", command=self.tree.yview) # Tạo thanh cuộn dọc(vertical)
+        y = tk.Scrollbar(self.content_frame, orient="vertical", command=self.tree.yview) # Tạo thanh cuộn dọc(vertical)
         # command=self.tree.yview: Liên kết thanh cuộn với phương thức yview của Treeview, cho phép thanh cuộn điều khiển việc cuộn dọc của Treeview.
-        v_scrollbar.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
-        h_scrollbar = tk.Scrollbar(self.content_frame, orient="horizontal", command=self.tree.xview) # Tạo thanh cuộn ngang(horizontal)
-        h_scrollbar.pack(side="bottom", fill="x") # Đặt thanh cuộn vào khung
+        y.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
+        x = tk.Scrollbar(self.content_frame, orient="horizontal", command=self.tree.xview) # Tạo thanh cuộn ngang(horizontal)
+        x.pack(side="bottom", fill="x") # Đặt thanh cuộn vào khung
         # Cấu hình treeview để có thanh cuộn dọc và ngang
-        """ yscrollcommand=v_scrollbar.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
-        xscrollcommand=h_scrollbar.set: Liên kết thanh cuộn ngang với Treeview, cho phép thanh cuộn ngang cập nhật khi nội dung Treeview thay đổi."""
-        self.tree.configure(yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
+        # yscrollcommand=y.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
+        self.tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
         self.tree.pack(padx=10, pady=10, expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
+
     def clear_data_treeview(self):
             # Xóa dữ liệu cũ
             for item in self.tree.get_children():
@@ -230,11 +226,10 @@ class Student:
         if field_name not in df.columns:
             messagebox.showerror("Error", f"Trường '{field_name}' không tồn tại trong dữ liệu.")
             return False
-        # Tìm kiếm dữ liệu, result_data là DataFrame chứa dữ liệu sau khi tìm kiếm theo trường và giá trị nhập vào
+        #  tìm kiếm các giá trị trong DataFrame df mà không phân biệt chữ hoa và chữ thường (case-insensitive) trong cột field_name so với giá trị field_value
         result_data = df[df[field_name].astype(str).str.lower() == field_value.lower()] # Tìm kiếm không phân biệt chữ hoa, thường
         if result_data.empty:
             messagebox.showerror("Error", f"Không tìm thấy dữ liệu với {field_name} = '{field_value}'")
-
         # Hiển thị dữ liệu mới
         for _, row in result_data.iterrows(): # Duyệt qua từng dòng dữ liệu
             self.tree.insert("", tk.END, values=list(row)) # thêm dòng dữ liệu vào treeview 

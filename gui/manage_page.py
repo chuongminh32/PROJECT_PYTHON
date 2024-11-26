@@ -7,7 +7,7 @@ import sys
 import pandas as pd
 import subprocess
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # Thêm đường dẫn của thư mục cha vào sys.path
 from modules.data_crud import read_data, create_data, update_data, delete_data
 from modules.data_cleaning import handle_missing_value, remove_duplicates, correct_formatting, save_to_cleaned_data_file
 
@@ -127,7 +127,7 @@ class StudentManagementApp():
             tree.insert("", "end", values=list(row)) 
         # Tạo thanh cuộn
         y = tk.Scrollbar(self.content_frame, orient="vertical", command=tree.yview) # Thanh cuộn dọc
-        x = tk.Scrollbar(self.content_frame, orient="horizontal", command=tree.xview)
+        x = tk.Scrollbar(self.content_frame, orient="horizontal", command=tree.xview) # Thanh cuộn nganwq    
         tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
         tree.pack(padx=10, pady=10, fill="both", expand=True)
         y.pack(side="right", fill="y")
@@ -143,9 +143,14 @@ class StudentManagementApp():
                   ("Gender", "e.g., M/F"), ("Ethnic Group", "e.g., NA"), ("Age", "e.g., 22"), ("English Grade", "e.g., 3.5"),
                   ("Math Grade", "e.g., 3.7"), ("Sciences Grade", "e.g., 3.2"), ("Language Grade", "e.g., 5"),
                   ("Portfolio Rating", "e.g., 4"), ("Cover Letter Rating", "e.g., 5"), ("Reference Letter Rating", "e.g., 4")]
+        fields_ui = [("ID", "e.g., 0, 1, 2..."), ("Name", "e.g., Kiana Lor"), ("Nationality", "e.g., United States of America"),
+        ("City", "e.g., Oakland"), ("Latitude (vĩ dộ)", "e.g., 37.8"), ("Longitude (kinh độ)", "e.g., -122.27"),
+        ("Gender", "e.g., M/F"), ("Ethnic Group", "e.g., NA"), ("Age", "e.g., 22"), ("English Grade", "e.g., 3.5"),
+        ("Math Grade", "e.g., 3.7"), ("Sciences Grade", "e.g., 3.2"), ("Language Grade", "e.g., 5"),
+        ("Portfolio Rating", "e.g., 4"), ("Cover Letter Rating", "e.g., 5"), ("Reference Letter Rating", "e.g., 4")]
         entries = self.create_form(fields, "THÊM SINH VIÊN") # Tạo form nhập liệu
         self.create_sample_button(entries, fields) # Tạo nút thêm dữ liệu mẫu
-        self.create_confirm_button(entries, fields, self.confirm_create,"Tạo") # Tạo nút xác nhận THÊM SINH VIÊN
+        self.create_confirm_button(entries, fields, fields_ui, self.confirm_create,"Tạo") # Tạo nút xác nhận THÊM SINH VIÊN
     
     # fields: List chứa các trường thông tin sinh viên , Ex: [("ID", "e.g., 0, 1, 2..."), ("Name", "e.g., Kiana Lor"), ...]
     # entries: Dictionary chứa các entry widget, Ex: {"ID": Entry, "Name": Entry, ...}
@@ -154,8 +159,10 @@ class StudentManagementApp():
         Tạo form nhập liệu để THÊM SINH VIÊN.
         :param fields: Danh sách các trường thông tin sinh viên.
         :param title: Tiêu đề của form.
+        * logic: đặt 8 dòng (1 -> 8), bỏ qua dòng đầu (tiêu đề), 4 col (col 0 , 2 : label, 1, 2: entry) 
+        -> lấy phần dư chỉ số x 2 -> vị trí label, x2 + 1 -> vị trí entry (ô nhập liệu)
         """ 
-        entries = {}
+        entries = {} # Dictionary chứa các entry widget
         title_label = Label(self.content_frame, text=title, font=("Arial", 14, "bold"), bg="lightgrey")
         title_label.pack(pady=10)
         field_frame = Frame(self.content_frame)
@@ -168,23 +175,27 @@ class StudentManagementApp():
             
             # Tạo label cho mỗi trường, col*2 -> bỏ qua col entry widget
             Label(field_frame, text=label_text, font=("Arial", 11)).grid(row=row, column=col*2 , padx=15, pady=5, sticky="w")
-            
+            # Stringvar là 1 lớp trong thư viện tkinter để quản lí chuỗi, giúp lấy giá trị từ entry widget
             var = StringVar(value=placeholder) # Tạo biến var để lưu giá trị nhập vào
             entry = Entry(field_frame, textvariable=var, fg="grey", font=("Arial", 11))  # Tạo ô nhập liệu
-            entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5)  # Đặt ô nhập liệu vào frame, col*2 + 1 -> kề label(ví dụ label col 0 -> entry col 1)
+            entry.grid(row=row, column=col * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5)  # Đặt ô nhập liệu vào frame, col*2 + 1 -> kề label(ví dụ label col 0 -> entry col 1)
             
             # chỉ cho nhập id đồi với các form chỉnh sửa và xóa
             if title == "CẬP NHẬT SINH VIÊN" or title == "XÓA SINH VIÊN":
             # Nếu là trường 'id', để người dùng nhập bình thường; ngược lại thì vô hiệu hóa
-                if label_text != "id":
+                if label_text != "ID":
                      entry.config(state="disabled")  # Vô hiệu hóa các trường không phải 'id'
 
             # Xử lý sự kiện để làm placeholder
+            """ entry.bind("<FocusIn>", ...): Liên kết sự kiện FocusIn với Entry widget.
+            lambda e, var=var, placeholder=placeholder: ...: Định nghĩa một hàm lambda để xử lý sự kiện. e là đối tượng sự kiện, var và placeholder là các biến được truyền vào hàm lambda.
+            var.set("") if var.get() == placeholder else None: Nếu giá trị hiện tại của var bằng placeholder, thì đặt giá trị của var thành chuỗi rỗng. Nếu không, không làm gì cả.
+            Mục đích của đoạn mã này là xóa giá trị mặc định (placeholder) trong Entry widget khi người dùng nhấp vào nó, để họ có thể nhập giá trị mới."""
             entry.bind("<FocusIn>", lambda e, var=var, placeholder=placeholder: var.set("") if var.get() == placeholder else None)
             entry.bind("<FocusOut>", lambda e, var=var, placeholder=placeholder: var.set(placeholder) if var.get() == "" else None)
             
-            # Thêm place holder vào entry widget
-            entries[label_text] = entry
+            # Thêm placeholder vào entry widget, lấy placeholder trong fields truyền cho var -> liên kết với entry widget
+            entries[label_text] = entry # Thêm entry widget vào dictionary entries
 
         # Tạo nút clear -> refresh lại form
         if title == "THÊM SINH VIÊN":
@@ -194,7 +205,8 @@ class StudentManagementApp():
         elif title == "XÓA SINH VIÊN":
             Button(self.content_frame, text="Clear",width=15, height=2, cursor="hand2", command=self.delete).pack(side=LEFT, padx=0, pady=10, expand=True)
 
-        return entries
+ 
+        return entries # Trả về dictionary chứa các entry widget
     # Sử dụng lambda khi bạn cần một hàm ngắn gọn cho các tác vụ đơn giản hoặc khi bạn muốn tránh phải định nghĩa một hàm riêng biệt cho một hành động tạm thời.
     def create_sample_button(self, entries, fields):
         sample_button = Button(self.content_frame, text="Thêm dữ liệu mẫu",width=15, height=2, cursor="hand2", command=lambda: self.fill_sample_data(entries, fields))
@@ -218,11 +230,9 @@ class StudentManagementApp():
             entries[label_text].insert(0, sample_value) # Điền dữ liệu mẫu vào entry
             entries[label_text].config(fg="black") # Đổi màu chữ
 
-    def create_confirm_button(self, entries, fields, confirm_command,title):
-        confirm_button = Button(self.content_frame, text=title,width=15, height=2, cursor="hand2", command=lambda: confirm_command(entries, fields))
-        confirm_button.pack(side=LEFT, padx=0, pady=10,expand=True)
 
-    def confirm_create(self, entries, fields): 
+
+    def confirm_create(self, entries, fields, fields_ui): 
         #  list comprehension
         student_data = [entries[label_text].get() for label_text, _ in fields] # Lấy thông tin sinh viên từ các ô nhập liệu
         for i, (field, placeholder) in enumerate(fields): # Kiểm tra thông tin nhập vào
@@ -236,34 +246,44 @@ class StudentManagementApp():
         create_data(student_data, "data/data_clean.csv")
         messagebox.showinfo("Thành công", "Dữ liệu đã được thêm vào!")
 
-    # Update
+    def create_confirm_button(self, entries, fields, fields_ui, confirm_command,title):
+        confirm_button = Button(self.content_frame, text=title,width=15, height=2, cursor="hand2", command=lambda: confirm_command(entries, fields, fields_ui))
+        confirm_button.pack(side=LEFT, padx=0, pady=10,expand=True)
+
     def update(self):
-        message = "Nhập ID của sinh viên cần cập nhật."
-        messagebox.showinfo("Thông báo", message)
         self.clear_content_frame()
         fields = [("id", "e.g., 0, 1, 2..."), ("name", "e.g., Kiana Lor"), ("nationality", "e.g., United States of America"),
-                  ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
-                  ("ethnic.group", "e.g., NA"), ("age", "e.g., 22"), ("english.grade", "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
-                  ("sciences.grade", "e.g., 3.2"), ("language.grade", "e.g., 5"), ("portfolio.rating", "e.g., 4"),
-                  ("coverletter.rating", "e.g., 5"), ("refletter.rating", "e.g., 4")]
-        entries = self.create_form(fields, "CẬP NHẬT SINH VIÊN")
-        self.create_search_button(entries, fields, self.search_student_for_update)
-        self.create_confirm_button(entries, fields, self.confirm_update,"Cập nhật")
+                    ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
+                    ("ethnic.group", "e.g., NA"), ("age", "e.g., 22"), ("english.grade", "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
+                    ("sciences.grade", "e.g., 3.2"), ("language.grade", "e.g., 5"), ("portfolio.rating", "e.g., 4"),
+                    ("coverletter.rating", "e.g., 5"), ("refletter.rating", "e.g., 4")]
+        
+        fields_ui = [("ID", "e.g., 0, 1, 2..."), ("Name", "e.g., Kiana Lor"), ("Nationality", "e.g., United States of America"),
+                  ("City", "e.g., Oakland"), ("Latitude (vĩ dộ)", "e.g., 37.8"), ("Longitude (kinh độ)", "e.g., -122.27"),
+                  ("Gender", "e.g., M/F"), ("Ethnic Group", "e.g., NA"), ("Age", "e.g., 22"), ("English Grade", "e.g., 3.5"),
+                  ("Math Grade", "e.g., 3.7"), ("Sciences Grade", "e.g., 3.2"), ("Language Grade", "e.g., 5"),
+                  ("Portfolio Rating", "e.g., 4"), ("Cover Letter Rating", "e.g., 5"), ("Reference Letter Rating", "e.g., 4")]
+        
+        entries = self.create_form(fields_ui, "CẬP NHẬT SINH VIÊN")
+        self.create_search_button(entries, fields, fields_ui, self.search_student_for_update)
+        self.create_confirm_button(entries, fields, fields_ui, self.confirm_update,"Cập nhật")
 
-    def create_search_button(self, entries, fields, search_command):
-        search_button = Button(self.content_frame, text="Tìm",width = 15, height = 2, cursor="hand2", command=lambda: search_command(entries, fields))
+
+    def create_search_button(self, entries, fields, fields_ui, search_command):
+        search_button = Button(self.content_frame, text="Tìm",width = 15, height = 2, cursor="hand2", command=lambda: search_command(entries, fields, fields_ui))
         search_button.pack(side=LEFT, padx=0, pady=10, expand=True)
 
-    def search_student_for_update(self, entries, fields):
+    def search_student_for_update(self, entries, fields, fields_ui):
         # bỏ di disable các trường
         for label_text, entry in entries.items():
-            if label_text != "id": 
+            if label_text != "ID": 
                 entry.config(state="normal")
 
         # Lấy ID sinh viên       
-        student_id = entries["id"].get()
+        student_id = entries["ID"].get()
         df = pd.read_csv("data/data_clean.csv") # df là DataFrame chứa dữ liệu sinh viên
         student_data = df[df['id'].astype(str) == student_id] # Tìm sinh viên
+
         if student_data.empty: 
             messagebox.showerror("Error", f"Không tìm thấy sinh viên có ID: {student_id}")
             self.update()  # Hiển thị lại form xóa
@@ -272,20 +292,20 @@ class StudentManagementApp():
         student_data = student_data.iloc[0] # Lấy thông tin sinh viên từ DataFrame dòng đầu tiên
 
         # chèn data tìm thấy vào entry widget
-        for i, (label_text, _) in enumerate(fields): # Điền thông tin sinh viên vào các ô nhập liệu
-            entry = entries[label_text] # Lấy entry widget
+        for i, ((label_text, _), (label_text_ui, _)) in enumerate(zip(fields, fields_ui)): # Điền thông tin sinh viên vào các ô nhập liệu
+            entry = entries[label_text_ui] # Lấy entry widget cua field_ui de hien thi labeltext va du lieu
             entry.delete(0, END) # Xóa dữ liệu cũ
             entry.insert(0, str(student_data[label_text])) # Điền dữ liệu sinh viên
             entry.config(fg="black", font=("Arial", 11)) # Đổi màu chữ và chỉ đọc
-            entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5) # Đặt ô nhập liệu vào frame
+            entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5) # Đặt ô nhập liệu vào frame, entry -> col = 1 or 3, label = 0 or 2
         return True
-
-    def confirm_update(self, entries, fields):
-        student_id = str(entries["id"].get())
+    
+    def confirm_update(self, entries, fields, fileds_ui):
+        student_id = str(entries["ID"].get())
         # Lấy thông tin sinh viên từ các ô nhập liệu: duyệt từng labeltext và placeholder trong fields, lấy giá trị từ entry widget tương ứng
-        new_data = [entries[label_text].get() for label_text, _ in fields] 
+        new_data = [entries[label_text].get() for label_text, _ in fileds_ui] 
 
-        for i, (field, placeholder) in enumerate(fields): # Kiểm tra thông tin nhập vào
+        for i, (field, placeholder) in enumerate(fileds_ui): # Kiểm tra thông tin nhập vào
             if new_data[i] == "": # Nếu ô nhập liệu trống
                 messagebox.showwarning("Cảnh báo", f"Hãy điền đầy đủ các trường '{field}'")
                 return
@@ -297,25 +317,31 @@ class StudentManagementApp():
     
     # Delete
     def delete(self):
-        message = "Nhập ID của sinh viên cần xoá."
-        messagebox.showinfo("Thông báo", message)
         self.clear_content_frame()
         fields = [("id", "e.g., 0, 1, 2..."), ("name", "e.g., Kiana Lor"), ("nationality", "e.g., United States of America"),
                   ("city", "e.g., Oakland"), ("latitude", "e.g., 37.8"), ("longitude", "e.g., -122.27"), ("gender", "e.g., M/F"),
                   ("ethnic.group", "e.g., NaN/Asia/.."), ("age", "e.g., 22"), ("english.grade", "e.g., 3.5"), ("math.grade", "e.g., 3.7"),
                   ("sciences.grade", "e.g., 3.2"), ("language.grade", "e.g., 5"), ("portfolio.rating", "e.g., 4"),
                   ("coverletter.rating", "e.g., 5"), ("refletter.rating", "e.g., 4")]
-        entries = self.create_form(fields, "XÓA SINH VIÊN")
-        self.create_search_button(entries, fields, self.search_student_for_delete)
-        self.create_confirm_button(entries, fields, self.confirm_delete,"Xóa")
+        
+        
+        fields_ui = [("ID", "e.g., 0, 1, 2..."), ("Name", "e.g., Kiana Lor"), ("Nationality", "e.g., United States of America"),
+                  ("City", "e.g., Oakland"), ("Latitude (vĩ dộ)", "e.g., 37.8"), ("Longitude (kinh độ)", "e.g., -122.27"),
+                  ("Gender", "e.g., M/F"), ("Ethnic Group", "e.g., NA"), ("Age", "e.g., 22"), ("English Grade", "e.g., 3.5"),
+                  ("Math Grade", "e.g., 3.7"), ("Sciences Grade", "e.g., 3.2"), ("Language Grade", "e.g., 5"),
+                  ("Portfolio Rating", "e.g., 4"), ("Cover Letter Rating", "e.g., 5"), ("Reference Letter Rating", "e.g., 4")]
 
-    def search_student_for_delete(self, entries, fields):
+        entries = self.create_form(fields_ui, "XÓA SINH VIÊN")
+        self.create_search_button(entries, fields, fields_ui, self.search_student_for_delete)
+        self.create_confirm_button(entries, fields, fields_ui, self.confirm_delete,"Xóa")
+
+    def search_student_for_delete(self, entries, fields, fields_ui):
         # Kích hoạt tất cả các trường
         for label_text, entry in entries.items():
-            if label_text != "id":
+            if label_text != "ID":
                 entry.config(state="normal")
         # Lấy ID sinh viên
-        student_id = entries["id"].get()
+        student_id = entries["ID"].get()
         df = pd.read_csv("data/data_clean.csv")
         student_data = df[df['id'].astype(str) == student_id] # Tìm sinh viên
         if student_data.empty: # Nếu không tìm thấy sinh viên
@@ -323,16 +349,16 @@ class StudentManagementApp():
             self.delete()  # Hiển thị lại form xóa
             return False
         student_data = student_data.iloc[0] # Lấy thông tin sinh viên
-        for i, (label_text, _) in enumerate(fields): # Điền thông tin sinh viên vào các ô nhập liệu
-            entry = entries[label_text] # Lấy entry widget
+        for i, ((label_text, _), (label_text_ui, _)) in enumerate(zip(fields, fields_ui)):
+            entry = entries[label_text_ui] # Lấy entry widget
             entry.delete(0, END) # Xóa dữ liệu cũ
             entry.insert(0, str(student_data[label_text])) # Điền dữ liệu sinh viên
             entry.config(fg="black", state="readonly", font=("Arial", 11)) # Đổi màu chữ và chỉ đọc
             entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5) # Đặt ô nhập liệu vào frame
         return True
 
-    def confirm_delete(self, entries, fields):
-        student_id = entries["id"].get() # Lấy ID sinh viên
+    def confirm_delete(self, entries, fields, fields_ui):
+        student_id = entries["ID"].get() # Lấy ID sinh viên
         if not student_id:
             messagebox.showwarning("Cảnh báo", "Vui lòng nhập ID sinh viên cần xóa.")
             return

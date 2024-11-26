@@ -46,16 +46,20 @@ def create_pie_chart(df, col, title):
         Parameters:
         event (matplotlib.backend_bases.Event): Sự kiện di chuột.
     """
+    # Tính số lượng mỗi nhóm.
     counts = df[col].value_counts()
     total = counts.sum()
+    # Chỉ hiển thị nhãn của nhóm chiếm hơn 2.4% tổng số lượng.
     labels = [label if size / total >= 0.024 else "" for label, size in zip(counts.index, counts)]
     sizes = counts.values
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.set(title=title)
+    # Tạo biểu đồ hình tròn.
     wedges, _, _ = ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 10 else '', startangle=140)
     annot = ax.annotate("", xy=(0, 0), xytext=(10, 10), textcoords="offset points", bbox=dict(boxstyle="round", fc="w"), arrowprops=dict(arrowstyle="->"))
     annot.set_visible(False)
 
+    # Cập nhật chú thích khi di chuột qua một phần của biểu đồ.
     def update_annot(wedge, event):
         angle = (wedge.theta2 - wedge.theta1) / 2 + wedge.theta1
         x = wedge.r * 0.5 * np.cos(np.radians(angle)) # r = 1
@@ -94,6 +98,7 @@ def plot_grade_btn(FILE_PATH):
     fig = create_bar_chart(df, ['english.grade', 'math.grade', 'sciences.grade', 'language.grade'], "Biểu đồ điểm học tập trung bình", "Môn học", "Điểm")
     plt.show()
 
+# Tạo biểu đồ hình tròn từ một DataFrame.
 def plot_country(FILE_PATH, frame):
     df = pd.read_csv(FILE_PATH)
     fig = create_pie_chart(df, 'nationality', "Biểu đồ phân bố quốc tịch")
@@ -129,7 +134,7 @@ def plot_age_btn(FILE_PATH):
     plt.tight_layout()
     plt.show()
 
-# 
+# Tạo biểu đồ cột từ một DataFrame.
 def plot_gender(FILE_PATH, frame):
     df = pd.read_csv(FILE_PATH)
     fig = create_pie_chart(df, 'gender', "Biểu đồ Tỉ Lệ Nam Nữ")
@@ -141,13 +146,13 @@ def plot_gender_btn(FILE_PATH):
     fig = create_pie_chart(df, 'gender', "Biểu đồ Tỉ Lệ Nam Nữ")
     plt.show()
 
-
+# Biểu đồ phân tán của Tuổi và Điểm học tập
 def plot_point_old(FILE_PATH, frame):
     data = pd.read_csv(FILE_PATH)
     fig = plt.Figure(figsize=(10, 6))
     ax = fig.add_subplot(111)
-    for mon in ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']:
-        ax.scatter(data['age'], data[mon], label=mon, alpha=0.7, s=50)
+    for mon in ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']: # Duyệt qua các môn học
+        ax.scatter(data['age'], data[mon], label=mon, alpha=0.7, s=50) # Tạo biểu đồ phân tán
     ax.set_xlabel('Tuổi', fontsize=12)
     ax.set_ylabel('Điểm số', fontsize=12)
     ax.set_title('Biểu đồ phân tán của Tuổi và Điểm học tập', fontsize=14)
@@ -168,12 +173,13 @@ def plot_point_old_btn(FILE_PATH):
     plt.tight_layout()
     plt.show()
 
+# Biểu đồ phân tán của Điểm và Đánh giá Cá Nhân
 def plot_personal(FILE_PATH, frame):
     data = pd.read_csv(FILE_PATH)
     fig = plt.Figure(figsize=(10, 6))
-    ax = fig.add_subplot(111)
-    diem_trung_binh = data[['portfolio.rating', 'coverletter.rating', 'refletter.rating']].mean()
-    bars = diem_trung_binh.plot(kind='bar', color=['#4CAF50', '#FF5722', '#2196F3'], ax=ax)
+    ax = fig.add_subplot(111) # Thêm một đối tượng Axes vào Figure
+    diem_trung_binh = data[['portfolio.rating', 'coverletter.rating', 'refletter.rating']].mean() # Tính điểm trung bình
+    bars = diem_trung_binh.plot(kind='bar', color=['#4CAF50', '#FF5722', '#2196F3'], ax=ax) # Tạo biểu đồ cột
     ax.set_xlabel('Loại Đánh Giá')
     ax.set_ylabel('Điểm Trung Bình')
     ax.set_title('Biểu đồ thanh của Điểm Đánh Giá Cá Nhân Trung Bình')
@@ -181,11 +187,11 @@ def plot_personal(FILE_PATH, frame):
     for bar in bars.patches:
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width() / 2, height, f'{height:.2f}', ha='center', va='bottom', fontsize=10)
-    create_canvas(fig, frame)
+    create_canvas(fig, frame) # Tạo một widget FigureCanvasTkAgg từ một đối tượng Figure của Matplotlib.
 
 def plot_personal_btn(FILE_PATH):
     data = pd.read_csv(FILE_PATH)
-    plt.close('all')
+    plt.close('all') # Đóng tất cả các cửa sổ biểu đồ
     fig, ax = plt.subplots(figsize=(10, 6))
     diem_trung_binh = data[['portfolio.rating', 'coverletter.rating', 'refletter.rating']].mean()
     bars = diem_trung_binh.plot(kind='bar', color=['#4CAF50', '#FF5722', '#2196F3'], ax=ax)
@@ -199,11 +205,12 @@ def plot_personal_btn(FILE_PATH):
     plt.tight_layout()
     plt.show()
 
+# Biểu đồ phân tán của Điểm và Đánh giá Cá Nhân
 def plot_point_rating(FILE_PATH, frame):
     data = pd.read_csv(FILE_PATH)
-    fig = plt.Figure(figsize=(10, 6))
-    ax = fig.add_subplot(111)
-    scatter_plots = []
+    fig = plt.Figure(figsize=(10, 6)) # Tạo một đối tượng Figure()
+    ax = fig.add_subplot(111) # Thêm một đối tượng Axes vào Figure
+    scatter_plots = []  # Danh sách chứa các đối tượng Scatter
     for mon in ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']:
         scatter_plots.append(ax.scatter(data[mon], data['portfolio.rating'], label=f'{mon} và Đánh Giá Hồ Sơ', alpha=0.6))
         scatter_plots.append(ax.scatter(data[mon], data['coverletter.rating'], label=f'{mon} và Đánh Giá Thư Xin Việc', alpha=0.6))
