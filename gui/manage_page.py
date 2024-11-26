@@ -300,21 +300,27 @@ class StudentManagementApp():
             entry.grid(row=(i // 2) + 1, column=(i % 2) * 2 + 1, padx=15, pady=5, ipadx=7, ipady=5) # Đặt ô nhập liệu vào frame, entry -> col = 1 or 3, label = 0 or 2
         return True
     
-    def confirm_update(self, entries, fields, fileds_ui):
+    def confirm_update(self, entries, fields, fields_ui):
         student_id = str(entries["ID"].get())
         # Lấy thông tin sinh viên từ các ô nhập liệu: duyệt từng labeltext và placeholder trong fields, lấy giá trị từ entry widget tương ứng
-        new_data = [entries[label_text].get() for label_text, _ in fileds_ui] 
-
-        for i, (field, placeholder) in enumerate(fileds_ui): # Kiểm tra thông tin nhập vào
-            if new_data[i] == "": # Nếu ô nhập liệu trống
+        new_data = []
+        for label_text, _ in fields_ui:
+            value = entries[label_text].get()
+            if label_text in ["ID", "Age", "Portfolio Rating", "Cover Letter Rating", "Reference Letter Rating"]:
+                value = int(value)  # Chuyển đổi về kiểu int
+            elif label_text in ["Latitude (vĩ dộ)", "Longitude (kinh độ)", "English Grade", "Math Grade", "Sciences Grade", "Language Grade"]:
+                value = float(value)
+            new_data.append(value)
+        for i, (field, _) in enumerate(fields_ui):  # Kiểm tra thông tin nhập vào
+            if new_data[i] == "":  # Nếu ô nhập liệu trống
                 messagebox.showwarning("Cảnh báo", f"Hãy điền đầy đủ các trường '{field}'")
                 return
-         # Cập nhật thông tin sinh viên       
-        if update_data(student_id, new_data):
+        # Cập nhật thông tin sinh viên
+        if update_data("data/data_clean.csv", student_id, new_data):
             messagebox.showinfo("Thành công!", "Đã cập nhật thông tin sinh viên.")
         else:
             messagebox.showerror("Cập nhật thất bại.", f"Không tìm thấy sinh viên với ID: {student_id}")
-    
+
     # Delete
     def delete(self):
         self.clear_content_frame()
@@ -364,13 +370,12 @@ class StudentManagementApp():
             return
 
         # Xóa sinh viên 
-        df = pd.read_csv("data/data_clean.csv")
-        updated_df = delete_data(df, student_id)
+        file_path = "data/data_clean.csv"
+        success = delete_data(file_path, student_id)
 
-        if updated_df is None:
+        if not success:
             messagebox.showerror("Lỗi", f"Không tìm thấy sinh viên với ID: {student_id}.")
         else:
-            updated_df.to_csv("data/data_clean.csv", index=False)
             messagebox.showinfo("Thành công", f"Đã XÓA SINH VIÊN có ID {student_id}")
 
     # Cleaning
