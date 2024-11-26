@@ -29,13 +29,14 @@ def create_data(student_data, file_path):
         df = pd.read_csv(file_path, encoding='utf-8')
     except FileNotFoundError:
         # Nếu file không tồn tại, tạo một DataFrame mới với tiêu đề cột
-        columns = ["ID", "Name", "Nationality", "City", "Latitude", "Longitude", "Gender",
-                   "Ethnic Group", "Age", "English Grade", "Math Grade",
-                   "Sciences Grade", "Language Grade", "Portfolio Rating",
-                   "Cover Letter Rating", "Reference Letter Rating"]
-        df = pd.DataFrame(columns=columns)
+        columns = ["id", "name", "nationality", "city", "latitude", "longitude", "gender",
+               "ethnic.group", "age", "english.grade", "math.grade",
+               "sciences.grade", "language.grade", "portfolio.rating",
+               "coverletter.rating", "refletter.rating"]
+        # Tạo DataFrame mới với tiêu đề cột
+        df = pd.DataFrame(columns=columns) 
 
-    # Thêm dữ liệu mới vào DataFrame
+    # Thêm dữ liệu mới vào DataFrame: concat() để nối dữ liệu mới vào cuối DataFrame hiện tại, tự động tạo chỉ số mới sau khi nối(ignore_index=True)
     df = pd.concat([df, pd.DataFrame([student_data], columns=df.columns)], ignore_index=True)
 
     # Ghi lại toàn bộ dữ liệu vào file
@@ -49,9 +50,11 @@ def update_data(file_path, student_id, new_info):
 
         # Tìm chỉ số của sinh viên cần cập nhật
         index = df[df['id'].astype(str) == student_id].index
+        print(index)
         if not index.empty:
             # Cập nhật thông tin mới
             for i, col in enumerate(df.columns):
+                #df.at[]: Đây là một phương thức trong Pandas dùng để truy cập và thay đổi giá trị trong DataFrame tại một chỉ số (index) và cột (column) cụ thể.
                 df.at[index[0], col] = new_info[i]
             # Ghi lại toàn bộ dữ liệu vào file
             df.to_csv(file_path, index=False, encoding='utf-8')

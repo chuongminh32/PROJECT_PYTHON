@@ -1,6 +1,6 @@
 id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grade,math.grade,sciences.grade,language.grade,portfolio.rating,coverletter.rating,refletter.rating
 0,Kiana Lor,China,Suzhou,31.31,120.62,F,Tibetan,22,3.5,3.7,3.1,1.0,4,4,4
-1,Joshua Lonaker,United States of America,Santa Clarita,34.39,-118.54,M,Black or African American,22,2.9,3.2,3.6,5.0,5,4,5
+1,Joshua Lonaker,United States of America,Santa Clarita,34.38,-118.54,M,Black or African American,22,2.9,3.2,3.6,5.0,5,4,5
 2,Dakota Blanco,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,22,3.9,3.8,3.2,5.0,3,3,4
 3,Natasha Yarusso,United States of America,Castro Valley,37.69,-122.09,F,Asian,20,3.3,2.8,3.2,5.0,5,2,4
 4,Brooke Cazares,Brazil,São José dos Campos,-23.18,-45.88,F,Asian,21,3.7,2.6,3.4,1.0,4,4,5
@@ -999,3 +999,4 @@ id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grad
 2297,Elliot,United States of America,Phoenix,-12.03,40.21,F,Black or African American,20,1.7,3.6,1.0,2.2,4,2,1
 2300,Aarti,India,Delhi,41.54,18.99,F,Hindu,20,1.3,1.0,2.3,3.9,4,1,4
 1999,Wu Jian,China,Shenzhen,-76.92,-125.9,F,Mongol,26,3.8,3.1,1.9,4.7,3,1,4
+9999,Project Python,Vietnam,Ho Chi Minh,37.8,-122.27,F,NA,22,4.0,3.9,3.8,5,4,5,4
