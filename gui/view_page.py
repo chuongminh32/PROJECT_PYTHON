@@ -102,6 +102,8 @@ class ViewPage:
                                 self.plot_point_old, 300)
         self.create_menu_button(M_Frame, "Quay về", self.exit_program, 350)
 
+   
+
     def create_content_frame(self):
         """Tạo vùng hiển thị nội dung."""
         self.content_frame = Frame(self.root, bg="lightgrey")

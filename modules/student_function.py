@@ -58,7 +58,7 @@ def sort_increase_age():
         df_sorted_age = df.sort_values(by="age", ascending=True)
 
         # Lưu DataFrame đã sắp xếp vào file CSV mới
-        df_sorted_age.to_csv("data/sorted_by_age.csv", index=False)
+        df_sorted_age.to_csv("data/sorted_by_age.csv", index=False) # index = false để không lưu cột index
 
         return True  # Trả về True khi hoàn tất
     except Exception as e:

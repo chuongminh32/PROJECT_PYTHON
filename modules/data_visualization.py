@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
+import numpy as np # Thư viện NumPy để xử lý mảng nhanh hơn
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg 
 import mplcursors
 
@@ -17,12 +17,26 @@ def create_canvas(fig, frame):
 
 # Tạo biểu đồ cột từ một DataFrame.
 def create_bar_chart(df, cols, title, xlabel, ylabel):
+    """
+    Tạo biểu đồ cột từ DataFrame.
+
+    Parameters:
+    df (pandas.DataFrame): DataFrame chứa dữ liệu.
+    cols (list): Danh sách các cột trong DataFrame để tạo biểu đồ.
+    title (str): Tiêu đề của biểu đồ.
+    xlabel (str): Nhãn trục X.
+    ylabel (str): Nhãn trục Y.
+
+    Returns:
+    matplotlib.figure.Figure: Đối tượng Figure của biểu đồ.
+
+    """
     fig, ax = plt.subplots(figsize=(10, 6))
     bars = ax.bar(cols, df[cols].mean(), color=plt.cm.Blues(np.linspace(0.5, 1, len(cols))))
     ax.set(title=title, xlabel=xlabel, ylabel=ylabel)
     plt.grid(axis='y', linestyle='--', alpha=0.5)
     for i, value in enumerate(df[cols].mean()): # Hiển thị giá trị trên cột
-        plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom')
+        plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom') # ha='center', va='bottom' để căn giữa giá trị, value + 0.05 để đẩy giá trị lên trên
     return fig
 
 # Tạo biểu đồ hình tròn từ một DataFrame.
