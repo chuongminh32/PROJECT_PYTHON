@@ -21,7 +21,7 @@ def read_data(file_path):
     except Exception as e:
         messagebox.showerror("Lỗi", f"Có lỗi xảy ra khi đọc file: {e}")
         return None
-
+        
 def create_data(student_data, file_path):
     """Thêm dữ liệu sinh viên vào file CSV, đảm bảo tiêu đề cột luôn đứng đầu."""
     try:
@@ -30,13 +30,16 @@ def create_data(student_data, file_path):
     except FileNotFoundError:
         # Nếu file không tồn tại, tạo một DataFrame mới với tiêu đề cột
         columns = ["id", "name", "nationality", "city", "latitude", "longitude", "gender",
-               "ethnic.group", "age", "english.grade", "math.grade",
-               "sciences.grade", "language.grade", "portfolio.rating",
-               "coverletter.rating", "refletter.rating"]
-        # Tạo DataFrame mới với tiêu đề cột
-        df = pd.DataFrame(columns=columns) 
+                   "ethnic.group", "age", "english.grade", "math.grade",
+                   "sciences.grade", "language.grade", "portfolio.rating",
+                   "coverletter.rating", "refletter.rating"]
+        df = pd.DataFrame(columns=columns)
 
-    # Thêm dữ liệu mới vào DataFrame: concat() để nối dữ liệu mới vào cuối DataFrame hiện tại
+    # Kiểm tra số lượng giá trị trong student_data
+    if len(student_data) != len(df.columns):
+        raise ValueError(f"Số lượng dữ liệu ({len(student_data)}) không khớp với số cột ({len(df.columns)}).")
+
+    # Thêm dữ liệu mới vào DataFrame
     df = pd.concat([df, pd.DataFrame([student_data], columns=df.columns)], ignore_index=True)
 
     # Ghi lại toàn bộ dữ liệu vào file
@@ -58,7 +61,7 @@ def update_data(file_path, student_id, new_info):
                 # tại một chỉ số (index) và cột (column) cụ thể.
                 df.at[index[0], col] = new_info[i]
             # Ghi lại toàn bộ dữ liệu vào file
-            df.to_csv(file_path, index=False, encoding='utf-8')
+            df.to_csv(file_path, index=False, encoding='utf -8')
             return True
         else:
             return False
