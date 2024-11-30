@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np # Thư viện NumPy để xử lý mảng nhanh hơn
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg 
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import mplcursors
 
 
@@ -152,7 +152,7 @@ def plot_age_btn(FILE_PATH):
 def plot_gender(FILE_PATH, frame):
     df = pd.read_csv(FILE_PATH)
     fig = create_pie_chart(df, 'gender', "Biểu đồ Tỉ Lệ Nam Nữ")
-    create_canvas(fig, frame) 
+    create_canvas(fig, frame)
 
 def plot_gender_btn(FILE_PATH):
     plt.close('all')
