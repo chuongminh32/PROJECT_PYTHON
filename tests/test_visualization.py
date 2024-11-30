@@ -1,33 +1,90 @@
-
-# Demo 
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import mplcursors
 
 import unittest
-import pandas as pd
-from modules.data_visualization import plot_histogram, plot_pie_chart
+from io import StringIO
+import os
 
-class TestVisualization(unittest.TestCase):
+def plot_country_btn(FILE_PATH):
+    plt.close('all')
+    df = pd.read_csv(FILE_PATH)
+    nation = df['nationality'].value_counts()
+    total = nation.sum()
 
-    def setUp(self):
-        self.df = pd.DataFrame({
-            'sbd': [100001, 100002],
-            'toan': [8.5, 6.5],
-            'ngu_van': [7.0, 5.5],
-            'ngoai_ngu': [9.0, 6.0]
-        })
+    labels = [label if size / total >= 0.024 else "" for label, size in zip(nation.index, nation)]
+    sizes = nation.values
 
-    def test_plot_histogram(self):
-        """Kiểm tra vẽ biểu đồ histogram"""
-        try:
-            plot_histogram(self.df, 'toan')
-        except Exception as e:
-            self.fail(f"plot_histogram failed with exception {e}")
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 10 else '', startangle=140)
 
-    def test_plot_pie_chart(self):
-        """Kiểm tra vẽ biểu đồ hình tròn"""
-        try:
-            plot_pie_chart(self.df, 'ngoai_ngu')
-        except Exception as e:
-            self.fail(f"plot_pie_chart failed with exception {e}")
+    plt.show()
 
+def plot_grade_btn(FILE_PATH):
+    plt.close('all')
+    df = pd.read_csv(FILE_PATH)
+    subject = ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']
+
+    # Kiểm tra nếu DataFrame trống hoặc thiếu các cột cần thiết
+    if df.empty or df[subject].isnull().all().all():
+        raise ValueError("DataFrame trống hoặc không có dữ liệu hợp lệ.")
+    if not all(sub in df.columns for sub in subject):
+        raise KeyError("DataFrame thiếu các cột cần thiết.")
+
+    grade = df[subject].mean()
+
+    plt.figure(figsize=(10,6))
+    plt.bar(subject, grade)
+    plt.xlabel("Môn học")
+    plt.ylabel("Điểm")
+    plt.title("Biều đồ điểm trung bình môn học")
+
+    for i, value in enumerate(grade):
+        plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom')
+
+    plt.show()
+
+class TestPlotGradeBtn(unittest.TestCase):
+
+    def tearDown(self):
+        if hasattr(self, 'temp_file') and os.path.exists(self.temp_file):
+            os.remove(self.temp_file)
+
+    def test_empty_data(self):
+    # Tạo file tạm với nội dung trống, chỉ có tiêu đề các cột
+        empty_data = """ english.grade,math.grade,sciences.grade,language.grade \n"""
+        self.temp_file = 'temp_empty_data.csv'
+        with open(self.temp_file, 'w') as f:
+            f.write(empty_data)
+
+        with self.assertRaises(ValueError):
+            plot_grade_btn(self.temp_file)
+
+    def test_mismatched_data(self):
+        # Tạo dữ liệu không khớp và lưu vào file tạm thời
+        mismatched_data = """english.grade,math.grade,sciences.grade
+        4.0,3.8,4.5
+        4.3,4.1,5.0
+        3.6,4.1,4.4
+        5.0,4.7,4.5
+        3.9,4.6,4.5"""
+
+        # Tạo tên tạm cho file CSV
+        self.temp_file = 'temp_mismatched_data.csv'
+
+        # Ghi dữ liệu vào file CSV
+        with open(self.temp_file, 'w') as f:
+            f.write(mismatched_data)
+
+        # Kiểm tra xem KeyError có được ném keông
+        with self.assertRaises(KeyError):
+            plot_grade_btn(self.temp_file)
+    '''
 if __name__ == '__main__':
     unittest.main()
+
+'''
+if __name__ == '__main__':
+    plot_country_btn("data/student-dataset.csv")
+

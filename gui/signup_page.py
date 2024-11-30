@@ -1,22 +1,28 @@
-# -*- coding: utf-8 -*-
 from tkinter import Tk, Label, Frame, Entry, Button, END, messagebox, PhotoImage
 import subprocess
 import os
 import ast
 from PIL import Image, ImageTk
 
-"""Tk: class để tạo cửa sổ chính
-Label: class để thêm text hoặc hình ảnh
-Frame: class để tạo container
-Entry: class để tạo ô nhập liệu
-Button: class để tạo nút
-END: biến để xác định cuối của Entry
-messagebox: class để hiển thị thông báo
-os: module để thao tác với hệ thống
-subprocess: module để chạy các lệnh hệ thống
-Image, ImageTk: class để thao tác với hình ảnh
-PhotoImage: class để thêm hình ảnh vào Label"""
-
+"""
+Chương trình đăng ký người dùng với giao diện đồ họa sử dụng thư viện Tkinter.
+Các thư viện sử dụng:
+- tkinter: Thư viện tiêu chuẩn của Python để tạo giao diện đồ họa.
+    + Tk: Tạo cửa sổ chính của ứng dụng.
+    + Label: Tạo nhãn văn bản hoặc hình ảnh.
+    + Frame: Tạo khung chứa các widget khác.
+    + Entry: Tạo ô nhập liệu.
+    + Button: Tạo nút bấm.
+    + END: Hằng số để chỉ định vị trí cuối cùng trong ô nhập liệu.
+    + messagebox: Hiển thị các hộp thoại thông báo.
+    + PhotoImage: Xử lý hình ảnh.
+- subprocess: Thư viện để chạy các tiến trình con.
+- os: Thư viện cung cấp các chức năng tương tác với hệ điều hành.
+- ast: Thư viện để xử lý và phân tích cú pháp các biểu thức Python.
+- PIL (Pillow): Thư viện xử lý hình ảnh.
+    + Image: Mở và xử lý hình ảnh.
+    + ImageTk: Chuyển đổi hình ảnh để sử dụng trong Tkinter.
+"""
 
 def initialize_root():
     root = Tk()
@@ -28,7 +34,7 @@ def initialize_root():
 
 
 def add_background(root):
-    img = PhotoImage(file="images/sign_up3.png")
+    img = PhotoImage(file="images/sign_up.png")
     Label(root, image=img, bg="white", border=0).place(
         x=50, y=50, width=450, height=450)
     root.bg_image = img  # giữ tham chiếu để tránh bị xóa khỏi bộ nhớ
@@ -49,8 +55,6 @@ def add_logo_and_heading(frame):
           bg="white", fg="#1C2442").place(x=80, y=15)
 
 # hàm add_entry() nhận thêm tham số show để ẩn mật khẩu
-
-
 def add_entry(frame, placeholder, y, show=""):
     entry = Entry(frame, width=35, fg='#1C2442', border=0,
                   bg="white", font=("Arial", 11), show=show)
@@ -71,8 +75,6 @@ def add_entry(frame, placeholder, y, show=""):
     return entry
 
 # hàm add_signup_button() nhận thêm tham số username, password, confirm_password để kiểm tra thông tin nhập vào
-
-
 def add_signup_button(frame, username, password, confirm_password):
     def signup():
         user = username.get()  # Lấy tên người dùng từ ô nhập liệu
@@ -83,9 +85,8 @@ def add_signup_button(frame, username, password, confirm_password):
             # Hiển thị thông báo lỗi
             messagebox.showerror("Sign Up", "Vui lòng điền đầy đủ thông tin.")
             return
-
         try:
-            # Mở (hoặc tạo) file users.txt trong chế độ append
+            # Mở (hoặc tạo) file users.txt trong chế độ đọc và ghi
             with open("data/users.txt", "a+") as file:
                 file.seek(0)  # Đưa con trỏ về đầu file
                 data = file.read() or "{}"  # Đọc dữ liệu từ file, nếu rỗng thì gán là dict rỗng
@@ -99,13 +100,17 @@ def add_signup_button(frame, username, password, confirm_password):
 
                 if pwd == confirm_pwd:  # Kiểm tra nếu mật khẩu và mật khẩu xác nhận khớp
                     users[user] = pwd  # Thêm người dùng mới vào dict
-                    file.seek(0)
-                    file.truncate()  # Xóa nội dung file trước khi ghi mới
-                    file.write(str(users))  # Ghi dict người dùng vào file
+                    
+                    # Mở lại file ở chế độ ghi để cập nhật dữ liệu mới mà không xóa thông tin cũ
+                    with open("data/users.txt", "w") as file_write:
+                        file_write.write(str(users))  # Ghi dict người dùng vào file
 
                     # Hiển thị thông báo thành công
                     messagebox.showinfo(
                         "Sign Up", "Đăng ký thành công! Chuyển đến trang đăng nhập.")
+                    root.destroy()
+                    subprocess.run(["python", "gui/login_page.py"])
+
                 else:
                     # Hiển thị thông báo lỗi nếu mật khẩu không khớp
                     messagebox.showerror(
