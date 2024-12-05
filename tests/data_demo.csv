@@ -1,0 +1,7 @@
+id,name,nationality,city,latitude,longitude,gender,ethnic.group,age,english.grade,math.grade,sciences.grade,language.grade,portfolio.rating,coverletter.rating,refletter.rating
+0,Kiana Lor,China,Suzhou,31.31,120.62,F,Tibetan,,3.5,3.7,3.1,1.0,4,4.0,
+1,,United States of America,Santa Clarita,34.39,-118.54,M,Black or African American,22,2.9,3.2,3.6,5.0,5,4.0,5
+2,Dakota Blanco,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,22,3.9,3.8,3.2,5.0,3,3.0,4
+2,,United States of America,Oakland,37.8,-122.27,F,Hispanic or Latino,22,3.9,3.8,3.2,5.0,3,3.0,4
+3,Natasha Yarusso,United States of America,Castro Valley,37.69,-122.09,F,Asian,20,3.3,2.8,3.2,5.0,5,2.0,4
+,Brooke Cazares,Brazil,São José dos Campos,-23.18,-45.88,F,Asian,21,3.7,2.6,3.4,1.0,4,4.0,5

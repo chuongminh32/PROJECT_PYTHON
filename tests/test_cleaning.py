@@ -1,48 +1,16 @@
-# import pandas as pd
-# import os
-
-# def handle_missing_value(file_path):
-#     """Thay thế dữ liệu bị thiếu thành 0.0 (float)"""
-#     df = pd.read_csv(file_path)
-#     result_df = df.dropna(subset=['sbd'])  # Xóa hàng có giá trị SBD bị rỗng
-#     result_df = result_df.fillna(0.0)       # Thay thế các giá trị thiếu thành 0.0
-#     save_to_cleaned_data_file(, result_df)  # Lưu dữ liệu đã làm sạch
-#     return result_df  # Trả về DataFrame đã xử lý
-
-# def remove_duplicates(file_path):
-#     """Loại bỏ các giá trị trùng lặp và ghi dữ liệu mới vào file "cleaned_data.csv"."""
-#     df = pd.read_csv(file_path)
-#     result_df = df.drop_duplicates(subset=['sbd'])  # Loại bỏ hàng trùng lặp theo SBD
-#     save_to_cleaned_data_file(, result_df)  # Lưu dữ liệu đã loại bỏ trùng lặp
-#     return result_df  # Trả về DataFrame đã xử lý
-
-# def correct_formatting(df):
-#     """Sửa định dạng dữ liệu, đảm bảo SBD là chuỗi số liên tiếp và các điểm thi là số."""
-#     # Chuyển đổi SBD thành chuỗi và loại bỏ bất kỳ giá trị không hợp lệ
-#     df['sbd'] = df['sbd'].astype(str).str.replace('.0', '', regex=False)  # Đảm bảo không có ".0"
-    
-#     columns = ['toan', 'ngu_van', 'ngoai_ngu', 'vat_li', 'hoa_hoc', 'sinh_hoc', 
-#                'lich_su', 'dia_li', 'gdcd']
-#     df[columns] = df[columns].apply(pd.to_numeric, errors='coerce')  # Chuyển đổi các điểm thi thành số
-#     return df
-
-# def save_to_cleaned_data_file(filepath, result_df):
-#     """Hàm này để lưu các giá trị sau khi làm sạch vào file "cleaned_data.csv"."""
-#     result_df.to_csv(filepath, index=False, encoding='utf-8')  # Sử dụng pandas để lưu dữ liệu
-
-
-
 import pandas as pd
 import numpy as np
 import csv
 from math import ceil
 
-def handle_missing_value(FILE_PATH, FILE_CLEAN_DATA_PATH):
+def test_handle_missing_value(FILE_PATH, FILE_CLEAN_DATA_PATH):
     """Thay thế dữ liệu bị thiếu thành 0.0 (float)
-    - Gọi hàm này ở cuối để chạy demo: fill_missing_value("data\dataset_demo.csv")
-    - Hàm xử lý dữ liệu ĐIỂM bị thiếu thành 0.0 và xóa hàng khi giá trị tại cột "SBD" bị rỗng
+    - Gọi hàm này ở cuối để chạy demo: handle_missing_value("data_demo.csv",'data_clean_demo.csv')
     """
     df = pd.read_csv(FILE_PATH)
+    # print(df.info())
+    print(df.loc[:,['id','name','age','refletter.rating']])
+
     #Loại bỏ record khi không chứa id
     df = df.dropna(subset=['id'])
 
@@ -70,6 +38,10 @@ def handle_missing_value(FILE_PATH, FILE_CLEAN_DATA_PATH):
             df[col] = df[col].fillna(0)
     # print(result_df)
     save_to_cleaned_data_file(FILE_CLEAN_DATA_PATH, df)
+    
+
+    result_df = pd.read_csv(FILE_CLEAN_DATA_PATH)
+    print(result_df.loc[:,['id','name','age','refletter.rating']])
     return 1
 
 def remove_duplicates(FILE_PATH, FILE_CLEAN_DATA_PATH):
@@ -88,15 +60,24 @@ def remove_duplicates(FILE_PATH, FILE_CLEAN_DATA_PATH):
 def correct_formatting(FILE_PATH):
     """Sửa định dạng dữ liệu, làm cho cột 'age' và các cột đánh giá thành số nguyên không âm."""
     df = pd.read_csv(FILE_PATH)
+    print(df.dtypes)
    # Chuyển đổi 'age' thành số nguyên dương
     if 'age' in df.columns:
-        df['age'] = pd.Series(df['age'], dtype=pd.Int64Dtype())
+        df['age'] = pd.to_numeric(df['age'], errors='coerce').fillna(0).astype(int)
         df['age'] = abs(df['age'])
+
+    if 'id' in df.columns:
+        df['id'] = pd.to_numeric(df['id'], errors='coerce').fillna(0).astype(int)
 
     # Đảm bảo các cột đánh giá là số nguyên không âm từ 0 đến 5
     columns_int = ['portfolio.rating', 'coverletter.rating', 'refletter.rating']
     for col in columns_int:
-        df[col] = pd.Series(df[col], dtype=pd.Int64Dtype())
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
+            df[col] = df[col].apply(lambda x: x if 0 <= x <= 5 else 0)
+
+    print(df.dtypes)
+
     save_to_cleaned_data_file(FILE_CLEAN_DATA_PATH, df)
 
     return df
@@ -120,16 +101,15 @@ thứ 2, 3, 4 truyền FILE_CLEAN_DATA_PATH
 
 # Chạy demo
 if __name__ == "__main__":
-    FILE_CLEAN_DATA_PATH = "data\data_clean.csv"
+    FILE_CLEAN_DATA_PATH = str('tests/data_clean_demo.csv')
     # Đường dẫn đến file dataset_demo.csv
-    dataset_path = "data\student-dataset.csv"  # Đường dẫn tuyệt đối tới file dữ liệu nguồn
-    print("Data source path:", dataset_path)
+    dataset_path = str('tests/data_demo.csv')
     
-    # Bước 1: Xóa các bản ghi trùng lặp
-    # df_no_duplicates = remove_duplicates(dataset_path, FILE_CLEAN_DATA_PATH)
+    # Bước 1: Xử lý giá trị bị thiếu
+    df_no_missing = test_handle_missing_value(dataset_path, FILE_CLEAN_DATA_PATH)
     
-    # # Bước 2: Xử lý các giá trị bị thiếu
-    # df_cleaned = handle_missing_value(dataset_path, FILE_CLEAN_DATA_PATH)
+    # # Bước 2: Xử lý các giá trị bị trùng lặp
+    # remove_dup = remove_duplicates(dataset_path,FILE_CLEAN_DATA_PATH)
     
     # Bước 3: Sửa định dạng dữ liệu
     df_corrected = correct_formatting(FILE_CLEAN_DATA_PATH)
