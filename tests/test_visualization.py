@@ -1,40 +1,90 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import mplcursors
-import tkinter as tk
 
+import unittest
+from io import StringIO
+import os
 
-
-# Hàm vẽ biểu đồ điểm học tập
-def plot_grade(FILE_PATH, frame):
+def plot_country_btn(FILE_PATH):
+    plt.close('all')
     df = pd.read_csv(FILE_PATH)
-    grade_cols = ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']
-    df_grades = df[grade_cols].mean()  # Tính điểm trung bình các môn
+    nation = df['nationality'].value_counts()
+    total = nation.sum()
 
-    # Tạo biểu đồ thanh
+    labels = [label if size / total >= 0.024 else "" for label, size in zip(nation.index, nation)]
+    sizes = nation.values
+
     fig, ax = plt.subplots(figsize=(10, 6))
-    bars = ax.bar(grade_cols, df_grades, color=plt.cm.Blues(np.linspace(0.5, 1, len(grade_cols))))
+    ax.pie(sizes, labels=labels, autopct=lambda p: '{:.1f}%'.format(p) if p >= 10 else '', startangle=140)
 
-    # Tùy chỉnh đồ thị
-    ax.set(title="Biểu đồ điểm học tập trung bình", xlabel="Môn học", ylabel="Điểm")
-    plt.grid(axis='y', linestyle='--', alpha=0.5)  # Lưới mờ
-    for i, value in enumerate(df_grades):  # Hiển thị giá trị trên mỗi cột
+    plt.show()
+
+def plot_grade_btn(FILE_PATH):
+    plt.close('all')
+    df = pd.read_csv(FILE_PATH)
+    subject = ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']
+
+    # Kiểm tra nếu DataFrame trống hoặc thiếu các cột cần thiết
+    if df.empty or df[subject].isnull().all().all():
+        raise ValueError("DataFrame trống hoặc không có dữ liệu hợp lệ.")
+    if not all(sub in df.columns for sub in subject):
+        raise KeyError("DataFrame thiếu các cột cần thiết.")
+
+    grade = df[subject].mean()
+
+    plt.figure(figsize=(10,6))
+    plt.bar(subject, grade)
+    plt.xlabel("Môn học")
+    plt.ylabel("Điểm")
+    plt.title("Biều đồ điểm trung bình môn học")
+
+    for i, value in enumerate(grade):
         plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom')
 
-    canvas = FigureCanvasTkAgg(fig, master=frame)
-    canvas.draw()
-    canvas.get_tk_widget().pack(fill="both", expand=True)
-    detail_btn = tk.Button(button_frame, text="Detail", command=plt.show, width=10, height=2)
-    detail_btn.pack(side="left", padx=10, pady=10)
-    
+    plt.show()
 
-root = tk.Tk()
-frame = tk.Frame(root)
-frame.pack(fill="both", expand=True)
-button_frame = tk.Frame(root)
-button_frame.pack()
+class TestPlotGradeBtn(unittest.TestCase):
 
-plot_grade("data/data_clean.csv", frame)
-root.mainloop()
+    def tearDown(self):
+        if hasattr(self, 'temp_file') and os.path.exists(self.temp_file):
+            os.remove(self.temp_file)
+
+    def test_empty_data(self):
+    # Tạo file tạm với nội dung trống, chỉ có tiêu đề các cột
+        empty_data = """ english.grade,math.grade,sciences.grade,language.grade \n"""
+        self.temp_file = 'temp_empty_data.csv'
+        with open(self.temp_file, 'w') as f:
+            f.write(empty_data)
+
+        with self.assertRaises(ValueError):
+            plot_grade_btn(self.temp_file)
+
+    def test_mismatched_data(self):
+        # Tạo dữ liệu không khớp và lưu vào file tạm thời
+        mismatched_data = """english.grade,math.grade,sciences.grade
+        4.0,3.8,4.5
+        4.3,4.1,5.0
+        3.6,4.1,4.4
+        5.0,4.7,4.5
+        3.9,4.6,4.5"""
+
+        # Tạo tên tạm cho file CSV
+        self.temp_file = 'temp_mismatched_data.csv'
+
+        # Ghi dữ liệu vào file CSV
+        with open(self.temp_file, 'w') as f:
+            f.write(mismatched_data)
+
+        # Kiểm tra xem KeyError có được ném keông
+        with self.assertRaises(KeyError):
+            plot_grade_btn(self.temp_file)
+    '''
+if __name__ == '__main__':
+    unittest.main()
+
+'''
+if __name__ == '__main__':
+    plot_country_btn("data/student-dataset.csv")
+

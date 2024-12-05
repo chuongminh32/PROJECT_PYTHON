@@ -1,138 +1,148 @@
+import unittest
+import os
 import pandas as pd
+import traceback
+from tkinter import Tk
+from unittest.mock import patch
+import sys
 
-def read_data(file_path):
-    """
-    Đọc dữ liệu từ file CSV và trả về DataFrame.
-    """
-    try:
-        df = pd.read_csv(file_path, delimiter=',')
-        if df.empty:  # Kiểm tra nếu dữ liệu trống
-            print("Không có dữ liệu để hiển thị.")
-        return df
-    except Exception as e:
-        print(f"Lỗi khi đọc file: {e}")
-        return None
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from modules.data_crud import read_data, create_data, update_data, delete_data
 
-def add_data(df, new_row):
-    """
-    Thêm hàng mới vào DataFrame.
-    """
-    if df is None:
-        print("DataFrame is None. Cannot add data.")
-        return df
+class TestCSVOperationsDetailed(unittest.TestCase):
+    def setUp(self):
+        """
+        Tạo dữ liệu và file CSV giả lập trước mỗi test.
+        """
+        self.file_path = 'test_data.csv'
+        self.sample_data = pd.DataFrame({
+            "id": [1, 2],
+            "name": ["Alice", "Bob"],
+            "nationality": ["Country A", "Country B"],
+            "city": ["City A", "City B"],
+            "latitude": [1.0, 2.0],
+            "longitude": [3.0, 4.0],
+            "gender": ["F", "M"],
+            "ethnic.group": ["Group A", "Group B"],
+            "age": [25, 30],
+            "english.grade": [4.0, 3.5],
+            "math.grade": [3.8, 3.9],
+            "sciences.grade": [4.0, 4.0],
+            "language.grade": [3.6, 3.7],
+            "portfolio.rating": [4, 5],
+            "coverletter.rating": [4.2, 3.8],
+            "refletter.rating": [3.9, 4.1]
+        })
+        self.sample_data.to_csv(self.file_path, index=False, encoding='utf-8')
 
-    # Kiểm tra nếu dữ liệu mới có đúng số lượng cột như DataFrame
-    if len(new_row) == len(df.columns):
-        new_row_df = pd.DataFrame([new_row], columns=df.columns)
-        df = pd.concat([df, new_row_df], ignore_index=True)
-    else:
-        print("Dữ liệu mới không khớp với cấu trúc DataFrame.")
-    return df
+    def tearDown(self):
+        """
+        Xóa file CSV giả lập sau mỗi test.
+        """
+        if os.path.exists(self.file_path):
+            os.remove(self.file_path)
 
-def update_data(df, id, updated_row):
-    """
-    Cập nhật dữ liệu theo ID.
-    """
-    if df is None:
-        print("DataFrame is None. Cannot update data.")
-        return df
+    @patch("tkinter.messagebox.showerror")
+    def test_read_data_error_handling(self, mock_error):
+        """
+        Hàm test_read_data_error_handling:
+        Hàm này kiểm tra lỗi khi đọc file CSV không tồn tại.
+        Kết quả cho thấy hàm read_data ném ra lỗi FileNotFoundError
+        và hiển thị thông báo lỗi qua tkinter.messagebox với nội dung:
+        "Không tìm thấy file: non_existent.csv".
+        Test sử dụng mock_error để xác nhận rằng thông báo lỗi được gọi đúng cách. 
+        Kết luận, hàm đã xử lý lỗi đọc file chính xác khi file không tồn tại.
+        Test báo lỗi cụ thể khi xảy ra lỗi đọc file.
+        """
+        try:
+            # Gọi hàm với đường dẫn không tồn tại
+            read_data("non_existent.csv")
+        except Exception as e:
+            print("Error occurred:", str(e))
+            traceback.print_exc()  # In chi tiết lỗi ra màn hình
+        mock_error.assert_called_once()
+        mock_error.assert_called_with("Lỗi", "Không tìm thấy file: non_existent.csv")
 
-    index = df[df['id'] == id].index
-    if not index.empty:
-        for key in updated_row:
-            if key in df.columns:
-                df.loc[index, key] = updated_row[key]
-    else:
-        print(f"Không tìm thấy ID {id}")
-    return df
+    def test_create_data_empty_columns(self):
+        """
+        Hàm test_create_data_empty_columns:
+        Hàm kiểm tra trường hợp dữ liệu đầu vào không đủ số cột.
+        Khi gọi create_data với dữ liệu thiếu cột, hàm ném ra lỗi ValueError
+        cùng thông báo: "Số lượng dữ liệu (4) không khớp với số cột (16).".
+        Sử dụng assertRaises để kiểm tra lỗi này được xử lý đúng như mong đợi. 
+        Kết luận, hàm đã hoạt động chính xác, không cho phép thêm dữ liệu không đầy đủ.
+        Test lỗi khi thiếu cột trong dữ liệu.
+        """
+        incomplete_student = [3, "Charlie", "Country C", "City C"]  # Dữ liệu không đủ số cột
+        with self.assertRaises(ValueError) as context:
+            create_data(incomplete_student, self.file_path)
 
-def delete_data(df, id):
-    """
-    Xóa hàng dữ liệu theo ID.
-    """
-    if df is None:
-        print("DataFrame is None. Cannot delete data.")
-        return df
+        # Kiểm tra thông báo lỗi
+        self.assertEqual(
+            str(context.exception),
+            "Số lượng dữ liệu (4) không khớp với số cột (16)."
+        )
+    def test_update_data_invalid_id(self):
+        """
 
-    index = df[df['id'] == id].index
-    if not index.empty:
-        df = df.drop(index)
-        print(f"Đã xóa ID {id}")
-    else:
-        print(f"Không tìm thấy ID {id}")
-    return df
+        Hàm test_update_data_invalid_id:
+        Hàm này kiểm tra việc cập nhật dữ liệu với ID không tồn tại trong file CSV. 
+        Kết quả cho thấy hàm update_data trả về False khi không tìm thấy ID cần cập nhật,
+        và không có lỗi bất ngờ xảy ra. Điều này chứng minh rằng hàm đã xử lý chính xác 
+        trường hợp ID không tồn tại mà không làm ảnh hưởng đến dữ liệu.
+        Test báo lỗi khi cập nhật với ID không tồn tại.
+        """
+        try:
+            # Cập nhật thông tin với ID không tồn tại
+            new_info = [3, "Updated Name", "Updated Country", "Updated City", 0, 0, "M", "Group", 20, 3.5, 3.5, 3.5, 3.5, 3, 3.5, 3]
+            result = update_data(self.file_path, "999", new_info)
+            self.assertFalse(result, "Update should fail for non-existent ID.")
+        except Exception as e:
+            print("Error occurred while updating:", str(e))
+            traceback.print_exc()
+            self.fail(f"Error when updating data: {e}")
 
-# Ví dụ sử dụng:
+    @patch("tkinter.messagebox.showerror")
+    def test_delete_data_invalid_file(self, mock_error):
+        """
+        Hàm test_delete_data_invalid_file:
+        Hàm kiểm tra lỗi khi xóa dữ liệu từ một file CSV không tồn tại. 
+        Kết quả cho thấy hàm delete_data ném lỗi và hiển thị thông báo qua tkinter
+        .messagebox với nội dung: "Không tìm thấy file: invalid_file.csv".
+        Test sử dụng mock_error để đảm bảo thông báo được gọi một cách chính xác. 
+         Kết luận, hàm xử lý lỗi đọc file chính xác khi file không tồn tại.
+        Test lỗi khi xóa dữ liệu từ file không tồn tại.
+        """
+        try:
+            # Xóa dữ liệu từ file không tồn tại
+            result = delete_data("invalid_file.csv", "1")
+            self.assertFalse(result)
+        except Exception as e:
+            print("Error occurred while deleting:", str(e))
+            traceback.print_exc()
+        mock_error.assert_called_once()
+        mock_error.assert_called_with("Lỗi", "Không tìm thấy file: invalid_file.csv")
+
+    def test_delete_data_invalid_id(self):
+        """
+        Hàm test_delete_data_invalid_id:
+        Hàm kiểm tra việc xóa dữ liệu với ID không tồn tại trong file CSV. 
+        Khi gọi delete_data với một ID không tồn tại, hàm trả về False và không gây
+        ra lỗi nào khác. Điều này cho thấy hàm xử lý chính xác, không thực hiện thao
+        tác xóa khi ID không tồn tại.
+        Test lỗi khi ID không tồn tại trong file CSV.
+        """
+        try:
+            result = delete_data(self.file_path, "999")  # ID không tồn tại
+            self.assertFalse(result, "Delete should fail for non-existent ID.")
+        except Exception as e:
+            print("Error occurred while deleting:", str(e))
+            traceback.print_exc()
+            self.fail(f"Error when deleting data: {e}")
+
 if __name__ == "__main__":
-    # Đường dẫn đến file CSV
-    file_path = "data/data_demo.csv"
+    # Tạo root Tkinter để chạy messagebox mà không lỗi
+    root = Tk()
+    root.withdraw()  # Ẩn cửa sổ Tkinter
+    unittest.main()
 
-    # Đọc dữ liệu từ file CSV
-    df = read_data(file_path)
-    if df is not None:
-        print("Dữ liệu ban đầu:")
-        print(df)
-
-        # Thêm hàng mới
-        new_row = [8, "Alex Doe", "Canada", "Toronto", 43.7, -79.42, "M", "NA", 23, 3.0, 3.5, 3.8, 4, 3, 4, 5]
-        df = add_data(df, new_row)
-        print("\nDữ liệu sau khi thêm:")
-        print(df)
-
-        # Cập nhật hàng theo ID
-        updated_row = {"name": "Alex Smith", "english.grade": 4.0}
-        df = update_data(df, 8, updated_row)
-        print("\nDữ liệu sau khi cập nhật:")
-        print(df)
-
-        # Xóa hàng theo ID
-        df = delete_data(df, 8)
-        print("\nDữ liệu sau khi xóa:")
-        print(df)
-
-        # Lưu dữ liệu đã thay đổi vào file mới
-        output_file_path = "data/data_clean.csv"
-        df.to_csv(output_file_path, sep=',', index=False)
-        print(f"\nDữ liệu đã được lưu vào {output_file_path}")
-
-        #  test 
-# update_data("1", ["1", "Nguyễn Văn A", "Việt Nam", "Hà Nội", "21.028511", "105.804817", "Nam", "Kinh", "20", "8.0", "7.5", "8.0", "7.5", "8.0", "8.0", "8.0"])
-
-
-# def display_data_in_table(root, data):
-#     """
-#     Hiển thị dữ liệu dưới dạng bảng trong Tkinter.
-    
-#     Args:
-#         root (Tk): Cửa sổ Tkinter.
-#         data (list): Danh sách các hàng dữ liệu để hiển thị.
-#     """
-#     if data is None or len(data) == 0:
-#         return
-
-#     # Tạo Treeview để hiển thị bảng dữ liệu
-#     table = ttk.Treeview(root, columns=[f"col_{i}" for i in range(len(data[0]))], show='headings')
-#     table.pack(expand=True, fill='both')
-
-#     # Đặt tên cột theo hàng đầu tiên
-#     for i, header in enumerate(data[0]):
-#         table.heading(f"col_{i}", text=header)
-#         table.column(f"col_{i}", width=100)  # Điều chỉnh độ rộng của cột
-
-#     # Thêm các hàng dữ liệu
-#     for row in data[1:]:  # Bỏ qua hàng đầu tiên (header)
-#         table.insert("", "end", values=row)
-
-# def main():
-#     root = tk.Tk()
-#     root.title("Hiển thị dữ liệu dạng bảng")
-#     root.geometry("800x400")
-
-#     # Đọc và hiển thị dữ liệu
-#     data = read_data()
-#     display_data_in_table(root, data)
-
-#     root.mainloop()
-
-# if __name__ == "__main__":
-#     main()

@@ -3,12 +3,12 @@
 ### Thành viên 1
 - **Họ và tên**: Phạm Hàn Minh Chương.
 - **MSSV**: 23110187.
-- **Vai trò**:  code GUI, chức năng CRUD, Leader, Quản lí dự án, lên kế hoạch, điều phối nhóm,.
+- **Vai trò**:  code GUI, chức năng CRUD, Leader, Quản lí dự án, lên kế hoạch, điều phối nhóm.
 
 ### Thành viên 2
 - **Họ và tên**: Nguyễn Thanh Bình Minh.
 - **MSSV**: 23110266.
-- **Vai trò**: Code chức năng Cleaning data, thống kê dữ liệu, sắp xếp dữ liệu.
+- **Vai trò**: Code chức năng làm sạch, thống kê dữ liệu, sắp xếp dữ liệu.
 
 ### Thành viên 3
 - **Họ và tên**: Nguyễn Thị Thanh Thùy.
