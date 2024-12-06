@@ -191,61 +191,11 @@ class Student:
         for text, command in buttons:
             Button(self.content_frame, text=text, cursor="hand2", command=command, width=15).pack(padx=5, pady=10)
 
-    # treeview là: một widget hiển thị dữ liệu dạng bảng, giống như bảng tính Excel. 
-    # def stu_filter(self):
-    #     self.clear_content_frame()  # Xóa nội dung cũ
-    #     global df # df là biến toàn cục chứa dữ liệu sinh viên
-    #     df = pd.read_csv("data/data_clean.csv") # Đọc dữ liệu từ file CSV
-
-    #     field_name_label = tk.Label(self.content_frame, text="Nhập tên trường cần lọc:").pack(padx=5, pady=5) # Đặt nhãn vào khung
-    #     self.field_name_entry = tk.Entry(self.content_frame, width=30) # Tạo trường nhập liệu
-    #     self.field_name_entry.pack(padx=5, pady=5) # Đặt trường nhập liệu vào khung
-
-    #     field_value_label = tk.Label(self.content_frame, text="Nhập giá trị cần tìm:").pack(padx=5, pady=5)
-    #     self.field_value_entry = tk.Entry(self.content_frame, width=30)
-    #     self.field_value_entry.pack(padx=5, pady=5)
-
-    #     search_button = tk.Button(self.content_frame, text="Tìm kiếm",cursor="hand2", command=self.search_by_field).pack(pady=5)
-
-    #     # nut xoa du lieu
-    #     button_clear = Button(self.content_frame, text="Clear", command=self.clear_data_treeview, cursor="hand2").place(x=10, y=120, width=70, height=40)
-    #     columns = list(df.columns) # Lấy danh sách các cột trong dữ liệu, ví dụ ['name', 'age', 'math.grade', ...]
-
-    #     # Tạo treeview để hiển thị dữ liệu sinh viên sau khi lọc 
-    #     self.tree = ttk.Treeview(self.content_frame, columns=columns, show = "headings")
-    #     for col in columns:
-    #         self.tree.heading(col, text=col)
-    #         self.tree.column(col, width=150, anchor="center")
-            
-    #     y = tk.Scrollbar(self.content_frame, orient="vertical", command=self.tree.yview) # Tạo thanh cuộn dọc(vertical)
-    #     # command=self.tree.yview: Liên kết thanh cuộn với phương thức yview của Treeview, cho phép thanh cuộn điều khiển việc cuộn dọc của Treeview.
-    #     y.pack(side="right", fill="y") # Đặt thanh cuộn vào khung 
-    #     x = tk.Scrollbar(self.content_frame, orient="horizontal", command=self.tree.xview) # Tạo thanh cuộn ngang(horizontal)
-    #     x.pack(side="bottom", fill="x") # Đặt thanh cuộn vào khung
-    #     # Cấu hình treeview để có thanh cuộn dọc và ngang
-    #     # yscrollcommand=y.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
-    #     self.tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
-    #     self.tree.pack(padx=10, pady=10,fill="both", expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
     def stu_filter(self):
         self.clear_content_frame()  # Xóa nội dung cũ
         global df # df là biến toàn cục chứa dữ liệu sinh viên
         df = pd.read_csv("data/data_clean.csv") # Đọc dữ liệu từ file CSV
         
-        # field_name_label = tk.Label(self.content_frame, text="Nhập tên trường cần lọc:").pack(padx=5, pady=5) # Đặt nhãn vào khung
-        # # Thêm các tùy chọn lựa chọn để nhập giá trị vào entry
-        # options = list(df.columns)
-        # self.field_name_entry = ttk.Combobox(self.content_frame, values=options, width=27)
-        # self.field_name_entry.pack(padx=5, pady=5)
-
-        # field_value_label = tk.Label(self.content_frame, text="Nhập giá trị cần tìm:").pack(padx=5, pady=5)
-        # options_value = []
-        # if self.field_name_entry.get() == "nationality":
-        #     options_value = df["nationality"].dropna().unique()
-        # self.field_value_entry = ttk.Combobox(self.content_frame, values=options_value, width=27)
-        # self.field_value_entry.pack(padx=5, pady=5)
-        
-        # search_button = tk.Button(self.content_frame, text="Tìm kiếm",cursor="hand2", command=self.search_by_field).pack(pady=5)
-
         # Combobox chọn trường cần lọc
         field_name_label = tk.Label(self.content_frame, text="Chọn tên trường cần lọc:")
         field_name_label.pack(padx=5, pady=5)

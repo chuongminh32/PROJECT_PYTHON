@@ -88,3 +88,41 @@ if __name__ == '__main__':
 if __name__ == '__main__':
     plot_country_btn("data/student-dataset.csv")
 
+
+
+class TestPlotGradeBtn(unittest.TestCase):
+
+    def tearDown(self):
+        if hasattr(self, 'temp_file') and os.path.exists(self.temp_file):
+            os.remove(self.temp_file)
+
+    def test_empty_data(self):
+    # Tạo file tạm với nội dung trống, chỉ có tiêu đề các cột
+        empty_data = """ english.grade,math.grade,sciences.grade,language.grade \n"""
+        self.temp_file = 'temp_empty_data.csv'
+        with open(self.temp_file, 'w') as f:
+            f.write(empty_data)
+
+        with self.assertRaises(ValueError):
+            plot_grade_btn(self.temp_file)
+
+    def test_mismatched_data(self):
+        # Tạo dữ liệu không khớp và lưu vào file tạm thời
+        mismatched_data = """english.grade,math.grade,sciences.grade
+        4.0,3.8,4.5
+        4.3,4.1,5.0
+        3.6,4.1,4.4
+        5.0,4.7,4.5
+        3.9,4.6,4.5"""
+
+        # Tạo tên tạm cho file CSV
+        self.temp_file = 'temp_mismatched_data.csv'
+
+        # Ghi dữ liệu vào file CSV
+        with open(self.temp_file, 'w') as f:
+            f.write(mismatched_data)
+
+        # Kiểm tra xem KeyError có được ném keông
+        with self.assertRaises(KeyError):
+            plot_grade_btn(self.temp_file)
+
