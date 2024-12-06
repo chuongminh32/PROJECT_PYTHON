@@ -236,6 +236,7 @@ class Student:
         # yscrollcommand=y.set: Liên kết thanh cuộn dọc với Treeview, cho phép thanh cuộn dọc cập nhật khi nội dung Treeview thay đổi.
         self.tree.configure(yscrollcommand=y.set, xscrollcommand=x.set)
         self.tree.pack(padx=10, pady=10,fill="both", expand=True) # fill = "both": Treeview sẽ mở rộng theo cả chiều ngang và chiều cao 
+        
     def update_field_values(self, df):
         """
         Cập nhật các giá trị tùy chọn cho combobox 'field_value_combobox' dựa trên trường đã chọn.

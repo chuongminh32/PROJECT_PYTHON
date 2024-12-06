@@ -505,6 +505,13 @@ class StudentManagementApp():
                 "Cảnh báo", "Vui lòng nhập ID sinh viên cần xóa.")
             return
 
+        # Hiển thị hộp thoại xác nhận
+        confirm = messagebox.askyesno(
+            "Xác nhận", f"Bạn có chắc chắn muốn xóa sinh viên có ID {student_id}?")
+
+        if not confirm:
+            return
+
         # Xóa sinh viên
         file_path = "data/data_clean.csv"
         success = delete_data(file_path, student_id)

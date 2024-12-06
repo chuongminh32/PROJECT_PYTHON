@@ -8,4 +8,8 @@ pandas: Phân tích và xử lý dữ liệu dạng bảng (DataFrame).
 matplotlib: Vẽ đồ thị và biểu đồ.
 ttk: Tạo các widget giao diện đẹp và hiện đại hơn cho Tkinter.
 csv: Đọc và ghi dữ liệu dạng CSV.
-
+mplcursors: Hiển thị thông tin chi tiết khi di chuột qua các điểm trên đồ thị.
+numpy: Thực hiện các phép toán trên mảng và ma trận.
+seaborn: Vẽ đồ thị thống kê đẹp mắt. 
+pathlib : Xử lý đường dẫn tệp và thư mục.
+csv : Đọc và ghi dữ liệu dạng CSV.

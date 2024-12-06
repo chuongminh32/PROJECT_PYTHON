@@ -1,9 +1,9 @@
-import unittest
+import unittest # Thư viện unittest giúp tạo test cases
 import os
 import pandas as pd
-import traceback
+import traceback # Thư viện traceback giúp in ra lỗi chi tiết
 from tkinter import Tk
-from unittest.mock import patch
+from unittest.mock import patch # Thư viện unittest.mock giúp mock các hàm, phương thức
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))

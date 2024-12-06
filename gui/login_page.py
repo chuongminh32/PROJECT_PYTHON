@@ -1,9 +1,9 @@
 from tkinter import *
 from tkinter import messagebox
-import subprocess 
-import os
+import subprocess # Thêm thư viện subprocess để chạy các tiến trình con 
+import os 
 from PIL import Image, ImageTk
-import ast
+import ast # Thêm thư viện ast để xử lý các biểu thức Python dưới dạng chuỗi
 
 """
 Mô tả:

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np # Thư viện NumPy để xử lý mảng nhanh hơn
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import mplcursors
+import mplcursors # Thư viện mplcursors để hiển thị chú thích khi di chuột qua biểu đồ
 
 
 # FigureCanvasTkAgg biến một đối tượng Figure (biểu đồ) của Matplotlib
