@@ -35,23 +35,3 @@ if __name__ == "__main__":
     install_requirements()  # Cài đặt thư viện nếu thiếu
     run_application()  # Khởi động ứng dụng sau khi cài đặt xong
 
-
-# def plot_grade_btn(FILE_PATH):
-#     plt.close('all')
-#     df = pd.read_csv(FILE_PATH)
-#     subject = ['english.grade', 'math.grade', 'sciences.grade', 'language.grade']
-#     grade = df[subject].mean()
-
-#     plt.figure(figsize=(10,6))
-#     plt.bar(subject, grade)
-#     plt.xlabel("Môn học")
-#     plt.ylabel("Điểm")
-#     plt.title("Biều đồ điểm trung bình môn học")
-
-#     for i, value in enumerate(grade):
-#         plt.text(i, value + 0.05, round(value, 2), ha='center', va='bottom')
-
-#     plt.show()
-
-# if __name__ == '__main__':
-#     plot_grade_btn("data/student-dataset.csv")
