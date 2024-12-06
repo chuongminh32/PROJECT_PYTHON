@@ -120,7 +120,7 @@ Nếu bạn muốn cài đặt các thư viện thủ công trước khi chạy 
 ## Liên Hệ
 
 Nếu bạn gặp vấn đề khi sử dụng ứng dụng, vui lòng liên hệ với đội ngũ phát triển qua email: [chuongminh3225@gmail.com](mailto:chuongminh3225@gmail.com).
-
+Github: [https://github.com/chuongminh32/PROJECT_PYTHON]
 
 ---
 
