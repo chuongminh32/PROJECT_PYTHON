@@ -71,7 +71,7 @@ class Student:
         self.create_logo()
         self.create_menu()
         self.create_content_frame()
-        # root.resizable(False, False)
+        root.resizable(False, False)
 
     def setup_window(self):
         self.root.title("Hệ thống quản lý sinh viên")
